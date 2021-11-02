@@ -1,0 +1,121 @@
+.login_wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ededed;
+    .bg_img {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: darken($primaryColor, 15);
+            opacity: .4;
+            content: "";
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &.hidden{
+        	display:none;
+        }
+    }
+}
+.login {
+    position: relative;
+    z-index: 99;
+    background: #FFF;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    width: 380px;
+    margin: 3% auto;
+    left: auto;
+    min-height: 400px;
+    padding: 1em 2em 5em;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: .6s;
+    @include screen('xs_mobile') {
+        width: 90%;
+    }
+    h1 {
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        line-height: 1.25em;
+        margin-bottom: 1em;
+        padding-bottom: .25em;
+        border-bottom: 1px solid #DDD;
+        .pic {
+            flex: 1 1 100%;
+            height: 60px;
+            display: flex;
+            img {
+                max-height: 100%;
+                max-width: 80%;
+                margin: 0 auto;
+                object-fit: contain;
+            }
+        }
+        span {
+            flex: 0 1 100%;
+            display: flex;
+            font-size: 1.5rem;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    .form_content {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: .813rem;
+    }
+    .btn_grp {
+        width: 100%;
+        margin-top: 1em;
+        .btn {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .contact {
+        position: absolute;
+        font-size: .75rem;
+        color: #888;
+        bottom: 1em;
+        left: 10%;
+        width: 80%;
+        line-height: 1.4;
+        text-align: center;
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

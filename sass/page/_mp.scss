@@ -1,0 +1,38 @@
+.mp_widget {
+    .help {
+        text-align: right;
+        font-size: .75rem;
+        color: #999;
+    }
+    .counter {
+        color: #FFF;
+        font-weight: bold;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+    }
+    [class^="widget_"] {
+        display: flex;
+        width: 100%;
+        height: 120px;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        border-radius: $border-radius;
+    }
+    .widget_now_counter {
+        background: rgb(20, 122, 231);
+        background: linear-gradient(0deg, rgba(20, 122, 231, 1) 0%, rgba(8, 201, 244, 1) 100%);
+    }
+    .widget_now_pageview {
+        background: rgb(244, 136, 8);
+        background: linear-gradient(0deg, rgba(244, 136, 8, 1) 0%, rgba(251, 188, 32, 1) 100%);
+    }
+    .widget_now_user {
+        background: rgb(78, 168, 9);
+        background: linear-gradient(0deg, rgba(78, 168, 9, 1) 0%, rgba(172, 223, 16, 1) 100%);
+    }
+    .widget_new_data {
+        background: rgb(214, 81, 116);
+        background: linear-gradient(0deg, rgba(214, 81, 116, 1) 0%, rgba(247, 166, 94, 1) 100%);
+    }
+}
