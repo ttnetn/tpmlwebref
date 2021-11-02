@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperCMS</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="light.htm">首頁</a></li>
+                    <li><a href="#">節點</a></li>
+                    <li>節點</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>基本範例頁面 - widget+內容樣式</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="">
+                                                    <label>文字表單</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="">
+                                                    <button class="btn btn-text">選擇</button>
+                                                    <label>請選擇人員</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="form_title">行內排列</div>
+                                                <div class="form_content">
+                                                    <div class="radio_grp form_inline">
+                                                        <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
+                                                        <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
+                                                        <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="form_title">行內排列</div>
+                                                <div class="form_content">
+                                                    <div class="check_grp form_inline">
+                                                        <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>日期選擇</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp datepick">
+                                                <div class="startDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button>
+                                                        <label>開始日期<abbr>*</abbr></label>
+                                                    </div>
+                                                    <!-- <div class="help">說明文字</div> -->
+                                                </div>
+                                                <div class="endDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button>
+                                                        <label>結束日期<abbr>*</abbr></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="" disabled selected></option>
+                                                        <option value="">選項1</option>
+                                                        <option value="">選項2</option>
+                                                        <option value="">選項3</option>
+                                                        <option value="">選項4</option>
+                                                        <option value="">選項5</option>
+                                                    </select>
+                                                    <label>下拉選單樣式</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button class="btn reset">取消</button>
+                                            <button class="btn btn-primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- demo -->
+                    <div class="demo_info">
+                        <h3>框架結構範例</h3>
+                        <pre><code class="language-html">&lt;!-- flex-12 --&gt;
+&lt;div class="flex-12"&gt;
+    &lt;div class="col "&gt;
+        &lt;div class="widget_block"&gt;
+            &lt;div class="_head"&gt;
+                &lt;h3&gt;左側：wigdet標題&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="widget"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="content_block"&gt;
+            &lt;div class="_head"&gt;
+                &lt;h3&gt;中央：節點標題&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="_content"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <div class="widget_block">
+                                <div class="_head">
+                                    <h3>左側：wigdet標題</h3>
+                                </div>
+                                <div class="widget">
+                                </div>
+                            </div>
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>中央：節點標題</h3>
+                                </div>
+                                <div class="_content">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider">範例</div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <div class="widget_block">
+                                <div class="_head">
+                                    <h3>目錄樹</h3>
+                                </div>
+                                <div class="widget">
+                                    <!-- 目錄樹區塊 -->
+                                    <div class="treeview_block">
+                                        <ul class="treeview">
+                                            <li class="collapsable">
+                                                <div class="hitarea collapsable-hitarea"></div><span class="folder">機關單位</span>
+                                                <ul class="treeview">
+                                                    <li class="collapsable">
+                                                        <div class="hitarea collapsable-hitarea"></div><span class="folder">A單位</span>
+                                                        <ul id="folder21" class="treeview">
+                                                            <li><a href="#" class=""><span class="file">a-1單位</span></a></li>
+                                                            <li><a href="#" class=""><span class="file">a-2單位</span></a></li>
+                                                            <li><a href="#" class=""><span class="file">a-3單位</span></a></li>
+                                                            <li class="last"><a href="#"><span class="file">a-4單位</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="collapsable lastCollapsable"><span class="folder">某科</span>
+                                                        <ul id="folder21" class="treeview">
+                                                            <li><a href="#"><span class="file">一組</span></a></li>
+                                                            <li><a href="#"><span class="file">二組</span></a></li>
+                                                            <li><a href="#"><span class="file">三組</span></a></li>
+                                                            <li><a href="#"><span class="file">四組</span></a></li>
+                                                            <li><a href="#"><span class="file">五組</span></a></li>
+                                                            <li><a href="#"><span class="file">六組</span></a></li>
+                                                            <li><a href="#"><span class="file">七組</span></a></li>
+                                                            <li class="last"><a href="#"><span class="file">八組</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea closed-hitarea expandable-hitarea"></div><span class="folder">其他單位</span>
+                                                <ul class="treeview">
+                                                    <li><span class="file">其他單位</span></li>
+                                                    <li class="last"><span class="file">其他單位</span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="last"><span class="file">其他單位</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>新增使用者資料</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text">
+                                                <label>使用者帳號<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text">
+                                                <label>使用者姓名<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect password_toggle">
+                                                <input name="" type="password" value="">
+                                                <button class="btn btn-icon"><i class="i_hide"></i></button>
+                                                <label>使用者密碼<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">請使用6位字元以上、英數字混合</div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect password_toggle">
+                                                <input name="" type="password" value="">
+                                                <button class="btn btn-icon"><i class="i_hide"></i></button>
+                                                <label>再次輸入確認密碼<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">請使用6位字元以上、英數字混合</div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <option value="選項1">選項1</option>
+                                                    <option value="選項2">選項2</option>
+                                                    <option value="選項3">選項3</option>
+                                                    <option value="選項4">選項4</option>
+                                                    <option value="選項5">選項5</option>
+                                                </select>
+                                                <label>下拉選單樣式</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text">
+                                                <label>Email<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text">
+                                                <label>職稱</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">電話格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect zip">
+                                                    <span>＋</span>
+                                                    <input name="" type="tel" value="886">
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="tel" value="23956966">
+                                                </div>
+                                                <div class="labelEffect ext">
+                                                    <span>分機</span>
+                                                    <input name="" type="tel" value="123">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">群組</div>
+                                            <div class="form_content">
+                                                <div class="check_grp form_inline">
+                                                    <label><input name="" type="checkbox" value="" checked><span>系統超級管理員</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>網站管理員</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>資料上稿</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>臨時群組</span></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="checkSwitch">
+                                                    <label>
+                                                        <input name="checkboxSample1" type="checkbox" value="">
+                                                        <div class="checkSwitch_switch"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button class="btn btn-primary">儲存</button>
+                                            <button class="btn">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>

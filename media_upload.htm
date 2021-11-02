@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperCMS</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="light.htm">首頁</a></li>
+                    <li><a href="#">節點</a></li>
+                    <li>節點</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>特殊範例頁面-多媒體資料庫</h2>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <div class="control_panel">
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-btn">
+                                                <i class="i_photo"></i>檔案批次處理</button>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <li>
+                                                        <button class="btn">
+                                                            <i class="i_download"></i> 下載原始圖檔</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn btn-delete">
+                                                            <i class="i_trash"></i>刪除 </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sort_panel">
+                                        <div class="flex-form">
+                                            <div class="form_grp">
+                                                <div class="form_content">
+                                                    <div class="check_grp form_inline">
+                                                        <label><input name="" type="checkbox" value=""><span>照片</span></label>
+                                                        <label><input name="" type="checkbox" value=""><span>影片</span></label>
+                                                        <label><input name="" type="checkbox" value=""><span>檔案</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <a href="#" class="btn btn-xs">檔名<i class="i_sort"></i></a>
+                                            <a href="#" class="btn btn-xs">檔案大小<i class="i_sort"></i></a>
+                                            <a href="#" class="btn btn-xs">上傳時間<i class="i_sort"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="quick_btn">
+                                        <button class="btn btn-orange btn-addfile"><i class="i_add"></i>新增媒體</button>
+                                    </div>
+                                </div>
+                                <div class="upload_content">
+                                    <a href="#" class="close"><i class="i_close"></i></a>
+                                    <p>請把檔案拖曳到此區域，或按此<button class="btn btn-xs btn-blue">上傳檔案</button>；每筆檔案限制<span>1</span>MB</p>
+                                    <div class="photo_list">
+                                        <div class="item">
+                                            <!-- 上傳完，移除loading -->
+                                            <div class="img-container">
+                                                <!-- <div class="loading"></div> -->
+                                                <img src="images/demo/01.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="img-container">
+                                                <!-- <div class="loading"></div> -->
+                                                <img src="images/demo/02.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="img-container">
+                                                <div class="loading"></div>
+                                                <img src="images/demo/03.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="img-container">
+                                                <div class="loading"></div>
+                                                <img src="images/demo/04.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="img-container">
+                                                <div class="loading"></div>
+                                                <img src="images/demo/05.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="img-container">
+                                                <div class="loading"></div>
+                                                <img src="images/demo/06.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="img-container">
+                                                <div class="loading"></div>
+                                                <img src="images/demo/07.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="img-container">
+                                                <div class="loading"></div>
+                                                <img src="images/demo/08.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>xxxxxx.jpg</p>
+                                        </div>
+                                        <div class="item error">
+                                            <a href="#" class="delete"><i class="i_close"></i></a>
+                                            <div class="img-container">
+                                                <img src="images/demo/08.jpg" alt="" class="cover">
+                                            </div>
+                                            <p>檔案上傳錯誤</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_content">
+                                    <div class="media">
+                                        <!-- 左側分類 -->
+                                        <div class="folder_list">
+                                            <div class="widget_block">
+                                                <div class="_head">
+                                                    <h3>資料夾分類</h3>
+                                                </div>
+                                                <div class="widget">
+                                                    <button class="btn btn-xs btn-green toggleOpen">展開所有分類</button>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#"><i class="i_folder_color"></i><span>分類1</span></a>
+                                                        <ul>
+                                                            <li><a href="#"><span>分類1-1</span></a></li>
+                                                            <li><a href="#"><span>分類1-2</span></a></li>
+                                                            <li><a href="#"><span>分類1-3</span></a></li>
+                                                            <li><a href="#"><span>分類1-4</span></a></li>
+                                                            <li><a href="#"><span>分類1-5</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="i_folder_color"></i><span>分類2</span></a>
+                                                        <ul>
+                                                            <li><a href="#"><span>分類2-1</span></a></li>
+                                                            <li><a href="#"><span>分類2-2</span></a></li>
+                                                            <li><a href="#"><span>分類2-3</span></a></li>
+                                                            <li><a href="#"><span>分類2-4</span></a></li>
+                                                            <li><a href="#"><span>分類2-5</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="i_folder_color"></i><span>分類3</span></a>
+                                                        <ul>
+                                                            <li><a href="#"><span>分類3-1</span></a></li>
+                                                            <li><a href="#"><span>分類3-2</span></a></li>
+                                                            <li><a href="#"><span>分類3-3</span></a></li>
+                                                            <li><a href="#"><span>分類3-4</span></a></li>
+                                                            <li><a href="#"><span>分類3-5</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                </div>
+
+                                            </div>
+                                            <div class="widget_block">
+                                                <div class="_head">
+                                                    <h3>熱門標籤</h3>
+                                                </div>
+                                                <div class="widget">
+                                                    <div class="hot_tag">
+                                                        <a href="#" class="btn">長官圖片</a>
+                                                        <a href="#" class="btn">生態</a>
+                                                        <a href="#" class="btn">單位建築</a>
+                                                        <a href="#" class="btn">記者會</a>
+                                                        <a href="#" class="btn">跑馬燈</a>
+                                                        <a href="#" class="btn">肺炎</a>
+                                                        <a href="#" class="btn">重要</a>
+                                                        <a href="#" class="btn">標籤1</a>
+                                                        <a href="#" class="btn">標籤2</a>
+                                                        <a href="#" class="btn">標籤3</a>
+                                                        <a href="#" class="btn">標籤4</a>
+                                                        <a href="#" class="btn">標籤5</a>
+                                                        <a href="#" class="btn">標籤6</a>
+                                                        <a href="#" class="btn">標籤7</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photo_list">
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/01.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/02.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/03.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/04.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/05.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/06.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/07.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/08.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/09.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/10.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/11.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/12.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/01.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/02.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/03.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/04.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/05.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/06.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/07.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/08.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/09.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/10.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/11.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/12.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/01.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/02.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/03.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/04.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/05.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/06.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/07.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/08.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/09.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/10.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/11.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/12.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/01.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/02.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/03.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/04.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/05.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/06.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/07.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/08.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/09.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/10.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/11.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <!-- checkbox -->
+                                                <div class="check_grp">
+                                                    <label>
+                                                        <input name="" type="checkbox" value="">
+                                                    </label>
+                                                </div>
+                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                    <div class="img-container">
+                                                        <img src="images/demo/12.jpg" alt="" class="cover">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="upload_area">
+        <span>請將檔案拖曳至這個區域上傳</span>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script>
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>

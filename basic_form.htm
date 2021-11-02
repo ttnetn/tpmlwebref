@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperCMS</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="light.htm">首頁</a></li>
+                    <li><a href="#">節點</a></li>
+                    <li>節點</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>共通元素 - 表單</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="" readonly>
+                                                    <label>文字表單</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="">
+                                                    <button class="btn btn-primary btn-text">選擇</button>
+                                                    <label>請選擇人員</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="form_title">行內排列</div>
+                                                <div class="form_content">
+                                                    <div class="radio_grp form_inline">
+                                                        <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
+                                                        <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
+                                                        <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="form_title">行內排列</div>
+                                                <div class="form_content">
+                                                    <div class="check_grp form_inline">
+                                                        <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>日期選擇</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp datepick">
+                                                <div class="startDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button>
+                                                        <label>開始日期<abbr>*</abbr></label>
+                                                    </div>
+                                                    <!-- <div class="help">說明文字</div> -->
+                                                </div>
+                                                <div class="endDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button>
+                                                        <label>結束日期<abbr>*</abbr></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="" disabled selected></option>
+                                                        <option value="">選項1</option>
+                                                        <option value="">選項2</option>
+                                                        <option value="">選項3</option>
+                                                        <option value="">選項4</option>
+                                                        <option value="">選項5</option>
+                                                    </select>
+                                                    <label>下拉選單樣式</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button class="btn reset">取消</button>
+                                            <button class="btn btn-primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-6-6">
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>文字標準表單</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="文字表單">
+                                                <label>文字表單</label>
+                                            </div>
+                                            <!--   <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <label>文字表單+說明文字格式</label>
+                                            </div>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <label>必填文字表單 <abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="文字表單">
+                                                <label>文字表單</label>
+                                            </div>
+                                            <div class="help">請填寫正確的格式</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>日期選擇</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp datepick">
+                                            <div class="labelEffect">
+                                                <input name="" type="calendar" value="" class="calendar">
+                                                <button class="btn"><i class="i_calendar"></i></button>
+                                                <label>日期選擇</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp datepick">
+                                            <div class="labelEffect">
+                                                <input name="" type="calendar" value="" class="calendar">
+                                                <button class="btn"><i class="i_calendar"></i></button>
+                                                <label>日期選擇<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp datepick">
+                                            <div class="startDate">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>開始日期</label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                            <div class="endDate">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>結束日期</label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp datepick">
+                                            <div class="startDate">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>開始日期<abbr>*</abbr></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                            <div class="endDate">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>結束日期<abbr>*</abbr></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp datepick error">
+                                            <div class="startDate">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="2020/01/01" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>開始日期</label>
+                                                </div>
+                                                <div class="help">說明文字</div>
+                                            </div>
+                                            <div class="endDate">
+                                                <div class="labelEffect">
+                                                    <input name="" type="calendar" value="2020/01/01" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button>
+                                                    <label>結束日期</label>
+                                                </div>
+                                                <div class="help">說明文字</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>單選核取表單</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">行內排列</div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">行內排列<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                </div>
+                                                <div class="help">說明文字</div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">垂直排列</div>
+                                            <div class="form_content">
+                                                <div class="radio_grp">
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">垂直排列<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp">
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                </div>
+                                                <div class="help">說明文字</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>複選核取表單</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">行內排列</div>
+                                            <div class="form_content">
+                                                <div class="check_grp form_inline">
+                                                    <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">行內排列<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="check_grp form_inline">
+                                                    <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                </div>
+                                                <div class="help">說明文字</div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">垂直排列</div>
+                                            <div class="form_content">
+                                                <div class="check_grp">
+                                                    <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">垂直排列<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="check_grp">
+                                                    <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                </div>
+                                                <div class="help">說明文字</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>組合型表單</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <label>姓</label>
+                                            </div>
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <label>名</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect hasBtn">
+                                                <input name="" type="text" value="">
+                                                <button class="btn btn-primary btn-text">選擇</button>
+                                                <label>有按鈕格式文字<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect password_toggle">
+                                                <input name="" type="password" value="">
+                                                <button class="btn btn-icon"><i class="i_hide"></i></button>
+                                                <label>密碼表單<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <button class="btn btn-icon"><i class="i_edit"></i></button>
+                                                <label>有按鈕格式icon<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <label>有條件式文字表單 <abbr>*</abbr>
+                                                </label>
+                                                <div class="additional">
+                                                    <div class="checkbox_grp">
+                                                        <label><input name="checkSample" type="checkbox" value=""><span>同會員資訊</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">下拉+文字表單<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect short">
+                                                    <select id="" name="">
+                                                        <option value="http://">http://</option>
+                                                        <option value="https://">https://</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="www.google.com.tw">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">電話格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect zip">
+                                                    <span>＋</span>
+                                                    <input name="" type="tel" value="886">
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="tel" value="23956966">
+                                                </div>
+                                                <div class="labelEffect ext">
+                                                    <span>分機</span>
+                                                    <input name="" type="tel" value="123">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">手機格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect zip">
+                                                    <input name="" type="tel" value="0932">
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="tel" value="123456">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">地址格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect county">
+                                                    <select id="" name="">
+                                                        <option value="請選擇鄉鎮">請選擇鄉鎮</option>
+                                                        <option value="台北市">台北市</option>
+                                                        <option value="台北市">新北市</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect dist">
+                                                    <select id="" name="">
+                                                        <option value="請選擇區域">請選擇區域</option>
+                                                        <option value="中正區">中正區</option>
+                                                        <option value="中正區">中山區</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect address">
+                                                    <input name="" type="text" value="重慶南路二段51號5樓">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">生日格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="DD">DD</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="MM">MM</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="YY">YY</option>
+                                                        <option value="2000">2000</option>
+                                                        <option value="2000">2000</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">開關格式<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="checkSwitch">
+                                                    <label>
+                                                        <input name="checkboxSample1" type="checkbox" value="">
+                                                        <div class="checkSwitch_switch"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>組合型表單</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp error">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <label>姓</label>
+                                            </div>
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="">
+                                                <label>名</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="文字">
+                                                <button class="btn btn-primary btn-text">選擇</button>
+                                                <label>有按鈕格式文字<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="labelEffect password_toggle">
+                                                <input name="" type="password" value="12345678">
+                                                <button class="btn btn-icon"><i class="i_hide"></i></button>
+                                                <label>密碼表單<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="labelEffect hasBtn">
+                                                <input name="" type="text" value="文字">
+                                                <button class="btn btn-icon"><i class="i_edit"></i></button>
+                                                <label>有按鈕格式 icon<abbr>*</abbr></label>
+                                            </div>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="文字">
+                                                <label>必填文字表單 <abbr>*</abbr>
+                                                </label>
+                                                <div class="additional">
+                                                    <div class="checkbox_grp">
+                                                        <label><input name="checkSample" type="checkbox" value=""><span>同會員資訊</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="form_title">下拉+文字<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect short">
+                                                    <select id="" name="">
+                                                        <option value="http://">http://</option>
+                                                        <option value="https://">https://</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="www.google.com.tw">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="form_title">電話格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect zip">
+                                                    <span>＋</span>
+                                                    <input name="" type="tel" value="886">
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="tel" value="23956966">
+                                                </div>
+                                                <div class="labelEffect ext">
+                                                    <span>分機</span>
+                                                    <input name="" type="tel" value="123">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="form_title">手機格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect zip">
+                                                    <input name="" type="tel" value="0932">
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="tel" value="123456">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="form_title">地址格式<abbr>*</abbr></div>
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect county">
+                                                    <select id="" name="">
+                                                        <option value="請選擇鄉鎮">請選擇鄉鎮</option>
+                                                        <option value="台北市">台北市</option>
+                                                        <option value="台北市">新北市</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect dist">
+                                                    <select id="" name="">
+                                                        <option value="請選擇區域">請選擇區域</option>
+                                                        <option value="中正區">中正區</option>
+                                                        <option value="中正區">中山區</option>
+                                                    </select>
+                                                </div>
+                                                <div class="labelEffect address">
+                                                    <input name="" type="text" value="重慶南路二段51號5樓">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp error">
+                                            <div class="form_title">開關格式<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="checkSwitch">
+                                                    <label>
+                                                        <input name="checkboxSample1" type="checkbox" value="">
+                                                        <div class="checkSwitch_switch"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>多行文字輸入表單</h3>
+                                </div>
+                                <div class="flex-form">
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <textarea></textarea>
+                                            <label>多行文字輸入表單</label>
+                                        </div>
+                                        <div class="help">說明文字</div>
+                                    </div>
+                                    <div class="form_grp error">
+                                        <div class="labelEffect">
+                                            <textarea>必填文字</textarea>
+                                            <label>多行文字輸入表單<abbr>*</abbr></label>
+                                        </div>
+                                        <div class="help">說明文字</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>原生下拉選單樣式</h3>
+                                </div>
+                                <div class="flex-form">
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <select id="" name="">
+                                                <option value="" disabled selected></option>
+                                                <option value="選項1">選項1</option>
+                                                <option value="選項2">選項2</option>
+                                                <option value="選項3">選項3</option>
+                                                <option value="選項4">選項4</option>
+                                                <option value="選項5">選項5</option>
+                                            </select>
+                                            <label>下拉選單樣式</label>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <select id="" name="">
+                                                <option value="" disabled selected></option>
+                                                <option value="">選項1</option>
+                                                <option value="">選項2</option>
+                                                <option value="">選項3</option>
+                                                <option value="">選項4</option>
+                                                <option value="">選項5</option>
+                                            </select>
+                                            <label>下拉選單樣式<abbr>*</abbr></label>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp error">
+                                        <div class="labelEffect">
+                                            <select id="" name="">
+                                                <option value="" disabled selected></option>
+                                                <option value="">選項1</option>
+                                                <option value="">選項2</option>
+                                                <option value="">選項3</option>
+                                                <option value="">選項4</option>
+                                                <option value="">選項5</option>
+                                            </select>
+                                            <label>原生下拉選單樣式<abbr>*</abbr></label>
+                                            <div class="help">說明文字</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>客製下拉選單樣式</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <div class="select">
+                                                    <div class="select-value">
+                                                        <span class="value"></span>
+                                                    </div>
+                                                    <div class="select-option">
+                                                        <ul>
+                                                            <li>選項1</li>
+                                                            <li>選項2</li>
+                                                            <li>選項3</li>
+                                                            <li>選項4</li>
+                                                            <li>選項5</li>
+                                                            <li>選項6</li>
+                                                            <li>選項7</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <label>客製下拉選單樣式</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>
