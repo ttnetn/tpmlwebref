@@ -16,6 +16,7 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
 </head>
 
 <body>
@@ -509,6 +510,7 @@
                                                 <label>選擇主題單元(不選擇會自動建立)<abbr>*</abbr></label>
                                             </div>
                                         </div>
+                                        <!--下拉或選擇模式二選一-->
                                         <div class="form_grp">
                                             <div class="labelEffect hasBtn">
                                                 <input name="" type="text" value="">
@@ -522,17 +524,44 @@
                                                 <input name="" type="file" value="">
                                                 <input name="" type="text" value="">
                                                 <button class="btn btn-primary btn-addfile">上傳</button>
-                                                <label>上傳節點圖片</label>
+                                                 <label>上傳節點圖片</label>
                                             </div>
                                             <!--div class="help">說明文字</div-->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <option value="1">版型1</option>
+                                                    <option value="2">版型2</option>
+                                                    <option value="3">版型版型版型</option>
+                                                    <option value="4">版型</option>
+                                                    <option value="5">版型</option>
+                                                </select>
+                                                <label>選擇條列頁版型(不選擇則為預設)<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <option value="1">版型1</option>
+                                                    <option value="2">版型2</option>
+                                                    <option value="3">版型版型版型</option>
+                                                    <option value="4">版型</option>
+                                                    <option value="5">版型</option>
+                                                </select>
+                                                <label>選擇內容頁版型(不選擇則為預設)<abbr>*</abbr></label>
+                                            </div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <input name="" type="text">
                                                 <label>限制條件</label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
+                                            <div class="help">可為節點添加限制條件，例如限制資料大類或顯示特定單位上稿資料</div>
                                         </div>
+                                        <!--必填未填error警示示意-->
                                         <div class="form_grp error">
                                             <div class="form_title">排序<abbr>*</abbr></div>
                                             <div class="form_content form_inline">
@@ -541,41 +570,136 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="divider">分隔線</div>
-                                        <hr>
+
+                                        <div style="border-top: 1px solid #CFCFCF;clear: both;width:100%;"></div>
+                                        <h4 style="margin-bottom:25px;">節點上稿權限設定</h4>
                                         <div class="form_grp">
-                                            <div class="form_title">Checkbox群組</div>
+                                            <div class="form_title">上稿權限</div>
                                             <div class="form_content">
                                                 <div class="check_grp form_inline">
-                                                    <label><input name="" type="checkbox" value="" checked=""><span>系統超級管理員</span></label>
+                                                    <label><input name="" type="checkbox" value="" checked=""><span>系統管理員</span></label>
                                                     <label><input name="" type="checkbox" value=""><span>網站管理員</span></label>
                                                     <label><input name="" type="checkbox" value=""><span>資料上稿</span></label>
                                                     <label><input name="" type="checkbox" value=""><span>臨時群組</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>權限群組1</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>權限群組2</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>權限群組權限群組3</span></label>
                                                 </div>
                                                 <!-- <div class="help">說明文字</div> -->
                                             </div>
+
+                                            <div class="setting_block">
+                                                    <div class="quick_btn">
+                                                        <button class="btn" data-fancybox data-type="iframe" data-src="fancybox_userlist.htm" href="javascript:;"><i class="i_add"></i>選入使用者</button>
+                                                    </div>
+                                                <div class="upload_block">
+                                                    <div class="attachment_list">
+                                                        <div class="item">
+                                                            <!-- number -->
+                                                            <div class="num">
+                                                                <span>1</span>
+                                                            </div>
+                                                            <span>使用者帳號｜姓名｜單位單位單位單位 </span>
+                                                            <div class="btn_grp">
+                                                                <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <!-- number -->
+                                                            <div class="num">
+                                                                <span>2</span>
+                                                            </div>
+                                                            <span>使用者帳號｜姓名｜單位 </span>
+                                                            <div class="btn_grp">
+                                                                <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        <div style="border-top: 1px solid #CFCFCF;clear: both;width:100%;"></div>
+                                        <h4 style="margin-bottom:25px;">節點審稿權限設定</h4>
+ 
                                         <div class="form_grp">
-                                            <div class="form_title">Radio選項排列</div>
+                                            <div class="form_title">審稿設定</div>
                                             <div class="form_content">
                                                 <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
-                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
-                                                    <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                    <label><input name="radioSample" type="radio" id="R1" value="R1" checked onclick="javascript:reviewCheck();"><span>不需審稿</span></label>
+                                                    <label><input name="radioSample" type="radio" id="R2" value="R2" onclick="javascript:reviewCheck();"><span>只需初審</span></label>
+                                                    <label><input name="radioSample" type="radio" id="R3" value="R3" onclick="javascript:reviewCheck();"><span>初審加複審</span></label>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    function reviewCheck() {
+                                                        if (document.getElementById('R1').checked) {
+                                                            document.getElementById('ifReview').style.display = 'none';
+                                                        }
+                                                        else document.getElementById('ifReview').style.display = 'block';
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp" id="ifReview" style="display:none;">
+                                            <div class="form_title">審稿權限</div>
+                                            <div class="form_content">
+                                                <div class="check_grp form_inline">
+                                                    <label><input name="" type="checkbox" value="" checked=""><span>系統管理員</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>網站管理員</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>資料上稿</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>臨時群組</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>權限群組1</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>權限群組2</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>權限群組權限群組3</span></label>
                                                 </div>
                                                 <!-- <div class="help">說明文字</div> -->
                                             </div>
+
+                                            <div class="setting_block">
+                                                    <div class="quick_btn">
+                                                        <button class="btn" data-fancybox data-type="iframe" data-src="fancybox_reviewerlist.htm" href="javascript:;"><i class="i_add"></i>選入使用者</button>
+                                                    </div>
+                                                <div class="upload_block">
+                                                    <div class="attachment_list">
+                                                        <div class="item">
+                                                            <!-- number -->
+                                                            <div class="num">
+                                                                <span>1</span>
+                                                            </div>
+                                                            <span>使用者帳號｜姓名｜單位單位單位單位｜ </span>
+                                                            <span>初審｜複審 </span>
+                                                            <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                <button class="btn" data-fancybox data-type="iframe" data-src="fancybox_reviewersetting.htm" href="javascript:;"><i class="i_edit"></i></button>
+                                                                <button class="btn"><i class="i_trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <!-- number -->
+                                                            <div class="num">
+                                                                <span>2</span>
+                                                            </div>
+                                                            <span>使用者帳號｜姓名｜單位｜ </span>
+                                                            <span>初審 </span>
+                                                            <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                <button class="btn" data-fancybox data-type="iframe" data-src="fancybox_reviewersetting.htm" href="javascript:;"><i class="i_edit"></i></button>
+                                                                <button class="btn"><i class="i_trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form_grp">
+
+                                        <!--div class="form_grp">
                                             <div class="form_title">隱藏節點</div>
                                             <div class="form_content">
                                                 <div class="check_grp form_inline">
                                                     <label><input name="" type="checkbox" value=""><span>不顯示於目錄選單</span></label>
                                                 </div>
-                                                <!-- <div class="help">說明文字</div> -->
+                                                
                                             </div>
-                                        </div>
-                                        <div class="form_grp">
+                                       </div>
+                                       <div class="form_grp">
                                             <div class="form_title">狀態<abbr>*</abbr></div>
                                             <div class="form_content">
                                                 <div class="checkSwitch">
@@ -585,15 +709,42 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="btn_grp">
+                                       </div-->
+                                       <div class="btn_grp">
                                             <button class="btn">清除重設(回復前次設定)</button>
-                                        </div>
+                                       </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="publish_block">
                                 <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>節點設定</h3>
+                                    </div>
+                                    <div class="log">
+                                        <div class="form_grp">
+                                            <div class="form_content">
+                                                <div class="check_grp form_inline">
+                                                    <label><input name="" type="checkbox" value=""><span>不顯示於目錄選單</span></label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*</abbr> </div>
+                                            <div class="form_content">
+                                                <div class="checkSwitch">
+                                                    <label>
+                                                        <input name="checkboxSample1" type="checkbox" value="">
+                                                        <div class="checkSwitch_switch"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="block">
                                     <div class="_head">
                                         <h3>節點狀態</h3>
@@ -642,6 +793,8 @@
             <script>
             hljs.initHighlightingOnLoad();
             </script>
+            <!-- fancybox -->
+            <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
             <!-- sortable -->
             <script src="vendor/sortable/Sortable.min.js"></script>
             <script type="text/javascript">
