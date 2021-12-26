@@ -31,14 +31,14 @@
                 <ul>
                     <li><a href="light.htm">首頁</a></li>
                     <li><a href="#">內容管理</a></li>
-                    <li>快速上稿</li>
+                    <li>資料審核</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>快速上稿</h2>
+                        <h2>資料審核</h2>
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
@@ -59,6 +59,25 @@
                                                     <label>標題</label>
                                                 </div>
                                             </div>
+                                            <div class="form_grp datepick">
+                                                <div class="startDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="date" value="">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>上線開始日期</label>
+                                                    </div>
+                                                    <!-- <div class="help">說明文字</div> -->
+                                                </div>
+                                                <div class="endDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="date" value="">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>上線結束日期</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <select id="" name="">
@@ -76,33 +95,21 @@
                                                     <label>上稿單元選擇</label>
                                                 </div>
                                             </div>
-                                            <div class="form_grp datepick">
-                                                <div class="startDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="date" value="">
-                                                        <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>上線開始日期<abbr>*</abbr></label>
-                                                    </div>
-                                                    <!-- <div class="help">說明文字</div> -->
-                                                </div>
-                                                <div class="endDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="date" value="">
-                                                        <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>上線結束日期<abbr>*</abbr></label>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="form_grp">
-                                                <div class="form_title">特殊設定</div>
-                                                <div class="form_content">
-                                                    <div class="check_grp form_inline">
-                                                        <label><input name="" type="checkbox" value=""><span>置頂</span></label>
-                                                        <!--label><input name="" type="checkbox" value=""><span>選項二</span></label>
-                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label-->
-                                                    </div>
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="" selected="" disabled="disabled"></option>
+                                                        <optgroup label="單位">
+                                                            <option value="1">帳號</option>
+                                                            <option value="2">帳號帳號帳號</option>
+                                                          </optgroup>
+                                                          <optgroup label="單位2">
+                                                            <option value="3">帳號</option>
+                                                            <option value="4">帳號</option>
+                                                            <option value="4">帳號</option>
+                                                          </optgroup>                                                        
+                                                    </select>
+                                                    <label>上稿單位帳號選擇</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -118,68 +125,6 @@
                     <!-- flex-12 -->
                     <div class="flex-12">
                         <div class="col ">
-                            <!--不要樹的版本-->
-                            <div class="widget_block" style="display: none;">
-                                <div class="_head">
-                                    <h3>網站單元</h3>
-                                </div>
-                                <div class="widget">
-                                    <!-- 目錄樹區塊 -->
-                                    <div class="treeview_block">
-                                        <ul class="treeview">
-                                            <li class="collapsable">
-                                                <div class="hitarea collapsable-hitarea"></div><span class="folder">關於本署</span>
-                                                <ul class="treeview">
-                                                    <li class="collapsable">
-                                                        <div class="hitarea collapsable-hitarea"></div><span class="folder">沿革與架構</span>
-                                                        <ul id="folder21" class="treeview">
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="collapsable">
-                                                        <div class="hitarea collapsable-hitarea"></div><span class="folder">沿革與願景</span>
-                                                        <ul id="folder21" class="treeview">
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="collapsable">
-                                                        <div class="hitarea collapsable-hitarea"></div><span class="folder">組織架構與業務職掌</span>
-                                                        <ul id="folder21" class="treeview">
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                            <li><a href="#"><span class="file">次選單</span></a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="collapsable lastCollapsable"><span class="folder">某科</span>
-                                                        <ul id="folder21" class="treeview">
-                                                            <li><a href="#"><span class="file">一組</span></a></li>
-                                                            <li><a href="#"><span class="file">二組</span></a></li>
-                                                            <li><a href="#"><span class="file">三組</span></a></li>
-                                                            <li><a href="#"><span class="file">四組</span></a></li>
-                                                            <li><a href="#"><span class="file">五組</span></a></li>
-                                                            <li><a href="#"><span class="file">六組</span></a></li>
-                                                            <li><a href="#"><span class="file">七組</span></a></li>
-                                                            <li class="last"><a href="#"><span class="file">八組</span></a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="expandable">
-                                                <div class="hitarea closed-hitarea expandable-hitarea"></div><span class="folder">其他單位</span>
-                                                <ul class="treeview">
-                                                    <li><span class="file">其他單位</span></li>
-                                                    <li class="last"><span class="file">其他單位</span></li>
-                                                </ul>
-                                            </li>
-                                            <li class="last"><span class="file">其他單位</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="content_block">
                                 <div class="_head">
                                     <h3>文章列表</h3>
@@ -190,11 +135,10 @@
                                     <div class="tag">
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">公開</a></li>
-                                            <li><a href="#">不公開</a></li>
-                                            <li><a href="#">審稿中</a></li>
-                                            <li><a href="#">下架</a></li>
-                                            <li><a href="#">草稿</a></li>
+                                            <li><a href="#">待初審</a></li>
+                                            <li><a href="#">待覆審</a></li>
+                                            <li><a href="#">審核通過</a></li>
+                                            <li><a href="#">審核不通過</a></li>
                                         </ul>
                                     </div>
                                     <!-- 資料處理 -->
@@ -207,31 +151,19 @@
                                                 <ul>
                                                     <li>
                                                         <button class="btn">
-                                                            <i class="i_top"></i>置頂</button>
+                                                            <i class="i_check"></i>審核通過</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn">
+                                                            <i class="i_check"></i>審核不通過</button>
                                                     </li>
                                                     <li>
                                                         <button class="btn">
                                                             <i class="i_check"></i>下架</button>
                                                     </li>
-                                                    <!--li>
-                                                        <button class="btn">
-                                                            <i class="i_edit"></i>編輯</button>
-                                                    </li>
-                                                    <li>
-                                                        <button class="btn">
-                                                            <i class="i_check"></i>審核 - 公開</button>
-                                                    </li>
-                                                    <li>
-                                                        <button class="btn">
-                                                            <i class="i_check"></i>審核 - 下架</button>
-                                                    </li>
-                                                    <li>
-                                                        <button class="btn">
-                                                            <i class="i_setting"></i>設定</button>
-                                                    </li-->
                                                     <li>
                                                         <button class="btn btn-delete">
-                                                            <i class="i_trash"></i>刪除 </button>
+                                                            <i class="i_trash"></i>刪除</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -249,10 +181,10 @@
                                                 </select> 筆 </div>
                                         </form>
                                     </div>
-                                    <div class="quick_btn">
+                                    <!--div class="quick_btn">
                                         <button class="btn btn-orange" onclick="window.location.href='data_new_update.htm';"><i class="i_add"></i>快速新增</button>
                                         <button class="btn" onclick="window.location.href='data_list.htm';">單元上稿</button>
-                                    </div>
+                                    </div-->
                                 </div>
                                 <div class="_content">
                                     <!-- 表格樣式 -->
@@ -276,7 +208,7 @@
                                                         <a href="#">下線日期 <i class="i_sort"></i>
                                                         </a>
                                                     </th>
-                                                    <th>置頂</th>
+                                                    <th>上稿帳號</th>
                                                     <th>狀態</th>
                                                     <th>動作</th>
                                                 </tr>
@@ -292,8 +224,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td><span class="blue">置頂</span></td>
-                                                    <td><span class="green">公開</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -305,12 +237,8 @@
                                                                             <i class="i_global"></i>預覽 </button>
                                                                     </li>
                                                                     <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                        <button class="btn" onclick="window.location.href='review_edit.htm';">
+                                                                            <i class="i_edit"></i>編輯(審核) </button></li>
                                                                     <li>
                                                                         <button class="btn btn-red">
                                                                             <i class="i_trash"></i>刪除 </button>
@@ -330,8 +258,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td><span class="blue">置頂</span></td>
-                                                    <td><span class="orange">審稿中</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="red">待覆審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -341,10 +269,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -368,8 +292,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="red">下架</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -379,10 +303,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -406,8 +326,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="green">公開</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -417,10 +337,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -444,8 +360,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="gray">草稿</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -455,10 +371,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -482,8 +394,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="green">公開</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -493,10 +405,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -520,8 +428,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="green">公開</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -531,10 +439,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -558,8 +462,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="green">公開</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -569,10 +473,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -596,8 +496,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="green">公開</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -607,10 +507,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
@@ -623,7 +519,7 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                </tr>
+                                               </tr>
                                                 <tr>
                                                     <td class="hasInput"><input type="checkbox"></td>
                                                     <td class="num">10</td>
@@ -634,8 +530,8 @@
                                                     </td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td><time>2019/12/16</time></td>
-                                                    <td></td>
-                                                    <td><span class="green">公開</span></td>
+                                                    <td>USER1</td>
+                                                    <td><span class="orange">待初審</span></td>
                                                     <td>
                                                         <div class="dropdown">
                                                             <button class="btn dropdown-btn">
@@ -645,10 +541,6 @@
                                                                     <li>
                                                                         <button class="btn">
                                                                             <i class="i_global"></i>預覽 </button>
-                                                                    </li>
-                                                                    <li>
-                                                                        <button class="btn">
-                                                                            <i class="i_top"></i>置頂</button>
                                                                     </li>
                                                                     <li>
                                                                         <button class="btn">
