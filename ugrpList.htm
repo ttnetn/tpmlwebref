@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SuperCMS</title>
+    <title>W CMS Lite</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -65,7 +65,7 @@
                                                     <label>群組名稱</label>
                                                 </div>
                                             </div>
-										   <div class="form_grp">
+										    <div class="form_grp">
 												<div class="labelEffect">
 													<input name="search_remark" id="search_remark" type="text">
 												<label>說明</label>
@@ -81,9 +81,10 @@
                                                 <label>是否公開</label>
 												</div>
 											</div>
-                                        <div class="btn_grp">
-                                            <button class="btn reset">取消</button>
-                                            <button class="btn btn-primary">確認</button>
+                                            <div class="btn_grp">
+                                                <button class="btn reset">取消</button>
+                                                <button class="btn btn-primary">確認</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -100,8 +101,9 @@
                                     <h3>權限群組條列</h3>
                                 </div>
                                 <div class="_head">
-                                    <div class="control_panel">
-                                    </div>
+                                    <!--沒有批次功能這整組div不留-->
+                                    <!--div class="control_panel">
+                                    </div-->
                                     <!-- 頁碼 -->
                                     <div class="pagination">
                                         <form action="" class="form_inline">
@@ -114,7 +116,7 @@
                                         </form>
                                     </div>
                                     <div class="quick_btn">
-                                        <button class="btn btn-orange"><i class="i_add"></i>新增</button>
+                                        <button class="btn btn-orange" onclick="window.location.href='ugrpEdit.htm';"><i class="i_add"></i>新增</button>
                                     </div>
                                 </div>
                                 <div class="_content">
@@ -155,10 +157,10 @@
                                                             <div class="dropdown-content">
                                                                 <ul>
                                                                     <li>
-                                                                        <button class="btn">
+                                                                        <button class="btn" onclick="window.location.href='ugrpEdit.htm';">
                                                                             <i class="i_edit"></i>編輯 </button></li>
                                                                     <li>
-                                                                        <button class="btn">
+                                                                        <button class="btn" onclick="window.location.href='ugrpAp.htm';">
                                                                             <i class="i_edit"></i>編修權限</button></li>
                                                                     <li>
                                                                         <button class="btn btn-red">
