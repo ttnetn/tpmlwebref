@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="../css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="../vendor/highlight/github-gist.css">
+    <link rel="stylesheet" href="../vendor/fancybox/jquery.fancybox.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">網站管理</a></li>
+                    <li>架構管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>架構管理</h2>
+                        <button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-3-9">
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <!-- 標題 -->
+                                    <h3>全球資訊入口網(目錄樹名稱)</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="sortable_list">
+                                        <div class="sortable">
+                                            <div>
+                                                <span>選單節點名稱 1 <div class="dropdown">
+                                                        <a href="#" class="btn-dropdown">
+                                                            <i class="i_edit"></i>
+                                                        </a>
+                                                        <div class="dropdown-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_edit"></i>編輯</button>
+                                                                </li>
+                                                                <li>
+                                                                    <!--增加下層節點-->
+                                                                    <button class="btn">
+                                                                        <i class="i_add"></i>新增</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn btn-delete">
+                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <div class="sortable n1">
+                                                    <div>
+                                                        <span> 選單 1-1 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span>選單 1-2 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                        <div class="sortable n2">
+                                                            <div>
+                                                                <span>選單 1-2-1 <div class="dropdown">
+                                                                        <a href="#" class="btn-dropdown">
+                                                                            <i class="i_edit"></i>
+                                                                        </a>
+                                                                        <div class="dropdown-content">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_edit"></i>編輯</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_add"></i>新增</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn btn-delete">
+                                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                            <div>
+                                                                <span>選單 1-2-2 <div class="dropdown">
+                                                                        <a href="#" class="btn-dropdown">
+                                                                            <i class="i_edit"></i>
+                                                                        </a>
+                                                                        <div class="dropdown-content">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_edit"></i>編輯</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_add"></i>新增</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn btn-delete">
+                                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                            <div>
+                                                                <span>選單 1-2-3 <div class="dropdown">
+                                                                        <a href="#" class="btn-dropdown">
+                                                                            <i class="i_edit"></i>
+                                                                        </a>
+                                                                        <div class="dropdown-content">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_edit"></i>編輯</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_add"></i>新增</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn btn-delete">
+                                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                            <div>
+                                                                <span>選單 1-2-4 <div class="dropdown">
+                                                                        <a href="#" class="btn-dropdown">
+                                                                            <i class="i_edit"></i>
+                                                                        </a>
+                                                                        <div class="dropdown-content">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_edit"></i>編輯</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn">
+                                                                                        <i class="i_add"></i>新增</button>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="btn btn-delete">
+                                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <span>選單 2-1 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span>選單 2-2 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span>選單 2 <div class="dropdown">
+                                                        <a href="#" class="btn-dropdown">
+                                                            <i class="i_edit"></i>
+                                                        </a>
+                                                        <div class="dropdown-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_edit"></i>編輯</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_add"></i>新增</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn btn-delete">
+                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span>選單 3 <div class="dropdown">
+                                                        <a href="#" class="btn-dropdown">
+                                                            <i class="i_edit"></i>
+                                                        </a>
+                                                        <div class="dropdown-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_edit"></i>編輯</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_add"></i>新增</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn btn-delete">
+                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span>選單 4 <div class="dropdown">
+                                                        <a href="#" class="btn-dropdown">
+                                                            <i class="i_edit"></i>
+                                                        </a>
+                                                        <div class="dropdown-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_edit"></i>編輯</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_add"></i>新增</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn btn-delete">
+                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <div class="sortable n1">
+                                                    <div>
+                                                        <span>選單 4-1 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span>選單 4-2 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span>選單 4-3 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span>選單 4-4 <div class="dropdown">
+                                                                <a href="#" class="btn-dropdown">
+                                                                    <i class="i_edit"></i>
+                                                                </a>
+                                                                <div class="dropdown-content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_edit"></i>編輯</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn">
+                                                                                <i class="i_add"></i>新增</button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button class="btn btn-delete">
+                                                                                <i class="i_trash"></i>刪除 </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span>選單 5 <div class="dropdown">
+                                                        <a href="#" class="btn-dropdown">
+                                                            <i class="i_edit"></i>
+                                                        </a>
+                                                        <div class="dropdown-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_edit"></i>編輯</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn">
+                                                                        <i class="i_add"></i>新增</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button class="btn btn-delete">
+                                                                        <i class="i_trash"></i>刪除 </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>節點編輯</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="dataParent" id="dataParent" type="hidden" value="">
+                                                <input name="CtRootID" id="CtRootID" type="hidden" value="">
+                                                <input name="ctNodeKind" id="ctNodeKind" type="hidden" value="">
+                                                <input name="catName" id="catName" type="text">
+                                                <label>節點(選單)名稱<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="catNameEng" id="catNameEng" type="text">
+                                                <label>節點(選單)英文名稱</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>										
+										<div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="ctNameLogo" id="ctNameLogo" type="file" value="">
+                                                <input name="" type="text" value="">
+                                                <button class="btn btn-primary btn-addfile">上傳</button>
+                                                 <label>上傳節點圖片</label>
+                                            </div>
+                                            <!--div class="help">說明文字</div-->
+                                        </div>
+
+
+                                        <div class="form_grp">
+                                            <div class="form_title">單元類型</div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="CtUnitKind" id="CtUnitKind_C" type="radio" value="C" checked onclick="javascript:ctUnitKindCheck();"><span>目錄</span></label>
+                                                    <label><input name="CtUnitKind" id="CtUnitKind_2" type="radio" value="2" onclick="javascript:ctUnitKindCheck();"><span>條列式</span></label>
+                                                    <label><input name="CtUnitKind" id="CtUnitKind_1" type="radio" value="1" onclick="javascript:ctUnitKindCheck();"><span>首頁式</span></label>
+                                                    <label><input name="CtUnitKind" id="CtUnitKind_U" type="radio" value="U" onclick="javascript:ctUnitKindCheck();"><span>連結</span></label>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    function ctUnitKindCheck() {
+													  if (document.getElementById('CtUnitKind_C').checked) {
+                                                            document.getElementById('nodeKind_U').style.display = 'none';
+                                                            document.getElementById('ctUnit_normal').style.display = 'none';
+															document.getElementById('ctUnit_url').style.display = 'none';
+													  }
+													  else {
+                                                        if (document.getElementById('CtUnitKind_U').checked) {
+                                                            document.getElementById('nodeKind_U').style.display = 'block';
+                                                            document.getElementById('ctUnit_normal').style.display = 'none';
+															document.getElementById('ctUnit_url').style.display = 'block';
+                                                        }
+                                                        else {
+                                                            document.getElementById('nodeKind_U').style.display = 'block';
+                                                            document.getElementById('ctUnit_normal').style.display = 'block';
+															document.getElementById('ctUnit_url').style.display = 'none';
+														}
+													  }
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+
+									<div id="nodeKind_U" class="form_grp" style="display:none;">
+										<div style="border-top: 1px solid #CFCFCF;clear: both;width:100%;"></div>
+                                        <h4 style="margin-bottom:25px;">主題單元</h4>
+
+                                        <div class="form_grp">
+                                            <div class="quick_btn">
+                                                <input name="ctUnitId" id="ctUnitId" type="hidden" value="">
+                                                <button class="btn" data-fancybox data-type="iframe" data-src="fancybox_ctUnitList.htm" href="javascript:;" style="width:120px">選擇既有單元</button>
+                                                　　(不選擇會自動建立)
+                                            </div>
+                                            <!--div class="help">說明文字</div-->
+                                        </div>
+									</div>
+
+										<div id="ctUnit_url" class="form_grp" style="display:none;">
+											<div class="form_grp">
+												<div class="labelEffect">
+													<input name="redirectUrl" id="redirectUrl" type="text">
+													<label>連結URL</label>
+												</div>
+												<!--div class="help">說明文字</div-->
+											</div>
+											<div class="form_grp">
+												<div class="form_title">另開視窗</div>
+												<div class="form_content">
+													<div class="checkSwitch">
+														<label>
+															<input name="newWindow" id="newWindow" type="checkbox" value="">
+															<div class="checkSwitch_switch"></div>
+														</label>
+													</div>
+												</div>
+											</div>           										
+											
+										</div>
+										
+										<div id="ctUnit_normal" class="form_grp" style="display:none;">
+											
+											<div class="form_grp">
+												<div class="labelEffect">
+													<input name="unitDesc" id="unitDesc" type="text">
+													<label>節點簡介說明</label>
+												</div>
+												<!--div class="help">說明文字</div-->
+											</div>
+											<div class="form_grp">
+												<div class="labelEffect">
+													<select id="ibaseDsd" name="ibaseDsd">
+														<option value="" selected="" disabled="disabled"></option>
+															<option value="7">純網頁</option>
+															<option value="2">影音資料</option>
+															<option value="3">景點</option>
+													</select>
+													<label>資料類型<abbr>*</abbr></label>
+												</div>
+											</div>										
+											
+											<div class="form_grp">
+												<div class="labelEffect">
+													<select id="xslList" name="xslList">
+														<option value="" selected="" disabled="disabled"></option>
+														<option value="1">版型1</option>
+														<option value="2">版型2</option>
+														<option value="3">版型版型版型</option>
+														<option value="4">版型</option>
+														<option value="5">版型</option>
+													</select>
+													<label>選擇條列頁版型(不選擇則為預設)<abbr>*</abbr></label>
+												</div>
+											</div>
+											<div class="form_grp">
+												<div class="labelEffect">
+													<select id="xslData" name="xslData">
+														<option value="" selected="" disabled="disabled"></option>
+														<option value="1">版型1</option>
+														<option value="2">版型2</option>
+														<option value="3">版型版型版型</option>
+														<option value="4">版型</option>
+														<option value="5">版型</option>
+													</select>
+													<label>選擇內容頁版型(不選擇則為預設)<abbr>*</abbr></label>
+												</div>
+											</div>
+											<div class="form_grp">
+												<div class="labelEffect">
+													<input name="" type="text">
+													<label>限制條件</label>
+												</div>
+												<div class="help">可為節點添加限制條件，例如限制資料大類或顯示特定單位上稿資料</div>
+											</div>											
+
+											<div style="border-top: 1px solid #CFCFCF;clear: both;width:100%;"></div>
+											<h4 style="margin-bottom:25px;">節點上稿權限設定</h4>
+											<div class="form_grp">
+												<div class="form_title">上稿權限</div>
+												<div class="form_content">
+													<div class="check_grp form_inline">
+														<label><input name="" type="checkbox" value="" checked=""><span>系統管理員</span></label>
+														<label><input name="" type="checkbox" value=""><span>網站管理員</span></label>
+														<label><input name="" type="checkbox" value=""><span>資料上稿</span></label>
+														<label><input name="" type="checkbox" value=""><span>臨時群組</span></label>
+														<label><input name="" type="checkbox" value=""><span>權限群組1</span></label>
+														<label><input name="" type="checkbox" value=""><span>權限群組2</span></label>
+														<label><input name="" type="checkbox" value=""><span>權限群組權限群組3</span></label>
+													</div>
+													<!-- <div class="help">說明文字</div> -->
+												</div>
+
+												<div class="setting_block" style="width: 100%;">
+														<div class="quick_btn">
+															<button class="btn" data-fancybox data-type="iframe" data-src="fancybox_userlist.htm" href="javascript:;"><i class="i_add"></i>選入使用者</button>
+														</div>
+													<div class="upload_block">
+														<div class="attachment_list">
+															<div class="item">
+																<!-- number -->
+																<div class="num">
+																	<span>1</span>
+																</div>
+																<span>使用者帳號｜姓名｜單位單位單位單位 </span>
+																<div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+																	<button class="btn btn-delete"><i class="i_trash"></i></button>
+																</div>
+															</div>
+															<div class="item">
+																<!-- number -->
+																<div class="num">
+																	<span>2</span>
+																</div>
+																<span>使用者帳號｜姓名｜單位 </span>
+																<div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+																	<button class="btn btn-delete"><i class="i_trash"></i></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>											
+
+											<div style="border-top: 1px solid #CFCFCF;clear: both;width:100%;"></div>
+											<h4 style="margin-bottom:25px;">節點審稿權限設定</h4>
+
+											<div class="form_grp">
+												<div class="form_title">審稿設定</div>
+												<div class="form_content">
+													<div class="radio_grp form_inline">
+														<label><input name="checkYn" type="radio" id="R1" value="N" checked onclick="javascript:reviewCheck();"><span>不需審稿</span></label>
+														<label><input name="checkYn" type="radio" id="R2" value="Y" onclick="javascript:reviewCheck();"><span>只需初審</span></label>
+														<label><input name="checkYn" type="radio" id="R3" value="3" onclick="javascript:reviewCheck();"><span>初審加複審</span></label>
+													</div>
+													<script type="text/javascript">
+														function reviewCheck() {
+															if (document.getElementById('R1').checked) {
+																document.getElementById('ifReview').style.display = 'none';
+															}
+															else document.getElementById('ifReview').style.display = 'block';
+														}
+													</script>
+												</div>
+											</div>											
+
+											<div class="form_grp" id="ifReview" style="display:none;">
+												<div class="setting_block" style="width: 100%;">
+														<div class="quick_btn">
+															<button class="btn" data-fancybox data-type="iframe" data-src="fancybox_reviewerlist.htm" href="javascript:;"><i class="i_add"></i>選入使用者</button>
+														</div>
+													<div class="upload_block">
+														<div class="attachment_list">
+															<div class="item">
+																<!-- number -->
+																<div class="num">
+																	<span>1</span>
+																</div>
+																<span>使用者帳號｜姓名｜單位單位單位單位｜ </span>
+																<span>初審｜複審 </span>
+																<div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+																	<button class="btn" data-fancybox data-type="iframe" data-src="fancybox_reviewersetting.htm" href="javascript:;"><i class="i_edit"></i></button>
+																	<button class="btn"><i class="i_trash"></i></button>
+																</div>
+															</div>
+															<div class="item">
+																<!-- number -->
+																<div class="num">
+																	<span>2</span>
+																</div>
+																<span>使用者帳號｜姓名｜單位｜ </span>
+																<span>初審 </span>
+																<div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+																	<button class="btn" data-fancybox data-type="iframe" data-src="fancybox_reviewersetting.htm" href="javascript:;"><i class="i_edit"></i></button>
+																	<button class="btn"><i class="i_trash"></i></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>											
+											
+											
+										</div>
+
+                                       <div class="btn_grp">
+                                            <button class="btn">清除重設(回復前次設定)</button>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>節點設定</h3>
+                                    </div>
+                                    <div class="log">
+                                        <div class="form_grp">
+                                            <div class="form_title">顯示於目錄選單<abbr>*</abbr> </div>
+                                            <div class="form_content">
+                                                <div class="checkSwitch">
+                                                    <label>
+                                                        <input name="inUse" type="checkbox" value="Y">
+                                                        <div class="checkSwitch_switch"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>節點狀態</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_man"></i></span><a href="#">系統管理者(admin)</a>
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-orange">儲存</button>
+                                        <button class="btn">取消</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>節點內容</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_global"></i></span>資料筆數: <em>1,099</em> 筆 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+            <!-- JS-->
+            <script src="../js/jquery-3.3.1.min.js"></script>
+            <script src="../vendor/jquery.easing.min.js"></script>
+            <!-- template customize js -->
+            <script src="../js/customize.js"></script>
+            <!-- highlight -->
+            <script src="../vendor/highlight/highlight.pack.js"></script>
+            <script>
+            hljs.initHighlightingOnLoad();
+            </script>
+            <!-- fancybox -->
+            <script src="../vendor/fancybox/jquery.fancybox.min.js"></script>
+            <!-- sortable -->
+            <script src="../vendor/sortable/Sortable.min.js"></script>
+            <script type="text/javascript">
+            var elements = $('.sortable');
+            for (var i = 0; i < elements.length; i++) {
+                new Sortable(elements[i], {
+                    group: 'nested',
+                    animation: 150,
+                    invertSwap: true,
+                    fallbackOnBody: true,
+                    swapThreshold: 0.65
+                });
+            }
+            </script>
+            <script>
+            $('header').load("header.htm");
+            $('aside').load("aside.htm");
+            </script>
+</body>
+
+</html>

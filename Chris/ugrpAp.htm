@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperCMS</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="../css/supercms.css">
+    <!-- <link rel="stylesheet" href="../css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="../vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">系統管理</a></li>
+                    <li>權限群組</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>權限設定</h2>
+                   </div>
+
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <!-- 左側widget -->
+                            <div class="widget_block">
+                                <div class="_head">
+                                    <h3>權限分類</h3>
+                                </div>
+                                <div class="_content">
+                                    <!-- 目錄樹區塊 -->
+                                    <div class="treeview_block">
+										<ul>
+											<li>
+												<a href="ugrpAp.htm?apcat=3">網站管理</a>
+											</li>
+											<li>
+												<a href="ugrpAp.htm?apcat=2">資料管理(上稿)</a>
+											</li>
+											<li>
+												<a href="ugrpAp.htm?apcat=8">系統管理</a>
+											</li>
+											<li>
+												<a href="ugrpAp.htm?apcat=9">系統開發</a>
+											</li>
+											<li>
+												<a href="ugrpAp.htm?apcat=7">功能管理</a>
+											</li>
+											
+										</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>網站管理</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="fix-form">
+											<form action="">
+												<input type="hidden" name="apcat" value="3">
+												<div class="aRightbox">
+												   
+												</div>
+												<!-- table對齊-(置左)class="aLeft"、(置中)class="aCenter"、(置右) class="aRight" -->
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="資料表格">
+												  <tr>
+													<th scope="col" width="2%"></th>
+													<th scope="col" width="auto">程式名稱</th>
+													<th scope="col" width="auto">查詢</th>
+													<th scope="col" width="auto">新增</th>
+													<th scope="col" width="auto">修改</th>
+													<th scope="col" width="auto">刪除</th>
+													<th scope="col" width="auto">列印</th>
+													<th scope="col" width="auto">備用A</th>
+													<th scope="col" width="auto">備用B</th>
+												</tr>
+												<tr>
+													<td><input type="checkbox" name="GE1T01" value="1" checked></td>
+													<td>資料範本定義</td>
+													<td class="aCenter"><input type="checkbox" name="GE1T01" value="2" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T01" value="4" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T01" value="8" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T01" value="16" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T01" value="32" style="display:inline-block; cursor:hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T01" value="64" style="display:inline-block; cursor:hand;" title="全體"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T01" value="128" style="display:inline-block; cursor:hand;" title="多項出版"></td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" name="GE1T11" value="1" checked></td>
+													<td>主題單元管理</td>
+													<td class="aCenter"><input type="checkbox" name="GE1T11" value="2" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T11" value="4" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T11" value="8" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T11" value="16" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T11" value="32" style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T11" value="64" style="display: none;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T11" value="128" style="display: none;"></td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" name="GE1T21" value="1" checked></td>
+													<td>目錄樹管理</td>
+													<td class="aCenter"><input type="checkbox" name="GE1T21" value="2" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T21" value="4" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T21" value="8" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T21" value="16" checked style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T21" value="32" style="display: inline-block; cursor: hand;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T21" value="64" style="display: none;"></td>
+													<td class="aCenter"><input type="checkbox" name="GE1T21" value="128" style="display: none;"></td>
+												</tr>
+												
+											</table>
+
+										</form>
+                                        <div class="btn_grp">
+											<button class="btn btn-submit">編修儲存</button>
+											<button class="btn btn-delete">刪除</button>
+											<button class="btn btn-reset">清除重填</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="../js/customize.js"></script>
+    <!-- highlight -->
+    <script src="../vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="../vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>
