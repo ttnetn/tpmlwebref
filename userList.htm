@@ -112,7 +112,7 @@
                                 <div class="_head">
                                     <div class="control_panel">
                                         <button class="btn btn-sm btn-red"><i class="i_trash invert"></i>批次刪除</button>
-                                        <button class="btn btn-sm btn-red"><i class="i_trash invert"></i>批次修改權限</button>
+                                        <!--button class="btn btn-sm btn-red"><i class="i_trash invert"></i>批次修改權限</button-->
                                     </div>
                                     <!-- 頁碼 -->
                                     <div class="pagination">
@@ -126,7 +126,7 @@
                                         </form>
                                     </div>
                                     <div class="quick_btn">
-                                        <button class="btn btn-orange"><i class="i_add"></i>新增</button>
+                                        <button class="btn btn-orange" onclick="window.location.href='userEdit.htm';"><i class="i_add"></i>新增</button>
                                     </div>
                                 </div>
                                 <div class="_content">
@@ -164,7 +164,7 @@
                                                 <tr>
                                                     <td><input type="checkbox"></td>
                                                     <td class="num">1</td>
-                                                    <td><a href="userEdit.htm?id=ADMIN">ADMIN</a></td>
+                                                    <td><a href="userEdit.htm">ADMIN</a></td>
                                                     <td>系統超級管理員</td>
                                                     <td>資訊處</td>
                                                     <td><span class="green">啟用</span></td>
@@ -176,7 +176,7 @@
                                                             <div class="dropdown-content">
                                                                 <ul>
                                                                     <li>
-                                                                        <button class="btn">
+                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
                                                                             <i class="i_edit"></i>編輯 </button></li>
                                                                     <li>
                                                                         <button class="btn btn-red">
