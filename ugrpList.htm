@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperCMS</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="light.htm">首頁</a></li>
+                    <li><a href="#">系統管理</a></li>
+                    <li>權限群組</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>權限群組管理</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="search_ugrpid" id="search_ugrpid" type="text" value="">
+                                                    <label>群組ID</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="search_ugrpName" id="search_ugrpName" type="text" value="">
+                                                    <label>群組名稱</label>
+                                                </div>
+                                            </div>
+										   <div class="form_grp">
+												<div class="labelEffect">
+													<input name="search_remark" id="search_remark" type="text">
+												<label>說明</label>
+												</div>
+											</div>
+											<div class="form_grp">
+												<div class="labelEffect">
+													<select name="search_isPublic" id="search_isPublic">
+														<option value="" disabled selected></option>
+														<option value="Y">是</option>
+														<option value="N">否</option>
+													</select>
+                                                <label>是否公開</label>
+												</div>
+											</div>
+                                        <div class="btn_grp">
+                                            <button class="btn reset">取消</button>
+                                            <button class="btn btn-primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>權限群組條列</h3>
+                                </div>
+                                <div class="_head">
+                                    <div class="control_panel">
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <form action="" class="form_inline">
+                                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">30</option>
+                                                    <option value="">50</option>
+                                                    <option value="">100</option>
+                                                </select> 筆 </div>
+                                        </form>
+                                    </div>
+                                    <div class="quick_btn">
+                                        <button class="btn btn-orange"><i class="i_add"></i>新增</button>
+                                    </div>
+                                </div>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <a href="#">群組ID<i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th>
+                                                        <a href="#">群組名稱<i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th>
+                                                        <a href="#">是否公開<i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th class="text-left">
+                                                        <a href="#">說明 <i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="ugrpEdit.htm?id=SysAdm">SysAdm</a></td>
+                                                    <td>系統管理</td>
+                                                    <td><span class="green">是</span></td>
+                                                    <td>系統管理系統管理系統管理系統管理系統管理系統管理</td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編修權限</button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="ugrpEdit.htm?id=SysAdm">SysAdm</a></td>
+                                                    <td>系統管理</td>
+                                                    <td><span class="green">是</span></td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編修權限</button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="ugrpEdit.htm?id=SysAdm">SysAdm</a></td>
+                                                    <td>系統管理</td>
+                                                    <td><span class="red">否</span></td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編修權限</button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>				
+                                                <tr>
+                                                    <td><a href="ugrpEdit.htm?id=SysAdm">SysAdm</a></td>
+                                                    <td>系統管理</td>
+                                                    <td><span class="green">是</span></td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編修權限</button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="ugrpEdit.htm?id=SysAdm">SysAdm</a></td>
+                                                    <td>系統管理</td>
+                                                    <td><span class="green">是</span></td>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"></i>編修權限</button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>												
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>

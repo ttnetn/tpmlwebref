@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SuperCMS</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="light.htm">首頁</a></li>
+                    <li><a href="#">系統管理</a></li>
+                    <li>組織架構</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>編修組織</h2>
+                         <a href="deptAdd.html?parent=0"><button class="btn btn-primary btn-adv">
+                            新增下層組織</button></a>
+                   </div>
+
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <!-- 左側widget -->
+                            <div class="widget_block">
+                                <div class="_head">
+                                    <h3>組織架構</h3>
+                                </div>
+                                <div class="_content">
+                                    <!-- 目錄樹區塊 -->
+                                    <div class="treeview_block">
+                                        <ul class="treeview">
+                                            <li class="collapsable">
+                                                <div class="hitarea collapsable-hitarea"></div><span class="folder"><a href="deptEdit?deptId=0">機關單位</a></span>
+                                                <ul class="treeview">
+                                                    <li class="collapsable">
+                                                        <div class="hitarea collapsable-hitarea"></div><span class="folder"><a href="deptEdit?deptId=001">A單位</a></span>
+                                                        <ul id="folder21" class="treeview">
+                                                            <li><a href="deptEdit?deptId=00101" class=""><span class="file">a-1單位</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00102" class=""><span class="file">a-2單位</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00103" class=""><span class="file">a-3單位</span></a></li>
+                                                            <li class="last"><a href="deptEdit?deptId=00104"><span class="file">a-4單位</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="collapsable lastCollapsable">
+                                                        <span class="folder"><a href="deptEdit?deptId=002">某科</a></span>
+                                                        <ul id="folder21" class="treeview">
+                                                            <li><a href="deptEdit?deptId=00201"><span class="file">一組</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00202"><span class="file">二組</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00203"><span class="file">三組</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00204"><span class="file">四組</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00205"><span class="file">五組</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00206"><span class="file">六組</span></a></li>
+                                                            <li><a href="deptEdit?deptId=00207"><span class="file">七組</span></a></li>
+                                                            <li class="last"><a href="deptEdit?deptId=00208"><span class="file">八組</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>編修組織單位資料</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+												<input type="text" id="deptId" value="0" readonly="true">
+												<label for="deptId">單位代號<abbr>*</abbr></label>
+											<!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="deptName" value="系統總管理">
+												<label for="deptName">部門中文名稱<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="abbrName" value="">
+												<label for="deptName">單位簡稱</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="edeptName" value="">
+												<label for="edeptName">英文名稱</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="eabbrName" value="">
+												<label for="eabbrName">英文簡稱</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="deptCode" value="">
+												<label for="deptCode">單位代碼</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="seq" value="">
+												<label for="seq">顯示次序</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="servPhone" value="">
+												<label for="servPhone">單位住址</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input type="text" id="servPhone" value="">
+												<label for="servPhone">單位電話</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="orgRank" id="orgRank">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                <option value="0">頂級</option>
+                                                <option value="1">一級</option>
+                                                <option value="2">二級</option>
+                                                </select>
+                                                <label>單位層級</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">是否有效<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="checkSwitch">
+                                                    <label>
+                                                        <input name="inUse" id="inUse" type="checkbox" value="Y">
+                                                        <div class="checkSwitch_switch"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+											<button class="btn btn-submit">編修儲存</button>
+											<button class="btn btn-delete">刪除</button>
+											<button class="btn btn-reset">清除重填</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>
