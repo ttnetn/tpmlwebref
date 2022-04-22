@@ -29,16 +29,16 @@
             <!-- breadcrumb路徑 -->
             <div class="breadcrumb">
                 <ul>
-                    <li><a href="light.htm">首頁</a></li>
-                    <li><a href="#">節點</a></li>
-                    <li>節點</li>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">內容管理</a></li>
+                    <li>單元上稿</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>資料發布</h2>
+                        <h2>單元上稿</h2>
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
@@ -55,73 +55,55 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="" type="text" value="">
-                                                    <label>文字表單</label>
+                                                    <label>標題</label>
                                                 </div>
                                             </div>
-                                            <div class="form_grp">
+                                            <!--div class="form_grp">
                                                 <div class="labelEffect">
-                                                    <input name="" type="text" value="">
-                                                    <button class="btn btn-text">選擇</button>
-                                                    <label>請選擇人員</label>
+                                                    <select id="" name="">
+                                                        <option value="" selected="" disabled="disabled"></option>
+                                                        <optgroup label="資料夾">
+                                                            <option value="1">節點</option>
+                                                            <option value="2">節點</option>
+                                                          </optgroup>
+                                                          <optgroup label="資料夾2">
+                                                            <option value="3">節點</option>
+                                                            <option value="4">節點</option>
+                                                            <option value="4">節點</option>
+                                                          </optgroup>                                                        
+                                                    </select>
+                                                    <label>上稿單元選擇</label>
                                                 </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <div class="form_title">行內排列</div>
-                                                <div class="form_content">
-                                                    <div class="radio_grp form_inline">
-                                                        <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
-                                                        <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
-                                                        <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <div class="form_title">行內排列</div>
-                                                <div class="form_content">
-                                                    <div class="check_grp form_inline">
-                                                        <label><input name="" type="checkbox" value=""><span>選項一</span></label>
-                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
-                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp datepick">
-                                                <div class="labelEffect">
-                                                    <input name="" type="calendar" value="" class="calendar">
-                                                    <button class="btn"><i class="i_calendar"></i></button>
-                                                    <label>日期選擇</label>
-                                                </div>
-                                            </div>
+                                            </div-->
                                             <div class="form_grp datepick">
                                                 <div class="startDate">
                                                     <div class="labelEffect">
-                                                        <input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button>
-                                                        <label>開始日期<abbr>*</abbr></label>
+                                                        <input name="" type="date" value="">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>上線開始日期<abbr>*</abbr></label>
                                                     </div>
                                                     <!-- <div class="help">說明文字</div> -->
                                                 </div>
                                                 <div class="endDate">
                                                     <div class="labelEffect">
-                                                        <input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button>
-                                                        <label>結束日期<abbr>*</abbr></label>
+                                                        <input name="" type="date" value="">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>上線結束日期<abbr>*</abbr></label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <select id="" name="">
-                                                        <option value="" disabled selected></option>
-                                                        <option value="">選項1</option>
-                                                        <option value="">選項2</option>
-                                                        <option value="">選項3</option>
-                                                        <option value="">選項4</option>
-                                                        <option value="">選項5</option>
-                                                    </select>
-                                                    <label>下拉選單樣式</label>
+                                            <!--div class="form_grp">
+                                                <div class="form_title">特殊設定</div>
+                                                <div class="form_content">
+                                                    <div class="check_grp form_inline">
+                                                        <label><input name="" type="checkbox" value=""><span>置頂</span></label>
+                                                        <-label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </div-->
                                         </div>
                                         <div class="btn_grp">
                                             <button class="btn reset">取消</button>
@@ -140,11 +122,108 @@
                                     <h3>網站單元</h3>
                                 </div>
                                 <div class="widget">
-                                    <!-- 目錄樹區塊 -->
+                                    <div class="treeview_block">
+                                        <ul id="myUL" class="treeview">
+                                            <li><span class="caret">目錄樹一</span>
+                                              <ul class="nested">
+                                                <li>關於我們</li>
+                                                <li>節點</li>
+                                                <li><span class="caret">第二層</span>
+                                                  <ul class="nested">
+                                                    <li>第三層</li>
+                                                    <li>節點第三層</li>
+                                                    <li><span class="caret">Green Tea</span>
+                                                      <ul class="nested">
+                                                        <li>Sencha</li>
+                                                        <li>Gyokuro</li>
+                                                        <li>Matcha</li>
+                                                        <li>Pi Lo Chun</li>
+                                                      </ul>
+                                                    </li>
+                                                  </ul>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                        </ul>
+                                        <ul id="myUL" class="treeview">
+                                            <li><span class="caret">Beverages</span>
+                                              <ul class="nested">
+                                                <li>Water</li>
+                                                <li>Coffee</li>
+                                                <li><span class="caret">Tea</span>
+                                                  <ul class="nested">
+                                                    <li>Black Tea</li>
+                                                    <li>White Tea</li>
+                                                    <li><span class="caret">Green Tea</span>
+                                                      <ul class="nested">
+                                                        <li>Sencha</li>
+                                                        <li>Gyokuro</li>
+                                                        <li>Matcha</li>
+                                                        <li>Pi Lo Chun</li>
+                                                      </ul>
+                                                    </li>
+                                                  </ul>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <style>
+                                        ul, #myUL {
+                                          list-style-type: none;
+                                        }
+                                        
+                                        #myUL {
+                                          margin: 0;
+                                          padding: 0;
+                                        }
+                                        
+                                        .caret {
+                                          cursor: pointer;
+                                          -webkit-user-select: none; /* Safari 3.1+ */
+                                          -moz-user-select: none; /* Firefox 2+ */
+                                          -ms-user-select: none; /* IE 10+ */
+                                          user-select: none;
+                                        }
+                                        
+                                        .caret::before {
+                                          content: "\25B6";
+                                          color: black;
+                                          display: inline-block;
+                                          margin-right: 6px;
+                                        }
+                                        
+                                        .caret-down::before {
+                                          -ms-transform: rotate(90deg); /* IE 9 */
+                                          -webkit-transform: rotate(90deg); /* Safari */'
+                                          transform: rotate(90deg);  
+                                        }
+                                        
+                                        .nested {
+                                          display: none;
+                                        }
+                                        
+                                        .active {
+                                          display: block;
+                                        }
+                                    </style>
+                                    <script>
+                                        var toggler = document.getElementsByClassName("caret");
+                                        var i;
+                                        
+                                        for (i = 0; i < toggler.length; i++) {
+                                          toggler[i].addEventListener("click", function() {
+                                            this.parentElement.querySelector(".nested").classList.toggle("active");
+                                            this.classList.toggle("caret-down");
+                                          });
+                                        }
+                                    </script>
+
+                                    <!-- 設計師的目錄樹區塊 -->
                                     <div class="treeview_block">
                                         <ul class="treeview">
                                             <li class="collapsable">
-                                                <div class="hitarea collapsable-hitarea"></div><span class="folder">關於本署</span>
+                                                <div class="hitarea collapsable-hitarea"></div><span class="folder">目錄樹一</span>
                                                 <ul class="treeview">
                                                     <li class="collapsable">
                                                         <div class="hitarea collapsable-hitarea"></div><span class="folder">沿革與架構</span>
@@ -185,7 +264,7 @@
                                                 </ul>
                                             </li>
                                             <li class="expandable">
-                                                <div class="hitarea closed-hitarea expandable-hitarea"></div><span class="folder">其他單位</span>
+                                                <div class="hitarea closed-hitarea expandable-hitarea"></div><span class="folder">目錄樹二</span>
                                                 <ul class="treeview">
                                                     <li><span class="file">其他單位</span></li>
                                                     <li class="last"><span class="file">其他單位</span></li>
