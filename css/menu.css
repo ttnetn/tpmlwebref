@@ -1,4 +1,3 @@
 @media screen and (min-width: 700px) and (max-width: 999px){
     .hidden .menu ul li.li_hasChild a:hover: ul{display:block;border:1px solid red;}
-
 }
