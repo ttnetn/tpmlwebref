@@ -41,7 +41,7 @@
                 <div class="container">
                     <div class="title">
                         <h2>資料審核</h2>
-                        <button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button>
+                        <button class="btn" onclick="window.location.href='review_list.htm';">放棄</button>
                     </div>
                     <div class="flex-12">
                         <div class="col">
@@ -637,6 +637,22 @@
                                 <!-- 每種不同功能，都用block區分 -->
                                 <div class="block">
                                     <div class="_head">
+                                        <h3>審稿狀態</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">審核狀態<abbr>*</abbr></div>
+                                            <div class="form_content">待初審</div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-green">不通過</button>
+                                        <button class="btn">預覽</button>
+                                        <button class="btn btn-orange">審核通過</button>
+                                    </div>
+                                </div>
+                                <div class="block" style="display:none;">
+                                    <div class="_head">
                                         <h3>資料狀態</h3>
                                     </div>
                                     <div class="flex-form">
@@ -650,6 +666,17 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>最後編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li id="editor" value="0"><span><i class="i_man"></i></span>劉佳淇</li>
+                                            <li id="deditDate" value="0"><span><i class="i_clock"></i></span>2022-04-22T14:35:00</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="block">
@@ -711,22 +738,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="block">
-                                    <div class="_head">
-                                        <h3>審稿狀態</h3>
-                                    </div>
-                                    <div class="flex-form">
-                                        <div class="form_grp">
-                                            <div class="form_title">審核狀態<abbr>*</abbr></div>
-                                            <div class="form_content">待初審</div>
-                                        </div>
-                                    </div>
-                                    <div class="btn_grp">
-                                        <button class="btn btn-green">不通過</button>
-                                        <button class="btn">預覽</button>
-                                        <button class="btn btn-orange">審核通過</button>
                                     </div>
                                 </div>
                             </div>
