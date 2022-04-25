@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/fileUpload.css">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+          selector: '#mytextarea'
+        });
+      </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">內容管理</a></li>
+                    <li>快速上稿</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>新增資料</h2>
+                        <button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button>
+                    </div>
+                    <div class="flex-12">
+                        <div class="col">
+                            <!-- 中央區塊 -->
+                            <div class="content_block edit_block">
+                                <div class="tabBtn_block">
+                                    <div class="tab_items">
+                                        <button class="btn active"><i class="i_setting"></i>單元設定</button>
+                                        <button class="btn"><i class="i_edit"></i>內容編輯</button>
+                                        <button class="btn"><i class="i_info"></i>詮釋資料</button>
+                                    </div>
+                                </div>
+                                <!--頁籤區-->
+                                <div class="tab__content">
+                                    <!--tabcontent 2--><!--單元設定-->
+                                    <div class="active">
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>單元設定</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <!-- setting_block為資料上稿專用 -->
+                                                <div class="setting_block">
+                                                    <div class="flex-form">
+                                                        <h3>上稿單元</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="全球資訊入口網 / 消息公告 / 最新消息">
+                                                                <button class="btn btn-primary btn-text">選擇</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <ol>
+                                                                <li>全球資訊入口網 / 消息公告 / 最新消息</li>
+                                                                <li>部屬單位網 / 消息公告 / 最新消息</li>
+                                                                <li>主題網 / 消息公告 / 最新消息</li>
+                                                            </ol>
+                                                        </div>
+
+                                                        <!-- <h3>網址</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="https://www.hyweb.com.tw/postID">
+                                                                <button class="btn btn-primary btn-text">複製</button>
+                                                                <label>網址</label>
+                                                            </div>
+                                                        </div> -->
+                                                        <h3>關鍵字/標籤</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="">
+                                                                <!-- <label>標籤</label> -->
+                                                            </div>
+                                                            <div class="help">空白區分多個標籤</div>
+                                                        </div>
+                                                        <!-- <h3>同步發佈單元</h3>
+                                                        <h4>全球資訊入口網</h4>
+                                                        <div class="multi-flex-form-5">
+                                                            <div class="form_grp" style="clear: both;">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">最新消息</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                    <div class="help">說明文字</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">申辦服務</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">申辦服務</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h4>第二顆樹</h4>
+                                                        <div class="multi-flex-form-5">
+                                                            <div class="form_grp" style="clear: both;">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">最新消息</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">申辦服務</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">申辦服務</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>行政公告</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>法案動態</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="form_title">關於本署</div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp">
+                                                                        <label><input name="" type="checkbox" value=""><span>新聞訊息</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                                                        <h3>是否推薦</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected disabled="disabled"></option>
+                                                                    <option value="Y">是</option>
+                                                                    <option value="N">否</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <h3>分類分眾</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select id="" name="" class="used">
+                                                                    <option value="" selected="" disabled="disabled">請選擇</option>
+                                                                    <option value="選項1">選項1</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                                <label>資料大類</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="form_title">分眾</div>
+                                                            <div class="form_content">
+                                                                <div class="checkbox_grp form_inline">
+                                                                    <label><input name="" type="checkbox" value=""><span>分眾1</span></label>
+                                                                    <label><input name="" type="checkbox" value=""><span>分眾2</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                
+                                                        <h3>上稿資訊</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="" disabled="disabled">
+                                                                    <option value="" disabled="disabled"></option>
+                                                                    <option value="選項1" selected>台中市政府</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="系統管理者" disabled>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="04-22289111 #22104" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="systemvod@gmail.com" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--tabcontent 3--><!--內容設定-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>內容編輯</h3>
+                                                <div class="flex-form">
+                                                    <div class="form_grp data-title">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="">
+                                                            <label>請輸入資料標題<abbr>*</abbr></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="_content">
+                                                <!-- 自由編輯區 -->
+                                                <div class="cp user_edit" style="min-height:200px;">
+                                                    <textarea id="mytextarea">Hello, World!</textarea>
+                                                </div>
+                                                <hr>
+                                                <!-- 圖片上傳區 -->
+                                                <div class="setting_block">
+                                                    <h3>附件圖片
+                                                        <!--改成上傳和圖庫選擇-->
+                                                        <button class="btn btn-xs btn-addfile"><i class="i_add"></i>上傳圖片</button>
+                                                        <!-- <button class="btn btn-xs" data-fancybox data-type="iframe" data-src="fancybox_choose_media.htm"><i class="i_photo"></i>上傳圖片</button> -->
+                                                        <button class="btn btn-xs" data-fancybox data-type="iframe" data-src="fancybox_choose_media.htm"><i class="i_photo"></i>圖庫選擇</button>
+                                                    </h3>
+                                                    <div class="upload_content">
+                                                        <a href="#" class="close"><i class="i_close"></i></a>
+                                                        <p>請把檔案拖曳到此區域，或按此<button class="btn btn-xs btn-blue">上傳檔案</button>；每筆檔案限制<span>1</span>MB</p>
+                                                        <div class="photo_list">
+                                                            <div class="item">
+                                                                <!-- 上傳完，移除loading -->
+                                                                <div class="img-container">
+                                                                    <!-- <div class="loading"></div> -->
+                                                                    <img src="images/demo/01.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <!-- <div class="loading"></div> -->
+                                                                    <img src="images/demo/02.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/03.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/04.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/05.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/06.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/07.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="img-container">
+                                                                    <div class="loading"></div>
+                                                                    <img src="images/demo/08.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>xxxxxx.jpg</p>
+                                                            </div>
+                                                            <div class="item error">
+                                                                <a href="#" class="delete"><i class="i_close"></i></a>
+                                                                <div class="img-container">
+                                                                    <img src="images/demo/08.jpg" alt="" class="cover">
+                                                                </div>
+                                                                <p>檔案上傳錯誤</p>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="fileDragDrop">
+                                                        <input type="file" id="inputImg" onchange="changeHandler(event,'img')" ondragover="dragoverHandler(event,'img')" ondrop="dropHandler(event,'img')">
+                                                        <p><em>上傳圖片檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                    </div>
+                                                    <p class="tips">接受MPEG-2,MPEG-4等影片格式，影音編碼說請至公佈欄，檔案大小請勿超過500MB(內網)或250MB(外網)。與本平台現有上架影片內容相同者，不得重複上傳，違者退件。如欲下載已上傳的影片，請在連結上點滑鼠右鍵，選擇"另存目標"。非下述任一影片內容者，一律退件: (A)業務機關自製文創影片(中英);(B)上級機關自製文創影片(中英); (C)其他介紹中市府文創影片(中英)。上傳影片的播放權需為本府所有，若涉及侵權或危害善良風俗者，上傳單位應自負咎責。</p>
+                    
+                                                    <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/01.jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional">
+                                                                <div class="checkbox_grp">
+                                                                    <label><input name="checkSample" type="checkbox" value="" checked><span>主圖</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/02.jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="" placeholder="請輸入圖片說明">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional">
+                                                                <div class="checkbox_grp">
+                                                                    <label><input name="checkSample" type="checkbox" value=""><span>主圖</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/03.jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="" placeholder="請輸入圖片說明">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional">
+                                                                <div class="checkbox_grp">
+                                                                    <label><input name="checkSample" type="checkbox" value=""><span>主圖</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <!-- 附件檔案上傳 -->
+                                                <div class="setting_block">
+                                                    <h3>附件檔案上傳 <button class="btn btn-xs"><i class="i_addfile"></i>新增檔案</button></h3>
+                                                    <div class="fileDragDrop">
+                                                        <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
+                                                        <p><em>上傳附件檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                      </div>
+                                                      <p class="tips">接受MPEG-2,MPEG-4等影片格式，影音編碼說請至公佈欄，檔案大小請勿超過500MB(內網)或250MB(外網)。與本平台現有上架影片內容相同者，不得重複上傳，違者退件。如欲下載已上傳的影片，請在連結上點滑鼠右鍵，選擇"另存目標"。非下述任一影片內容者，一律退件: (A)業務機關自製文創影片(中英);(B)上級機關自製文創影片(中英); (C)其他介紹中市府文創影片(中英)。上傳影片的播放權需為本府所有，若涉及侵權或危害善良風俗者，上傳單位應自負咎責。</p>
+
+                                                      <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_xls.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.xls </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <!-- 相關連結 -->
+                                                <div class="setting_block">
+                                                    <h3>相關連結</h3>
+                                                    <div class="link_block">
+                                                        <!-- item = 1 link -->
+                                                        <div class="item">
+                                                            <div class="flex-form">
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="自訂連結顯示名稱">
+                                                                        <label>連結名稱</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="https://www.hyweb.com.tw">
+                                                                        <label>請填入URL連結位址</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional">
+                                                                <a href="#" class="btn"><i class="i_edit"></i>移除</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- item = 1 link 永遠保留一組新增 -->
+                                                        <div class="item">
+                                                            <div class="flex-form">
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="">
+                                                                        <label>連結名稱</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect">
+                                                                        <input name="" type="text" value="">
+                                                                        <label>請填入URL連結位址</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional">
+                                                                <a href="#" class="btn"><i class="i_add"></i>新增</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="setting_block">
+                                                    <h3>單元備用欄位</h3>
+                                                    <div class="flex-form">
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="">
+                                                                <label>備用TEXT欄位</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected disabled="disabled"></option>
+                                                                    <option value="Y">是</option>
+                                                                    <option value="N">否</option>
+                                                                </select>
+                                                                <label>備用Select欄位</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <textarea></textarea>
+                                                                <label>備用Textarea欄位</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="form_title">備用Radio欄位</div>
+                                                            <div class="form_content">
+                                                                <div class="radio_grp form_inline">
+                                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
+                                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
+                                                                    <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="form_title">行內排列</div>
+                                                            <div class="form_content">
+                                                                <div class="check_grp form_inline">
+                                                                    <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                                    <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                    <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--tabcontent 3-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>Metadata編輯</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="setting_block">
+                                                    <div class="flex-form">
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>標題<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>主旨<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <textarea></textarea>
+                                                                <label>多行文字輸入表單</label>
+                                                            </div>
+                                                            <div class="help">說明文字</div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>貢獻者<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected="" disabled="disabled"></option>
+                                                                    <option value="選項1">選項1</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                                <label>資料類型</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected="" disabled="disabled"></option>
+                                                                    <option value="選項1">選項1</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                                <label>資料格式</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp datepick">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="calendar" value="" class="calendar">
+                                                                <button class="btn"><i class="i_calendar"></i></button>
+                                                                <label>日期選擇</label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>來源<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>貢獻者<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>涵蓋範圍<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>識別資料<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>關聯<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text">
+                                                                <label>著作權<abbr>*</abbr></label>
+                                                            </div>
+                                                            <!-- <div class="help">說明文字</div> -->
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="">
+                                                                    <option value="" selected="" disabled="disabled"></option>
+                                                                    <option value="選項1">選項1</option>
+                                                                    <option value="選項2">選項2</option>
+                                                                    <option value="選項3">選項3</option>
+                                                                    <option value="選項4">選項4</option>
+                                                                    <option value="選項5">選項5</option>
+                                                                </select>
+                                                                <label>語言</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_grp">
+                                                            <button class="btn">清除以上資料</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右側資料widget -->
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>資料狀態</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioStatus" type="radio" value="" checked><span>公開</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>不公開(隱藏)</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>下架</span></label>
+                                                    <!--label><input name="radioStatus" type="radio" value=""><span>草稿</span></label-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-green">暫存</button>
+                                        <button class="btn">預覽</button>
+                                        <button class="btn btn-orange">確定發布</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>最後編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_man"></i></span>系統管理者(admin)
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>發佈選項</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp datepick">
+                                            <div class="form_title">發佈時間<abbr>*</abbr></div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="datetime-local" value="2021-10-03T19:30">
+                                                    <!--button class="btn"><i class="i_calendar"></i></button-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form_grp datepick">
+                                            <div class="form_title">下架時間</div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="datetime-local" value="">
+                                                    <!--input name="" type="calendar" value="" class="calendar">
+                                                    <button class="btn"><i class="i_calendar"></i></button-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form_grp">
+                                            <div class="form_title">另開視窗<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioSample" type="radio" value="" checked><span>否</span></label>
+                                                    <label><input name="radioSample" type="radio" value=""><span>是</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="" class="used">
+                                                    <option value="" selected="" disabled="disabled">請選擇</option>
+                                                    <option value="選項1">選項1</option>
+                                                    <option value="選項2">選項2</option>
+                                                    <option value="選項3">選項3</option>
+                                                    <option value="選項4">選項4</option>
+                                                    <option value="選項5">選項5</option>
+                                                </select>
+                                                <label>資料大類</label>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form_grp">
+                                            <div class="form_title">分眾</div>
+                                            <div class="form_content">
+                                                <div class="checkbox_grp form_inline">
+                                                    <label><input name="" type="checkbox" value=""><span>分眾1</span></label>
+                                                    <label><input name="" type="checkbox" value=""><span>分眾2</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>
