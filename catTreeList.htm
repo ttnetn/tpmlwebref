@@ -40,8 +40,7 @@
                 <div class="container">
                     <div class="title">
                         <h2>目錄樹條列</h2>
-                        <button class="btn btn-primary btn-adv">
-                            <i class="i_search"></i></button>
+                        <button class="btn btn-primary btn-adv"><i class="i_search"></i></button>
                     </div>
                     <!-- flex-12 -->
                     <div class="flex-12">
@@ -88,9 +87,10 @@
                                                 <label>是否公開</label>
 												</div>
 											</div>
-                                        <div class="btn_grp">
-                                            <button class="btn reset">取消</button>
-                                            <button class="btn btn-primary">確認</button>
+                                            <div class="btn_grp">
+                                                <button class="btn reset">取消</button>
+                                                <button class="btn btn-primary">確認</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -107,8 +107,8 @@
                                     <h3>目錄樹條列</h3>
                                 </div>
                                 <div class="_head">
-                                    <div class="control_panel">
-                                    </div>
+                                    <!--div class="control_panel">
+                                    </div-->
                                     <!-- 頁碼 -->
                                     <div class="pagination">
                                         <form action="" class="form_inline">
@@ -121,7 +121,7 @@
                                         </form>
                                     </div>
                                     <div class="quick_btn">
-                                        <a href="catTreeAdd.htm"><button class="btn btn-orange"><i class="i_add"></i>新增</button></a>
+                                        <a href="catTreeAdd.htm"><button class="btn btn-orange" onclick="window.location.href='catTreeAdd.htm';"><i class="i_add"></i>新增</button></a>
                                     </div>
                                 </div>
                                 <div class="_content">
@@ -151,9 +151,9 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><a href="catTreeEdit.htm?CtRootID=1">目錄樹1</a></td>
+                                                    <td><a href="catTreeEdit.htm">目錄樹1 - 目錄樹名稱目錄樹名稱目錄樹名稱</a></td>
                                                     <td>目錄樹1 用途說明</td>
-                                                    <td>單位1-1</td>
+                                                    <td>單位1-1 單位名稱</td>
                                                     <td><span class="green">是</span></td>
                                                     <td>
                                                         <div class="dropdown">
@@ -162,10 +162,10 @@
                                                             <div class="dropdown-content">
                                                                 <ul>
                                                                     <li>
-                                                                        <a href="catTreeEdit.htm?CtRootID=1"><button class="btn">
+                                                                        <a href="catTreeEdit.htm"><button class="btn">
                                                                             <i class="i_edit"></i>編輯 </button></a></li>
                                                                     <li>
-                                                                        <a href="catNodeEdit.htm?CtRootID=1"><button class="btn">
+                                                                        <a href="catNodeEdit.htm"><button class="btn">
                                                                             <i class="i_edit"></i>編修目錄樹</button></a></li>
                                                                     <li>
                                                                         <button class="btn btn-red">

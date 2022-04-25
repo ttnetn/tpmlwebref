@@ -39,9 +39,16 @@
                 <div class="container">
                     <div class="title">
                         <h2>架構管理</h2>
+                        <div class="function">
+                            <ul>
+                            	<li class="icon_back"><a href="catNodeEdit.htm">編修目錄樹</a></li>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- flex-12 -->
-                    <div class="flex-9-3">
+                    <!--這一層要放的數字是需不需要切欄，例如設定 -3-9 則 col 寬度會左3右9，和 col 下再分成 content_block, publish_block兩欄無關-->
+                    <div class="flex-12">
                         <div class="col ">
                             <div class="content_block">
                                 <div class="_head">
@@ -75,7 +82,7 @@
                                                 </div>
                                             </div>
                                         </div>                                        
-                                            <div class="form_grp">
+                                        <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <select name="deptId" id="deptId">
                                                         <option value="" disabled selected></option>
@@ -87,14 +94,14 @@
                                                     </select>
                                                     <label>單位</label>
                                                 </div>
-                                            </div>
                                         </div>
+                                     </div>
 
 
-                                        <div class="btn_grp">
-                                            <button class="btn">清除重設(回復前次設定)</button>
-                                        </div>
+                                    <div class="btn_grp">
+                                        <button class="btn">清除重設(回復前次設定)</button>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="publish_block">

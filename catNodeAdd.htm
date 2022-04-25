@@ -40,7 +40,12 @@
                 <div class="container">
                     <div class="title">
                         <h2>架構管理</h2>
-                        <button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button>
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="catTreeList.htm">回目錄樹條列</a></li>
+                            </ul>
+                        </div>
+
                     </div>
                     <!-- flex-12 -->
                     <div class="flex-3-9">
@@ -51,6 +56,12 @@
                                     <h3>全球資訊入口網(目錄樹名稱)</h3>
                                 </div>
                                 <div class="_content">
+                                    <div id="node_0">
+	                                    <span class="btn" style="background-color:#E0E0E0;width:100%;">
+	                                    	根目錄&nbsp;&nbsp;
+	                                    	<a href="#"><i class="i_add"></i>新增</a>
+	                                    </span>
+	                                </div>
                                     <div class="sortable_list">
                                         <div class="sortable">
                                             <div>
@@ -61,12 +72,12 @@
                                                         <div class="dropdown-content">
                                                             <ul>
                                                                 <li>
-                                                                    <button class="btn">
+                                                                    <button class="btn" onclick="window.location.href='catNodeEdit.htm';">
                                                                         <i class="i_edit"></i>編輯</button>
                                                                 </li>
                                                                 <li>
                                                                     <!--增加下層節點-->
-                                                                    <button class="btn">
+                                                                    <button class="btn" onclick="window.location.href='catNodeAdd.htm';">
                                                                         <i class="i_add"></i>新增</button>
                                                                 </li>
                                                                 <li>
@@ -507,8 +518,9 @@
                                             <!--div class="help">說明文字</div-->
                                         </div>
 
-										<div style="border-top: 1px solid #CFCFCF;clear: both;width:100%;"></div>
-                                        <h4 style="margin-bottom:25px;">主題單元</h4>
+										<div style="border-top:1px solid #CFCFCF;clear:both;width:100%;margin-bottom:25px;"></div>
+
+                                        <!--h4 style="margin-bottom:25px;">主題單元</h4>
 
                                         <div class="form_grp">
                                             <div class="quick_btn">
@@ -516,15 +528,14 @@
                                                 <button class="btn" data-fancybox data-type="iframe" data-src="fancybox_ctUnitList.htm" href="javascript:;" style="width:120px">選擇既有單元</button>
                                                 　　(不選擇會自動建立)
                                             </div>
-                                            <!--div class="help">說明文字</div-->
-                                        </div>
+                                        </div-->
 
                                         <div class="form_grp">
                                             <div class="form_title">單元類型</div>
                                             <div class="form_content">
                                                 <div class="radio_grp form_inline">
                                                     <label><input name="CtUnitKind" id="CtUnitKind_C" type="radio" value="C" checked onclick="javascript:ctUnitKindCheck();"><span>目錄</span></label>
-                                                    <label><input name="CtUnitKind" id="CtUnitKind_2" type="radio" value="2" checked onclick="javascript:ctUnitKindCheck();"><span>條列式</span></label>
+                                                    <label><input name="CtUnitKind" id="CtUnitKind_2" type="radio" value="2" onclick="javascript:ctUnitKindCheck();"><span>條列式</span></label>
                                                     <label><input name="CtUnitKind" id="CtUnitKind_1" type="radio" value="1" onclick="javascript:ctUnitKindCheck();"><span>首頁式</span></label>
                                                     <label><input name="CtUnitKind" id="CtUnitKind_U" type="radio" value="U" onclick="javascript:ctUnitKindCheck();"><span>連結</span></label>
                                                 </div>
@@ -547,7 +558,8 @@
 															document.getElementById('ctUnit_url').style.display = 'none';
 														}
 													  }
-                                                    }                                                </script>
+                                                    }
+                                                </script>
                                             </div>
                                         </div>
 
