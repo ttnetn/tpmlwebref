@@ -15,8 +15,8 @@
 	.hidden .menu li li a{padding-left:12px;padding-right:12px}
 	.hidden .menu li ul{position:absolute;top:0;left:48px;width:14em;-webkit-box-shadow:rgba(0,0,0,0.3) 6px 6px 15px -4px;box-shadow:rgba(0,0,0,0.3) 6px 6px 15px -4px}
 	.hidden .menu li li a:before{background:#ffe05f}
-	.hidden .menu li li>a:hover:before{background:#f82;width:4px}
-	.hidden .menu li.hasChild>a:after{right:-5px;bottom:-5px;top:auto;left:auto;width:0;height:0;border-style:solid;border-width:5px;border-color:transparent transparent transparent #6e8083;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-transition:.2s;transition:.2s}
+	aside nav>ul>li>a:hover:before{background:#f82;width:4px}
+	aside nav>ul>li.hasChild>a:after{right:-5px;bottom:-5px;top:auto;left:auto;width:0;height:0;border-style:solid;border-width:5px;border-color:transparent transparent transparent #6e8083;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-transition:.2s;transition:.2s}
 	}
 @media screen and (min-width: 700px) and (max-width: 999px){
 	.hidden .menu li ul{overflow-y:scroll}
