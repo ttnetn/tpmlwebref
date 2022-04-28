@@ -62,17 +62,17 @@
                                             <div class="form_grp datepick">
                                                 <div class="startDate">
                                                     <div class="labelEffect">
-                                                        <input name="search_sdate" id="search_sdate" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button>
-                                                        <label>開始日期<abbr>*</abbr></label>
+                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                        <input name="search_sdate" id="search_sdate" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                        <!--button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>開始日期</label>
                                                     </div>
                                                     <!-- <div class="help">說明文字</div> -->
                                                 </div>
                                                 <div class="endDate">
                                                     <div class="labelEffect">
-                                                        <input name="search_edate" id="search_edate" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button>
-                                                        <label>結束日期<abbr>*</abbr></label>
+                                                        <input name="search_edate" id="search_edate" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                        <label>結束日期</label>
                                                     </div>
                                                 </div>
                                             </div>                                            

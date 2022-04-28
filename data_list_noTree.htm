@@ -59,7 +59,27 @@
                                                     <label>標題</label>
                                                 </div>
                                             </div>
-                                            <div class="form_grp">
+                                            <div class="form_grp datepick">
+                                                <div class="startDate">
+                                                    <div class="labelEffect">
+                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>上線開始日期</label>
+                                                    </div>
+                                                    <!-- <div class="help">說明文字</div> -->
+                                                </div>
+                                                <div class="endDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>上線結束日期</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp" style="display:none;">
                                                 <div class="labelEffect">
                                                     <select id="" name="">
                                                         <option value="" selected="" disabled="disabled"></option>
@@ -76,26 +96,7 @@
                                                     <label>上稿單元選擇</label>
                                                 </div>
                                             </div>
-                                            <div class="form_grp datepick">
-                                                <div class="startDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="date" value="">
-                                                        <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button>
-                                                        <label>上線開始日期<abbr>*</abbr></label-->
-                                                    </div>
-                                                    <!-- <div class="help">說明文字</div> -->
-                                                </div>
-                                                <div class="endDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="date" value="">
-                                                        <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button>
-                                                        <label>上線結束日期<abbr>*</abbr></label-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
+                                            <div class="form_grp" style="display:none;">
                                                 <div class="form_title">特殊設定</div>
                                                 <div class="form_content">
                                                     <div class="check_grp form_inline">

@@ -576,12 +576,25 @@
                                                 </div>
                                                 <hr>
                                                 <div class="setting_block">
-                                                    <h3>單元備用欄位</h3>
+                                                    <h3>單元XML動態備用欄位</h3>
                                                     <div class="flex-form">
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
                                                                 <input name="" type="text" value="">
                                                                 <label>備用TEXT欄位</label>
+                                                            </div>
+                                                        </div>
+                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'"">
+                                                                <label>備用date欄位</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'"">
+                                                                <label>備用datetime欄位</label>
                                                             </div>
                                                         </div>
                                                         <div class="form_grp">
