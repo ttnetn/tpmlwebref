@@ -81,9 +81,9 @@
                             <div class="content_block edit_block">
                                 <div class="tabBtn_block">
                                     <div class="tab_items">
-                                        <button class="btn active"><i class="i_setting"></i>內容編輯</button>
-                                        <button class="btn"><i class="i_edit"></i>租金設定</button>
-                                        <button class="btn"><i class="i_info"></i>SEO資料設定</button>
+                                        <button class="btn active"><i class="i_edit"></i>基本資料設定</button>
+                                        <button class="btn"><i class="i_setting"></i>關聯設定</button>
+                                        <button class="btn"><i class="i_info"></i>SEO設定</button>
                                     </div>
                                 </div>
                                 <!--頁籤區-->
@@ -92,71 +92,91 @@
                                     <div class="active">
                                         <div class="content__wrapper">
                                             <div class="_head">
-                                                <h3>內容編輯</h3>
+                                                <h3>基本資料設定</h3>
                                                 <div class="flex-form">
                                                     <div class="form_grp data-title">
                                                         <div class="labelEffect">
                                                             <input name="" type="text" value="">
-                                                            <label>請輸入資料標題<abbr>*</abbr></label>
+                                                            <label>請輸入場地名稱<abbr>*</abbr></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" style="margin-top:20px;width:48%;">
+                                                    <div class="form_title">場地類型： </div>
+                                                    <div class="form_content">
+                                                        <div class="radio_grp form_inline">
+                                                            <label><input name="radioSample111" type="radio" value=""><span>單間</span></label>
+                                                            <label><input name="radioSample111" type="radio" value="" checked><span>合併</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" style="margin-top: 20px;">
+                                                    <div class="form_title">樓層： </div>
+                                                    <div class="form_content">
+                                                        <div class="radio_grp form_inline">
+                                                            <label><input name="radioSample222" type="radio" value="" checked><span>1F</span></label>
+                                                            <label><input name="radioSample222" type="radio" value=""><span>2F</span></label>
+                                                            <label><input name="radioSample222" type="radio" value=""><span>3F</span></label>
+                                                            <label><input name="radioSample222" type="radio" value=""><span>4F</span></label>
+                                                            <label><input name="radioSample222" type="radio" value=""><span>5F</span></label>
+                                                            <label><input name="radioSample222" type="radio" value=""><span>6F</span></label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="_content">
                                                 <!-- 自由編輯區 -->
-                                                <div class="cp user_edit" style="min-height:200px;">
+                                                <div class="cp user_edit" style="min-height:500px;">
                                                     
                                                     <textarea class="tinymce">
+                                                        <h2 style="text-align: center;">101 全室</h2>
                                                         <p style="text-align: center;">
-                                                          <img title="" src="images/demo/2011 101-02.jpg" alt="" max-width="100%" height="auto" />
+                                                          <img title="" src="images/demo/2011 101-02.jpg" alt="" width="350px" height="auto" style="float:left;margin:3px 25px 10px 0;" />
                                                         </p>
-                                                      
-                                                        <h2 style="text-align: center;">WELCOME to the TinyMCE editor demo!</h2>
-                                                      
                                                         <p>
-                                                          Please try out the features provided in this basic example.<br>
-                                                          Note that any <strong>MoxieManager</strong> file and image management functionality in this example is part of our commercial offering – the demo is to show the integration.
+                                                            會議室101可針對不同性質會議需求作彈性隔間，可全室打通或隔成四間（101A、101B、101C、101D）、或隔成二間（101AB、101CD），分別容納88－744人不等。本會議室最大特色為設有階梯式電動彈射椅，當使用全間或二間之會議室時，後半段的彈射椅(計:220席*2側=400席)可彈出使用。101會議室共有10間同步口譯室供租用。
                                                         </p>
                                                       
-                                                        <h2>Got questions or need help?</h2>
+                                                        <h2>101 全室特色介紹</h2>
                                                       
                                                         <ul>
-                                                          <li>Our <a href="https://www.tinymce.com/docs/">documentation</a> is a great resource for learning how to configure TinyMCE.</li>
-                                                          <li>Have a specific question? Visit the <a href="https://community.tinymce.com/forum/" target="_blank">Community Forum</a>.</li>
-                                                          <li>We also offer enterprise grade support as part of <a href="www.tinymce.com/pricing">TinyMCE Enterprise</a>.</li>
+                                                          <li>本會議室為多元會議空間，可布置為劇院型、教室型/、馬蹄形使用，舒適氣派，為企業團體會議首選。</li>
+                                                          <li>本會議室為一間大型會議室，可隔成四小間或二小間使用 <a href="https://community.tinymce.com/forum/" target="_blank">平面圖一覽</a></li>
+                                                          <li>本會議室另可作為洽談或展覽空間使用，洽談可容納256個位置、展覽則可容納57個攤位。</li>
                                                         </ul>
                                                       
-                                                        <h2>A simple table to play with</h2>
+                                                        <h2>會議室設備簡介</h2>
                                                       
-                                                        <table style="text-align: center;">
+                                                        <table style="text-align:left;">
                                                           <thead>
                                                             <tr>
-                                                              <th>Product</th>
-                                                              <th>Cost</th>
-                                                              <th>Really?</th>
+                                                              <th>類型</th>
+                                                              <th>設備簡介</th>
+                                                              <th>備註</th>
                                                             </tr>
                                                           </thead>
                                                           <tbody>
                                                             <tr>
-                                                              <td>TinyMCE</td>
-                                                              <td>Free</td>
-                                                              <td>YES!</td>
+                                                              <td>免費提供標準配備</td>
+                                                              <td>有線麥克風及無線麥克風各 1 支、主講桌 1 個、司儀台 1 個、三人報到桌 2 張、海報架 3 個</td>
+                                                              <td>免費提供</td>
                                                             </tr>
                                                             <tr>
-                                                              <td>Plupload</td>
-                                                              <td>Free</td>
-                                                              <td>YES!</td>
+                                                              <td>本會議室專屬設備/td>
+                                                              <td>網際網路數據專線、1KW聚光燈、會議系統、投影機(HD)</td>
+                                                              <td>本會議室可加租設備</td>
                                                             </tr>
                                                           </tbody>
                                                         </table>
                                                       
-                                                        <h2>Found a bug?</h2>
+                                                        <h2>應用範例</h2>
                                                       
                                                         <p>
-                                                          If you think you have found a bug please create an issue on the <a href="https://github.com/tinymce/tinymce/issues">GitHub repo</a> to report it to the developers.
+                                                          本會議室室合辦理課程、座談、演講等研習或商務會議。<br>近期辦理了「<a href="#">第二屆Super TaiRa／GloRa國際論壇</a>」、「<a href="#">淨零碳排論壇暨展覽</a>」等國際大型論壇與展覽，是您專業研習、論壇、展覽的最佳選擇。
                                                         </p>
+                                                        <hr>
                                                       
-                                                        <h2>Finally ...</h2>
+                                                        <h2>注意事項</h2>
                                                       
                                                         <p>
                                                           Don't forget to check out our other product <a href="http://www.plupload.com" target="_blank">Plupload</a>, your ultimate upload solution featuring HTML5 upload support.
@@ -164,13 +184,51 @@
                                                         <p>
                                                           Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
                                                         </p>
-                                                      </textarea>
+                                                    </textarea>
 
                                                 </div>
-                                                <hr>
+                                                
+                                                <div class="setting_block">
+                                                    <h3>設備與格局</h3>
+                                                        <div class="form_grp">
+                                                            <div class="form_title">會議設備： </div>
+                                                            <div class="form_content">
+                                                                <div class="check_grp form_inline">
+                                                                    <label><input name="111" type="checkbox" value="" checked><span>網際網路數據專線</span></label>
+                                                                    <label><input name="111" type="checkbox" value="" checked><span>1KW聚光燈</span></label>
+                                                                    <label><input name="111" type="checkbox" value="" checked><span>會議系統</span></label>
+                                                                    <label><input name="111" type="checkbox" value="" checked><span>投影機(HD)</span></label>
+                                                                    <label><input name="111" type="checkbox" value=""><span>設備名稱</span></label>
+                                                                    <label><input name="111" type="checkbox" value=""><span>設備名稱</span></label>
+                                                                    <label><input name="111" type="checkbox" value=""><span>設備名稱</span></label>
+                                                                    <label><input name="111" type="checkbox" value=""><span>設備名稱</span></label>
+                                                                    <label><input name="111" type="checkbox" value=""><span>設備名稱</span></label>
+                                                                    <label><input name="111" type="checkbox" value=""><span>設備名稱</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="form_grp" style="margin-top:20px;vertical-align:middle;">
+                                                            <div class="form_title">全室格局： </div>
+                                                            <div class="form_content">
+                                                                <div class="check_grp form_inline">
+                                                                    <label><input name="222" type="checkbox" value=""><span>教室型</span>： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                    <label><input name="222" type="checkbox" value=""><span>劇院型</span>： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                    <label><input name="222" type="checkbox" value=""><span>馬蹄型U</span>： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                    <label><input name="222" type="checkbox" value=""><span>洽談</span>： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                    <label><input name="222" type="checkbox" value=""><span>展覽</span>： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                    <label><input name="222" type="checkbox" value=""><span>其他格局</span>： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                </div>
+
+
                                                 <!-- 圖片上傳區 -->
                                                 <div class="setting_block">
-                                                    <h3>附件圖片
+                                                    <h3>空間實景照
                                                         <!--改成上傳和圖庫選擇-->
                                                         <button class="btn btn-xs btn-addfile"><i class="i_add"></i>上傳圖片</button>
                                                         <!-- <button class="btn btn-xs" data-fancybox data-type="iframe" data-src="fancybox_choose_media.htm"><i class="i_photo"></i>上傳圖片</button> -->
@@ -184,7 +242,7 @@
                                                                 <!-- 上傳完，移除loading -->
                                                                 <div class="img-container">
                                                                     <!-- <div class="loading"></div> -->
-                                                                    <img src="images/demo/01.jpg" alt="" class="cover">
+                                                                    <img src="images/demo/2011 101-02.jpg" alt="" class="cover">
                                                                 </div>
                                                                 <p>xxxxxx.jpg</p>
                                                             </div>
@@ -258,13 +316,13 @@
                                                         <!-- item = 1 file -->
                                                         <div class="item">
                                                             <div class="pic">
-                                                                <img src="images/demo/01.jpg" alt="">
+                                                                <img src="images/demo/2011 101-02.jpg" alt="">
                                                             </div>
                                                             <div class="flex-form">
                                                                 <div class="file_title">圖片名稱.jpg </div>
                                                                 <div class="form_grp">
                                                                     <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明">
+                                                                        <input name="" type="text" value="101全室空間圖" placeholder="請輸入圖片說明">
                                                                         <button class="btn btn-icon"><i class="i_copy"></i></button>
                                                                     </div>
                                                                 </div>
@@ -278,13 +336,13 @@
                                                         <!-- item = 1 file -->
                                                         <div class="item">
                                                             <div class="pic">
-                                                                <img src="images/demo/02.jpg" alt="">
+                                                                <img src="images/demo/101AB(001).jpg" alt="">
                                                             </div>
                                                             <div class="flex-form">
                                                                 <div class="file_title">圖片名稱.jpg </div>
                                                                 <div class="form_grp">
                                                                     <div class="labelEffect">
-                                                                        <input name="" type="text" value="" placeholder="請輸入圖片說明">
+                                                                        <input name="" type="text" value="101AB分租格局" placeholder="請輸入圖片說明">
                                                                         <button class="btn btn-icon"><i class="i_copy"></i></button>
                                                                     </div>
                                                                 </div>
@@ -298,13 +356,13 @@
                                                         <!-- item = 1 file -->
                                                         <div class="item">
                                                             <div class="pic">
-                                                                <img src="images/demo/03.jpg" alt="">
+                                                                <img src="images/demo/101會議室 劇院型.jpg" alt="">
                                                             </div>
                                                             <div class="flex-form">
                                                                 <div class="file_title">圖片名稱.jpg </div>
                                                                 <div class="form_grp">
                                                                     <div class="labelEffect">
-                                                                        <input name="" type="text" value="" placeholder="請輸入圖片說明">
+                                                                        <input name="" type="text" value="會議應用範例" placeholder="請輸入圖片說明">
                                                                         <button class="btn btn-icon"><i class="i_copy"></i></button>
                                                                     </div>
                                                                 </div>
@@ -312,50 +370,6 @@
                                                             <div class="additional">
                                                                 <div class="checkbox_grp">
                                                                     <label><input name="checkSample" type="checkbox" value=""><span>主圖</span></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <!-- 附件檔案上傳 -->
-                                                <div class="setting_block">
-                                                    <h3>附件檔案上傳 <button class="btn btn-xs"><i class="i_addfile"></i>新增檔案</button></h3>
-                                                    <div class="fileDragDrop">
-                                                        <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
-                                                        <p><em>上傳附件檔案</em></p>
-                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
-                                                      </div>
-                                                      <p class="tips">接受MPEG-2,MPEG-4等影片格式，影音編碼說請至公佈欄，檔案大小請勿超過250MB。若涉及侵權或危害善良風俗者，上傳單位應自負咎責。</p>
-
-                                                      <div class="upload_block">
-                                                        <!-- item = 1 file -->
-                                                        <div class="item">
-                                                            <div class="pic">
-                                                                <img src="images/icon/icon_xls.svg" alt="">
-                                                            </div>
-                                                            <div class="flex-form">
-                                                                <div class="file_title">附件檔案名稱.xls </div>
-                                                                <div class="form_grp">
-                                                                    <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
-                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- item = 1 file -->
-                                                        <div class="item">
-                                                            <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
-                                                            </div>
-                                                            <div class="flex-form">
-                                                                <div class="file_title">附件檔案名稱.pdf </div>
-                                                                <div class="form_grp">
-                                                                    <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
-                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -364,28 +378,8 @@
                                                 <hr>
                                                 <!-- 相關連結 -->
                                                 <div class="setting_block">
-                                                    <h3>相關連結</h3>
+                                                    <h3>實境導覽</h3>
                                                     <div class="link_block">
-                                                        <!-- item = 1 link -->
-                                                        <div class="item">
-                                                            <div class="flex-form">
-                                                                <div class="form_grp">
-                                                                    <div class="labelEffect">
-                                                                        <input name="" type="text" value="自訂連結顯示名稱">
-                                                                        <label>連結名稱</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form_grp">
-                                                                    <div class="labelEffect">
-                                                                        <input name="" type="text" value="https://www.hyweb.com.tw">
-                                                                        <label>請填入URL連結位址</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="additional">
-                                                                <a href="#" class="btn"><i class="i_edit"></i>移除</a>
-                                                            </div>
-                                                        </div>
                                                         <!-- item = 1 link 永遠保留一組新增 -->
                                                         <div class="item">
                                                             <div class="flex-form">
@@ -408,56 +402,107 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="setting_block">
+                                                    <h3>空間資訊</h3>
+                                                    <div class="flex-form">
+                                                        <div class="form_grp form_inline">
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>攤位數(3公尺*2公尺)</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>面積(平方公尺)</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>面積(坪)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp form_inline">
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(長)公尺</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(寬)公尺</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(高)公尺</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 附件檔案上傳 -->
+                                                <div class="setting_block">
+                                                    <h3>空間平面圖上傳 <button class="btn btn-xs"><i class="i_addfile"></i>更換檔案</button></h3>
+                                                    <div class="fileDragDrop" style="display: none;">
+                                                        <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
+                                                        <p><em>上傳附件檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                      </div>
+
+                                                      <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="setting_block">
+                                                    <h3>樓層導覽圖上傳 <button class="btn btn-xs"><i class="i_addfile"></i>更換檔案</button></h3>
+                                                    <div class="fileDragDrop" style="display: none;">
+                                                        <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
+                                                        <p><em>上傳附件檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                    </div>
+
+                                                      <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱">
+                                                                        <button class="btn btn-icon"><i class="i_copy"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <hr>
                                                 <div class="setting_block">
-                                                    <h3>單元備用欄位</h3>
+                                                    <h3>備註</h3>
                                                     <div class="flex-form">
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="">
-                                                                <label>備用TEXT欄位</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <select name="">
-                                                                    <option value="" selected disabled="disabled"></option>
-                                                                    <option value="Y">是</option>
-                                                                    <option value="N">否</option>
-                                                                </select>
-                                                                <label>備用Select欄位</label>
-                                                            </div>
-                                                        </div>
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
                                                                 <textarea></textarea>
                                                                 <label>備用Textarea欄位</label>
                                                             </div>
                                                         </div>
-                                                        <div class="form_grp">
-                                                            <div class="form_title">備用Radio欄位</div>
-                                                            <div class="form_content">
-                                                                <div class="radio_grp form_inline">
-                                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
-                                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
-                                                                    <label><input name="radioSample" type="radio" value=""><span>選項三</span></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <div class="form_title">行內排列</div>
-                                                            <div class="form_content">
-                                                                <div class="check_grp form_inline">
-                                                                    <label><input name="" type="checkbox" value=""><span>選項一</span></label>
-                                                                    <label><input name="" type="checkbox" value=""><span>選項二</span></label>
-                                                                    <label><input name="" type="checkbox" value=""><span>選項三</span></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                     <!--tabcontent 2--><!--單元設定-->
                                     <div>
@@ -768,30 +813,6 @@
                                                 <div class="radio_grp form_inline">
                                                     <label><input name="radioSample" type="radio" value="" checked><span>否</span></label>
                                                     <label><input name="radioSample" type="radio" value=""><span>是</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <select id="" name="" class="used">
-                                                    <option value="" selected="" disabled="disabled">請選擇</option>
-                                                    <option value="選項1">選項1</option>
-                                                    <option value="選項2">選項2</option>
-                                                    <option value="選項3">選項3</option>
-                                                    <option value="選項4">選項4</option>
-                                                    <option value="選項5">選項5</option>
-                                                </select>
-                                                <label>資料大類</label>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="form_grp">
-                                            <div class="form_title">分眾</div>
-                                            <div class="form_content">
-                                                <div class="checkbox_grp form_inline">
-                                                    <label><input name="" type="checkbox" value=""><span>分眾1</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>分眾2</span></label>
                                                 </div>
                                             </div>
                                         </div>
