@@ -56,7 +56,7 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>系統編號</label>
+                                                    <label>案件編號</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
@@ -68,7 +68,7 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>預約email</label>
+                                                    <label>預約者email</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
@@ -82,10 +82,8 @@
                                                     <select name="search_deptid" id="search_deptid">
                                                         <option value="" disabled selected></option>
                                                         <option value="0">1F</option>
-                                                        <option value="001">101全室</option>
-                                                        <option value="00101">--101A</option>
-                                                        <option value="00102">--101B</option>
-                                                       <option value="002">102</option>
+                                                        <option value="001">101教室</option>
+                                                        <option value="002">102教室</option>
                                                     </select>
                                                     <label>預約場地</label>
                                                 </div>
@@ -128,7 +126,7 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>使用者條列</h3>
+                                    <h3>預約資訊條列</h3>
                                 </div>
                                 <div class="_head">
                                     <div class="tag">
@@ -136,15 +134,15 @@
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
                                             <li><a href="#">待確認</a></li>
-                                            <li><a href="#">已成立，待付款</a></li>
-                                            <li><a href="#">已付款，待處理</a></li>
-                                            <li><a href="#">預約完成</a></li>
+                                            <li><a href="#">已成立</a></li>
+                                            <li><a href="#">已取消</a></li>
+                                            <li><a href="#">已結束</a></li>
                                         </ul>
-                                        ｜聯繫狀態：
+                                        ｜報到狀態：
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">有未讀訊息</a></li>
-                                            <!--li><a href="#">無未讀訊息</a></li-->
+                                            <li><a href="#">正常</a></li>
+                                            <li><a href="#">未出席</a></li>
                                         </ul>
                                     </div>
                                     <!-- 資料處理 -->
@@ -157,11 +155,11 @@
                                                 <ul>
                                                     <li>
                                                         <button class="btn">
-                                                            <i class="i_edit"></i>批次匯出</button>
+                                                            <i class="i_edit"></i>批次成立</button>
                                                     </li>
                                                     <li>
                                                         <button class="btn">
-                                                            <i class="i_add"></i>批次匯入</button>
+                                                            <i class="i_add"></i>批次取消</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -178,9 +176,9 @@
                                                 </select> 筆 </div>
                                         </form>
                                     </div>
-                                    <!--div class="quick_btn">
+                                    <div class="quick_btn">
                                         <button class="btn btn-orange" onclick="window.location.href='userEdit.htm';"><i class="i_add"></i>新增</button>
-                                    </div-->
+                                    </div>
                                 </div>
                                 <div class="_content">
                                     <!-- 表格樣式 -->
@@ -191,7 +189,7 @@
                                                     <th><input type="checkbox"></th>
                                                     <th>編號</th>
                                                     <th class="text-left">
-                                                        <a href="#">系統編號 <i class="i_sort"></i>
+                                                        <a href="#">案件編號 <i class="i_sort"></i>
                                                         </a>
                                                     </th>
                                                     <th class="text-left">
@@ -199,7 +197,7 @@
                                                         </a>
                                                     </th>
                                                     <th>
-                                                        <a href="#">預約email
+                                                        <a href="#">預約者email
                                                         </a>
                                                     </th>
                                                     <th>
@@ -207,7 +205,7 @@
                                                         </a>
                                                     </th>
                                                     <th>
-                                                        <a href="#">預約者公司/單位
+                                                        <a href="#">預約者人數
                                                         </a>
                                                     </th>
                                                     <th class="text-left">
@@ -215,15 +213,11 @@
                                                         </a>
                                                     </th>
                                                     <th class="text-left">
-                                                        <a href="#">上傳附件 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th class="text-left">
-                                                        <a href="#">未讀訊息 <i class="i_sort"></i>
+                                                        <a href="#">報到狀態 <i class="i_sort"></i>
                                                         </a>
                                                     </th>
                                                     <th>
-                                                        <a href="#">最後編修日期 <i class="i_sort"></i>
+                                                        <a href="#">預約日期 <i class="i_sort"></i>
                                                         </a>
                                                     </th>
                                                     <th>編輯</th>
@@ -238,8 +232,7 @@
                                                     <td>liucc@hyweb.com.tw</td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="orange">已成立，待付款</span></td>
-                                                    <td></td>
+                                                    <td><span class="orange">已成立</span></td>
                                                     <td></td>
                                                     <td><time>2022/07/16</time></td>
                                                     <td>
@@ -270,7 +263,6 @@
                                                     <td>凌網科技股份有限公司</td>
                                                     <td><span class="red">待確認</span></td>
                                                     <td></td>
-                                                    <td></td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td>
                                                         <div class="dropdown">
@@ -292,45 +284,14 @@
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">1</td>
+                                                    <td class="num">2</td>
                                                     <td><a href="#">2022050810001</a></td>
                                                     <td><a href="#">S11105080001</a></td>
                                                     <td>liucc@hyweb.com.tw</td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="green">已付款，待處理</span></td>
-                                                    <td><i class="i_check"></i> 繳款證明/合約書</td>
-                                                    <td class="text-center"><i class="i_global"></i> 2</td>
-                                                    <td><time>2019/10/16</time></td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox"></td>
-                                                    <td class="num">1</td>
-                                                    <td><a href="#">2022050810001</a></td>
-                                                    <td><a href="#">S11105080001</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
-                                                    <td>劉佳淇</td>
-                                                    <td>凌網科技股份有限公司</td>
-                                                    <td><span class="gray">預約完成</span></td>
-                                                    <td><i class="i_check"></i> 繳款證明/合約書</td>
-                                                    <td></td>
+                                                    <td><span class="gray">已結束</span></td>
+                                                    <td><span class="green">正常</span></td>
                                                     <td><time>2019/10/16</time></td>
                                                     <td>
                                                         <div class="dropdown">
