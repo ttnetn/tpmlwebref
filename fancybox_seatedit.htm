@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+</head>
+
+<body>
+    <div class="lightbox">
+                <!-- 中央區塊 -->
+                <div class="content_block">
+                    <div class="lightbox_title">設定座位設備資訊</div>
+                    <div class="_head" style="margin-top: 55px;">
+                        <h3>座位資料設定</h3>
+                        <div class="flex-form">
+                            <div class="form_grp data-title">
+                                <div class="labelEffect">
+                                    <input name="" type="text" value="A1">
+                                    <label>請輸入座位名稱<abbr>*</abbr></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="_content">
+                        <div class="form_grp">
+                            <div class="form_title" style="font-size:.813em;color:#00646d;margin-right:10px;">是否啟用</div>
+                            <div class="form_content">
+                                <div class="radio_grp form_inline">
+                                    <label><input name="radioSample" type="radio" value="" checked><span>是</span></label>
+                                    <label><input name="radioSample" type="radio" value=""><span>否</span></label>
+                                    <label><input name="radioSample" type="radio" value=""><span>區間停用</span></label>
+                                    <div class="form_grp datepick">
+                                        <div class="startDate">
+                                            <div class="labelEffect">
+                                                <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                <!--input name="" type="calendar" value="" class="calendar">
+                                                <button class="btn"><i class="i_calendar"></i></button-->
+                                                <label>停用開始日期</label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="endDate">
+                                            <div class="labelEffect">
+                                                <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                <!--input name="" type="calendar" value="" class="calendar">
+                                                <button class="btn"><i class="i_calendar"></i></button-->
+                                                <label>提用結束日期</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="margin-top:20px;">
+                        <div class="form_grp">
+                            <div class="labelEffect">
+                                <input name="" type="text" value="" placeholder="請選入電腦軟體資訊" class="used">
+                                <button class="btn btn-primary btn-text">選擇</button>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="labelEffect">
+                                <textarea></textarea>
+                                <label>座位備註</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+</body>
+<!-- JS-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- template customize js -->
+<script src="js/customize.js"></script>
+<!-- highlight -->
+<script src="vendor/highlight/highlight.pack.js"></script>
+<!-- fancybox -->
+<script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
