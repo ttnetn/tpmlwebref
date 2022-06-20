@@ -391,6 +391,10 @@ $(function() {
     }
 });
 
+
+
+// 複選select選單
+
 $(document).ready(function () {
     $(document).on("click", ".MultiCheckBox", function () {
         var detail = $(this).next();
@@ -442,7 +446,6 @@ $(document).ready(function () {
 });
 
 
-// 複選select選單
 var defaultMultiCheckBoxOption = { width: '220px', defaultText: 'Select Below', height: '200px' };
 
 jQuery.fn.extend({
