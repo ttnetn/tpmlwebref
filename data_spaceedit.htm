@@ -542,7 +542,7 @@
                                                             </ol>
                                                         </div-->
                                                         <!--複選關聯空間-->
-                                                        <div class="form_grp">
+                                                        <div class="form_grp" style="display:none;">
                                                             <div class="labelEffect">
                                                                 <select id="" name="" multiple style="height:fit-content;">
                                                                     <option value="" selected="" disabled="disabled"></option>
@@ -562,20 +562,17 @@
 
                                                         <div class="form_grp">
                                                             <select id="test">
-                                                                <option value="1">American Black Bear</option>
-                                                                <option value="2">Asiatic Black Bear</option>
-                                                                <option value="3">Brown Bear</option>
-                                                                <option value="4">Giant Panda</option>
-                                                                <option value="5">Sloth Bear</option>
-                                                                <option value="6">Sun Bear</option>
-                                                                <option value="7">Polar Bear</option>
-                                                                <option value="8">Spectacled Bear</option>
+                                                                <option value="1">101 / 全室</option>
+                                                                <option value="1">101A / 單間</option>
+                                                                <option value="2">101B / 單間</option>
+                                                                <option value="3">101C / 單間</option>
+                                                                <option value="4">101D / 單間</option>
+                                                                <option value="5">101AB / 雙間</option>
+                                                                <option value="6">101CD / 雙間</option>
+                                                                <option value="7" disabled>101AD / 雙間</option>
+                                                                <option value="8" disabled>101BC / 雙間</option>
                                                             </select>
-                                                            <script>
-                                                                $(document).ready(function () {
-                                                                    $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
-                                                                });
-                                                            </script>
+                                                            
                                                         </div>
                                                     
         
@@ -898,6 +895,11 @@
     $(".treeview .treeview").treeview();
     $('header').load("header.htm");
     $('aside').load("aside_ticc.htm");
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+        });
     </script>
 </body>
 
