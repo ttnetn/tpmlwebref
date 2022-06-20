@@ -19,6 +19,7 @@
     <!-- fancybox -->
     <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/fileUpload.css">
+    <link rel="stylesheet" href="css/customize.css">
     <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
 
     <!--測試 tinyMCE html editor-->
@@ -501,7 +502,7 @@
                                         </div>
                                         
                                     </div>
-                                    <!--tabcontent 2--><!--關聯設定-->
+                                    <!--tabcontent 2 --><!--關聯設定-->
                                     <div>
                                         <div class="content__wrapper">
                                             <div class="_head">
@@ -510,12 +511,17 @@
                                                     <div class="form_title">場地類型： </div>
                                                     <div class="form_content">
                                                         <div class="radio_grp form_inline">
+                                                            <label><input name="spacetype" type="radio" value="all" checked><span>全室</span></label>
                                                             <label><input name="spacetype" type="radio" value="1"><span>單間</span></label>
-                                                            <label><input name="spacetype" type="radio" value="2" checked><span>合併</span></label>
-                                                            <label><input name="spacetypesub" type="checkbox" value="21" checked><span>全室</span></label>
-                                                            <label><input name="spacetypesub" type="checkbox" value="22" checked><span>雙間</span></label>
-                                                            <label><input name="spacetypesub" type="checkbox" value="23" checked><span>三間</span></label>
-                                                            <label><input name="spacetypesub" type="checkbox" value="24" checked><span>四間</span></label>
+                                                            <label><input name="spacetype" type="radio" value="2"><span>雙間</span></label>
+                                                            <label><input name="spacetype" type="radio" value="3"><span>三間</span></label>
+                                                            <label><input name="spacetype" type="radio" value="4"><span>四間</span></label>
+
+                                                            <!--label><input name="spacetype" type="radio" value="2" checked><span>合併</span></label>
+                                                                <label><input name="spacetypesub" type="checkbox" value="21" checked><span>全室</span></label>
+                                                                <label><input name="spacetypesub" type="checkbox" value="22" checked><span>雙間</span></label>
+                                                                <label><input name="spacetypesub" type="checkbox" value="23" checked><span>三間</span></label>
+                                                                <label><input name="spacetypesub" type="checkbox" value="24" checked><span>四間</span></label-->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -524,20 +530,54 @@
                                                 <!-- setting_block為資料上稿專用 -->
                                                 <div class="setting_block">
                                                     <div class="flex-form">
-                                                        <h3>上稿單元</h3>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="TICC台北國際會議中心全球資訊網 / 空間管理">
-                                                                <!--button class="btn btn-primary btn-text" disabled>選擇</button-->
-                                                            </div>
-                                                        </div>
+                                                        <h3>合併/分租</h3>
                                                         <!--div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="">
+                                                                <button class="btn btn-primary btn-text">請選擇</button>
+                                                            </div>
                                                             <ol>
-                                                                <li>全球資訊入口網 / 消息公告 / 最新消息</li>
-                                                                <li>部屬單位網 / 消息公告 / 最新消息</li>
-                                                                <li>主題網 / 消息公告 / 最新消息</li>
+                                                                <li>101A / 單間</li>
+                                                                <li>101B / 單間</li>
                                                             </ol>
                                                         </div-->
+                                                        <!--複選關聯空間-->
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select id="" name="" multiple style="height:fit-content;">
+                                                                    <option value="" selected="" disabled="disabled"></option>
+                                                                    <option value="選項1">101A / 單間</option>
+                                                                    <option value="選項2">101B / 單間</option>
+                                                                    <option value="選項3">101C / 單間</option>
+                                                                    <option value="選項4">101D / 單間</option>
+                                                                    <option value="選項5">101AB / 雙間</option>
+                                                                    <option value="選項6">101CD / 雙間</option>
+                                                                    <option value="選項7" disabled>101AD / 雙間</option>
+                                                                    <option value="選項8" disabled>101BC / 雙間</option>
+                                                                </select>
+                                                                <!--label>欄位名稱</label-->
+                                                                <div class="help">請使用 Ctrl+點選選項，選入複數關聯空間</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form_grp">
+                                                            <select id="test">
+                                                                <option value="1">American Black Bear</option>
+                                                                <option value="2">Asiatic Black Bear</option>
+                                                                <option value="3">Brown Bear</option>
+                                                                <option value="4">Giant Panda</option>
+                                                                <option value="5">Sloth Bear</option>
+                                                                <option value="6">Sun Bear</option>
+                                                                <option value="7">Polar Bear</option>
+                                                                <option value="8">Spectacled Bear</option>
+                                                            </select>
+                                                            <script>
+                                                                $(document).ready(function () {
+                                                                    $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+                                                                });
+                                                            </script>
+                                                        </div>
+                                                    
         
                                                         <h3>關鍵字/標籤</h3>
                                                         <div class="form_grp">
