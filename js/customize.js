@@ -471,7 +471,11 @@ jQuery.fn.extend({
             if (val == undefined)
                 val = '';
 
-            multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' /></div><div>" + $(this).text() + "</div></div>");
+			if($(this).prop("disabled")==true) {
+				multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' disabled /></div><div>" + $(this).text() + "</div></div>");
+			} else {
+				multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' /></div><div>" + $(this).text() + "</div></div>");
+			}
         });
 
         multiCheckBoxDetailBody.css("max-height", (parseInt($(".MultiCheckBoxDetail").css("max-height")) - 28) + "px");
