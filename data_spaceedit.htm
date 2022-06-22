@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
     <!-- fancybox -->
     <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!--圖片批次上傳-->
     <link rel="stylesheet" href="css/fileUpload.css">
+    <!--增加select-->
     <link rel="stylesheet" href="css/customize.css">
-    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
+    <link rel="stylesheet" href="css/select2.min.css">
 
-    <!--測試 tinyMCE html editor-->
+    <!--測試 tinyMCE html editor 暫用-->
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
     <script>
         tinymce.init({
         selector: 'textarea.tinymce',
@@ -171,6 +174,24 @@
                                                 <div class="setting_block">
                                                     <h3>設備與格局</h3>
                                                     <div class="form_grp">
+                                                        <div class="form_title">場地類型： </div>
+                                                        <div class="form_content">
+                                                            <div class="radio_grp form_inline">
+                                                                <label><input name="spacetype" type="radio" value="all" checked><span>全室</span></label>
+                                                                <label><input name="spacetype" type="radio" value="1"><span>單間</span></label>
+                                                                <label><input name="spacetype" type="radio" value="2"><span>雙間</span></label>
+                                                                <label><input name="spacetype" type="radio" value="3"><span>三間</span></label>
+                                                                <label><input name="spacetype" type="radio" value="4"><span>四間</span></label>
+    
+                                                                <!--label><input name="spacetype" type="radio" value="2" checked><span>合併</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="21" checked><span>全室</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="22" checked><span>雙間</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="23" checked><span>三間</span></label>
+                                                                    <label><input name="spacetypesub" type="checkbox" value="24" checked><span>四間</span></label-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_title">樓層： </div>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
@@ -507,30 +528,72 @@
                                         <div class="content__wrapper">
                                             <div class="_head">
                                                 <h3>關聯設定</h3>
-                                                <div class="form_grp" style="margin-top:20px;width:48%;">
-                                                    <div class="form_title">場地類型： </div>
-                                                    <div class="form_content">
-                                                        <div class="radio_grp form_inline">
-                                                            <label><input name="spacetype" type="radio" value="all" checked><span>全室</span></label>
-                                                            <label><input name="spacetype" type="radio" value="1"><span>單間</span></label>
-                                                            <label><input name="spacetype" type="radio" value="2"><span>雙間</span></label>
-                                                            <label><input name="spacetype" type="radio" value="3"><span>三間</span></label>
-                                                            <label><input name="spacetype" type="radio" value="4"><span>四間</span></label>
-
-                                                            <!--label><input name="spacetype" type="radio" value="2" checked><span>合併</span></label>
-                                                                <label><input name="spacetypesub" type="checkbox" value="21" checked><span>全室</span></label>
-                                                                <label><input name="spacetypesub" type="checkbox" value="22" checked><span>雙間</span></label>
-                                                                <label><input name="spacetypesub" type="checkbox" value="23" checked><span>三間</span></label>
-                                                                <label><input name="spacetypesub" type="checkbox" value="24" checked><span>四間</span></label-->
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                             <div class="_content">
                                                 <!-- setting_block為資料上稿專用 -->
                                                 <div class="setting_block">
                                                     <div class="flex-form">
-                                                        <h3>合併/分租</h3>
+                                                        <h3>合併/分租格局</h3>
+                                                        <div class="form_grp">
+                                                            <select id="select1" multiple>
+                                                                <option value="101">101 / 全室</option>
+                                                                <option value="101A">101A / 單間</option>
+                                                                <option value="2">101B / 單間</option>
+                                                                <option value="3">101C / 單間</option>
+                                                                <option value="4">101D / 單間</option>
+                                                                <option value="5">101AB / 雙間</option>
+                                                                <option value="6">101CD / 雙間</option>
+                                                                <option value="7" disabled>101AD / 雙間</option>
+                                                                <option value="8" disabled>101BC / 雙間</option>
+                                                                <option value="9">201 / 全室</option>
+                                                                <option value="9">201A / 單間</option>
+                                                                <option value="9">201B / 單間</option>
+                                                            </select>
+                                                            
+                                                        </div>
+
+                                                        <!--測試select option加上搜尋功能-->
+                                                        <h3>可用設備</h3>
+                                                        <div class="form_grp">
+                                                            <select id="select2" multiple>
+                                                            <option value='2101' > 1007345136 </option> 
+                                                            <option value='2102' > 1007921321 </option> 
+                                                            <option value='2103' > 1007987235 </option> 
+                                                            <option value='2407' > 132 </option> 
+                                                            <option value='2408' > 141 </option> 
+                                                            <option value='2409' > 142 </option> 
+                                                            <option value='2410' > 145 </option> 
+                                                            <option value='2701' > 225 </option> 
+                                                            <option value='2702' > 248 </option> 
+                                                            <option value='2703' > 251 </option> 
+                                                            <option value='2704' > 254 </option> 
+                                                            <option value='2705' > 264 </option> 
+                                                            <option value='1804' > 27 </option> 
+                                                            <option value='2706' > 274 </option> 
+                                                            <option value='2707' > 310 </option> 
+                                                            <option value='2708' > 311 </option> 
+                                                            <option value='3001' > 333 </option> 
+                                                            <option value='2401' > 38 </option> 
+                                                            <option value='2402' > 64 </option> 
+                                                            <option value='2403' > 68 </option> 
+                                                            <option value='2404' > 69 </option> 
+                                                            <option value='2405' > 76 </option> 
+                                                            <option value='2406' > 81 </option> 
+                                                            <option value='2411' > abc123post </option> 
+                                                            <option value='3301' > circuit id 50 </option> 
+                                                            <option value='2105' > fadhil </option> 
+                                                            <option value='2104' > faisal </option> 
+                                                            <option value='3002' > IPEN - SITE TEST </option> 
+                                                            <option value='3601' > Manual Circuit ID </option> 
+                                                            <option value='3302' > new circuit id fadhil </option> 
+                                                            <option value='1809' > try iframe </option> 
+                                                            </select>
+                                                        </div>                                                        
+        
+
+                                                    </div>
+                                                    <div class="flex-form">
+                                                        <h3>[備用]下拉選單multiple有checkbox</h3>
                                                         <!--div class="form_grp">
                                                             <div class="labelEffect">
                                                                 <input name="" type="text" value="">
@@ -542,7 +605,7 @@
                                                             </ol>
                                                         </div-->
                                                         <!--複選關聯空間-->
-                                                        <div class="form_grp" style="display:none;">
+                                                        <!--div class="form_grp">
                                                             <div class="labelEffect">
                                                                 <select id="" name="" multiple style="height:fit-content;">
                                                                     <option value="" selected="" disabled="disabled"></option>
@@ -555,13 +618,13 @@
                                                                     <option value="選項7" disabled>101AD / 雙間</option>
                                                                     <option value="選項8" disabled>101BC / 雙間</option>
                                                                 </select>
-                                                                <!--label>欄位名稱</label-->
+                                                                
                                                                 <div class="help">請使用 Ctrl+點選選項，選入複數關聯空間</div>
                                                             </div>
-                                                        </div>
+                                                        </div-->
 
                                                         <div class="form_grp">
-                                                            <select id="test">
+                                                            <select id="test" multiple>
                                                                 <option value="1">101 / 全室</option>
                                                                 <option value="1">101A / 單間</option>
                                                                 <option value="2">101B / 單間</option>
@@ -571,16 +634,57 @@
                                                                 <option value="6">101CD / 雙間</option>
                                                                 <option value="7" disabled>101AD / 雙間</option>
                                                                 <option value="8" disabled>101BC / 雙間</option>
+                                                                <option value="9">201 / 全室</option>
+                                                                <option value="9">201A / 單間</option>
+                                                                <option value="9">201B / 單間</option>
                                                             </select>
                                                             
                                                         </div>
-                                                    
+
+                                                        <!--測試select option加上搜尋功能-->
+                                                        <h3>[備用]下拉選單可搜尋</h3>
+                                                        <div class="form_grp">
+                                                            <select id="select3" class="">
+                                                            <option value='0' selected='true'> Not associated to any Circuit ID </option>
+                                                            <option value='2101' > 1007345136 </option> 
+                                                            <option value='2102' > 1007921321 </option> 
+                                                            <option value='2103' > 1007987235 </option> 
+                                                            <option value='2407' > 132 </option> 
+                                                            <option value='2408' > 141 </option> 
+                                                            <option value='2409' > 142 </option> 
+                                                            <option value='2410' > 145 </option> 
+                                                            <option value='2701' > 225 </option> 
+                                                            <option value='2702' > 248 </option> 
+                                                            <option value='2703' > 251 </option> 
+                                                            <option value='2704' > 254 </option> 
+                                                            <option value='2705' > 264 </option> 
+                                                            <option value='1804' > 27 </option> 
+                                                            <option value='2706' > 274 </option> 
+                                                            <option value='2707' > 310 </option> 
+                                                            <option value='2708' > 311 </option> 
+                                                            <option value='3001' > 333 </option> 
+                                                            <option value='2401' > 38 </option> 
+                                                            <option value='2402' > 64 </option> 
+                                                            <option value='2403' > 68 </option> 
+                                                            <option value='2404' > 69 </option> 
+                                                            <option value='2405' > 76 </option> 
+                                                            <option value='2406' > 81 </option> 
+                                                            <option value='2411' > abc123post </option> 
+                                                            <option value='3301' > circuit id 50 </option> 
+                                                            <option value='2105' > fadhil </option> 
+                                                            <option value='2104' > faisal </option> 
+                                                            <option value='3002' > IPEN - SITE TEST </option> 
+                                                            <option value='3601' > Manual Circuit ID </option> 
+                                                            <option value='3302' > new circuit id fadhil </option> 
+                                                            <option value='1809' > try iframe </option> 
+                                                            </select>
+                                                        </div>                                                        
         
-                                                        <h3>關鍵字/標籤</h3>
+                                                        <!--h3>關鍵字/標籤</h3>
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
                                                                 <input name="" type="text" value="">
-                                                                <!-- <label>標籤</label> -->
+                                                                <label>標籤</label>
                                                             </div>
                                                             <div class="help">請以半形, 分格多個標籤</div>
                                                         </div>
@@ -645,7 +749,7 @@
                                                             <div class="labelEffect">
                                                                 <input name="" type="text" value="systemvod@gmail.com" disabled>
                                                             </div>
-                                                        </div>
+                                                        </div-->
 
                                                     </div>
                                                 </div>
@@ -883,6 +987,7 @@
     <script src="vendor/treeview/jquery.treeview.js"></script>
     <!-- fancybox -->
     <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
     <script>
     // first example
     $(".treeview .treeview").treeview();
@@ -896,11 +1001,21 @@
     $('header').load("header.htm");
     $('aside').load("aside_ticc.htm");
     </script>
+    <!--Select multiple checkbox-->
     <script>
         $(document).ready(function () {
             $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
         });
     </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
+    </script>
+    
 </body>
 
 </html>
