@@ -551,7 +551,7 @@
                                                             </select>
                                                             
                                                         </div>
-                                                        <h4>會議室可用設備</h4>
+                                                        <h4>會議室可用設備(從設備管理來控制可能更恰當)</h4>
                                                         <div class="form_grp">
                                                             <select id="select2" multiple>
                                                                 <optgroup label="會議室固定單槍投影機">
@@ -662,15 +662,15 @@
                                                             </select>
                                                         </div>                                                        
         
-                                                        <!--h3>關鍵字/標籤</h3>
+                                                        <h4>標籤</h4>
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
                                                                 <input name="" type="text" value="">
-                                                                <label>標籤</label>
+                                                                <!--label>標籤</label-->
                                                             </div>
                                                             <div class="help">請以半形, 分格多個標籤</div>
                                                         </div>
-                                                        <h3>是否推薦</h3>
+                                                        <!--h3>是否推薦</h3>
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
                                                                 <select name="">
@@ -736,8 +736,7 @@
 
                                                     <div class="flex-form">
                                                         <h4>關聯文件(開啟lightbox選擇模式)
-                                                            <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_filelist.htm" href="javascript:;"><i class="i_addfile"></i>選入附件</button>
-                                                            
+                                                            <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_filelist.htm" href="javascript:;"><i class="i_addfile"></i>選入資料</button>
                                                         </h4>
                                                         <div class="upload_block">
                                                             <div class="attachment_list">
@@ -746,7 +745,7 @@
                                                                     <div class="num">
                                                                         <span>1</span>
                                                                     </div>
-                                                                    <span>最新優惠｜網路需求表暨通案優惠方案｜210kb </span>
+                                                                    <span>最新優惠｜網路需求表暨通案優惠方案測試測試 </span>
                                                                     <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
                                                                         <button class="btn btn-delete"><i class="i_trash"></i></button>
                                                                     </div>
@@ -756,7 +755,7 @@
                                                                     <div class="num">
                                                                         <span>2</span>
                                                                     </div>
-                                                                    <span>場地價目表｜會場租金價目表｜117kb </span>
+                                                                    <span>場地價目表｜會場租金價目表 </span>
                                                                     <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
                                                                         <button class="btn btn-delete"><i class="i_trash"></i></button>
                                                                     </div>
@@ -765,7 +764,36 @@
                                                         </div>
 
                                                     </div>
+                                                    <div class="flex-form">
+                                                        <h4>關聯問答
+                                                            <button class="btn btn-xs"><i class="i_addfile"></i>選入資料</button>
+                                                        </h4>
+                                                        <div class="upload_block">
+                                                            <div class="attachment_list">
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>1</span>
+                                                                    </div>
+                                                                    <span>關於TICC｜前往TICC如何搭乘大眾捷運? </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <!-- number -->
+                                                                    <div class="num">
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                    <span>會展設施｜外貿協會經營那些會展設施 </span>
+                                                                    <div class="btn_grp" style="flex-basis:100px; margin-left:15px;">
+                                                                        <button class="btn btn-delete"><i class="i_trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1002,6 +1030,7 @@
     <!-- fancybox -->
     <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/select2.full.min.js"></script>
+
     <script>
     // first example
     $(".treeview .treeview").treeview();
