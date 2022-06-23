@@ -65,3 +65,13 @@
         left: 24px;
         color:#fff;
     }
+
+/*表單客製化暫用*/
+input[disabled][type="checkbox"]:checked {
+    box-shadow: none;
+    border:none;
+}
+
+table td span.green, table td span.red, table td span.orange {
+    min-width: 6em !important;
+}

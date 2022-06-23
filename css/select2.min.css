@@ -4,7 +4,7 @@
     margin: 0;
     position: relative;
     vertical-align: middle;
-    min-width: 280px;
+    width:100% !important;
     height:35px;
 }
 
