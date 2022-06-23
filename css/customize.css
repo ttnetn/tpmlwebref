@@ -75,3 +75,12 @@ input[disabled][type="checkbox"]:checked {
 table td span.green, table td span.red, table td span.orange {
     min-width: 6em !important;
 }
+
+.setting_block .upload_block {
+    width: 100%;
+}
+
+.content_block .flex-form {
+    width: 96%;
+    max-width: 96%;
+}
