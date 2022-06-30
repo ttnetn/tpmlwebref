@@ -552,7 +552,7 @@
                                                             </select>
                                                             
                                                         </div>
-                                                        <h4>會議室可用設備(從設備管理來控制可能更恰當)</h4>
+                                                        <!--h4>會議室可用設備(從設備管理來控制可能更恰當)</h4>
                                                         <div class="form_grp">
                                                             <select id="select2" multiple>
                                                                 <optgroup label="會議室固定單槍投影機">
@@ -572,10 +572,7 @@
                                                                     <option value='2409' > 3F 宴會廳  </option>
                                                                 </optgroup> 
                                                             </select>
-                                                        </div>                                                        
-
-                                                    </div>
-                                                    <div class="flex-form">
+                                                        </div-->                                                        
                                                         <h4>[備用]下拉選單multiple有checkbox</h4>
                                                         <!--div class="form_grp">
                                                             <div class="labelEffect">
@@ -764,8 +761,6 @@
                                                             </div>
                                                         </div>
 
-                                                    </div>
-                                                    <div class="flex-form">
                                                         <h4>關聯問答(開啟lightbox選擇模式)
                                                             <button class="btn btn-xs"><i class="i_addfile"></i>選入資料</button>
                                                         </h4>
@@ -793,8 +788,52 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+
+                                                    <hr>
+                                                    <div class="flex-form">
+                                                        <h4>檔期關閉設定</h4>
+                                                        <div style="width: 100%;">
+                                                            <div class="form_grp" style="margin-top:20px;">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="2022春節檔期" class="dynamicCol used">
+                                                                    <label>檔期名稱 <abbr>*</abbr>
+                                                                    </label>
+                                                                    <div class="additional">
+                                                                        <div class="checkbox_grp">
+                                                                            <label><input name="checkSample" type="checkbox" value=""><span>不開放</span></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp form_inline" style="flex:0 1 50%;padding-left:.5em;">
+                                                                <div class="datepick">
+                                                                    <div class="startDate">
+                                                                        <div class="labelEffect">
+                                                                            <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                                            <input name="" type="text" value="2022-01-29" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                            <label>開始日期</label>
+                                                                        </div>
+                                                                        <!-- <div class="help">說明文字</div> -->
+                                                                    </div>
+                                                                    <div class="endDate">
+                                                                        <div class="labelEffect">
+                                                                            <input name="" type="text" value="2022-02-06" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                            <label>結束日期</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional"><button class="btn" style="height:2.75em;padding-left:1em;position:absolute;right:3em;"><i class="i_close"></i>移除本組設定</button></div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <button class="btn btn-yellow" style="height:2.75em;padding-left:1em;"><i class="i_add"></i>新增一組檔期</button>
+                                                            </div>
+                                                        </div>
 
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
