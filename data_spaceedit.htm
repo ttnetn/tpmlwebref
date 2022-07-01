@@ -793,28 +793,44 @@
                                                     <hr>
                                                     <div class="flex-form">
                                                         <h4>檔期關閉設定</h4>
-                                                        <div style="width: 100%;">
-                                                            <div class="form_grp" style="margin-top:20px;">
+                                                        <div style="width:100%;">
+                                                            <div class="form_grp form_inline" style="margin-top:20px;">
                                                                 <div class="labelEffect">
                                                                     <input name="" type="text" value="2022春節檔期" class="dynamicCol used">
                                                                     <label>檔期名稱 <abbr>*</abbr>
                                                                     </label>
+                                                                    <div class="datepick" style="margin-left:1.25em;margin-right:1em;">
+                                                                        <div class="startDate">
+                                                                            <div class="labelEffect">
+                                                                                <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                                                <input name="" type="text" value="2022-01-29" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>開始日期</label>
+                                                                            </div>
+                                                                            <!-- <div class="help">說明文字</div> -->
+                                                                        </div>
+                                                                        <div class="endDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-02-06" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>結束日期</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                     <div class="additional">
                                                                         <div class="checkbox_grp">
-                                                                            <label><input name="checkSample" type="checkbox" value=""><span>不開放</span></label>
+                                                                            <label><input name="checkSample" type="checkbox" value="" style="width:1.25em;" checked><span>不開放預約</span></label>
                                                                         </div>
+                                                                        <button class="btn" style="flex:0 1 25%;height:2.5em;"><i class="i_close"></i> </button>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="form_grp form_inline" style="flex:0 1 50%;padding-left:.5em;">
+                                                            <!--div class="form_grp form_inline" style="flex:0 1 50%;padding-left:.5em;">
                                                                 <div class="datepick">
                                                                     <div class="startDate">
                                                                         <div class="labelEffect">
-                                                                            <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
                                                                             <input name="" type="text" value="2022-01-29" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
                                                                             <label>開始日期</label>
                                                                         </div>
-                                                                        <!-- <div class="help">說明文字</div> -->
+                                                                        <div class="help">說明文字</div>
                                                                     </div>
                                                                     <div class="endDate">
                                                                         <div class="labelEffect">
@@ -824,11 +840,73 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="additional"><button class="btn" style="height:2.75em;padding-left:1em;position:absolute;right:3em;"><i class="i_close"></i>移除本組設定</button></div>
+                                                            <div class="additional"><button class="btn" style="height:2.75em;padding-left:1em;position:absolute;right:3em;"><i class="i_close"></i>移除本組設定</button></div-->
                                                         </div>
+                                                        <div style="width:100%;">
+                                                            <div class="form_grp form_inline">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="可預約只是標示用" class="dynamicCol used">
+                                                                    <label>檔期名稱 <abbr>*</abbr>
+                                                                    </label>
+                                                                    <div class="datepick" style="margin-left:1.25em;margin-right:1em;">
+                                                                        <div class="startDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-07-01" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>開始日期</label>
+                                                                            </div>
+                                                                            <!-- <div class="help">說明文字</div> -->
+                                                                        </div>
+                                                                        <div class="endDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-07-07" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>結束日期</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <div class="checkbox_grp">
+                                                                            <label><input name="checkSample" type="checkbox" value="" style="width:1.25em;"><span>不開放預約</span></label>
+                                                                        </div>
+                                                                        <button class="btn" style="flex:0 1 25%;height:2.5em;"><i class="i_close"></i> </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width:100%;">
+                                                            <div class="form_grp form_inline">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="例行維修" class="dynamicCol used">
+                                                                    <label>檔期名稱 <abbr>*</abbr>
+                                                                    </label>
+                                                                    <div class="datepick" style="margin-left:1.25em;margin-right:1em;">
+                                                                        <div class="startDate">
+                                                                            <div class="labelEffect">
+                                                                                <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                                                <input name="" type="text" value="2022-07-01" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>開始日期</label>
+                                                                            </div>
+                                                                            <!-- <div class="help">說明文字</div> -->
+                                                                        </div>
+                                                                        <div class="endDate">
+                                                                            <div class="labelEffect">
+                                                                                <input name="" type="text" value="2022-07-07" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                                                <label>結束日期</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <div class="checkbox_grp">
+                                                                            <label><input name="checkSample" type="checkbox" value="" style="width:1.25em;" checked><span>不開放預約</span></label>
+                                                                        </div>
+                                                                        <button class="btn" style="flex:0 1 25%;height:2.5em;"><i class="i_close"></i> </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
-                                                                <button class="btn btn-yellow" style="height:2.75em;padding-left:1em;"><i class="i_add"></i>新增一組檔期</button>
+                                                                <button class="btn btn-yellow" style="height:2.75em;"><i class="i_add"></i>新增一組檔期 </button>
                                                             </div>
                                                         </div>
 
