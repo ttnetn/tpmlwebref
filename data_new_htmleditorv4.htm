@@ -18,12 +18,17 @@
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
     <!-- fancybox -->
     <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!--圖片批次上傳-->
     <link rel="stylesheet" href="css/fileUpload.css">
-    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
+    <!--增加select-->
+    <link rel="stylesheet" href="css/customize.css">
+    <link rel="stylesheet" href="css/select2.min.css">
 
+    <!--測試 tinyMCE html editor 暫用-->
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
     <script>
         tinymce.init({
-        selector: 'textarea',
+        selector: 'textarea.tinymce',
         height: 500,
         menubar: false,
         plugins: [
@@ -357,7 +362,7 @@
                                                 <!-- 自由編輯區 -->
                                                 <div class="cp user_edit" style="min-height:200px;">
                                                     
-                                                    <textarea>
+                                                    <textarea class="tinymce">
                                                         <p style="text-align: center;">
                                                           <img title="" src="images/style_01.png" alt="TinyMCE Logo" width="110" height="97" />
                                                         </p>
@@ -415,7 +420,7 @@
                                                         <p>
                                                           Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
                                                         </p>
-                                                      </textarea>
+                                                    </textarea>
 
                                                 </div>
                                                 <hr>
@@ -665,6 +670,12 @@
                                                     <div class="flex-form">
                                                         <div class="form_grp">
                                                             <div class="labelEffect">
+                                                                <textarea></textarea>
+                                                                <label>備用Textarea欄位</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
                                                                 <input name="" type="text" value="">
                                                                 <label>備用TEXT欄位</label>
                                                             </div>
@@ -679,13 +690,82 @@
                                                                 <label>備用Select欄位</label>
                                                             </div>
                                                         </div>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <textarea></textarea>
-                                                                <label>備用Textarea欄位</label>
-                                                            </div>
+                                                        <!--特殊Select複選模式-->
+                                                        <div class="form_grp" style="margin-top:20px;">
+                                                            <div class="form_title">複選select Labels樣式<abbr>*</abbr></div>
+                                                            <select id="select1" multiple>
+                                                                <option value="101">101 / 全室</option>
+                                                                <option value="101A">101A / 單間</option>
+                                                                <option value="2">101B / 單間</option>
+                                                                <option value="3">101C / 單間</option>
+                                                                <option value="4">101D / 單間</option>
+                                                                <option value="5">101AB / 雙間</option>
+                                                                <option value="6">101CD / 雙間</option>
+                                                                <option value="7" disabled>101AD / 雙間</option>
+                                                                <option value="8" disabled>101BC / 雙間</option>
+                                                                <option value="9">201 / 全室</option>
+                                                                <option value="9">201A / 單間</option>
+                                                                <option value="9">201B / 單間</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="form_grp">
+                                                        <div class="form_grp" style="margin-top:20px;">
+                                                            <div class="form_title">複選select checkbox樣式<abbr>*</abbr></div>
+                                                            <select id="test" multiple>
+                                                                <option value="1">101 / 全室</option>
+                                                                <option value="1">101A / 單間</option>
+                                                                <option value="2">101B / 單間</option>
+                                                                <option value="3">101C / 單間</option>
+                                                                <option value="4">101D / 單間</option>
+                                                                <option value="5">101AB / 雙間</option>
+                                                                <option value="6">101CD / 雙間</option>
+                                                                <option value="7" disabled>101AD / 雙間</option>
+                                                                <option value="8" disabled>101BC / 雙間</option>
+                                                                <option value="9">201 / 全室</option>
+                                                                <option value="9">201A / 單間</option>
+                                                                <option value="9">201B / 單間</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <!--測試select option加上搜尋功能-->
+                                                        <div class="form_grp" style="margin-top:20px;">
+                                                            <div class="form_title">select加上搜尋樣式<abbr>*</abbr></div>
+                                                            <select id="select3" class="">
+                                                            <option value='0' selected='true'> Not associated to any Circuit ID </option>
+                                                            <option value='2101' > 1007345136 </option> 
+                                                            <option value='2102' > 1007921321 </option> 
+                                                            <option value='2103' > 1007987235 </option> 
+                                                            <option value='2407' > 132 </option> 
+                                                            <option value='2408' > 141 </option> 
+                                                            <option value='2409' > 142 </option> 
+                                                            <option value='2410' > 145 </option> 
+                                                            <option value='2701' > 225 </option> 
+                                                            <option value='2702' > 248 </option> 
+                                                            <option value='2703' > 251 </option> 
+                                                            <option value='2704' > 254 </option> 
+                                                            <option value='2705' > 264 </option> 
+                                                            <option value='1804' > 27 </option> 
+                                                            <option value='2706' > 274 </option> 
+                                                            <option value='2707' > 310 </option> 
+                                                            <option value='2708' > 311 </option> 
+                                                            <option value='3001' > 333 </option> 
+                                                            <option value='2401' > 38 </option> 
+                                                            <option value='2402' > 64 </option> 
+                                                            <option value='2403' > 68 </option> 
+                                                            <option value='2404' > 69 </option> 
+                                                            <option value='2405' > 76 </option> 
+                                                            <option value='2406' > 81 </option> 
+                                                            <option value='2411' > abc123post </option> 
+                                                            <option value='3301' > circuit id 50 </option> 
+                                                            <option value='2105' > fadhil </option> 
+                                                            <option value='2104' > faisal </option> 
+                                                            <option value='3002' > IPEN - SITE TEST </option> 
+                                                            <option value='3601' > Manual Circuit ID </option> 
+                                                            <option value='3302' > new circuit id fadhil </option> 
+                                                            <option value='1809' > try iframe </option> 
+                                                            </select>
+                                                        </div> 
+
+                                                        <div class="form_grp" style="margin-top:20px;">
                                                             <div class="form_title">備用Radio欄位</div>
                                                             <div class="form_content">
                                                                 <div class="radio_grp form_inline">
@@ -921,7 +1001,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <!--hr>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <select id="" name="" class="used">
@@ -944,7 +1024,7 @@
                                                     <label><input name="" type="checkbox" value=""><span>分眾2</span></label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div-->
                                     </div>
                                 </div>
                             </div>
@@ -965,6 +1045,8 @@
     <script src="vendor/treeview/jquery.treeview.js"></script>
     <!-- fancybox -->
     <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+
     <script>
     // first example
     $(".treeview .treeview").treeview();
@@ -977,6 +1059,20 @@
     $(".treeview .treeview").treeview();
     $('header').load("header.htm");
     $('aside').load("aside_cms.htm");
+    </script>
+    <!--Select multiple checkbox-->
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+        });
+    </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
     </script>
 </body>
 
