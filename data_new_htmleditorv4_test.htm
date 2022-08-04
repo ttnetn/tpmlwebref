@@ -26,130 +26,128 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!--測試 tinyMCE html editor 暫用-->
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/eou2u0dcyaz3v6vaj81ao0dp6p3y096n3f67r0udq051gffc/tinymce/4/tinymce.min.js"></script>
     <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
+        tinymce.init({
+          // selector 指定要轉換為 TinyMCE 編輯器的文本區域
+          selector: "textarea#tinymce1",
 
-      tinymce.init({
-        // selector 指定要轉換為 TinyMCE 編輯器的文本區域
-        selector: "textarea#tinymce1",
+          // height 設置為 TinyMCE 替換的 HTML 元素的高度
+          height: 500,
 
-        // height 設置為 TinyMCE 替換的 HTML 元素的高度
-        height: 500,
+          // menubar 和 toolbar 可以啟用/禁用選單欄和工具欄和添加/刪除工具
+          menubar: false,
+          toolbar:
+            "insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help | code",
 
-        // menubar 和 toolbar 可以啟用/禁用選單欄和工具欄和添加/刪除工具
-        menubar: false,
-        toolbar:
-          "insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help | code",
+          //  Plugins 可以添加插件, 例如我們需要添加 image 插件才可以讓用戶上傳圖片
+          plugins: [
+            "advlist autolink lists link image charmap print preview anchor textcolor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste code help wordcount",
+          ],
 
-        //  Plugins 可以添加插件, 例如我們需要添加 image 插件才可以讓用戶上傳圖片
-        plugins: [
-          "advlist autolink lists link image charmap print preview anchor textcolor",
-          "searchreplace visualblocks code fullscreen",
-          "insertdatetime media table contextmenu paste code help wordcount",
-        ],
+          // 服務器端用於處理和儲存上傳圖片的 URL
+          // 需要有一個存檔的 web service 可以將上傳的圖片存在 web server 上, 並回傳儲存後的網址: json string { location="http://...." }
+          images_upload_url: "http://52.148.91.63/TinyMCE/FileUpload/SaveFile",
 
-        // 服務器端用於處理和儲存上傳圖片的 URL
-        // 需要有一個存檔的 web service 可以將上傳的圖片存在 web server 上, 並回傳儲存後的網址: json string { location="http://...." }
-        images_upload_url: "http://52.148.91.63/TinyMCE/FileUpload/SaveFile",
+          // mobile 可以更改移動設備的樣式
+          mobile: {
+            theme: "mobile",
+          },
 
-        // mobile 可以更改移動設備的樣式
-        mobile: {
-          theme: "mobile",
-        },
+          // content-css 可以導入 CSS 文件和自定義樣式
+          content_css: [
+            "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i",
+            "//www.tiny.cloud/css/codepen.min.css",
+          ],
 
-        // content-css 可以導入 CSS 文件和自定義樣式
-        content_css: [
-          "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i",
-          "//www.tiny.cloud/css/codepen.min.css",
-        ],
+          // 在初始內容加載到編輯器後展示內容
+          // setup: function(editor) {
+          //   editor.on('LoadContent', function(e) {
+          //     console.log('Editor 1 has loaded.');
+          //     alertContent("tinymce1");
+          //   });
+          // }
+        });
 
-        // 在初始內容加載到編輯器後展示內容
-        // setup: function(editor) {
-        //   editor.on('LoadContent', function(e) {
-        //     console.log('Editor 1 has loaded.');
-        //     alertContent("tinymce1");
-        //   });
-        // }
+        tinymce.init({
+          // selector 指定要轉換為 TinyMCE 編輯器的文本區域
+          selector: "textarea#tinymce2",
+
+          // height 設置為 TinyMCE 替換的 HTML 元素的高度
+          height: 500,
+
+          // menubar 和 toolbar 可以啟用/禁用選單欄和工具欄和添加/刪除工具
+          menubar: false,
+          toolbar:
+            "insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help | code",
+
+          //  Plugins 可以添加插件, 例如我們需要添加 image 插件才可以讓用戶上傳圖片
+          plugins: [
+            "advlist autolink lists link image charmap print preview anchor textcolor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste code help wordcount",
+          ],
+
+          // 服務器端用於處理和儲存上傳圖片的 URL
+          // 需要有一個存檔的 web service 可以將上傳的圖片存在 web server 上, 並回傳儲存後的網址: json string { location="http://...." }
+          images_upload_url: "http://52.148.91.63/TinyMCE/FileUpload/SaveFile",
+
+          // mobile 可以更改移動設備的樣式
+          mobile: {
+            theme: "mobile",
+          },
+
+          // content-css 可以導入 CSS 文件和自定義樣式
+          content_css: [
+            "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i",
+            "//www.tiny.cloud/css/codepen.min.css",
+          ],
+
+          // 在初始內容加載到編輯器後展示內容
+          // setup: function(editor) {
+          //   editor.on('LoadContent', function(e) {
+          //     console.log('Editor 2 has loaded.');
+          //     alertContent('tinymce2');
+          //   });
+          // }
+        });
+
+        // 展示被選定的 tinyMCE 編輯器的內容
+        function alertContent(id) {
+          const content = tinymce.get(id).getContent();
+          console.log(content);
+          alert(content);
+        }
+
+        $("#tinymce1-get-btn").on("click", function () {
+          alertContent("tinymce1");
+        });
+
+        $("#tinymce2-get-btn").on("click", function () {
+          alertContent("tinymce2");
+        });
+
+        $("#tinymce1-set-btn").on("click", function () {
+          tinymce.get("tinymce1").setContent($("#tinymce1-input").val());
+          alertContent("tinymce1");
+        });
+
+        $("#tinymce2-set-btn").on("click", function () {
+          tinymce.get("tinymce2").setContent($("#tinymce2-input").val());
+          alertContent("tinymce2");
+        });
       });
-    
-
-      tinymce.init({
-        // selector 指定要轉換為 TinyMCE 編輯器的文本區域
-        selector: "textarea#tinymce2",
-
-        // height 設置為 TinyMCE 替換的 HTML 元素的高度
-        height: 500,
-
-        // menubar 和 toolbar 可以啟用/禁用選單欄和工具欄和添加/刪除工具
-        menubar: false,
-        toolbar:
-          "insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help | code",
-
-        //  Plugins 可以添加插件, 例如我們需要添加 image 插件才可以讓用戶上傳圖片
-        plugins: [
-          "advlist autolink lists link image charmap print preview anchor textcolor",
-          "searchreplace visualblocks code fullscreen",
-          "insertdatetime media table contextmenu paste code help wordcount",
-        ],
-
-        // 服務器端用於處理和儲存上傳圖片的 URL
-        // 需要有一個存檔的 web service 可以將上傳的圖片存在 web server 上, 並回傳儲存後的網址: json string { location="http://...." }
-        images_upload_url: "http://52.148.91.63/TinyMCE/FileUpload/SaveFile",
-
-        // mobile 可以更改移動設備的樣式
-        mobile: {
-          theme: "mobile",
-        },
-
-        // content-css 可以導入 CSS 文件和自定義樣式
-        content_css: [
-          "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i",
-          "//www.tiny.cloud/css/codepen.min.css",
-        ],
-        
-        // 在初始內容加載到編輯器後展示內容
-        // setup: function(editor) {
-        //   editor.on('LoadContent', function(e) {
-        //     console.log('Editor 2 has loaded.');
-        //     alertContent('tinymce2');
-        //   });
-        // }
-      });
-
-      // 展示被選定的 tinyMCE 編輯器的內容
-      function alertContent(id) {
-        const content = tinymce.get(id).getContent();
-        console.log(content);
-        alert(content);
-      }
-
-      $('#tinymce1-get-btn').on('click', function(){
-        alertContent('tinymce1');
-      })
-
-      $('#tinymce2-get-btn').on('click', function(){
-        alertContent('tinymce2');
-      })
-
-      $('#tinymce1-set-btn').on('click', function(){
-        tinymce.get('tinymce1').setContent($('#tinymce1-input').val());
-        alertContent('tinymce1');
-      })
-
-      $('#tinymce2-set-btn').on('click', function(){
-        tinymce.get('tinymce2').setContent($('#tinymce2-input').val());
-        alertContent('tinymce2');
-      })
-    });
     </script>
-
-    <style>
+    <!-- 隱藏無 API key 的錯誤消息 -->
+    <!-- <style>
       .mce-notification-inner,
       .mce-notification-warning {
         visibility: hidden;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <div class="wrapper">
@@ -516,12 +514,21 @@
                             </div>
                           </div>
                         </div>
-                          <div class="_content">
-                            <div class="cp user_edit" style="min-height: 200px">
-                              <button id="tinymce1-get-btn">TinyMCE1 Get Content</button>
-                              <button id="tinymce1-set-btn">TinyMCE1 Set Content</button>
-                              <input id="tinymce1-input" type="text" placeholder="Input Content Here" style="width:25%">
-                              <textarea class="tinymce" id="tinymce1">
+                        <div class="_content">
+                          <div class="cp user_edit" style="min-height: 200px">
+                            <button id="tinymce1-get-btn">
+                              TinyMCE1 Get Content
+                            </button>
+                            <button id="tinymce1-set-btn">
+                              TinyMCE1 Set Content
+                            </button>
+                            <input
+                              id="tinymce1-input"
+                              type="text"
+                              placeholder="Input Content Here"
+                              style="width: 25%"
+                            />
+                            <textarea class="tinymce" id="tinymce1">
                                 <p style="text-align: center;">
                                   <img title="" src="images/style_01.png" alt="TinyMCE Logo" width="110" height="97" />
                                 </p>
@@ -529,13 +536,23 @@
                                   <p>
                                     Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
                                   </p>
-                              </textarea>
-                            </div>
-                            <div class="cp user_edit" style="min-height: 200px">
-                              <button id="tinymce2-get-btn">TinyMCE2 Get Content</button>
-                              <button id="tinymce2-set-btn">TinyMCE2 Set Content</button>
-                              <input id="tinymce2-input" type="text" placeholder="Input Content Here" style="width:25%">
-                              <textarea class="tinymce" id="tinymce2">
+                              </textarea
+                            >
+                          </div>
+                          <div class="cp user_edit" style="min-height: 200px">
+                            <button id="tinymce2-get-btn">
+                              TinyMCE2 Get Content
+                            </button>
+                            <button id="tinymce2-set-btn">
+                              TinyMCE2 Set Content
+                            </button>
+                            <input
+                              id="tinymce2-input"
+                              type="text"
+                              placeholder="Input Content Here"
+                              style="width: 25%"
+                            />
+                            <textarea class="tinymce" id="tinymce2">
                                 <p style="text-align: center;">
                                   <img title="" src="images/style_01.png" alt="TinyMCE Logo" width="110" height="97" />
                                 </p>
@@ -543,8 +560,8 @@
                                 <p>
                                   Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
                                 </p>
-                              </textarea>
-                            </div>
+                              </textarea
+                            >
                           </div>
                           <hr />
                           <!-- 圖片上傳區 -->
