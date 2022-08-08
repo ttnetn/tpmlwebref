@@ -174,7 +174,7 @@
                                                 
                                                 <div class="setting_block">
                                                     <h4>設備與格局</h4>
-                                                    <div class="form_grp">
+                                                    <!--div class="form_grp">
                                                         <div class="form_title">場地類型： </div>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
@@ -184,24 +184,34 @@
                                                                 <label><input name="spacetype" type="radio" value="3"><span>三間</span></label>
                                                                 <label><input name="spacetype" type="radio" value="4"><span>四間</span></label>
     
-                                                                <!--label><input name="spacetype" type="radio" value="2" checked><span>合併</span></label>
+                                                                <label><input name="spacetype" type="radio" value="2" checked><span>合併</span></label>
                                                                     <label><input name="spacetypesub" type="checkbox" value="21" checked><span>全室</span></label>
                                                                     <label><input name="spacetypesub" type="checkbox" value="22" checked><span>雙間</span></label>
                                                                     <label><input name="spacetypesub" type="checkbox" value="23" checked><span>三間</span></label>
-                                                                    <label><input name="spacetypesub" type="checkbox" value="24" checked><span>四間</span></label-->
+                                                                    <label><input name="spacetypesub" type="checkbox" value="24" checked><span>四間</span></label>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div-->
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_title">樓層： </div>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label><input name="floor" type="radio" value="" checked><span>1F</span></label>
-                                                                <label><input name="floor" type="radio" value=""><span>2F</span></label>
-                                                                <label><input name="floor" type="radio" value=""><span>3F</span></label>
-                                                                <label><input name="floor" type="radio" value=""><span>4F</span></label>
-                                                                <label><input name="floor" type="radio" value=""><span>5F</span></label>
-                                                                <label><input name="floor" type="radio" value=""><span>6F</span></label>
+                                                                <label><input name="floor" type="radio" value="1" checked><span>1F</span></label>
+                                                                <label><input name="floor" type="radio" value="2"><span>2F</span></label>
+                                                                <label><input name="floor" type="radio" value="3"><span>3F</span></label>
+                                                                <label><input name="floor" type="radio" value="4"><span>4F</span></label>
+                                                                <label><input name="floor" type="radio" value="5"><span>5F</span></label>
+                                                                <label><input name="floor" type="radio" value="6"><span>6F</span></label>
+                                                                <label><input name="floor" type="radio" value="O">其他： <input name="" type="text" value="" style="width:150px;border-radius:0;"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="form_title">用途： </div>
+                                                        <div class="form_content">
+                                                            <div class="check_grp form_inline">
+                                                                <label><input name="333" type="checkbox" value=""><span>會議、典禮、教育訓練</span></label>
+                                                                <label><input name="333" type="checkbox" value=""><span>餐宴</span></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -210,12 +220,12 @@
                                                         <div class="form_content">
                                                             <div class="check_grp form_inline">
                                                                 <label><input name="222" type="checkbox" value="">教室型： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <label><input name="222" type="checkbox" value="">馬蹄型U： <input name="" type="text" value="" style="width:50px;"> 人</label>
                                                                 <label><input name="222" type="checkbox" value="">劇院型： <input name="" type="text" value="" style="width:50px;"> 人</label>
                                                                 <label><input name="222" type="checkbox" value="">劇院型含彈射椅： <input name="" type="text" value="" style="width:50px;"> 人</label>
-                                                                <label><input name="222" type="checkbox" value="">馬蹄型U： <input name="" type="text" value="" style="width:50px;"> 人</label>
-                                                                <label><input name="222" type="checkbox" value="">洽談： <input name="" type="text" value="" style="width:50px;"> 人</label>
-                                                                <label><input name="222" type="checkbox" value="">展覽： <input name="" type="text" value="" style="width:50px;"> 人</label>
-                                                                <label><input name="222" type="checkbox" value="">其他格局： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <label><input name="222" type="checkbox" value="">攤位數： <input name="" type="text" value="" style="width:50px;"> 人</label>
+                                                                <!--label><input name="222" type="checkbox" value="">展覽： <input name="" type="text" value="" style="width:50px;"> 人</label-->
+                                                                <label><input name="222" type="checkbox" value="">其他格局： <input name="" type="text" value="" style="width:100px;">／<input name="" type="text" value="" style="width:50px;"> 人</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -223,12 +233,43 @@
                                                         <div class="form_title">會議設備： </div>
                                                         <div class="form_content">
                                                             <div class="check_grp form_inline">
-                                                                <label><input name="111" type="checkbox" value="" checked><span>網際網路數據專線</span></label>
-                                                                <label><input name="111" type="checkbox" value="" checked><span>1KW聚光燈</span></label>
-                                                                <label><input name="111" type="checkbox" value="" checked><span>會議系統</span></label>
                                                                 <label><input name="111" type="checkbox" value="" checked><span>投影機(HD)</span></label>
-                                                                <!--label><input name="111" type="checkbox" value=""><span>設備名稱</span></label>
-                                                                <label><input name="111" type="checkbox" value=""><span>設備名稱</span></label-->
+                                                                <label><input name="111" type="checkbox" value="" checked><span>PA音響設備/span></label>
+                                                                <label><input name="111" type="checkbox" value="" checked><span>聚光燈</span></label>
+                                                                <label><input name="111" type="checkbox" value="" checked><span>網際網路數據專線</span></label>
+                                                                <label><input name="111" type="checkbox" value=""><span>桌子</span></label>
+                                                                <label><input name="111" type="checkbox" value=""><span>座椅</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h4>空間資訊</h4>
+                                                    <div class="flex-form">
+                                                        <div class="form_grp form_inline">
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>攤位數(3公尺*2公尺)</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>面積(平方公尺)</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>面積(坪)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp form_inline">
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(長)公尺</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(寬)公尺</label>
+                                                            </div>
+                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
+                                                                <input name="" type="text" value="">
+                                                                <label>尺寸(高)公尺</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -379,40 +420,6 @@
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <div class="setting_block">
-                                                    <h4>空間資訊</h4>
-                                                    <div class="flex-form">
-                                                        <div class="form_grp form_inline">
-                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
-                                                                <input name="" type="text" value="">
-                                                                <label>攤位數(3公尺*2公尺)</label>
-                                                            </div>
-                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
-                                                                <input name="" type="text" value="">
-                                                                <label>面積(平方公尺)</label>
-                                                            </div>
-                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
-                                                                <input name="" type="text" value="">
-                                                                <label>面積(坪)</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp form_inline">
-                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
-                                                                <input name="" type="text" value="">
-                                                                <label>尺寸(長)公尺</label>
-                                                            </div>
-                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
-                                                                <input name="" type="text" value="">
-                                                                <label>尺寸(寬)公尺</label>
-                                                            </div>
-                                                            <div class="labelEffect" style="flex:0 1 calc(100% - 70%);">
-                                                                <input name="" type="text" value="">
-                                                                <label>尺寸(高)公尺</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <hr>
                                                 <!-- 實境VR連結 -->
                                                 <div class="setting_block">
                                                     <h4>實境導覽</h4>
@@ -534,7 +541,22 @@
                                                 <!-- setting_block為資料上稿專用 -->
                                                 <div class="setting_block">
                                                     <div class="flex-form">
-                                                        <h4>合併/分租格局</h4>
+                                                        <h4>格局</h4>
+                                                        <div class="form_grp">
+                                                            <!--div class="form_title">格局： </div-->
+                                                            <div class="form_content">
+                                                                <div class="radio_grp form_inline">
+                                                                    <label><input name="spacetype" type="radio" value="all" checked><span>全室格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="1"><span>單間格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="2"><span>雙間格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="3"><span>三間格局</span></label>
+                                                                    <label><input name="spacetype" type="radio" value="4"><span>四間格局</span></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-form">
+                                                        <h4>子場地(合併/分租格局)</h4>
                                                         <div class="form_grp">
                                                             <select id="select1" multiple>
                                                                 <option value="101">101 / 全室</option>
@@ -552,184 +574,6 @@
                                                             </select>
                                                             
                                                         </div>
-                                                        <!--h4>會議室可用設備(從設備管理來控制可能更恰當)</h4>
-                                                        <div class="form_grp">
-                                                            <select id="select2" multiple>
-                                                                <optgroup label="會議室固定單槍投影機">
-                                                                    <option value='101' > 101 會議室專用 </option> 
-                                                                    <option value='102' > 102 會議室 </option> 
-                                                                    <option value='103' > 103 會議室 </option> 
-                                                                    <option value='105' > 105 會議室 </option> 
-                                                                    <option value='201' > 201 會議室  </option> 
-                                                                    <option value='2409' > 3F 宴會廳  </option>
-                                                                </optgroup> 
-                                                                <optgroup label="活動式單槍投影機">
-                                                                    <option value='2101' > 高亮度小單槍 </option> 
-                                                                    <option value='2102' > 102 會議室 </option> 
-                                                                    <option value='2103' > 103 會議室 </option> 
-                                                                    <option value='2407' > 105 會議室 </option> 
-                                                                    <option value='2408' > 201 會議室  </option> 
-                                                                    <option value='2409' > 3F 宴會廳  </option>
-                                                                </optgroup> 
-                                                            </select>
-                                                        </div-->                                                        
-                                                        <h4>[備用]下拉選單multiple有checkbox</h4>
-                                                        <!--div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="">
-                                                                <button class="btn btn-primary btn-text">請選擇</button>
-                                                            </div>
-                                                            <ol>
-                                                                <li>101A / 單間</li>
-                                                                <li>101B / 單間</li>
-                                                            </ol>
-                                                        </div-->
-                                                        <!--複選關聯空間-->
-                                                        <!--div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <select id="" name="" multiple style="height:fit-content;">
-                                                                    <option value="" selected="" disabled="disabled"></option>
-                                                                    <option value="選項1">101A / 單間</option>
-                                                                    <option value="選項2">101B / 單間</option>
-                                                                    <option value="選項3">101C / 單間</option>
-                                                                    <option value="選項4">101D / 單間</option>
-                                                                    <option value="選項5">101AB / 雙間</option>
-                                                                    <option value="選項6">101CD / 雙間</option>
-                                                                    <option value="選項7" disabled>101AD / 雙間</option>
-                                                                    <option value="選項8" disabled>101BC / 雙間</option>
-                                                                </select>
-                                                                
-                                                                <div class="help">請使用 Ctrl+點選選項，選入複數關聯空間</div>
-                                                            </div>
-                                                        </div-->
-
-                                                        <div class="form_grp">
-                                                            <select id="test" multiple>
-                                                                <option value="1">101 / 全室</option>
-                                                                <option value="1">101A / 單間</option>
-                                                                <option value="2">101B / 單間</option>
-                                                                <option value="3">101C / 單間</option>
-                                                                <option value="4">101D / 單間</option>
-                                                                <option value="5">101AB / 雙間</option>
-                                                                <option value="6">101CD / 雙間</option>
-                                                                <option value="7" disabled>101AD / 雙間</option>
-                                                                <option value="8" disabled>101BC / 雙間</option>
-                                                                <option value="9">201 / 全室</option>
-                                                                <option value="9">201A / 單間</option>
-                                                                <option value="9">201B / 單間</option>
-                                                            </select>
-                                                            
-                                                        </div>
-
-                                                        <!--測試select option加上搜尋功能-->
-                                                        <h4>[備用]下拉選單可搜尋</h4>
-                                                        <div class="form_grp">
-                                                            <select id="select3" class="">
-                                                            <option value='0' selected='true'> Not associated to any Circuit ID </option>
-                                                            <option value='2101' > 1007345136 </option> 
-                                                            <option value='2102' > 1007921321 </option> 
-                                                            <option value='2103' > 1007987235 </option> 
-                                                            <option value='2407' > 132 </option> 
-                                                            <option value='2408' > 141 </option> 
-                                                            <option value='2409' > 142 </option> 
-                                                            <option value='2410' > 145 </option> 
-                                                            <option value='2701' > 225 </option> 
-                                                            <option value='2702' > 248 </option> 
-                                                            <option value='2703' > 251 </option> 
-                                                            <option value='2704' > 254 </option> 
-                                                            <option value='2705' > 264 </option> 
-                                                            <option value='1804' > 27 </option> 
-                                                            <option value='2706' > 274 </option> 
-                                                            <option value='2707' > 310 </option> 
-                                                            <option value='2708' > 311 </option> 
-                                                            <option value='3001' > 333 </option> 
-                                                            <option value='2401' > 38 </option> 
-                                                            <option value='2402' > 64 </option> 
-                                                            <option value='2403' > 68 </option> 
-                                                            <option value='2404' > 69 </option> 
-                                                            <option value='2405' > 76 </option> 
-                                                            <option value='2406' > 81 </option> 
-                                                            <option value='2411' > abc123post </option> 
-                                                            <option value='3301' > circuit id 50 </option> 
-                                                            <option value='2105' > fadhil </option> 
-                                                            <option value='2104' > faisal </option> 
-                                                            <option value='3002' > IPEN - SITE TEST </option> 
-                                                            <option value='3601' > Manual Circuit ID </option> 
-                                                            <option value='3302' > new circuit id fadhil </option> 
-                                                            <option value='1809' > try iframe </option> 
-                                                            </select>
-                                                        </div>                                                        
-        
-                                                        <h4>標籤</h4>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="">
-                                                                <!--label>標籤</label-->
-                                                            </div>
-                                                            <div class="help">請以半形, 分格多個標籤</div>
-                                                        </div>
-                                                        <!--h3>是否推薦</h3>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <select name="">
-                                                                    <option value="" selected disabled="disabled"></option>
-                                                                    <option value="Y">是</option>
-                                                                    <option value="N">否</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                        <h3>分類分眾</h3>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <select id="" name="" class="used">
-                                                                    <option value="" selected="" disabled="disabled">請選擇</option>
-                                                                    <option value="選項1">選項1</option>
-                                                                    <option value="選項2">選項2</option>
-                                                                    <option value="選項3">選項3</option>
-                                                                    <option value="選項4">選項4</option>
-                                                                    <option value="選項5">選項5</option>
-                                                                </select>
-                                                                <label>資料大類</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <div class="form_title">分眾</div>
-                                                            <div class="form_content">
-                                                                <div class="checkbox_grp form_inline">
-                                                                    <label><input name="" type="checkbox" value=""><span>分眾1</span></label>
-                                                                    <label><input name="" type="checkbox" value=""><span>分眾2</span></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                
-                                                        <h3>上稿資訊</h3>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <select name="" disabled="disabled">
-                                                                    <option value="" disabled="disabled"></option>
-                                                                    <option value="選項1" selected>台中市政府</option>
-                                                                    <option value="選項2">選項2</option>
-                                                                    <option value="選項3">選項3</option>
-                                                                    <option value="選項4">選項4</option>
-                                                                    <option value="選項5">選項5</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="系統管理者" disabled>
-                                                            </div>
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="04-22289111 #22104" disabled>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="systemvod@gmail.com" disabled>
-                                                            </div>
-                                                        </div-->
                                                     </div>
 
                                                     <div class="flex-form">
