@@ -84,3 +84,8 @@ table td span.green, table td span.red, table td span.orange {
     width: 96%;
     max-width: 96%;
 }
+
+/*避免跑版暫用*/
+div .radio_grp label input:checked ~ span:after {
+    background: none;
+}
