@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!--增加select-->
+    <link rel="stylesheet" href="css/customize.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>空間管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>設備管理</h2>
+                         <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>編輯設備資訊</h3>
+                                    <div class="flex-form">
+                                        <div class="form_grp" style="margin-top: 20px;">
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="">
+                                                    <label>請輸入設備名稱<abbr>*</abbr></label>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="">
+                                                    <label>可租用數量</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+
+                                        <h4>設備時段費用設定</h4>
+                                        <div class="form_grp" style="margin-top: 20px;">
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="08:30~12:30" class="dynamicCol used" disabled>
+                                                    <label>時段</label>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="13000" class="dynamicCol used">
+                                                    <label>正式使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="7800" class="dynamicCol used">
+                                                    <label>彩排使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>拆、佈場</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+
+                                                <div class="additional" style="display:inline-block;margin-left:20px;">
+                                                    <div class="checkSwitch">
+                                                        <label>
+                                                            <input name="checkboxSample1" type="checkbox" value="" checked>
+                                                            <div class="checkSwitch_switch"></div>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="13:30~17:30" class="dynamicCol used" disabled>
+                                                    <label>時段</label>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="13000" class="dynamicCol used">
+                                                    <label>正式使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="7800" class="dynamicCol used">
+                                                    <label>彩排使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>拆、佈場</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+
+                                                <div class="additional" style="display:inline-block;margin-left:20px;">
+                                                    <div class="checkSwitch">
+                                                        <label>
+                                                            <input name="checkboxSample1" type="checkbox" value="" checked>
+                                                            <div class="checkSwitch_switch"></div>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="18:30~22:30" class="dynamicCol used" disabled>
+                                                    <label>時段</label>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="13000" class="dynamicCol used">
+                                                    <label>正式使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="7800" class="dynamicCol used">
+                                                    <label>彩排使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>拆、佈場</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+
+                                                <div class="additional" style="display:inline-block;margin-left:20px;">
+                                                    <div class="checkSwitch">
+                                                        <label>
+                                                            <input name="checkboxSample1" type="checkbox" value="" checked>
+                                                            <div class="checkSwitch_switch"></div>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="00:00~03:30" class="dynamicCol used" disabled>
+                                                    <label>時段</label>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>正式使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>彩排使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>拆、佈場</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+
+                                                <div class="additional" style="display:inline-block;margin-left:20px;">
+                                                    <div class="checkSwitch">
+                                                        <label>
+                                                            <input name="checkboxSample1" type="checkbox" value="">
+                                                            <div class="checkSwitch_switch"></div>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="form_content form_inline">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="03:30~07:30" class="dynamicCol used" disabled>
+                                                    <label>時段</label>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>正式使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>彩排使用</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <input name="" type="number" value="">
+                                                    <label>拆、佈場</label>
+                                                    <div class="help">請輸入金額，整數數字</div>
+                                                </div>
+
+                                                <div class="additional" style="display:inline-block;margin-left:20px;">
+                                                    <div class="checkSwitch">
+                                                        <label>
+                                                            <input name="checkboxSample1" type="checkbox" value="">
+                                                            <div class="checkSwitch_switch"></div>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右側資料widget -->
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>資料狀態</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioStatus" type="radio" value="" checked=""><span>公開(啟用)</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>下架(停用)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <!--button class="btn btn-green">暫存</button>
+                                        <button class="btn">預覽</button-->
+                                        <button class="btn btn-orange">編修儲存</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>最後編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li><span><i class="i_man"></i></span>系統管理者(admin)</li>
+                                            <li><span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside_ticc.htm");
+    </script>
+</body>
+
+</html>

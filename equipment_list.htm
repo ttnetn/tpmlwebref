@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>設備管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>設備管理</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <!--查詢-->
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="" type="text" value="">
+                                                    <label>標題(設備名稱)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button class="btn reset">取消</button>
+                                            <button class="btn btn-primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>設備清單</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="_head">
+                                        <!-- 資料分類 -->
+                                        <div class="tag">
+                                            <ul>
+                                                <li class="active"><a href="#">全部</a></li>
+                                                <li><a href="#">公開</a></li>
+                                                <li><a href="#">下架</a></li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <!-- 頁碼 -->
+                                        <div class="pagination">
+                                            <form action="" class="form_inline">
+                                                <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                                        <option value="">10</option>
+                                                        <option value="">30</option>
+                                                        <option value="">50</option>
+                                                        <option value="">100</option>
+                                                    </select> 筆 </div>
+                                            </form>
+                                        </div>
+                                        <div class="quick_btn">
+                                            <button class="btn btn-orange" onclick="window.location.href='equipmentEdit.htm';"><i class="i_add"></i>新增</button>
+                                        </div>
+                                    </div>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>序號 </th>
+                                                    <th class="main_data">
+                                                        <a href="#">設備名稱(標題)</a>
+                                                    </th>
+                                                    <th>可租用數量</th>
+                                                    <th>啟用時段</th>
+                                                    <th>狀態</th>
+                                                    <th>
+                                                        <a href="#">最後編修日期 <i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th>動作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="num">1</td>
+                                                    <td class="main_data">
+                                                        <a href="equipmentEdit.htm">有線麥克風 </a>
+                                                    </td>
+                                                    <td>10</td>
+                                                    <td>08:30~12:30 / 13:30~17:30 / 18:30~22:30</td>
+                                                    <td><span class="green">公開</span></td>
+                                                    <td><time>2022/08/08 14:23</time></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit" onclick="window.location.href='equipmentEdit.htm';"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">2</td>
+                                                    <td class="main_data">
+                                                        <a href="equipmentEdit.htm">有線麥克風 </a>
+                                                    </td>
+                                                    <td>10</td>
+                                                    <td>08:30~12:30 / 13:30~17:30 / 18:30~22:30</td>
+                                                    <td><span class="red">下架</span></td>
+                                                    <td><time>2022/08/08 14:23</time></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit" onclick="window.location.href='equipmentEdit.htm';"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">3</td>
+                                                    <td class="main_data">
+                                                        <a href="equipmentEdit.htm">有線麥克風有線麥克風有線麥克風有線麥克風 </a>
+                                                    </td>
+                                                    <td>10</td>
+                                                    <td>08:30~12:30 / 18:30~22:30</td>
+                                                    <td><span class="green">公開</span></td>
+                                                    <td><time>2022/08/08 14:23</time></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit" onclick="window.location.href='equipmentEdit.htm';"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">4</td>
+                                                    <td class="main_data">
+                                                        <a href="equipmentEdit.htm">有線麥克風 </a>
+                                                    </td>
+                                                    <td>10</td>
+                                                    <td>08:30~12:30 / 13:30~17:30 / 18:30~22:30</td>
+                                                    <td><span class="green">公開</span></td>
+                                                    <td><time>2022/08/08 14:23</time></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit" onclick="window.location.href='equipmentEdit.htm';"></i>編輯 </button></li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside_ticc.htm");
+    </script>
+</body>
+
+</html>
