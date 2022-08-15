@@ -135,10 +135,13 @@
                                         預約狀態： 
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">待確認</a></li>
-                                            <li><a href="#">已成立，待付款</a></li>
-                                            <li><a href="#">已付款，待處理</a></li>
-                                            <li><a href="#">預約完成</a></li>
+                                            <li><a href="#">未繳清</a></li>
+                                            <li><a href="#">訂單錯誤</a></li>
+                                            <li><a href="#">訂單逾期</a></li>
+                                            <li><a href="#">已繳清</a></li>
+                                            <li><a href="#">待上傳收據</a></li>
+                                            <li><a href="#">活動結束</a></li>
+                                            <li><a href="#">訂單解約</a></li>
                                         </ul>
                                         ｜聯繫狀態：
                                         <ul>
@@ -147,9 +150,8 @@
                                             <!--li><a href="#">無未讀訊息</a></li-->
                                         </ul>
                                     </div>
-                                    <!-- 資料處理 -->
-                                    <div class="control_panel">
-                                        <!-- 預設隱藏，有勾選check再顯示 -->
+                                    <!-- 資料處理為介接 -->
+                                    <!--div class="control_panel">
                                         <div class="dropdown">
                                             <button class="btn dropdown-btn">
                                                 <i class="i_setting"></i>批次處理</button>
@@ -166,7 +168,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div-->
                                 <!-- 頁碼 -->
                                     <div class="pagination">
                                         <form action="" class="form_inline">
@@ -188,165 +190,88 @@
                                         <table class="table_hover">
                                             <thead>
                                                 <tr>
-                                                    <th><input type="checkbox"></th>
                                                     <th>編號</th>
                                                     <th class="text-left">
                                                         <a href="#">系統編號 <i class="i_sort"></i>
                                                         </a>
                                                     </th>
-                                                    <th class="text-left">
-                                                        <a href="#">預約編號 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a href="#">預約email
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a href="#">預約者姓名
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a href="#">預約者公司/單位
-                                                        </a>
-                                                    </th>
-                                                    <th class="text-left">
-                                                        <a href="#">預約狀態 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th class="text-left">
-                                                        <a href="#">上傳附件 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th class="text-left">
-                                                        <a href="#">未讀訊息 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a href="#">最後編修日期 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
+                                                    <th class="text-left">預約編號 <i class="i_sort"></i></th>
+                                                    <th>預約email</th>
+                                                    <th>聯絡人</th>
+                                                    <th>承租公司/人</th>
+                                                    <th class="text-left">預約狀態</th>
+                                                    <th class="text-left">承辦人</th>
+                                                    <th class="text-left">未讀訊息 <i class="i_sort"></i></th>
+                                                    <th>最後編修日期 <i class="i_sort"></i></th>
                                                     <th>編輯</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><input type="checkbox"></td>
                                                     <td class="num">1</td>
-                                                    <td><a href="#">2022050810022</a></td>
-                                                    <td><a href="#">S11105080011</a></td>
+                                                    <td><a href="reservationEdit.htm">2022050810022</a></td>
+                                                    <td>S11105080011</td>
                                                     <td>liucc@hyweb.com.tw</td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="orange">已成立，待付款</span></td>
+                                                    <td><span class="orange">未繳清</span></td>
+                                                    <td>劉佳淇</td>
                                                     <td></td>
-                                                    <td></td>
-                                                    <td><time>2022/07/16</time></td>
+                                                    <td><time>2022/07/16 14:51</time></td>
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                        <div class="btn_grp">
+                                                            <a href="reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox"></td>
-                                                    <td class="num">1</td>
+                                                    <td class="num">2</td>
                                                     <td><a href="#">2022050810001</a></td>
-                                                    <td><a href="#">S11105080001</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>S11105080001</td>
+                                                    <td>liucc910hyweb@gmail.com</td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="red">待確認</span></td>
+                                                    <td><span class="red">訂單錯誤</span></td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td><time>2019/10/16</time></td>
+                                                    <td><time>2019/10/16 11:11</time></td>
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                        <div class="btn_grp">
+                                                            <a href="reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox"></td>
-                                                    <td class="num">1</td>
+                                                    <td class="num">3</td>
                                                     <td><a href="#">2022050810001</a></td>
-                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>S11105080001</td>
                                                     <td>liucc@hyweb.com.tw</td>
                                                     <td>劉佳淇</td>
-                                                    <td>凌網科技股份有限公司</td>
-                                                    <td><span class="green">已付款，待處理</span></td>
-                                                    <td><i class="i_check"></i> 繳款證明/合約書</td>
+                                                    <td>凌網凌網凌網凌網科技股份有限公司</td>
+                                                    <td><span class="green">已繳清</span></td>
+                                                    <td></td>
                                                     <td class="text-center"><i class="i_global"></i> 2</td>
-                                                    <td><time>2019/10/16</time></td>
+                                                    <td><time>2019/10/16 21:13</time></td>
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                        <div class="btn_grp">
+                                                            <a href="reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox"></td>
-                                                    <td class="num">1</td>
+                                                    <td class="num">4</td>
                                                     <td><a href="#">2022050810001</a></td>
                                                     <td><a href="#">S11105080001</a></td>
                                                     <td>liucc@hyweb.com.tw</td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="gray">預約完成</span></td>
-                                                    <td><i class="i_check"></i> 繳款證明/合約書</td>
+                                                    <td><span class="gray">訂單解約</span></td>
                                                     <td></td>
-                                                    <td><time>2019/10/16</time></td>
+                                                    <td></td>
+                                                    <td><time>2019/10/16 10:22</time></td>
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                        <div class="btn_grp">
+                                                            <a href="reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
