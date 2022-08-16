@@ -101,8 +101,8 @@
                                                 <h3>預約訊息</h3>
                                             </div>
                                             <div class="_content">
-                                                <div class="flex-form">
                                                 <h4>訂單資訊</h4>
+                                                <div class="flex-form">
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_content form_inline">
                                                             <div class="labelEffect">
@@ -195,8 +195,8 @@
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <div class="flex-form">
                                                 <h4>合約管理</h4>
+                                                <div class="flex-form">
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
@@ -249,8 +249,8 @@
                                                     </div>      
                                                 </div>
                                                 <hr>
-                                                <div class="flex-form">
                                                 <h4>場地及設備追加簽認單管理</h4>
+                                                <div class="flex-form">
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
@@ -296,16 +296,16 @@
                                                 </div>
                                                 <hr>
                                                 <h4>繳費資訊</h4>
+                                                <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">1.訂金</h5>
                                                 <div class="flex-form">
-                                                <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">1.訂金</h5>
                                                     <div class="form_grp">
-                                                        <!--div class="form_title">繳費期限</div-->
+                                                        <div class="form_title">繳費期限</div>
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
                                                                 <div class="labelEffect">
                                                                     <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
                                                                     <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
-                                                                    <label>繳費期限</label>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -342,18 +342,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form_grp" style="margin-top:20px;">
-                                                        <div class="form_content form_inline">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
-                                                                <label>匯款銀行</label>
-                                                            </div>
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="12345" disabled>
-                                                                <label>匯款帳號後五碼</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                     <div class="form_grp">
                                                         <h5 class="form_title">客戶端回傳檔案</h5>
                                                         <ol style="margin-top:2em;">
@@ -362,16 +350,16 @@
                                                         </ol>
                                                     </div>      
                                                 </div>
+                                                <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">2.待收網路費</h5>
                                                 <div class="flex-form">
-                                                <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">2.待收網路費</h5>
                                                     <div class="form_grp">
-                                                        <!--div class="form_title">繳費期限</div-->
+                                                        <div class="form_title">繳費期限</div>
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
                                                                 <div class="labelEffect">
                                                                     <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
                                                                     <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
-                                                                    <label>繳費期限</label>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -478,20 +466,18 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="flex-form">
-                                                    <div class="setting_block" style="width:100%;">
-                                                        <div class="upload_block">
-                                                            <!-- item = 1 file -->
-                                                            <div class="item">
-                                                                <div class="pic">
-                                                                    <img src="images/demo/01.jpg" alt="">
-                                                                </div>
-                                                                <div class="flex-form">
-                                                                    <div class="file_title">活動宣傳圖</div>
-                                                                    <div class="form_grp">
-                                                                        <div class="labelEffect hasBtn">
-                                                                            <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
-                                                                        </div>
+                                                <div class="setting_block">
+                                                    <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/01.jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">活動宣傳圖</div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -566,49 +552,48 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="flex-form">
-                                                    <div class="setting_block" style="width:100%;">
-                                                        <h4>附件上傳</h4>
-                                                        <div class="fileDragDrop">
-                                                            <input type="file" id="inputImg" onchange="changeHandler(event,'img')" ondragover="dragoverHandler(event,'img')" ondrop="dropHandler(event,'img')">
-                                                            <p><em>上傳檔案</em></p>
-                                                            <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                <div class="setting_block">
+                                                    <h4>附件上傳</h4>
+                                                    <div class="fileDragDrop">
+                                                        <input type="file" id="inputImg" onchange="changeHandler(event,'img')" ondragover="dragoverHandler(event,'img')" ondrop="dropHandler(event,'img')">
+                                                        <p><em>上傳檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                    </div>
+                    
+                                                    <div class="upload_block">
+                                                        <!-- item = 1 image -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/01.jpg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
+                                                                    </div>
+                                                                    <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                        
-                                                        <div class="upload_block">
-                                                            <!-- item = 1 image -->
-                                                            <div class="item">
-                                                                <div class="pic">
-                                                                    <img src="images/demo/01.jpg" alt="">
-                                                                </div>
-                                                                <div class="flex-form">
-                                                                    <div class="file_title">圖片名稱.jpg </div>
-                                                                    <div class="form_grp">
-                                                                        <div class="labelEffect hasBtn">
-                                                                            <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
-                                                                        </div>
-                                                                        <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                        <!-- item = 2 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/demo/101ABCD-floor.png" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- item = 2 file -->
-                                                            <div class="item">
-                                                                <div class="pic">
-                                                                    <img src="images/demo/101ABCD-floor.png" alt="">
-                                                                </div>
-                                                                <div class="flex-form">
-                                                                    <div class="file_title">附件檔案名稱.pdf </div>
-                                                                    <div class="form_grp">
-                                                                        <div class="labelEffect hasBtn">
-                                                                            <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
-                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -688,13 +673,13 @@
                                                 <div class="flex-form">
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <textarea class="" disabled>顯示會員意見調查的其他輸入內文</textarea>
+                                                            <textarea class=""></textarea>
                                                             <label>其他建議</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <h4>附件上傳(完成問卷調查後顯示)</h4>
+                                                <h4>附件上傳</h4>
                                                 <div class="flex-form">
                                                     <div class="setting_block" style="width:100%;">
                                                         <div class="upload_block">
@@ -732,18 +717,6 @@
                                 <div class="block">
                                     <div class="_head">
                                         <h3>資料狀態</h3>
-                                    </div>
-                                    <div class="flex-form">
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <select name="" class="used" disabled="disabled">
-                                                    <option value="" selected="" disabled="disabled">請選擇</option>
-                                                    <option value="選項1">預定單</option>
-                                                    <option value="選項2">未繳清</option>
-                                                    <option value="選項3">訂單錯誤</option>
-                                                </select>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="flex-form">
                                         <div class="form_grp">
