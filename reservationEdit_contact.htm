@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!--圖片批次上傳-->
+    <link rel="stylesheet" href="css/fileUpload.css">
+    <!--增加select-->
+    <link rel="stylesheet" href="css/customize.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+
+    <!--測試 tinyMCE html editor 暫用-->
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+        selector: 'textarea.tinymce',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor textcolor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code help wordcount'
+        ],
+        mobile: { 
+            theme: 'mobile' 
+        },
+        toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tiny.cloud/css/codepen.min.css'
+        ],
+        });
+    </script>
+    <style>
+        .mce-notification-inner, .mce-notification-warning {visibility: hidden;}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>預約管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>聯絡管理 - 預約編號：2022050810022</h2>
+                        <!--button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button-->
+                        <div class="function">
+                            <ul>
+                                <li ><a href="reservationEdit_update.htm">預約管理</a></li>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="flex-12">
+                        <div class="col">
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>聯絡紀錄</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>詢問內文</th>
+                                                    <th>附件</th>
+                                                    <th>發送日期時間</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Q1</td>
+                                                    <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
+                                                    <td><a href="#">附件1</a>, <a href="#">附件2</a></td>
+                                                    <td>2022-08-12 14:23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Q2</td>
+                                                    <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
+                                                    <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件2</a></td>
+                                                    <td>2022-08-14 18:23</td>
+                                                </tr>
+                                                <tr style="background-color:#fdfccb;">
+                                                    <td>A1</td>
+                                                    <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。請填寫聯絡訊息，我們將盡快為您服務<br>
+                                                        若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務<br>
+                                                        <a hrf="https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7">https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7</a>
+                                                    </td>
+                                                    <td><a href="#">附件1</a>, <a href="#">附件2</a>, <a href="#">附件3</a></td>
+                                                    <td>2022-08-16 10:11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Q3</td>
+                                                    <td>－</td>
+                                                    <td><a href="#">附件1</a>, <a href="#">附件2</a></td>
+                                                    <td>2022-08-18 14:23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Q4</td>
+                                                    <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
+                                                    <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件2</a></td>
+                                                    <td>2022-08-18 14:34</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <hr>
+                                    <h3>問題回復</h3>
+                                    <div class="flex-form">
+                                        <div class="form_grp" style="margin-top:20px;">
+                                            <div class="labelEffect">
+                                                <textarea class=""></textarea>
+                                                <label>回覆內容</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="setting_block" style="width:100%;">
+                                            <h4>附件上傳</h4>
+                                            <div class="fileDragDrop">
+                                                <input type="file" id="inputImg" onchange="changeHandler(event,'img')" ondragover="dragoverHandler(event,'img')" ondrop="dropHandler(event,'img')">
+                                                <p><em>上傳檔案</em></p>
+                                                <p>拖拉檔案或選擇「從本機上傳」</p>
+                                            </div>
+            
+                                            <div class="upload_block">
+                                                <!-- item = 1 image -->
+                                                <div class="item">
+                                                    <div class="pic">
+                                                        <img src="images/demo/01.jpg" alt="">
+                                                    </div>
+                                                    <div class="flex-form">
+                                                        <div class="file_title">圖片名稱.jpg </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect hasBtn">
+                                                                <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
+                                                            </div>
+                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- item = 2 file -->
+                                                <div class="item">
+                                                    <div class="pic">
+                                                        <img src="images/demo/101ABCD-floor.png" alt="">
+                                                    </div>
+                                                    <div class="flex-form">
+                                                        <div class="file_title">附件檔案名稱.pdf </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect hasBtn">
+                                                                <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右側資料widget -->
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>資料狀態</h3>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <!--button class="btn btn-green">暫存</button>
+                                        <button class="btn">預覽</button-->
+                                        <button class="btn btn-orange">發送回覆</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>最後編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_man"></i></span>系統管理者(admin)
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside_ticc.htm");
+    </script>
+    <!--Select multiple checkbox-->
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+        });
+    </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
+    </script>
+    
+</body>
+
+</html>

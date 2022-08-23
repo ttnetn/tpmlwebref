@@ -71,10 +71,12 @@
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>預約管理 - 2022050810022</h2>
+                        <h2>預約管理 - 預約單號：2022050810022</h2>
                         <!--button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button-->
                         <div class="function">
                             <ul>
+                                <li ><a href="reservationEdit_contact.htm">聯絡紀錄</a></li>
+                                <li ><a href="reservationEdit_activity.htm">活動資料</a></li>
                                 <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
                             </ul>
                         </div>
@@ -87,8 +89,8 @@
                                 <div class="tabBtn_block">
                                     <div class="tab_items">
                                         <button class="btn active"><i class="i_edit"></i>預約訊息</button>
-                                        <button class="btn"><i class="i_setting"></i>活動資料</button>
-                                        <button class="btn"><i class="i_info"></i>聯絡紀錄</button>
+                                        <button class="btn"><i class="i_setting"></i>合約與追加簽單</button>
+                                        <button class="btn"><i class="i_info"></i>繳費與繳款紀錄</button>
                                         <button class="btn"><i class="i_clock"></i>滿意度調查</button>
                                     </div>
                                 </div>
@@ -101,8 +103,8 @@
                                                 <h3>預約訊息</h3>
                                             </div>
                                             <div class="_content">
-                                                <h4>訂單資訊</h4>
                                                 <div class="flex-form">
+                                                <h4>訂單資訊</h4>
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_content form_inline">
                                                             <div class="labelEffect">
@@ -190,219 +192,33 @@
                                                         <div class="labelEffect">
                                                             <textarea class="used">本中心提供每間會議室桌椅數量以價目表所列標準容量為限，額外需求或現場追加桌椅費用另計。
 免費提供標準配備：有線麥克風及無線麥克風各 1 支、主講桌 1 個、司儀台 1 個、三人報到桌 2 張、海報架 3 個，其它設備依價目表收費。</textarea>
-                                                            <label>租借內容</label>
+                                                            <label>租借內容(僅列主要會議室，租借內容詳見合約)</label>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <hr>
-                                                <h4>合約管理</h4>
-                                                <div class="flex-form">
-                                                    <div class="form_grp" style="margin-top:20px;">
-                                                        <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
-                                                            <div class="startDate">
-                                                                <div class="labelEffect">
-                                                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
-                                                                    <label>合約回傳期限</label>
-                                                                </div>
-                                                                <!-- <div class="help">說明文字</div> -->
+                                                <h4>場地資訊</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>預約日期</label>
                                                             </div>
-                                                         </div>
-                                                    </div>
-                                                    <div class="setting_block" style="width:100%;">
-                                                        <div class="upload_block">
-                                                            <!-- item = 1 file -->
-                                                            <div class="item">
-                                                                <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
-                                                                </div>
-                                                                <div class="flex-form">
-                                                                    <div class="file_title">上傳已/未用印合約及附件</div>
-                                                                    <div class="form_grp">
-                                                                        <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="A101" class="dynamicCol used" disabled>
+                                                                <label>預約場地</label>
                                                             </div>
                                                         </div>
-                                                        <div class="tips">所上傳的檔案將顯示於前台會員訂單中。若兩方用印合約回傳完畢後，請移除未用印合約</div>
-                                                    </div>
-                                                    <!--div class="form_grp">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="file" value="">
-                                                            <button class="btn btn-icon"><i class="i_edit"></i></button>
-                                                            <label>有按鈕格式icon<abbr>*</abbr></label>
-                                                        </div>
-                                                        <div class="help">說明文字</div>
-                                                    </div-->
-                                                    <div class="form_grp">
-                                                        <h5 class="form_title">客戶端回傳檔案</h5>
-                                                        <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
-                                                        </ol>
-                                                    </div>      
-                                                </div>
-                                                <hr>
-                                                <h4>場地及設備追加簽認單管理</h4>
-                                                <div class="flex-form">
-                                                    <div class="form_grp" style="margin-top:20px;">
-                                                        <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
-                                                            <div class="startDate">
-                                                                <div class="labelEffect">
-                                                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
-                                                                    <label>合約回傳期限</label>
-                                                                </div>
-                                                                <!-- <div class="help">說明文字</div> -->
+                                                        <div class="form_content form_inline" style="margin-top:20px;">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>預約日期</label>
                                                             </div>
-                                                         </div>
-                                                    </div>
-                                                    <div class="setting_block" style="width:100%;">
-                                                        <div class="upload_block">
-                                                            <!-- item = 1 file -->
-                                                            <div class="item">
-                                                                <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
-                                                                </div>
-                                                                <div class="flex-form">
-                                                                    <div class="file_title">上傳已/未用印合約及附件</div>
-                                                                    <div class="form_grp">
-                                                                        <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                        <div class="tips">所上傳的檔案將顯示於前台會員訂單中。若兩方用印合約回傳完畢後，請移除未用印合約</div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <h5 class="form_title">客戶端回傳檔案</h5>
-                                                        <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
-                                                        </ol>
-                                                    </div>      
-                                                </div>
-                                                <hr>
-                                                <h4>繳費資訊</h4>
-                                                <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">1.訂金</h5>
-                                                <div class="flex-form">
-                                                    <div class="form_grp">
-                                                        <div class="form_title">繳費期限</div>
-                                                        <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
-                                                            <div class="startDate">
-                                                                <div class="labelEffect">
-                                                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
-                                                                    
-                                                                </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="A201" class="dynamicCol used" disabled>
+                                                                <label>預約場地</label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form_grp">
-                                                        <div class="form_title">繳款方式</div>
-                                                        <div class="form_content">
-                                                            <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項一</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項二</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項三</span></label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="setting_block" style="width:100%;">
-                                                        <div class="upload_block">
-                                                            <!-- item = 1 file -->
-                                                            <div class="item">
-                                                                <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
-                                                                </div>
-                                                                <div class="flex-form">
-                                                                    <div class="file_title">上傳繳費單</div>
-                                                                    <div class="form_grp">
-                                                                        <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <h5 class="form_title">客戶端回傳檔案</h5>
-                                                        <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
-                                                        </ol>
-                                                    </div>      
-                                                </div>
-                                                <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">2.待收網路費</h5>
-                                                <div class="flex-form">
-                                                    <div class="form_grp">
-                                                        <div class="form_title">繳費期限</div>
-                                                        <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
-                                                            <div class="startDate">
-                                                                <div class="labelEffect">
-                                                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
-                                                                    
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <div class="form_title">繳款方式</div>
-                                                        <div class="form_content">
-                                                            <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項一</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項二</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項三</span></label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="setting_block" style="width:100%;">
-                                                        <div class="upload_block">
-                                                            <!-- item = 1 file -->
-                                                            <div class="item">
-                                                                <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
-                                                                </div>
-                                                                <div class="flex-form">
-                                                                    <div class="file_title">上傳繳費單</div>
-                                                                    <div class="form_grp">
-                                                                        <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <h5 class="form_title">客戶端回傳檔案</h5>
-                                                        <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
-                                                        </ol>
-                                                    </div>      
+    
                                                 </div>
                                                 <hr>
                                             </div>
@@ -414,75 +230,121 @@
                                     <div>
                                         <div class="content__wrapper">
                                             <div class="_head">
-                                                <h3>活動資料</h3>
+                                                <h3>合約與追加簽單</h3>
                                             </div>
                                             <div class="_content">
-                                                <h4>登錄資訊</h4>
                                                 <div class="flex-form">
-                                                    <div class="form_grp">
-                                                        <div class="form_title">同意活動登錄於官網</div>
-                                                        <div class="form_content">
-                                                            <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample2222" type="radio" checked value="" disabled><span>同意</span></label>
-                                                                <label><input name="radioSample2222" type="radio" value="" disabled><span>不同意</span></label>
+                                                    <h4>合約管理</h4>
+                                                        <div class="form_grp form_inline" style="margin-top:20px;">
+                                                            <div class="form_content form_inline">
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                    <label>回傳期限</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                    <label>合約回傳狀態</label>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <div class="form_title">活動行事曆顯示</div>
-                                                        <div class="form_content">
-                                                            <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample3333" type="radio" checked value=""><span>開啟</span></label>
-                                                                <label><input name="radioSample3333" type="radio" value=""><span>關閉</span></label>
+                                                        <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                            <div class="upload_block">
+                                                                <div class="item">
+                                                                    <div class="flex-form">
+                                                                        <div class="form_grp">
+                                                                            <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                            <input name="" type="file">
+                                                                            <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                                <div class="item">
+                                                                    <div class="pic">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
+                                                                    </div>
+                                                                    <div class="flex-form">
+                                                                        <div class="file_title">上傳已/未用印合約及附件</div>
+                                                                        <div class="form_grp">
+                                                                            <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs">
+                                                                                <i class="i_addfile"></i>更換
+                                                                            </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
                                                             </div>
+                                                            <div class="tips">所上傳的檔案將顯示於前台會員訂單中。若兩方用印合約回傳完畢後，請更換未用印合約檔案，重新上傳雙方用印合約，前台會員訂單只顯示最新更換的合約檔案。</div>
                                                         </div>
-                                                    </div>
+                                                        <!--div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="file" value="">
+                                                                <button class="btn btn-icon"><i class="i_edit"></i></button>
+                                                                <label>有按鈕格式icon<abbr>*</abbr></label>
+                                                            </div>
+                                                            <div class="help">說明文字</div>
+                                                        </div-->
+                                                        <hr >
+                                                        <div class="form_grp" style="margin:0 1em;">
+                                                            <h4 class="form_title">合約(客戶用印，客戶端回傳檔案紀錄)：</h4>
+                                                            <ol style="margin-top:2em;">
+                                                                <li><b>最新</b>｜<a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-15 17:33</em></li>
+                                                                <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                            </ol>
+                                                        </div>      
                                                 </div>
                                                 <hr>
-                                                <h4>活動資訊</h4>
                                                 <div class="flex-form">
-                                                    <div class="form_grp" style="margin-top:20px;">
-                                                        <div class="form_content form_inline">
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="https://www.hyweb.com.tw" class="dynamicCol used" disabled>
-                                                                <label>活動網站</label>
+                                                    <h4>場地及設備追加簽認單管理</h4>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <h4>檔案上傳 <button class="btn btn-xs"><i class="i_addfile"></i>新增檔案</button></h4>
+                                                        <div class="upload_block">
+                                                            <!-- item = 1 file -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                    <img src="images/icon/icon_xls.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">附件檔案名稱.xls </div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs"><i class="i_trash"></i>刪除</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="凌網科技股份有限公司" disabled>
-                                                                <label>主辦/承辦單位</label>
-                                                            </div>
-                                                            <div class="labelEffect">
-                                                                <input name="" type="text" value="liucc@hyweb.com.tw" disabled>
-                                                                <label>活動聯絡email</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form_grp" style="margin-top:20px;">
-                                                        <div class="labelEffect">
-                                                            <textarea class="used">本中心提供每間會議室桌椅數量以價目表所列標準容量為限，額外需求或現場追加桌椅費用另計。
-免費提供標準配備：有線麥克風及無線麥克風各 1 支、主講桌 1 個、司儀台 1 個、三人報到桌 2 張、海報架 3 個，其它設備依價目表收費。</textarea>
-                                                            <label>活動內容</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="setting_block">
-                                                    <div class="upload_block">
-                                                        <!-- item = 1 file -->
-                                                        <div class="item">
-                                                            <div class="pic">
-                                                                <img src="images/demo/01.jpg" alt="">
-                                                            </div>
-                                                            <div class="flex-form">
-                                                                <div class="file_title">活動宣傳圖</div>
-                                                                <div class="form_grp">
-                                                                    <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
+                                                            <!-- item = 1 file -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">附件檔案名稱.pdf </div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                            <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs"><i class="i_trash"></i>刪除</button>
+                                                                            <!--button class="btn btn-icon"><i class="i_copy"></i></button-->
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <hr >
+                                                    <div class="form_grp" style="margin:0 1em;">
+                                                        <h4 class="form_title">追加簽認單(客戶用印，客戶端回傳檔案紀錄)：</h4>
+                                                        <ol style="margin-top:2em;">
+                                                            <li><b>最新</b>｜<a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-15 17:33</em></li>
+                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                        </ol>
+                                                    </div>      
                                                 </div>
                                                 <hr>
                                             </div>
@@ -492,108 +354,249 @@
                                     <div>
                                         <div class="content__wrapper">
                                             <div class="_head">
-                                                <h3>聯絡紀錄</h3>
+                                                <h3>繳費與繳款紀錄</h3>
                                             </div>
                                             <div class="_content">
-                                                <div class="table_wrapper">
-                                                    <table class="table_hover">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>編號</th>
-                                                                <th>詢問內文</th>
-                                                                <th>附件</th>
-                                                                <th>發送日期時間</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Q1</td>
-                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件2</a></td>
-                                                                <td>2022-08-12 14:23</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Q2</td>
-                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件2</a></td>
-                                                                <td>2022-08-14 18:23</td>
-                                                            </tr>
-                                                            <tr style="background-color:#fdfccb;">
-                                                                <td>A1</td>
-                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。請填寫聯絡訊息，我們將盡快為您服務<br>
-                                                                    若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務<br>
-                                                                    <a hrf="https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7">https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7</a>
-                                                                </td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件2</a>, <a href="#">附件3</a></td>
-                                                                <td>2022-08-16 10:11</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Q3</td>
-                                                                <td>－</td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件2</a></td>
-                                                                <td>2022-08-18 14:23</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Q4</td>
-                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件2</a></td>
-                                                                <td>2022-08-18 14:34</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <hr>
-                                                <h3>問題回復</h3>
                                                 <div class="flex-form">
-                                                    <div class="form_grp" style="margin-top:20px;">
-                                                        <div class="labelEffect">
-                                                            <textarea class=""></textarea>
-                                                            <label>回覆內容</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="setting_block">
-                                                    <h4>附件上傳</h4>
-                                                    <div class="fileDragDrop">
-                                                        <input type="file" id="inputImg" onchange="changeHandler(event,'img')" ondragover="dragoverHandler(event,'img')" ondrop="dropHandler(event,'img')">
-                                                        <p><em>上傳檔案</em></p>
-                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
-                                                    </div>
-                    
-                                                    <div class="upload_block">
-                                                        <!-- item = 1 image -->
-                                                        <div class="item">
-                                                            <div class="pic">
-                                                                <img src="images/demo/01.jpg" alt="">
+                                                    <h4>暫收款</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="58512" class="dynamicCol used" disabled>
+                                                                <label>繳費單號</label>
                                                             </div>
-                                                            <div class="flex-form">
-                                                                <div class="file_title">圖片名稱.jpg </div>
-                                                                <div class="form_grp">
-                                                                    <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
-                                                                    </div>
-                                                                    <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
-                                                                </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>回傳期限</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                <label>合約回傳狀態</label>
                                                             </div>
                                                         </div>
-                                                        <!-- item = 2 file -->
-                                                        <div class="item">
-                                                            <div class="pic">
-                                                                <img src="images/demo/101ABCD-floor.png" alt="">
-                                                            </div>
-                                                            <div class="flex-form">
-                                                                <div class="file_title">附件檔案名稱.pdf </div>
-                                                                <div class="form_grp">
-                                                                    <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                    </div>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">繳費資訊</h5>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <div class="upload_block">
+                                                            <div class="item">
+                                                                <div class="flex-form">
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                        <input name="" type="file">
+                                                                        <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                            <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">上傳繳費單</div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                        <button class="btn btn-xs">
+                                                                            <i class="i_addfile"></i>更換
+                                                                        </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips">提示用說明文案放置處。</div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">繳費方式</h5>
+                                                    <div class="form_grp" style="margin:20px 1em 0;">
+                                                        <!--div class="form_title">繳費方式</div-->
+                                                        <div class="form_content">
+                                                            <div class="radio_grp">
+                                                                <label><input name="radioSample777" type="radio" value=""><span>信用卡繳款</span></label>
+                                                                <div class="form_grp">
+                                                                    <h5 class="form_title">客戶端回傳檔案</h5>
+                                                                    <ol style="margin-top:2em;">
+                                                                        <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
+                                                                    </ol>
+                                                                </div>
+                                                                <label><input name="radioSample777" type="radio" value=""><span>銀行轉帳繳款</span></label>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
+                                                                    <label>匯款銀行</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="12345" disabled>
+                                                                    <label>匯款帳號後五碼</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help">選擇了繳款方式後，會員端會以該繳款方式提供客戶回填/回傳欄位。繳款資訊只會紀錄客戶回報的最後一筆。</div>
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                <hr style="margin-top:20px;">
+                                                <div class="flex-form">
+                                                    <h4>暫收款</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="58512" class="dynamicCol used" disabled>
+                                                                <label>繳費單號</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>回傳期限</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                <label>合約回傳狀態</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">繳費資訊</h5>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <div class="upload_block">
+                                                            <div class="item">
+                                                                <div class="flex-form">
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                        <input name="" type="file">
+                                                                        <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">上傳繳費單</div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                        <button class="btn btn-xs">
+                                                                            <i class="i_addfile"></i>更換
+                                                                        </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips">提示用說明文案放置處。</div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">繳費方式</h5>
+                                                    <div class="form_grp" style="margin:20px 1em 0;">
+                                                        <!--div class="form_title">繳費方式</div-->
+                                                        <div class="form_content">
+                                                            <div class="radio_grp">
+                                                                <label><input name="radioSample777" type="radio" value=""><span>信用卡繳款</span></label>
+                                                                <div class="form_grp">
+                                                                    <h5 class="form_title">客戶端回傳檔案</h5>
+                                                                    <ol style="margin-top:2em;">
+                                                                        <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
+                                                                    </ol>
+                                                                </div>
+                                                                <label><input name="radioSample777" type="radio" value=""><span>銀行轉帳繳款</span></label>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
+                                                                    <label>匯款銀行</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="12345" disabled>
+                                                                    <label>匯款帳號後五碼</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help">選擇了繳款方式後，會員端會以該繳款方式提供客戶回填/回傳欄位。繳款資訊只會紀錄客戶回報的最後一筆。</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr style="margin-top:20px;">
+                                                <div class="flex-form">
+                                                    <h4>代收網路費</h4>
+                                                    <div class="form_grp form_inline" style="margin-top:20px;">
+                                                        <div class="form_content form_inline">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="58512" class="dynamicCol used" disabled>
+                                                                <label>繳費單號</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="2022-08-22" class="dynamicCol used" disabled>
+                                                                <label>回傳期限</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="已回傳" class="dynamicCol used" disabled>
+                                                                <label>合約回傳狀態</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">繳費資訊</h5>
+                                                    <div class="setting_block" style="width:100%;margin:0 1em;">
+                                                        <div class="upload_block">
+                                                            <div class="item">
+                                                                <div class="flex-form">
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="" placeholder="請選擇檔案" class="used">
+                                                                        <input name="" type="file">
+                                                                        <button class="btn btn-xs"><i class="i_add"></i>新增</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 選擇新增檔案後，以下方模式呈現。此處僅限一個檔案 -->
+                                                            <div class="item">
+                                                                <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                </div>
+                                                                <div class="flex-form">
+                                                                    <div class="file_title">上傳繳費單</div>
+                                                                    <div class="form_grp">
+                                                                        <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
+                                                                        <button class="btn btn-xs">
+                                                                            <i class="i_addfile"></i>更換
+                                                                        </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="tips">提示用說明文案放置處。</div>
+                                                    </div>
+                                                    <h5 style="padding:0 0 0 1em;margin:0;font-size:.95em;">繳費方式</h5>
+                                                    <div class="form_grp" style="margin:20px 1em 0;">
+                                                        <!--div class="form_title">繳費方式</div-->
+                                                        <div class="form_content">
+                                                            <div class="radio_grp">
+                                                                <label><input name="radioSample777" type="radio" value=""><span>信用卡繳款</span></label>
+                                                                <div class="form_grp">
+                                                                    <h5 class="form_title">客戶端回傳檔案</h5>
+                                                                    <ol style="margin-top:2em;">
+                                                                        <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
+                                                                    </ol>
+                                                                </div>
+                                                                <label><input name="radioSample777" type="radio" value=""><span>銀行轉帳繳款</span></label>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
+                                                                    <label>匯款銀行</label>
+                                                                </div>
+                                                                <div class="labelEffect">
+                                                                    <input name="" type="text" value="12345" disabled>
+                                                                    <label>匯款帳號後五碼</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help">選擇了繳款方式後，會員端會以該繳款方式提供客戶回填/回傳欄位。繳款資訊只會紀錄客戶回報的最後一筆。</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -673,17 +676,16 @@
                                                 <div class="flex-form">
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <textarea class=""></textarea>
+                                                            <textarea class="" disabled>顯示會員意見調查的其他輸入內文</textarea>
                                                             <label>其他建議</label>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <hr>
-                                                <h4>附件上傳</h4>
+                                                <!--hr>
+                                                <h4>附件上傳(完成問卷調查後顯示)</h4>
                                                 <div class="flex-form">
                                                     <div class="setting_block" style="width:100%;">
                                                         <div class="upload_block">
-                                                            <!-- item = 1 file -->
                                                             <div class="item">
                                                                 <div class="pic">
                                                                 <img src="images/icon/icon_pdf.svg" alt="">
@@ -704,7 +706,7 @@
                                                         </div>
 
                                                     </div>
-                                                </div>
+                                                </div-->
 
                                             </div>
                                         </div>
@@ -720,6 +722,16 @@
                                     </div>
                                     <div class="flex-form">
                                         <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="" class="used" disabled="disabled">
+                                                    <option value="" disabled="disabled">自動顯示目前訂單狀態</option>
+                                                    <option value="選項1">預定單</option>
+                                                    <option value="選項2" selected="">未繳清</option>
+                                                    <option value="選項3">訂單錯誤</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp" style="margin-top:20px;">
                                             <div class="form_title">狀態<abbr>*</abbr></div>
                                             <div class="form_content">
                                                 <div class="radio_grp form_inline">
@@ -732,7 +744,7 @@
                                     <div class="btn_grp">
                                         <!--button class="btn btn-green">暫存</button>
                                         <button class="btn">預覽</button-->
-                                        <button class="btn btn-orange">確定發布</button>
+                                        <button class="btn btn-orange">編修儲存</button>
                                     </div>
                                 </div>
                                 <div class="block">
