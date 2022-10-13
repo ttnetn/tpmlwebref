@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>研究成果批次管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>研究成果批次管理</h2>
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="flex-4-4-4">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>主表資料匯入</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="help">請依<a href="#">匯入範本</a>欄位輸入建立主表資料，選擇檔案後進行匯入</div>
+                                        <div class="flex-form">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <input name="" id="" type="file" value="">
+                                                            <input name="" type="text" value="">
+                                                            <button class="btn btn-primary btn-addfile">上傳</button>
+                                                        </div>
+                                                        <div class="help">請選擇xls檔案上傳</div>
+                                                    </div>
+                                                    <label>選擇主表匯入檔案</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>副表資料匯入</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="help">請依<a href="#">匯入範本</a>欄位輸入建立副表資料，選擇檔案後進行匯入</div>
+                                        <div class="flex-form">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <input name="" id="" type="file" value="">
+                                                            <input name="" type="text" value="">
+                                                            <button class="btn btn-primary btn-addfile">上傳</button>
+                                                        </div>
+                                                        <div class="help">請選擇xls檔案上傳</div>
+                                                    </div>
+                                                    <label>選擇副表匯入檔案</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="tips">若不需副表請略過此步驟，副表資料是用來建立關聯專題章節資料，需能對應主表ID方可正確建立。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>附件打包上傳</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="help">請依<a href="#">附件打包規則</a>來命名資料夾與檔案名稱、並打包成壓縮檔案</div>
+                                        <div class="flex-form">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <input name="" id="" type="file" value="">
+                                                            <input name="" type="text" value="">
+                                                            <button class="btn btn-primary btn-addfile">上傳</button>
+                                                        </div>
+                                                        <div class="help">請選擇zip檔案上傳</div>
+                                                    </div>
+                                                    <label>選擇副表匯入檔案</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="tips">可同時上傳主表與附表專題對應附件，需能對應主副表ID方可正確建立關聯。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-12">
+                            <div class="col ">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>請選擇匯入單元</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <select id="" name="">
+                                            <option value="" selected="" disabled="disabled"></option>
+                                                <option value="1" selected>各年度研究報告</option>
+                                                <option value="2">簡訊</option>
+                                                <option value="3">研究季刊</option>
+                                                <option value="4">技術叢書</option>
+                                                <option value="5">重要績效輯(其他出版品)</option>
+                                                <option value="6">專利技術</option>
+                                            </optgroup>                                                        
+                                        </select>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn reset">取消</button>
+                                        <button class="btn btn-primary">確認匯入</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="upload_area">
+        <div class="loading"></div><span>檔案上傳中，請稍後</span>
+    </div>
+    
+    
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $('header').load("header.htm");
+    $('aside').load("aside_ilosh.htm");
+    </script>
+</body>
+
+</html>
