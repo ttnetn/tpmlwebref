@@ -675,8 +675,13 @@
                                     <div class="btn_grp">
                                         <button class="btn btn-green">編修儲存</button>
                                         <!--button class="btn">預覽</button-->
-                                        <button class="btn btn-orange">重新公告</button>
+                                        <button class="btn btn-orange" onclick="myFunction()">重新公告</button>
                                         <!--重新公告採複製模式，將原資料複製新的一筆，舊的資料紀錄為歷程，並自動產生公告次數。新增為第一次，複製後為第二次-->
+                                        <script>
+                                            function myFunction() {
+                                              confirm("重新公告此筆招標資訊，公告次數將自動加一。原資料將紀錄為歷程，並無法再編修。確定重新公告？");
+                                            }
+                                        </script>
                                     </div>
                                 </div>
                                 <div class="block">
