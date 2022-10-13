@@ -140,7 +140,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
+                                        
                                         <div class="btn_grp">
                                             <button class="btn reset">取消</button>
                                             <button class="btn btn-primary">確認</button>
@@ -191,11 +191,11 @@
                                                 <ul>
                                                     <li>
                                                         <button class="btn">
-                                                            <i class="i_edit"></i>批次審核通過</button>
+                                                            <i class="i_edit"></i>複製(僅限單筆)</button>
                                                     </li>
                                                     <li>
                                                         <button class="btn">
-                                                            <i class="i_add"></i>批次審核不通過</button>
+                                                            <i class="i_add"></i>批次下架</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -214,7 +214,7 @@
                                         </form>
                                     </div>
                                     <div class="quick_btn">
-                                        <button class="btn btn-orange" onclick="window.location.href='userEdit.htm';"><i class="i_add"></i>新增</button>
+                                        <button class="btn btn-orange" onclick="window.location.href='ilosh_projectNew.htm';"><i class="i_add"></i>新增</button>
                                     </div>
                                 </div>
                                 <div class="_content">
@@ -257,8 +257,47 @@
                                                     <td></td>
                                                     <td><time>2022/07/27</time></td>
                                                     <td>
-                                                        <div class="btn_grp">
+                                                        <!--div class="btn_grp">
                                                             <a href="ilosh_projectEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div-->
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn" onclick="window.location.href='ilosh_projectEdit.htm';">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>複製一筆 </button>
+                                                                    </li>
+                                                                        <button class="btn" onclick="copy()">
+                                                                            <i class="i_check"></i>複製連結 </button>
+                                                                    <script>
+                                                                        function copy() {
+                                                                        // Get the text field
+                                                                        //var copyText = document.getElementById("myInput");
+
+                                                                        // Select the text field
+                                                                        //copyText.select();
+                                                                        //copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                                                                        // Copy the text inside the text field
+                                                                        navigator.clipboard.writeText("https://URL");
+
+                                                                        // Alert the copied text
+                                                                        alert("連結已複製");
+                                                                        }
+                                                                    </script>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -275,8 +314,28 @@
                                                     <td>流標</td>
                                                     <td><time>2019/06/16</time></td>
                                                     <td>
-                                                        <div class="btn_grp">
-                                                            <a href="ilosh_projectEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn" onclick="window.location.href='ilosh_projectEdit.htm';">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>複製一筆 </button>
+                                                                    </li>
+                                                                        <button class="btn">
+                                                                            <i class="i_check"></i>複製連結 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -293,8 +352,28 @@
                                                     <td>已決標</td>
                                                     <td><time>2022/05/31</time></td>
                                                     <td>
-                                                        <div class="btn_grp">
-                                                            <a href="ilosh_projectEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn" onclick="window.location.href='ilosh_projectEdit.htm';">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>複製一筆 </button>
+                                                                    </li>
+                                                                        <button class="btn">
+                                                                            <i class="i_check"></i>複製連結 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -311,8 +390,28 @@
                                                     <td></td>
                                                     <td><time>2019/05/11</time></td>
                                                     <td>
-                                                        <div class="btn_grp">
-                                                            <a href="ilosh_projectEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn" onclick="window.location.href='ilosh_projectEdit.htm';">
+                                                                            <i class="i_edit"></i>編輯 </button></li>
+                                                                    <li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>複製一筆 </button>
+                                                                    </li>
+                                                                        <button class="btn">
+                                                                            <i class="i_check"></i>複製連結 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </td>
                                                 </tr>
