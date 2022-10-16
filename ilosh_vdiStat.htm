@@ -32,14 +32,14 @@
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
                     <li><a href="#">客製化管理</a></li>
-                    <li>研究成果統計報表</li>
+                    <li>VDI預約統計報表</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>研究成果統計報表</h2>
+                        <h2>VDI預約統計報表</h2>
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
@@ -53,46 +53,28 @@
                                     </div>
                                     <div class="_content">
                                         <div class="flex-form flex-6-6">
-                                            <div class="form_grp">
+                                            <div class="form_grp" style="margin-top:10px;">
                                                 <div class="labelEffect">
-                                                        <select id="" name="">
-                                                            <option value="" selected disabled="disabled"></option>
-                                                            <option value="1">各年度研究報告</option>
-                                                            <option value="2">簡訊</option>
-                                                            <option value="3">研究季刊</option>
-                                                            <option value="4">技術叢書</option>
-                                                            <option value="5">重要績效輯(其他出版品)</option>
-                                                            <option value="6">專利技術</option>
-                                                        </select>
-                                                        <label>單元</label>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp form_inline" style="margin-top:10px;">
-                                                <div class="labelEffect">
-                                                    <div class="form_title">統計結果<abbr>*</abbr></div>
+                                                    <div class="form_title">統計結果依<abbr>*</abbr></div>
                                                     <div class="form_content">
                                                         <div class="check_grp form_inline">
-                                                            <label><input name="111" type="radio" value="" checked style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>單元</span></label>
-                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>資料</span></label>
+                                                            <label><input name="111" type="radio" value="" checked style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>教室</span></label>
+                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>虛擬主機</span></label>
+                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>案號</span></label>
                                                         </div>
                                                         <!--div class="help">說明文字</-->
                                                     </div>
                                                 </div>
-                                                <div class="labelEffect">
+                                                <!--div class="labelEffect">
                                                     <div class="form_title">報表類型<abbr>*</abbr></div>
                                                     <div class="form_content">
                                                         <div class="check_grp form_inline">
-                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>瀏覽</span></label>
-                                                            <label><input name="222" type="radio" value="" checked style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>下載</span></label>
+                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>使用</span></label>
+                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>預約</span></label>
+                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>報到</span></label>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <input name="search_name" id="search_name" type="text" value="">
-                                                    <label>標題(名稱)</label>
-                                                </div>
+                                                </div-->
                                             </div>
                                             <div class="form_grp" style="margin-top:10px;">
                                                 <div class="labelEffect">
@@ -107,6 +89,29 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="search_name" id="search_name" type="text" value="">
+                                                    <label>案號</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="search_name" id="search_name" type="text" value="">
+                                                    <label>單位名稱</label>
+                                                </div>
+                                            </div>
+                                            <!--div class="form_grp">
+                                                <div class="labelEffect">
+                                                        <select id="" name="">
+                                                            <option value="" selected="" disabled="disabled"></option>
+                                                            <option value="1">選項</option>
+                                                            <option value="2">選項</option>
+                                                            <option value="3">選項</option>
+                                                        </select>
+                                                    <label>預約狀態</label>
+                                                </div>
+                                            </div-->
                                             <div class="form_grp datepick">
                                                 <div class="startDate">
                                                     <div class="labelEffect">
@@ -114,7 +119,7 @@
                                                         <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>建立日期(起)</label>
+                                                        <label>預約日期(起)</label>
                                                     </div>
                                                     <!-- <div class="help">說明文字</div> -->
                                                 </div>
@@ -123,25 +128,19 @@
                                                         <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>建立日期(迄)</label>
+                                                        <label>預約日期(迄)</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form_grp form_inline">
                                                     <div class="labelEffect">
-                                                    <select id="" name="">
-                                                        <option value="" selected="" disabled="disabled"></option>
-                                                        <optgroup label="資料夾">
-                                                            <option value="1">節點</option>
-                                                            <option value="2">節點</option>
-                                                          </optgroup>
-                                                          <optgroup label="資料夾2">
-                                                            <option value="3">節點</option>
-                                                            <option value="4">節點</option>
-                                                            <option value="4">節點</option>
-                                                          </optgroup>                                                        
-                                                    </select>
-                                                        <label>研究單位</label>
+                                                        <select id="" name="">
+                                                            <option value="" selected="" disabled="disabled"></option>
+                                                            <option value="1">選項</option>
+                                                            <option value="2">選項</option>
+                                                            <option value="3">選項</option>
+                                                        </select>
+                                                        <label>預約狀態</label>
                                                     </div>
                                                     <div class="labelEffect">
                                                         <select id="" name="">
@@ -150,7 +149,7 @@
                                                             <option value="2">選項</option>
                                                             <option value="3">選項</option>
                                                         </select>
-                                                        <label>年度</label>
+                                                        <label>報到狀態</label>
                                                     </div>
                                             </div>
                                         </div>
@@ -165,21 +164,20 @@
                         </div>
                     </div>
                     <div class="flex-12">
-                        <div class="col"><p class="notice">目前條件 - 單元/下載/月；建立日期：2022/1/1~2022/12/31</p></div>
+                        <div class="col"><p class="notice">目前條件 - 教室/月；預約日期：2022/1/1~2022/12/31</p></div>
                         
                     </div>
-                    <div class="flex-3-3-3-3">
+                    <!--div class="flex-3-3-3-3">
                         <div class="col">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>上架成果總數</h3>
+                                    <h3>預約總數</h3>
                                 </div>
                                 <div class="_content">
                                     <div class="mp_widget">
                                         <div class="widget_now_counter">
                                             <div class="counter "data-count="1537"></div>
                                         </div>
-                                        <!--div class="help">時間以...為計算準</div-->
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +192,6 @@
                                         <div class="widget_now_pageview">
                                             <div class="counter "data-count="34"></div>
                                         </div>
-                                        <!--div class="help">時間以...為計算準</div-->
                                     </div>
                                 </div>
                             </div>
@@ -227,12 +224,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
                     <div class="flex-12">
                         <div class="col ">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>下載次數</h3>
+                                    <h3>預約次數</h3>
                                 </div>
                                 <div class="_content">
                                     <!-- 長條圖 -->
@@ -250,10 +247,10 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>熱門下載統計</h3>
+                                    <h3>預約狀態統計</h3>
                                 </div>
                                 <div class="_head">
-                                    <p>僅顯示符合查詢條件前10筆資訊，匯出則提供前100筆資料。</p>
+                                    <p>僅顯示符合查詢條件前10筆資訊，請使用匯出檢視完整資料。</p>
                                     <div class="quick_btn">
                                         <button class="btn btn-orange" onclick="window.location.href='#';"><i class="i_add"></i>匯出結果</button>
                                     </div>
@@ -265,23 +262,80 @@
                                             <thead>
                                                 <tr>
                                                     <th>序號</th>
-                                                    <th class="text-left">計畫編號</th>
-                                                    <th>標題(名稱)</th>
-                                                    <th>單元</th>
-                                                    <th>研究單位</th>
-                                                    <th class="text-left">狀態</th>
-                                                    <th>建立日期</th>
+                                                    <th class="text-left">教室</th>
+                                                    <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                    <th class="text-left">月份</th>
+                                                    <th class="text-left">預約總次數</th>
+                                                    <th class="text-left">預約取消</th>
+                                                    <th class="text-left">已報到</th>
+                                                    <th class="text-left">未報到</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td class="num">1</td>
-                                                    <td>ILOSH110-A302</td>
-                                                    <td>職業災害勞工使用自費醫療材料情形評估研究</td>
-                                                    <td>各年度研究報告</td>
-                                                    <td>職業安全研究組</td>
-                                                    <td>公開(上架)</td>
-                                                    <td><time>2022/07/27</time></td>
+                                                    <td>101教室</td>
+                                                    <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                    <td>2022/7</td>
+                                                    <td>1615</td>
+                                                    <td>311</td>
+                                                    <td>1589</td>
+                                                    <td>265</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">2</td>
+                                                    <td>101教室</td>
+                                                    <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                    <td>2022/6</td>
+                                                    <td>1615</td>
+                                                    <td>311</td>
+                                                    <td>1589</td>
+                                                    <td>265</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">3</td>
+                                                    <td>102教室</td>
+                                                    <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                    <td>2022/6</td>
+                                                    <td>1615</td>
+                                                    <td>311</td>
+                                                    <td>1589</td>
+                                                    <td>265</td>
+                                                </tr>
+                                           </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>序號</th>
+                                                    <!--th class="text-left">教室</-->
+                                                    <th>預約案號</th>
+                                                    <!--th>虛擬主機(編號)</th-->
+                                                    <th class="text-left">月份</th>
+                                                    <th class="text-left">預約總次數</th>
+                                                    <th class="text-left">預約取消</th>
+                                                    <th class="text-left">已報到</th>
+                                                    <th class="text-left">未報到</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="num">1</td>
+                                                    <!--td>101教室</-->
+                                                    <td>1110101001</td>
+                                                    <!--td>1</td-->
+                                                    <td>2022/6</td>
+                                                    <td>1615</td>
+                                                    <td>311</td>
+                                                    <td>1589</td>
+                                                    <td>265</td>
                                                 </tr>
                                            </tbody>
                                         </table>
@@ -322,7 +376,7 @@
                 zoomType: 'xy'
             },
             title: {
-                text: '研究成果下載統計資訊'
+                text: '預約統計資訊'
             },
             // subtitle: {
             //     text: 'Source: 勞安所科研採購網'
@@ -374,7 +428,7 @@
                     'rgba(255,255,255,0.25)'
             },
             series: [{
-                name: '研究報告',
+                name: '101教室',
                 type: 'column',
                 yAxis: 1,
                 data: [49.0, 71.0, 106.0, 129.0, 144.0, 126.0, 35.0, 48.0, 16.0, 19.0, 95.0, 54.0],
@@ -382,34 +436,10 @@
                     valueSuffix: ''
                 }
             }, {
-                name: '簡訊',
+                name: '102教室',
                 type: 'column',
                 yAxis: 1,
                 data: [17.0, 26.0, 89.0, 94.0, 78.0, 91.0, 25.0, 26.0, 13.0, 18.0, 53.0, 19.0],
-                tooltip: {
-                    valueSuffix: ''
-                }
-            }, {
-                name: '季刊',
-                type: 'column',
-                yAxis: 1,
-                data: [3.0, 16.0, 8.0, 9.0, 7.0, 19.0, 5.0, 6.0, 13.0, 8.0, 3.0, 9.0],
-                tooltip: {
-                    valueSuffix: ''
-                }
-            }, {
-                name: '技術叢書',
-                type: 'column',
-                yAxis: 1,
-                data: [7.0, 6.0, 9.0, 4.0, 8.0, 9.0, 22.0, 1.0, 3.0, 18.0, 3.0, 2.0],
-                tooltip: {
-                    valueSuffix: ''
-                }
-            }, {
-                name: '其他出版品',
-                type: 'column',
-                yAxis: 1,
-                data: [17.0, 26.0, 89.0, 94.0, 78.0, 91.0, 25.0, 26.0, 13.0, 18.0, 53.0, 9.0],
                 tooltip: {
                     valueSuffix: ''
                 }
