@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!--圖片批次上傳-->
+    <link rel="stylesheet" href="css/fileUpload.css">
+</head>
+
+<body>
+    <div class="lightbox">
+                <!-- 中央區塊 -->
+                <div class="content_block">
+                    <div class="lightbox_title">章節目錄</div>
+
+                    <div class="_head">
+                        <h3>20220910021－職業災害勞工使用自費醫療材料情形評估研究</h3>
+                    </div>
+                    <div class="_content">
+                        <div class="flex-form">
+                        <!--h4>基本資訊</h4-->
+                            <div class="form_grp" style="margin-top:20px;">
+                                <div class="form_content">
+                                    <div class="labelEffect">
+                                        <input name="" type="text" value="1" class="dynamicCol used">
+                                        <label>排序</label>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="form_grp">
+                                 <div class="form_content">
+                                    <div class="labelEffect">
+                                        <input name="" type="text" value="守護勞工的最前線「勞安加衛體驗館」隆重開幕">
+                                        <label>標題</label>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="form_grp form_inline">
+                                <div class="labelEffect">
+                                    <select id="" name="" class="dynamicCol used">
+                                        <option value="" selected="" disabled="disabled"></option>
+                                        <optgroup label="分類群組">
+                                            <option value="1" selected>勞工安全衛生展示館</option>
+                                            <option value="2">單位選單2</option>
+                                          </optgroup>
+                                          <optgroup label="單位群組上層">
+                                            <option value="3">單位選單</option>
+                                            <option value="4">單位選單</option>
+                                            <option value="4">單位選單</option>
+                                          </optgroup>                                                        
+                                    </select>
+                                    <label>單位</label>
+                                </div>
+                                <div class="labelEffect">
+                                    <input name="" type="text" value="蘇暐智、許嘉享" class="dynamicCol used">
+                                    <label>作者</label>
+                                </div>
+                            </div>
+                            <div class="form_grp" style="margin-bottom:50px;">
+                            <div class="labelEffect">
+                                    <textarea class="used" style="min-height:250px;">本研究分析我國職業災害勞工有關自費醫療特殊材料使用情形，並探討職業災害保險將自費醫療特殊材料納入給付範圍的可行性，研究結果顯示冠狀動脈支架、人工髖關節與人工水晶體這三類為使用量最多的特材。
+本研究之建議包括:
+1.職災勞工使用健保自付差額最多的項目為冠狀動脈支架、人工髖關節、與人工水晶體，每件分別為NT$14,099~67,320元、9,164~186,002元、6,000~110,000元；估計在新法實施後職災勞工可能申請補助自付差額之冠狀動脈支架、人工髖關節、與人工水晶體之年均使用量分別為127.2件、82.8件及320.4件，議此數據用於評估未來補助職災勞工需求之給付方式與金額。
+2.職災病人使用全自費特材案件數最多科別為骨科(4,402)件、神經外科(718件)、整形外科(476件)，針對這些案例的自費醫療費用分析，其25、50、75百分位比分別為骨科NT$ 7,064元、50,650元、67,889元，神經外科NT$ 8,932元、38,184元、75,220元，整形外科 NT$ 1,416元、8,874元、37,260元；建議此數據用於評估未來補助職災勞工需求之給付方式與金額。</textarea>
+                                    <label>中文摘要</label>
+                                </div>
+                                <div class="help">1500 / 8000</div>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="setting_block">
+                            <h3>附件檔案上傳 </h3>
+                            <div class="fileDragDrop">
+                                <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
+                                <p><em>上傳附件檔案</em></p>
+                                <p>拖拉檔案或選擇「從本機上傳」</p>
+                            </div>
+                            <p class="tips">說明文案：檔案上傳限制，格式或檔案大小等</p>
+
+                            <div class="upload_block">
+                                <!-- item = 1 file -->
+                                <div class="item">
+                                    <div class="pic">
+                                        <img src="images/icon/icon_pdf.svg" alt="">
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="file_title">附件檔案名稱.pdf </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect hasBtn">
+                                                <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                            </div>
+                                            <div class="additional">
+                                                <a href="#" class="btn"><i class="i_edit"></i>移除</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+</body>
+<!-- JS-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- template customize js -->
+<script src="js/customize.js"></script>
+<!-- highlight -->
+<script src="vendor/highlight/highlight.pack.js"></script>
+<!-- fancybox -->
+<script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!--圖片批次上傳-->
+    <link rel="stylesheet" href="css/fileUpload.css">
+    <!--增加select-->
+    <link rel="stylesheet" href="css/customize.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+
+    <!--測試 tinyMCE html editor 暫用-->
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+        selector: 'textarea.tinymce',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor textcolor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code help wordcount'
+        ],
+        mobile: { 
+            theme: 'mobile' 
+        },
+        toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tiny.cloud/css/codepen.min.css'
+        ],
+        });
+    </script>
+    <style>
+        .mce-notification-inner, .mce-notification-warning {visibility: hidden;}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>研究成果管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>研究成果管理 - 系統編號：20220910021</h2>
+                        <!--button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button-->
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="flex-12">
+                        <div class="col">
+                            <!-- 中央區塊 -->
+                            <div class="content_block edit_block">
+                                <div class="tabBtn_block">
+                                    <div class="tab_items">
+                                        <button class="btn"><i class="i_setting"></i>單元設定</button>
+                                        <button class="btn active"><i class="i_edit"></i>成果資訊</button>
+                                        <button class="btn"><i class="i_info"></i>章節專題</button>
+                                        <!--button class="btn" style="flex: 0 1 calc(50% - 1em);"><i class="i_info"></i>決標與歷程</button>
+                                        <button class="btn"><i class="i_setting"></i>資訊</button-->
+                                    </div>
+                                </div>
+                                <!--頁籤區-->
+                                <div class="tab__content">
+                                    <!--tabcontent 1 -->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>單元設定</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <!-- setting_block為資料上稿專用 -->
+                                                <div class="setting_block">
+                                                    <div class="flex-form">
+                                                        <h3>上稿單元</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select id="" name="" class="dynamicCol used">
+                                                                    <option value="" disabled="disabled"></option>
+                                                                    <option value="1" selected>各年度研究報告</option>
+                                                                    <option value="2">簡訊</option>
+                                                                    <option value="3">研究季刊</option>
+                                                                    <option value="4">技術叢書</option>
+                                                                    <option value="5">重要績效輯(其他出版品)</option>
+                                                                    <option value="6">專利技術</option>
+                                                                </select>
+                                                                <!--input name="" type="text" value="研究成果網 / 各年度研究報告">
+                                                                <button class="btn btn-primary btn-text">選擇</button-->
+                                                            </div>
+                                                        </div>
+                                                        <!--div class="form_grp">
+                                                            <ol>
+                                                                <li>各年度研究報告</li>
+                                                                <li>部屬單位網 / 消息公告 / 最新消息</li>
+                                                                <li>主題網 / 消息公告 / 最新消息</li>
+                                                            </ol>
+                                                        </div-->
+
+                                                        <h3>關鍵字/標籤</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="關鍵字一, 關鍵字二">
+                                                                <!-- <label>標籤</label> -->
+                                                            </div>
+                                                            <div class="help">空白區分多個標籤</div>
+                                                        </div>
+                                                        <hr>
+                                                        <h3>分類分眾</h3>
+                                                        <div class="form_grp" style="margin-top:20px;">
+                                                            <div class="labelEffect">
+                                                                <div class="form_title">資料大類<abbr>*</abbr></div>
+                                                                <div class="form_content">
+                                                                    <select id="" name="" class="used">
+                                                                        <option value="" selected="" disabled="disabled">請選擇</option>
+                                                                        <option value="選項1">選項1</option>
+                                                                        <option value="選項2">選項2</option>
+                                                                        <option value="選項3">選項3</option>
+                                                                        <option value="選項4">選項4</option>
+                                                                        <option value="選項5">選項5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <div class="form_title">分眾<abbr>*</abbr></div>
+                                                                <div class="form_content">
+                                                                    <div class="check_grp form_inline">
+                                                                        <label><input name="" type="checkbox" value=""><span>選項一</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項二</span></label>
+                                                                        <label><input name="" type="checkbox" value=""><span>選項三</span></label>
+                                                                    </div>
+                                                                    <div class="help">說明文字</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                
+                                                        <h3>上稿資訊</h3>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <select name="" disabled="disabled">
+                                                                    <option value="" disabled="disabled"></option>
+                                                                    <option value="選項1" selected>勞動部勞動及職業安全衛生研究所</option>
+                                                                    <optgroup label="分類群組">
+                                                                        <option value="1" selected>單位選單1</option>
+                                                                        <option value="2">單位選單2</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="單位群組上層">
+                                                                        <option value="3">單位選單</option>
+                                                                        <option value="4">單位選單</option>
+                                                                        <option value="4">單位選單</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="系統管理者" disabled>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="system@gmail.com" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--tabcontent 2 -->
+                                    <div class="active">
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>成果資訊</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="flex-form">
+                                                <!--h4>基本資訊</h4-->
+                                                    <div class="form_grp" style="margin-top:20px;">
+                                                        <div class="form_content">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="ILOSH110-A302" class="dynamicCol used">
+                                                                <label>計畫(自訂)編號</label>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                         <div class="form_content">
+                                                            <div class="labelEffect">
+                                                                <input name="" type="text" value="職業災害勞工使用自費醫療材料情形評估研究">
+                                                                <label>標題(名稱)</label>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                            <div class="labelEffect">
+                                                                <select id="" name="" class="dynamicCol used">
+                                                                    <option value="" disabled="disabled"></option>
+                                                                    <option value="1" selected>111年度</option>
+                                                                    <option value="2">單位選單2</option>
+                                                                    <option value="3">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                </select>
+                                                                <label>年度</label>
+                                                            </div>
+                                                            <div class="labelEffect">
+                                                                <select id="" name="" class="dynamicCol used">
+                                                                    <option value="" disabled="disabled"></option>
+                                                                    <option value="1" selected>一月</option>
+                                                                    <option value="2">單位選單2</option>
+                                                                    <option value="3">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                </select>
+                                                                <label>月份</label>
+                                                            </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" disabled="disabled"></option>
+                                                                <option value="1" selected>34</option>
+                                                                <option value="2">33</option>
+                                                                <option value="3">32</option>
+                                                                <option value="4">單位選單</option>
+                                                                <option value="4">單位選單</option>
+                                                            </select>
+                                                            <label>期別</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <!--input name="" type="text" value="凌網科技股份有限公司" class="dynamicCol used"-->
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled"></option>
+                                                                <optgroup label="分類群組">
+                                                                    <option value="1" selected>職業安全研究組</option>
+                                                                    <option value="2">單位選單2</option>
+                                                                  </optgroup>
+                                                                  <optgroup label="單位群組上層">
+                                                                    <option value="3">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                  </optgroup>                                                        
+                                                            </select>
+                                                            <label>出版單位</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled"></option>
+                                                                <optgroup label="分類群組">
+                                                                    <option value="1" selected>職業安全研究組</option>
+                                                                    <option value="2">單位選單2</option>
+                                                                  </optgroup>
+                                                                  <optgroup label="單位群組上層">
+                                                                    <option value="3">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                    <option value="4">單位選單</option>
+                                                                  </optgroup>                                                        
+                                                            </select>
+                                                            <label>研究單位</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="潘致弘、杜宗禮" class="dynamicCol used">
+                                                            <label>研究主持人/作者</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp" style="margin-bottom:50px;">
+                                                        <div class="labelEffect">
+                                                            <textarea class="used" style="min-height:250px;">本研究分析我國職業災害勞工有關自費醫療特殊材料使用情形，並探討職業災害保險將自費醫療特殊材料納入給付範圍的可行性，研究結果顯示冠狀動脈支架、人工髖關節與人工水晶體這三類為使用量最多的特材。
+本研究之建議包括:
+1.職災勞工使用健保自付差額最多的項目為冠狀動脈支架、人工髖關節、與人工水晶體，每件分別為NT$14,099~67,320元、9,164~186,002元、6,000~110,000元；估計在新法實施後職災勞工可能申請補助自付差額之冠狀動脈支架、人工髖關節、與人工水晶體之年均使用量分別為127.2件、82.8件及320.4件，議此數據用於評估未來補助職災勞工需求之給付方式與金額。
+2.職災病人使用全自費特材案件數最多科別為骨科(4,402)件、神經外科(718件)、整形外科(476件)，針對這些案例的自費醫療費用分析，其25、50、75百分位比分別為骨科NT$ 7,064元、50,650元、67,889元，神經外科NT$ 8,932元、38,184元、75,220元，整形外科 NT$ 1,416元、8,874元、37,260元；建議此數據用於評估未來補助職災勞工需求之給付方式與金額。</textarea>
+                                                            <label>中文摘要</label>
+                                                        </div>
+                                                        <div class="help">1500 / 8000</div>
+                                                    </div>
+    
+                                                </div>
+                                                <hr>
+                                                <div class="setting_block">
+                                                    <h3>附件檔案上傳 <!--button class="btn btn-xs"><i class="i_addfile"></i>新增檔案</button--></h3>
+                                                    <div class="fileDragDrop">
+                                                        <input type="file" id="inputFile" onchange="changeHandler(event,'file')" ondragover="dragoverHandler(event,'file')" ondrop="dropHandler(event,'file')">
+                                                        <p><em>上傳附件檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                      </div>
+                                                      <p class="tips">說明文案：檔案上傳限制，格式或檔案大小等</p>
+
+                                                      <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <a href="#" class="btn"><i class="i_edit"></i>移除</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                        
+                                    </div>
+                                    <!--tabcontent 3-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>章節專題
+                                                    <span class="quick_btn" >
+                                                        <button class="btn" data-fancybox="" data-type="iframe" data-src="fancybox_researchchapter.htm" href="javascript:;">
+                                                            <i class="i_add"></i>新增章節目錄
+                                                            <span class="ink animate" style="height: 151px; width: 151px; left: 14.5px; top: -63.5px;"></span>
+                                                        </button>
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="flex-form">
+                                                    <table class="table_hover" style="width:100%;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>排序</th>
+                                                                <th>專題名稱</th>
+                                                                <th>專題篇名</th>
+                                                                <th>單位</th>
+                                                                <th>作者</th>
+                                                                <th>檔案下載</th>
+                                                                <th>編輯</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>守護勞工的最前線「勞安加衛體驗館」隆重開幕</td>
+                                                                <td>焦點話題</td>
+                                                                <td>勞工安全衛生展示館</td>
+                                                                <td>蘇暐智、許嘉享</td>
+                                                                <td><a href="#">守護勞工的最前線「勞安加衛體驗館」隆重開幕.pdf</a></td>
+                                                                <td>
+                                                                    <span class="quick_btn" >
+                                                                        <button class="btn" data-fancybox="" data-type="iframe" data-src="fancybox_researchchapter.htm" href="javascript:;">
+                                                                            <i class="i_edit"></i>
+                                                                            <span class="ink animate" style="height: 151px; width: 151px; left: 14.5px; top: -63.5px;"></span>
+                                                                        </button>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>施工架性能導向　提升勞動力能量</td>
+                                                                <td>勞安園地</td>
+                                                                <td>中華民國工業安全衛生協會、鉞鑫工程有限公司、千鼎鋁業有限公司</td>
+                                                                <td>彭馨頤、徐正重、許雄明</td>
+                                                                <td><a href="#">施工架性能導向.pdf</a></td>
+                                                                <td>
+                                                                    <span class="quick_btn" >
+                                                                        <button class="btn" data-fancybox="" data-type="iframe" data-src="fancybox_researchchapter.htm" href="javascript:;">
+                                                                            <i class="i_edit"></i>
+                                                                            <span class="ink animate" style="height: 151px; width: 151px; left: 14.5px; top: -63.5px;"></span>
+                                                                        </button>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右側資料widget -->
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>發佈選項</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioStatus" type="radio" value="" checked=""><span>公開(上架)</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>關閉(下架)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form_grp datepick">
+                                            <div class="form_title">發佈(上架)時間<abbr>*</abbr></div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="datetime-local" value="2021-10-03T19:30">
+                                                    <!--button class="btn"><i class="i_calendar"></i></button-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp datepick" style="margin-top:20px;">
+                                            <div class="form_title">下架時間</div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="datetime-local" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-green">新增儲存</button>
+                                        <!--button class="btn">預覽</button-->
+                                        <!--button class="btn btn-orange">重新公告</button-->
+                                        <!--重新公告採複製模式，將原資料複製新的一筆，舊的資料紀錄為歷程，並自動產生公告次數。新增為第一次，複製後為第二次-->
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>狀態資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <!--ul>
+                                            <li>公告狀態：第二次公告(自動)</li>
+                                            <li>收件狀態：已截止(自動)</li>
+                                        </ul-->
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>最後編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <!--ul>
+                                            <li>編修者: <span><i class="i_man"></i></span>系統管理者(admin)</li>
+                                            <li>編修日期: <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                            <li>建立者: <span><i class="i_man"></i></span>系統管理者(admin)</li>
+                                            <li>建立日期: <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    </script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside_ilosh.htm");
+    </script>
+    <!--Select multiple checkbox-->
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+        });
+    </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
+    </script>
+    
+</body>
+
+</html>
