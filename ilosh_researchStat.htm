@@ -32,14 +32,14 @@
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
                     <li><a href="#">客製化管理</a></li>
-                    <li>標案統計報表</li>
+                    <li>研究成果統計報表</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>標案統計報表</h2>
+                        <h2>研究成果統計報表</h2>
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
@@ -55,48 +55,55 @@
                                         <div class="flex-form flex-6-6">
                                             <div class="form_grp">
                                                 <div class="labelEffect">
-                                                    <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>採購案案號</label>
+                                                        <select id="" name="">
+                                                            <option value="" selected disabled="disabled"></option>
+                                                            <option value="1">各年度研究報告</option>
+                                                            <option value="2">簡訊</option>
+                                                            <option value="3">研究季刊</option>
+                                                            <option value="4">技術叢書</option>
+                                                            <option value="5">重要績效輯(其他出版品)</option>
+                                                            <option value="6">專利技術</option>
+                                                        </select>
+                                                        <label>單元</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp form_inline" style="margin-top:10px;">
+                                                <div class="labelEffect">
+                                                    <div class="form_title">統計結果<abbr>*</abbr></div>
+                                                    <div class="form_content">
+                                                        <div class="check_grp form_inline">
+                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>單元</span></label>
+                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>資料</span></label>
+                                                        </div>
+                                                        <!--div class="help">說明文字</-->
+                                                    </div>
+                                                </div>
+                                                <div class="labelEffect">
+                                                    <div class="form_title">報表類型<abbr>*</abbr></div>
+                                                    <div class="form_content">
+                                                        <div class="check_grp form_inline">
+                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>瀏覽</span></label>
+                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>下載</span></label>
+                                                        </div>
+                                                        <!--div class="help">說明文字</-->
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_name" id="search_name" type="text" value="">
-                                                    <label>案名</label>
+                                                    <label>標題(名稱)</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
-                                                    <select id="" name="">
-                                                        <option value="" selected="" disabled="disabled"></option>
-                                                        <optgroup label="資料夾">
-                                                            <option value="1">節點</option>
-                                                            <option value="2">節點</option>
-                                                          </optgroup>
-                                                          <optgroup label="資料夾2">
-                                                            <option value="3">節點</option>
-                                                            <option value="4">節點</option>
-                                                            <option value="4">節點</option>
-                                                          </optgroup>                                                        
-                                                    </select>
-                                                    <label>承辦單位</label>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <select id="" name="">
-                                                        <option value="" selected="" disabled="disabled"></option>
-                                                        <optgroup label="資料夾">
-                                                            <option value="1">節點</option>
-                                                            <option value="2">節點</option>
-                                                          </optgroup>
-                                                          <optgroup label="資料夾2">
-                                                            <option value="3">節點</option>
-                                                            <option value="4">節點</option>
-                                                            <option value="4">節點</option>
-                                                          </optgroup>                                                        
-                                                    </select>
-                                                    <label>採購單位</label>
+                                                        <select id="" name="">
+                                                            <option value="" selected="" disabled="disabled"></option>
+                                                            <option value="1">選項</option>
+                                                            <option value="2">選項</option>
+                                                            <option value="3">選項</option>
+                                                        </select>
+                                                    <label>發布狀態</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp datepick">
@@ -106,7 +113,7 @@
                                                         <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>招標日期(起)</label>
+                                                        <label>建立日期(起)</label>
                                                     </div>
                                                     <!-- <div class="help">說明文字</div> -->
                                                 </div>
@@ -115,75 +122,25 @@
                                                         <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>招標日期(迄)</label>
+                                                        <label>建立日期(迄)</label>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp datepick">
-                                                <div class="startDate">
-                                                    <div class="labelEffect">
-                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
-                                                        <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>決標日期(起)</label>
-                                                    </div>
-                                                    <!-- <div class="help">說明文字</div> -->
-                                                </div>
-                                                <div class="endDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
-                                                        <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>決標日期(迄)</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp datepick">
-                                                <div class="startDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="text" value="">
-                                                        <label>招標金額(起)</label>
-                                                    </div>
-                                                    <!-- <div class="help">說明文字</div> -->
-                                                </div>
-                                                <div class="endDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="text" value="">
-                                                        <label>招標金額(迄)</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp datepick">
-                                                <div class="startDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="text" value="">
-                                                        <label>決標金額(起)</label>
-                                                    </div>
-                                                    <!-- <div class="help">說明文字</div> -->
-                                                </div>
-                                                <div class="endDate">
-                                                    <div class="labelEffect">
-                                                        <input name="" type="text" value="">
-                                                        <label>決標金額(迄)</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>得標廠商</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp form_inline">
                                                     <div class="labelEffect">
-                                                        <select id="" name="">
-                                                            <option value="" selected="" disabled="disabled"></option>
-                                                            <option value="1">選項</option>
-                                                            <option value="2">選項</option>
-                                                            <option value="3">選項</option>
-                                                        </select>
-                                                        <label>招標狀態</label>
+                                                    <select id="" name="">
+                                                        <option value="" selected="" disabled="disabled"></option>
+                                                        <optgroup label="資料夾">
+                                                            <option value="1">節點</option>
+                                                            <option value="2">節點</option>
+                                                          </optgroup>
+                                                          <optgroup label="資料夾2">
+                                                            <option value="3">節點</option>
+                                                            <option value="4">節點</option>
+                                                            <option value="4">節點</option>
+                                                          </optgroup>                                                        
+                                                    </select>
+                                                        <label>研究單位</label>
                                                     </div>
                                                     <div class="labelEffect">
                                                         <select id="" name="">
@@ -192,7 +149,7 @@
                                                             <option value="2">選項</option>
                                                             <option value="3">選項</option>
                                                         </select>
-                                                        <label>決標狀態</label>
+                                                        <label>年度</label>
                                                     </div>
                                             </div>
                                         </div>
@@ -207,14 +164,14 @@
                         </div>
                     </div>
                     <div class="flex-12">
-                        <div class="col"><p class="notice">目前條件 - 招標日期：2022/8/13~2022/10/13</p></div>
+                        <div class="col"><p class="notice">目前條件 - 建立日期：2022/8/13~2022/10/13</p></div>
                         
                     </div>
                     <div class="flex-3-3-3-3">
                         <div class="col">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>招標總數</h3>
+                                    <h3>上架成果總數</h3>
                                 </div>
                                 <div class="_content">
                                     <div class="mp_widget">
@@ -229,12 +186,12 @@
                         <div class="col">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>決標總數</h3>
+                                    <h3>新增總數</h3>
                                 </div>
                                 <div class="_content">
                                     <div class="mp_widget">
                                         <div class="widget_now_pageview">
-                                            <div class="counter "data-count="654"></div>
+                                            <div class="counter "data-count="34"></div>
                                         </div>
                                         <!--div class="help">時間以...為計算準</div-->
                                     </div>
@@ -244,7 +201,7 @@
                         <div class="col">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>流標總數</h3>
+                                    <h3>瀏覽總數</h3>
                                 </div>
                                 <div class="_content">
                                     <div class="mp_widget ">
@@ -258,23 +215,23 @@
                         <div class="col">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>廢標總數</h3>
+                                    <h3>下載總數</h3>
                                 </div>
                                 <div class="_content">
                                     <div class="mp_widget">
                                         <div class="widget_new_data">
-                                            <div class="counter "data-count="20">20</div>
+                                            <div class="counter "data-count="1220"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex-6-6">
+                    <div class="flex-12">
                         <div class="col ">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>標案狀態統計</h3>
+                                    <h3>每月下載次數</h3>
                                 </div>
                                 <div class="_content">
                                     <!-- 長條圖 -->
@@ -284,34 +241,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col ">
-                            <div class="content_block">
-                                <div class="_head">
-                                    <h3>標案組別統計</h3>
-                                </div>
-                                <div class="_content">
-                                    <!-- 長條圖 -->
-                                    <figure class="highcharts-figure">
-                                        <div id="axes_line_column2"></div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 圓餅圖 -->
-                        <!--div class="col">
-                        <div class="content_block">
-                                <div class="_head">
-                                    <h3>數據分析</h3>
-                                </div>
-                                <div class="_content">
-                                    
-                                    <figure class="highcharts-figure">
-                                        <div id="pie1"></div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div-->
-                    </div>
+                   </div>
                     <!-- flex-12 -->
                     <div class="flex-12">
                         <div class="col ">
@@ -319,10 +249,10 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>標案統計摘要</h3>
+                                    <h3>熱門下載統計</h3>
                                 </div>
                                 <div class="_head">
-                                    <p>僅顯示符合查詢條件前10筆資訊，請使用匯出檢視完整資料。</p>
+                                    <p>僅顯示符合查詢條件前10筆資訊，匯出則提供前100筆資料。</p>
                                     <div class="quick_btn">
                                         <button class="btn btn-orange" onclick="window.location.href='#';"><i class="i_add"></i>匯出結果</button>
                                     </div>
@@ -333,73 +263,26 @@
                                         <table class="table_hover">
                                             <thead>
                                                 <tr>
-                                                    <!--th><input type="checkbox"></th--><!--有批次功能才使用-->
-                                                    <th>編號</th>
-                                                    <th class="text-left">系統編號</th>
-                                                    <th class="text-left">採購案案號</th>
-                                                    <th>案名</th>
-                                                    <th>請購單位</th>
-                                                    <th>請購人</th>
-                                                    <th class="text-left">公告狀態</th>
-                                                    <th class="text-left">收件狀態</th>
-                                                    <th class="text-left">決標狀態</th>
-                                                    <th>公告日期</th>
+                                                    <th>序號</th>
+                                                    <th class="text-left">計畫編號</th>
+                                                    <th>標題(名稱)</th>
+                                                    <th>單元</th>
+                                                    <th>研究單位</th>
+                                                    <th class="text-left">狀態</th>
+                                                    <th>建立日期</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <!--td><input type="checkbox"></td-->
                                                     <td class="num">1</td>
-                                                    <td>20220910022</td>
-                                                    <td>1110057</td>
-                                                    <td>人員落海警示裝置之研製與測試</td>
+                                                    <td>ILOSH110-A302</td>
+                                                    <td>職業災害勞工使用自費醫療材料情形評估研究</td>
+                                                    <td>各年度研究報告</td>
                                                     <td>職業安全研究組</td>
-                                                    <td>蘇文源副研究員</td>
-                                                    <td>第一次公告</td>
-                                                    <td>公告中</td>
-                                                    <td></td>
+                                                    <td>公開(上架)</td>
                                                     <td><time>2022/07/27</time></td>
                                                 </tr>
-                                                <tr>
-                                                    <!--td><input type="checkbox"></td-->
-                                                    <td class="num">2</td>
-                                                    <td>20220910021</td>
-                                                    <td>1110056</td>
-                                                    <td>綜合商品零售業職場危害影像辨識判別與緊急通報技術建置研究</td>
-                                                    <td>職業危害評估研究組</td>
-                                                    <td>鄭乃云副研究員</td>
-                                                    <td>第三次公告及以後</td>
-                                                    <td>已截止</td>
-                                                    <td>流標</td>
-                                                    <td><time>2019/06/16</time></td>
-                                                </tr>
-                                                <tr>
-                                                    <!--td><input type="checkbox"></td-->
-                                                    <td class="num">3</td>
-                                                    <td>20220910020</td>
-                                                    <td>1110055</td>
-                                                    <td>太陽光電發電系統現況及職業災害預防探討</td>
-                                                    <td>職業安全研究組</td>
-                                                    <td>林光邦助理研究員</td>
-                                                    <td>第二次公告</td>
-                                                    <td>已截止</td>
-                                                    <td>已決標</td>
-                                                    <td><time>2022/05/31</time></td>
-                                                </tr>
-                                                <tr>
-                                                    <!--td><input type="checkbox"></td-->
-                                                    <td class="num">4</td>
-                                                    <td>20220910019</td>
-                                                    <td>1110054</td>
-                                                    <td>綜合商品零售業職場危害影像辨識判別與緊急通報技術建置研究</td>
-                                                    <td>職業危害評估研究組</td>
-                                                    <td>鄭乃云副研究員</td>
-                                                    <td>第二次公告</td>
-                                                    <td>已截止</td>
-                                                    <td></td>
-                                                    <td><time>2019/05/11</time></td>
-                                                </tr>
-                                            </tbody>
+                                           </tbody>
                                         </table>
                                     </div>
 
@@ -432,13 +315,13 @@
         $('header').load("header.htm");
         $('aside').load("aside_ilosh.htm");
         var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-        // 長條結合折線圖
+        // 長條
         Highcharts.chart('axes_line_column1', {
             chart: {
                 zoomType: 'xy'
             },
             title: {
-                text: '標案公告統計資訊'
+                text: '研究成果下載統計資訊'
             },
             // subtitle: {
             //     text: 'Source: 勞安所科研採購網'
@@ -490,7 +373,7 @@
                     'rgba(255,255,255,0.25)'
             },
             series: [{
-                name: '公告數',
+                name: '研究報告',
                 type: 'column',
                 yAxis: 1,
                 data: [49.0, 71.0, 106.0, 129.0, 144.0, 126.0, 35.0, 48.0, 16.0, 19.0, 95.0, 54.0],
@@ -498,144 +381,37 @@
                     valueSuffix: ''
                 }
             }, {
-                name: '決標數',
+                name: '簡訊',
+                type: 'column',
+                yAxis: 1,
+                data: [17.0, 26.0, 89.0, 94.0, 78.0, 91.0, 25.0, 26.0, 13.0, 18.0, 53.0, 19.0],
+                tooltip: {
+                    valueSuffix: ''
+                }
+            }, {
+                name: '季刊',
+                type: 'column',
+                yAxis: 1,
+                data: [3.0, 16.0, 8.0, 9.0, 7.0, 19.0, 5.0, 6.0, 13.0, 8.0, 3.0, 9.0],
+                tooltip: {
+                    valueSuffix: ''
+                }
+            }, {
+                name: '技術叢書',
+                type: 'column',
+                yAxis: 1,
+                data: [7.0, 6.0, 9.0, 4.0, 8.0, 9.0, 22.0, 1.0, 3.0, 18.0, 3.0, 2.0],
+                tooltip: {
+                    valueSuffix: ''
+                }
+            }, {
+                name: '其他出版品',
                 type: 'column',
                 yAxis: 1,
                 data: [17.0, 26.0, 89.0, 94.0, 78.0, 91.0, 25.0, 26.0, 13.0, 18.0, 53.0, 9.0],
                 tooltip: {
                     valueSuffix: ''
                 }
-            }]
-        });
-        // 長條結合折線圖
-        Highcharts.chart('axes_line_column2', {
-            chart: {
-                zoomType: 'xy'
-            },
-            title: {
-                text: '組別招標統計資訊'
-            },
-            // subtitle: {
-            //     text: 'Source: 勞安所科研採購網'
-            // },
-            colors: _Color,
-            xAxis: [{
-                categories: ['勞動市場研究組', '勞動關係研究組', '職業安全研究組', '職業衛生研究組', '職業危害評估研究組', '勞工安全衛生展示館'],
-                crosshair: true
-            }],
-            yAxis: [{ // Primary yAxis
-                labels: {
-                    format: '{value}',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-                },
-                title: {
-                    text: '次數',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-                }
-            }, { // Secondary yAxis
-                title: {
-                    text: '',
-                    style: {
-                        color: Highcharts.getOptions().colors[0]
-                    }
-                },
-                labels: {
-                    format: '{value}',
-                    style: {
-                        color: Highcharts.getOptions().colors[0]
-                    }
-                },
-                opposite: true
-            }],
-            tooltip: {
-                shared: true
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                x: 20,
-                verticalAlign: 'top',
-                y: 20,
-                floating: true,
-                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
-                    'rgba(255,255,255,0.25)'
-            },
-            series: [{
-                name: '公告數',
-                type: 'column',
-                yAxis: 1,
-                data: [129.0, 144.0, 126.0, 35.0, 48.0, 16.0],
-                tooltip: {
-                    valueSuffix: ''
-                }
-            }, {
-                name: '決標數',
-                type: 'column',
-                yAxis: 1,
-                data: [17.0, 78.0, 91.0, 18.0, 53.0, 9.0],
-                tooltip: {
-                    valueSuffix: ''
-                }
-            }]
-        });
-        // pie
-        Highcharts.chart('pie1', {
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false,
-                type: 'pie'
-            },
-            title: {
-                text: '圖表標題(可省略)'
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            // colors: _Color,
-            accessibility: {
-                point: {
-                    valueSuffix: '%'
-                }
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: false
-                    },
-                    showInLegend: true
-                }
-            },
-            series: [{
-                name: 'Brands',
-                colorByPoint: true,
-                data: [{
-                    name: 'Chrome',
-                    y: 61.41,
-                    sliced: true,
-                    selected: true
-                }, {
-                    name: 'Internet Explorer',
-                    y: 11.84
-                }, {
-                    name: 'Firefox',
-                    y: 10.85
-                }, {
-                    name: 'Edge',
-                    y: 4.67
-                }, {
-                    name: 'Safari',
-                    y: 4.18
-                }, {
-                    name: 'Other',
-                    y: 7.05
-                }]
             }]
         });
     </script>
