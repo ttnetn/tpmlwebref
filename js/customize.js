@@ -586,9 +586,3 @@ $(function () {
   }
 });
 
-//我沒辦法讓搜尋區塊預設展開，先暫時加的
-<script>
-function myFunction() {
-  document.getElementById("open").style.display = "block"
-}
-</script>
