@@ -45,50 +45,15 @@
                     </div>
                     <!-- flex-12 搜尋 -->
                     <div class="flex-12">
-                        <div class="adv_search">
+                        <div class="adv_search" id="open" style="display:block;">
                             <div class="col">
                                 <div class="content_block">
                                     <div class="_head">
-                                        <h3>查詢</h3>
+                                        <h3>統計報表設定</h3>
                                     </div>
                                     <div class="_content">
+                                        <h4>查詢條件設定</h4>
                                         <div class="flex-form flex-6-6">
-                                            <div class="form_grp" style="margin-top:10px;">
-                                                <div class="labelEffect">
-                                                    <div class="form_title">統計結果依<abbr>*</abbr></div>
-                                                    <div class="form_content">
-                                                        <div class="check_grp form_inline">
-                                                            <label><input name="111" type="radio" value="" checked style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>教室</span></label>
-                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>虛擬主機</span></label>
-                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>案號</span></label>
-                                                        </div>
-                                                        <!--div class="help">說明文字</-->
-                                                    </div>
-                                                </div>
-                                                <!--div class="labelEffect">
-                                                    <div class="form_title">報表類型<abbr>*</abbr></div>
-                                                    <div class="form_content">
-                                                        <div class="check_grp form_inline">
-                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>使用</span></label>
-                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>預約</span></label>
-                                                            <label><input name="222" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>報到</span></label>
-                                                        </div>
-                                                    </div>
-                                                </div-->
-                                            </div>
-                                            <div class="form_grp" style="margin-top:10px;">
-                                                <div class="labelEffect">
-                                                    <div class="form_title">圖表單位<abbr>*</abbr></div>
-                                                    <div class="form_content">
-                                                        <div class="check_grp form_inline">
-                                                            <label><input name="333" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>年</span></label>
-                                                            <label><input name="333" type="radio" value="" checked style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>月</span></label>
-                                                            <label><input name="333" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>天</span></label>
-                                                        </div>
-                                                        <!--div class="help">說明文字</-->
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_name" id="search_name" type="text" value="">
@@ -98,20 +63,9 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_name" id="search_name" type="text" value="">
-                                                    <label>單位名稱</label>
+                                                    <label>申請單位名稱</label>
                                                 </div>
                                             </div>
-                                            <!--div class="form_grp">
-                                                <div class="labelEffect">
-                                                        <select id="" name="">
-                                                            <option value="" selected="" disabled="disabled"></option>
-                                                            <option value="1">選項</option>
-                                                            <option value="2">選項</option>
-                                                            <option value="3">選項</option>
-                                                        </select>
-                                                    <label>預約狀態</label>
-                                                </div>
-                                            </div-->
                                             <div class="form_grp datepick">
                                                 <div class="startDate">
                                                     <div class="labelEffect">
@@ -136,21 +90,48 @@
                                                     <div class="labelEffect">
                                                         <select id="" name="">
                                                             <option value="" selected="" disabled="disabled"></option>
-                                                            <option value="1">選項</option>
-                                                            <option value="2">選項</option>
-                                                            <option value="3">選項</option>
+                                                            <option value="1">預約成功</option>
+                                                            <option value="2">預約取消</option>
                                                         </select>
                                                         <label>預約狀態</label>
                                                     </div>
                                                     <div class="labelEffect">
                                                         <select id="" name="">
                                                             <option value="" selected="" disabled="disabled"></option>
-                                                            <option value="1">選項</option>
-                                                            <option value="2">選項</option>
-                                                            <option value="3">選項</option>
+                                                            <option value="1">預約日尚未到期</option>
+                                                            <option value="2">已報到</option>
+                                                            <option value="3">未報到</option>
                                                         </select>
                                                         <label>報到狀態</label>
                                                     </div>
+                                            </div>
+                                        </div>
+                                        <h4>統計圖與匯出報表設定</h4>
+                                        <div class="flex-form flex-6-6">
+                                            <div class="form_grp" style="margin-top:10px;">
+                                                <div class="labelEffect">
+                                                    <div class="form_title">匯出結果依<abbr>*</abbr></div>
+                                                    <div class="form_content">
+                                                        <div class="check_grp form_inline">
+                                                            <label><input name="111" type="radio" value="" checked style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>教室</span></label>
+                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>虛擬主機</span></label>
+                                                            <label><input name="111" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>案號</span></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="help">請注意，圖表固定產生教室的時間單位柱狀圖，不提供主機或案號圖表</div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp" style="margin-top:10px;">
+                                                <div class="labelEffect">
+                                                    <div class="form_title">統計單位依<abbr>*</abbr></div>
+                                                    <div class="form_content">
+                                                        <div class="check_grp form_inline">
+                                                            <label><input name="333" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>年</span></label>
+                                                            <label><input name="333" type="radio" value="" checked style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>月</span></label>
+                                                            <label><input name="333" type="radio" value="" style="border-radius: 1em;width: 1.25em;height: 1.25em;"><span>天</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         
@@ -229,7 +210,7 @@
                         <div class="col ">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>預約次數</h3>
+                                    <h3>預約總次數</h3>
                                 </div>
                                 <div class="_content">
                                     <!-- 長條圖 -->
@@ -250,7 +231,7 @@
                                     <h3>預約狀態統計</h3>
                                 </div>
                                 <div class="_head">
-                                    <p>僅顯示符合查詢條件前10筆資訊，請使用匯出檢視完整資料。</p>
+                                    <p>僅顯示符合查詢條件前10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
                                     <div class="quick_btn">
                                         <button class="btn btn-orange" onclick="window.location.href='#';"><i class="i_add"></i>匯出結果</button>
                                     </div>
@@ -259,6 +240,7 @@
                                     <!-- 表格樣式 -->
                                     <div class="table_wrapper">
                                         <table class="table_hover">
+                                            <caption>教室年/月/日預約報表格式</caption>
                                             <thead>
                                                 <tr>
                                                     <th>序號</th>
@@ -266,8 +248,9 @@
                                                     <!--th>預約案號</th>
                                                     <th>虛擬主機(編號)</th-->
                                                     <th class="text-left">月份</th>
-                                                    <th class="text-left">預約總次數</th>
+                                                    <th class="text-left">預約總次數(含取消)</th><!--預約總次數=預約取消+報到狀態尚未設定+已報到+未報到-->
                                                     <th class="text-left">預約取消</th>
+                                                    <th class="text-left">尚未設定(含未到期)</th>
                                                     <th class="text-left">已報到</th>
                                                     <th class="text-left">未報到</th>
                                                 </tr>
@@ -278,11 +261,12 @@
                                                     <td>101教室</td>
                                                     <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                    <td>2022/7</td>
+                                                    <td>2022/9</td>
                                                     <td>1615</td>
                                                     <td>311</td>
-                                                    <td>1589</td>
-                                                    <td>265</td>
+                                                    <td>99</td>
+                                                    <td>905</td>
+                                                    <td>300</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num">2</td>
@@ -290,21 +274,23 @@
                                                     <!--td>1110101001</td>
                                                     <td>1</td-->
                                                     <td>2022/6</td>
-                                                    <td>1615</td>
-                                                    <td>311</td>
-                                                    <td>1589</td>
-                                                    <td>265</td>
+                                                    <td>1503</td>
+                                                    <td>432</td>
+                                                    <td>0</td>
+                                                    <td>900</td>
+                                                    <td>301</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num">3</td>
                                                     <td>102教室</td>
                                                     <!--td>1110101001</td>
                                                     <td>1</td-->
-                                                    <td>2022/6</td>
-                                                    <td>1615</td>
-                                                    <td>311</td>
-                                                    <td>1589</td>
-                                                    <td>265</td>
+                                                    <td>2022/8</td>
+                                                    <td>1377</td>
+                                                    <td>99</td>
+                                                    <td>0</td>
+                                                    <td>1057</td>
+                                                    <td>221</td>
                                                 </tr>
                                            </tbody>
                                         </table>
@@ -312,15 +298,17 @@
 
                                     <div class="table_wrapper">
                                         <table class="table_hover">
+                                            <caption>虛擬主機年/月/日預約報表格式</caption>
                                             <thead>
                                                 <tr>
                                                     <th>序號</th>
-                                                    <!--th class="text-left">教室</-->
-                                                    <th>預約案號</th>
-                                                    <!--th>虛擬主機(編號)</th-->
+                                                    <!--th class="text-left">教室</>
+                                                    <th>預約案號</th-->
+                                                    <th>虛擬主機(編號)</th>
                                                     <th class="text-left">月份</th>
-                                                    <th class="text-left">預約總次數</th>
+                                                    <th class="text-left">預約總次數(含取消)</th>
                                                     <th class="text-left">預約取消</th>
+                                                    <th class="text-left">尚未設定(含未到期)</th>
                                                     <th class="text-left">已報到</th>
                                                     <th class="text-left">未報到</th>
                                                 </tr>
@@ -328,14 +316,69 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="num">1</td>
+                                                    <td>A01</td>
+                                                    <td>2022/8</td>
+                                                    <td>34</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>21</td>
+                                                    <td>9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">2</td>
+                                                    <td>B21</td>
+                                                    <td>2022/5</td>
+                                                    <td>29</td>
+                                                    <td>0</td>
+                                                    <td>6</td>
+                                                    <td>23</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">3</td>
+                                                    <td>A01</td>
+                                                    <td>2022/7</td>
+                                                    <td>22</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>21</td>
+                                                    <td>2</td>
+                                                </tr>
+                                           </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <caption>案號年/月/日預約報表格式</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>序號</th>
+                                                    <!--th class="text-left">教室</-->
+                                                    <th>預約案號</th>
+                                                    <!--th>虛擬主機(編號)</th-->
+                                                    <th class="text-left">月份</th>
+                                                    <th class="text-left">預約總次數(含取消)</th>
+                                                    <th class="text-left">預約取消</th>
+                                                    <th class="text-left">尚未設定(含未到期)</th>
+                                                    <th class="text-left">已報到</th>
+                                                    <th class="text-left">未報到</th>
+                                                    <th class="text-left">被鎖定次數</th><!--案號匯出統計會多一欄，加總該案號、該區間被鎖定的次數-->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="num">1</td>
                                                     <!--td>101教室</-->
-                                                    <td>1110101001</td>
+                                                    <td>ilosh111-Z102</td>
                                                     <!--td>1</td-->
                                                     <td>2022/6</td>
-                                                    <td>1615</td>
-                                                    <td>311</td>
-                                                    <td>1589</td>
-                                                    <td>265</td>
+                                                    <td>40</td>
+                                                    <td>11</td>
+                                                    <td>4</td>
+                                                    <td>23</td>
+                                                    <td>2</td>
+                                                    <td>1</td>
                                                 </tr>
                                            </tbody>
                                         </table>
