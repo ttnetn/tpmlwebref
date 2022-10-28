@@ -89,3 +89,20 @@ table td span.green, table td span.red, table td span.orange {
 div .radio_grp label input:checked ~ span:after {
     background: none;
 }
+
+/*管理端條列頁友善列印用*/
+@media print{
+    header, aside, .breadcrumb{display: none;}
+    .container .title{display: none;}
+    .content_block ._head{display: none;}
+    .pagination, .control_panel, .quick_btn, .tag{display: none;}
+    .btn_grp a{display: none;}
+    .table_wrapper table tr th:nth-child(1), .table_wrapper table tr td:nth-child(1){display: none;}
+    }
+
+    @page{
+        size: A4 landscape;
+        margin: 0.5cm;
+        orphans:4;
+        widows:2;
+    }
