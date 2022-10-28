@@ -30,18 +30,17 @@
             <div class="breadcrumb">
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
-                    <li><a href="#">網站管理</a></li>
-                    <li>架構管理</li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>預約管理</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>架構管理</h2>
+                        <h2>預約管理</h2>
                         <div class="function">
                             <ul>
-                            	<li class="icon_back"><a href="catNodeEdit.htm">編修目錄樹</a></li>
                                 <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
                             </ul>
                         </div>
@@ -52,55 +51,86 @@
                         <div class="col ">
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>編輯目錄樹</h3>
+                                    <h3>預約資訊</h3>
                                 </div>
                                 <div class="_content">
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-												<input name="CtRootID" id="CtRootID" type="hidden" value="">
-                                                <input name="CtRootName" id="CtRootName" type="text">
-                                                <label>目錄樹名稱<abbr>*</abbr></label>
+                                                <input name="" id="" type="text" value="S11105080011" class="dynamicCol used" disabled>
+                                                <label>預約編號</label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="Purpose" id="Purpose" type="text">
-                                                <label>用途說明</label>
+                                                <input name="" id="" type="text" value="ilosh111-Z102" class="dynamicCol used" disabled>
+                                                <label>預約案號</label>
                                             </div>
-                                            <!--div class="help">說明文字</div-->
                                         </div>
                                         <div class="form_grp">
-                                            <div class="form_title">是否開放<abbr>*</abbr></div>
-                                            <div class="form_content">
-                                                <div class="checkSwitch">
-                                                    <label>
-                                                        <input name="inUse" type="checkbox" value="">
-                                                        <div class="checkSwitch_switch"></div>
-                                                    </label>
-                                                </div>
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="劉佳淇" class="dynamicCol used" disabled>
+                                                <label>預約姓名</label>
                                             </div>
-                                        </div>                                        
-                                        <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <select name="deptId" id="deptId">
-                                                        <option value="" disabled selected></option>
-                                                        <option value="0">總管理</option>
-                                                        <option value="001">單位1</option>
-                                                        <option value="00101">--第1-1科</option>
-                                                        <option value="00102">--第1-2科</option>
-                                                       <option value="002">單位2</option>
-                                                    </select>
-                                                    <label>單位</label>
-                                                </div>
                                         </div>
-                                     </div>
-
-
-                                    <div class="btn_grp">
-                                        <button class="btn">清除重設(回復前次設定)</button>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="liucc@hyweb.com.tw" class="dynamicCol used" disabled>
+                                                <label>預約email</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp form_inline">
+                                            <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
+                                                    <div class="labelEffect">
+                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                        <input name="" type="text" value="2022-10-16" onfocus="(this.type='datetime')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                        <label>預約日期</label>
+                                                    </div>
+                                            </div>
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="下午" class="dynamicCol used" disabled>
+                                             </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="DATA1, DATA2, DATA3" class="dynamicCol used" disabled>
+                                                <label>預約VDI虛擬主機</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp form_inline">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="101教室" class="dynamicCol used" disabled>
+                                                <label>預約教室</label>
+                                            </div>
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="A1, A2" class="dynamicCol used" disabled>
+                                                <label>預約位置</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="" class="dynamicCol used">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <option value="1" selected>正常</option>
+                                                    <option value="2">取消</option>
+                                                </select>
+                                                <label>預約狀態</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="" class="dynamicCol used">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <option value="1" selected>已報到</option>
+                                                    <option value="2">未報到</option>
+                                                </select>
+                                                <label>報到狀態</label>
+                                            </div>
+                                        </div>
                                     </div>
+
+
 
                                 </div>
                             </div>
@@ -120,19 +150,8 @@
                                         </ul>
                                     </div>
                                     <div class="btn_grp">
-                                        <button class="btn btn-orange">儲存</button>
-                                        <button class="btn">取消</button>
-                                    </div>
-                                </div>
-                                <div class="block">
-                                    <div class="_head">
-                                        <h3>目錄樹內容</h3>
-                                    </div>
-                                    <div class="log">
-                                        <ul>
-                                            <li>
-                                                <span><i class="i_global"></i></span>節點筆數: <em>99</em> 筆 </li>
-                                        </ul>
+                                        <button class="btn btn-orange">編修儲存</button>
+                                        <button class="btn">放棄編修</button>
                                     </div>
                                 </div>
                             </div>
