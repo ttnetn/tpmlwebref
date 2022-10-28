@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <link rel="stylesheet" href="css/customize.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>案件管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>案件管理</h2>
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <!--這一層要放的數字是需不需要切欄，例如設定 -3-9 則 col 寬度會左3右9，和 col 下再分成 content_block, publish_block兩欄無關-->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>案件資訊</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="ilosh111-Z101" class="dynamicCol used">
+                                                <label>案件編號<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="臺灣職安卡計畫促進勞工就轉業及職業災害分析-5" class="dynamicCol used">
+                                                <label>案件名稱<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="劉佳淇" class="dynamicCol used">
+                                                <label>案件負責人姓名<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="">
+                                                <label>Text欄位</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp form_inline">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="">
+                                                <label>雙欄式欄位</label>
+                                            </div>
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="">
+                                                <label>預雙欄式欄位</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <!--input name="" type="text" value="凌網科技股份有限公司" class="dynamicCol used"-->
+                                                <select id="" name="" class="dynamicCol used">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <optgroup label="分類群組">
+                                                        <option value="1" selected="">職業安全研究組</option>
+                                                        <option value="2">單位選單2</option>
+                                                      </optgroup>
+                                                      <optgroup label="單位群組上層">
+                                                        <option value="3">單位選單</option>
+                                                        <option value="4">單位選單</option>
+                                                        <option value="4">單位選單</option>
+                                                      </optgroup>                                                        
+                                                </select>
+                                                <label>Select欄位</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <textarea></textarea>
+                                                <label>Textarea欄位</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <hr>
+                                        <div class="form_grp form_inline" style="margin-top: 30px;">
+                                            <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
+                                                    <div class="labelEffect">
+                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                        <input name="" type="text" value="2022-10-16" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                        <label>作業開始日期</label>
+                                                    </div>
+                                            </div>
+                                            <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
+                                                <div class="labelEffect">
+                                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                    <input name="" type="text" value="2022-10-16" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" class="dynamicCol used">
+                                                    <label>作業結束日期</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="999" class="dynamicCol used">
+                                                <label>案件點數(預約數)上限</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <hr>
+                                        <div class="form_grp form_inline" style="margin-top: 30px;">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="101教室" class="dynamicCol used">
+                                                <label>資料督管人姓名</label>
+                                            </div>
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="A1, A2" class="dynamicCol used">
+                                                <label>資料督管人職稱</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="" id="" type="text" value="liucc@hyweb.com.tw" class="dynamicCol used">
+                                                <label>資料督管人email</label>
+                                            </div>
+                                        </div>
+                                        <!--div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="" class="dynamicCol used">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <option value="1" selected>正常</option>
+                                                    <option value="2">取消</option>
+                                                </select>
+                                                <label>預約狀態</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="" class="dynamicCol used">
+                                                    <option value="" selected="" disabled="disabled"></option>
+                                                    <option value="1" selected>已報到</option>
+                                                    <option value="2">未報到</option>
+                                                </select>
+                                                <label>報到狀態</label>
+                                            </div>
+                                        </div-->
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>發佈選項</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*</abbr></div>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioStatus" type="radio" value="" checked=""><span>啟用</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""><span>不啟用</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--hr>
+                                        <div class="form_grp datepick">
+                                            <div class="form_title">作業開始時間<abbr>*</abbr></div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="date" value="2021-10-03">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp datepick" style="margin-top:20px;">
+                                            <div class="form_title">作業結束時間</div>
+                                            <div class="form_grp datepick">
+                                                <div class="labelEffect">
+                                                    <input name="" type="date" value="">
+                                                </div>
+                                            </div>
+                                        </div-->
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-orange">編修儲存</button>
+                                        <button class="btn">放棄編修</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>編輯紀錄</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_man"></i></span><a href="#">系統管理者(admin)</a>
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+            <!-- JS-->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="vendor/jquery.easing.min.js"></script>
+            <!-- template customize js -->
+            <script src="js/customize.js"></script>
+            <!-- highlight -->
+            <script src="vendor/highlight/highlight.pack.js"></script>
+            <script>
+            hljs.initHighlightingOnLoad();
+            </script>
+            <!-- sortable -->
+            <script src="vendor/sortable/Sortable.min.js"></script>
+            <script type="text/javascript">
+            var elements = $('.sortable');
+            for (var i = 0; i < elements.length; i++) {
+                new Sortable(elements[i], {
+                    group: 'nested',
+                    animation: 150,
+                    invertSwap: true,
+                    fallbackOnBody: true,
+                    swapThreshold: 0.65
+                });
+            }
+            </script>
+            <script>
+            $('header').load("header.htm");
+            $('aside').load("aside.htm");
+            </script>
+</body>
+
+</html>
