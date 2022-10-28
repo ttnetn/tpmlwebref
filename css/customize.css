@@ -72,9 +72,9 @@ input[disabled][type="checkbox"]:checked {
     border:none;
 }
 
-table td span.green, table td span.red, table td span.orange {
+/* table td span.green, table td span.red, table td span.orange {
     min-width: 6em !important;
-}
+} */
 
 .setting_block .upload_block {
     width: 100%;
@@ -98,11 +98,11 @@ div .radio_grp label input:checked ~ span:after {
     .pagination, .control_panel, .quick_btn, .tag{display: none;}
     .btn_grp a{display: none;}
     .table_wrapper table tr th:nth-child(1), .table_wrapper table tr td:nth-child(1){display: none;}
-    }
+}
 
-    @page{
-        size: A4 landscape;
-        margin: 0.5cm;
-        orphans:4;
-        widows:2;
-    }
+@page{
+    size: A4 landscape;
+    margin: 0.5cm;
+    orphans:4;
+    widows:2;
+}
