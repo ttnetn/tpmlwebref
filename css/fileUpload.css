@@ -140,3 +140,13 @@
 .calendar_Tb table td.othermonth .num_date {
     color: #b4b4b4;
 }
+
+/*修正Tabs暫用*/
+.tabBtn_block .tab_items {
+    justify-content: initial;
+}
+.tabBtn_block .tab_items .btn {
+    flex: none;
+    min-width: 20%;
+    margin-right: 10px;
+}
