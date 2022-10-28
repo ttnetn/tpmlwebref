@@ -63,3 +63,80 @@
     max-width: 95% !important;
     margin-bottom: 15px !important;
 }
+
+/*增加月曆style*/
+.year_month_block {
+    font-size: 2em;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 500;
+}
+.year_month_block .prev_btn, .year_month_block .next_btn {
+    display: inline-block;
+    vertical-align: middle;
+}
+.year_month_block .prev_btn a, .year_month_block .next_btn a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #666;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+}
+.year_month_block .year_month {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.calendar_Tb table {
+    word-break: break-all;
+    table-layout: fixed;
+}
+.calendar_Tb table thead {
+    margin-bottom: 5px;
+}
+.calendar_Tb table tr {
+    background-color: #fff;
+}
+.calendar_Tb table th {
+    background-color: #d3d3d3 !important;
+    border: 1px solid #999;
+    /* border: 5px solid #f8f3e4; */
+    color: #333;
+    padding: 0.5em 1em;
+    width: 14.28%;
+    font-size: 1.25em;
+    font-weight: 400;
+}
+.calendar_Tb table td {
+    position: relative;
+    border: 1px solid #999;
+    padding: 0.5em;
+    vertical-align: top;
+}
+.calendar_Tb table th.weekend {
+    background-color: #f66f62 !important;
+    color: #fff;
+}
+.calendar_Tb table ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+/* .calendar_Tb table .num_date {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    text-align: right;
+    color: #7a7a7a;
+    font-size: 1.063em;
+    font-weight: bolder;
+} */
+.calendar_Tb table td.othermonth {
+    background-color: #d5d5d5;
+}
+.calendar_Tb table td.othermonth .num_date {
+    color: #b4b4b4;
+}
