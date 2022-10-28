@@ -17,6 +17,24 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <style>
+        @media print{
+        header, aside, .breadcrumb{display: none;}
+        .container .title{display: none;}
+        .content_block ._head{display: none;}
+        .pagination, .control_panel, .quick_btn, .tag{display: none;}
+        .btn_grp a{display: none;}
+        .table_wrapper table tr th:nth-child(1), .table_wrapper table tr td:nth-child(1){display: none;}
+        }
+
+        @page{
+            size: A4 landscape;
+            margin: 0.5cm;
+            orphans:4;
+            widows:2;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -43,7 +61,7 @@
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
-                    <!-- flex-12 -->
+                    <!-- flex-12 搜尋區塊-->
                     <div class="flex-12">
                         <div class="adv_search">
                             <div class="col">
@@ -109,7 +127,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
+                                        
                                         <div class="btn_grp">
                                             <button class="btn reset">取消</button>
                                             <button class="btn btn-primary">確認</button>
@@ -133,16 +151,22 @@
                                         預約狀態： 
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">待確認</a></li>
-                                            <li><a href="#">已成立</a></li>
-                                            <li><a href="#">已取消</a></li>
-                                            <li><a href="#">已結束</a></li>
+                                            <!--li><a href="#">待確認</a></li-->
+                                            <li><a href="#">正常</a></li>
+                                            <li><a href="#">取消</a></li>
+                                        </ul>
+                                        ｜到期狀態：
+                                        <ul>
+                                            <li class="active"><a href="#">全部</a></li>
+                                            <li><a href="#">尚未到期</a></li>
+                                            <li><a href="#">到期</a></li>
                                         </ul>
                                         ｜報到狀態：
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">正常</a></li>
-                                            <li><a href="#">未出席</a></li>
+                                            <li><a href="#">未設定</a></li>
+                                            <li><a href="#">已報到</a></li>
+                                            <li><a href="#">未報到</a></li>
                                         </ul>
                                     </div>
                                     <!-- 資料處理 -->
@@ -154,12 +178,10 @@
                                             <div class="dropdown-content">
                                                 <ul>
                                                     <li>
-                                                        <button class="btn">
-                                                            <i class="i_edit"></i>批次成立</button>
+                                                        <button class="btn"><i class="i_edit"></i>批次成立</button>
                                                     </li>
                                                     <li>
-                                                        <button class="btn">
-                                                            <i class="i_add"></i>批次取消</button>
+                                                        <button class="btn"><i class="i_add"></i>批次取消</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -177,7 +199,7 @@
                                         </form>
                                     </div>
                                     <div class="quick_btn">
-                                        <button class="btn btn-orange" onclick="window.location.href='userEdit.htm';"><i class="i_add"></i>新增</button>
+                                        <button class="btn btn-orange" onclick="window.print()"><i class="i_check"></i>列印本頁資料</button>
                                     </div>
                                 </div>
                                 <div class="_content">
@@ -188,37 +210,18 @@
                                                 <tr>
                                                     <th><input type="checkbox"></th>
                                                     <th>編號</th>
-                                                    <th class="text-left">
-                                                        <a href="#">案件編號 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
+                                                    <th class="text-left">案件編號</th>
                                                     <th class="text-left">
                                                         <a href="#">預約編號 <i class="i_sort"></i>
                                                         </a>
                                                     </th>
+                                                    <th>預約者email</th>
+                                                    <th>預約者姓名</th>
+                                                    <th>預約者單位</th>
+                                                    <th class="text-left">預約狀態</th>
+                                                    <th class="text-left">報到狀態</th>
                                                     <th>
-                                                        <a href="#">預約者email
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a href="#">預約者姓名
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a href="#">預約者人數
-                                                        </a>
-                                                    </th>
-                                                    <th class="text-left">
-                                                        <a href="#">預約狀態 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th class="text-left">
-                                                        <a href="#">報到狀態 <i class="i_sort"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a href="#">預約日期 <i class="i_sort"></i>
-                                                        </a>
+                                                        <a href="#">預約日期 <i class="i_sort"></i></a>
                                                     </th>
                                                     <th>編輯</th>
                                                 </tr>
@@ -227,87 +230,85 @@
                                                 <tr>
                                                     <td><input type="checkbox"></td>
                                                     <td class="num">1</td>
-                                                    <td><a href="#">2022050810022</a></td>
+                                                    <td>ilosh111-Z102</td>
                                                     <td><a href="#">S11105080011</a></td>
                                                     <td>liucc@hyweb.com.tw</td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="orange">已成立</span></td>
+                                                    <td><span class="orange">正常</span></td>
                                                     <td></td>
-                                                    <td><time>2022/07/16</time></td>
+                                                    <td><time>2022/11/16 上午</time></td>
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox"></td>
-                                                    <td class="num">1</td>
-                                                    <td><a href="#">2022050810001</a></td>
-                                                    <td><a href="#">S11105080001</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
-                                                    <td>劉佳淇</td>
-                                                    <td>凌網科技股份有限公司</td>
-                                                    <td><span class="red">待確認</span></td>
-                                                    <td></td>
-                                                    <td><time>2019/10/16</time></td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
                                                     <td class="num">2</td>
-                                                    <td><a href="#">2022050810001</a></td>
+                                                    <td>ilosh111-Z102</td>
                                                     <td><a href="#">S11105080001</a></td>
                                                     <td>liucc@hyweb.com.tw</td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="gray">已結束</span></td>
-                                                    <td><span class="green">正常</span></td>
-                                                    <td><time>2019/10/16</time></td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td></td>
+                                                    <td><time>2022/11/16 下午</time></td>
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <button class="btn dropdown-btn">
-                                                                <i class="i_setting"></i></button>
-                                                            <div class="dropdown-content">
-                                                                <ul>
-                                                                    <li>
-                                                                        <button class="btn" onclick="window.location.href='userEdit.htm';">
-                                                                            <i class="i_edit"></i>編輯 </button></li>
-                                                                    <li>
-                                                                        <button class="btn btn-red">
-                                                                            <i class="i_check"></i>列印 </button>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">3</td>
+                                                    <td>ilosh111-Z101</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="gray">取消</span></td>
+                                                    <td></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">4</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td><span class="green">已報到</span></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">5</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td><span class="gray">未報到</span></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
