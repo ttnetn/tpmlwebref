@@ -89,6 +89,15 @@ input[disabled][type="checkbox"]:checked {
 div .radio_grp label input:checked ~ span:after {
     background: none;
 }
+.table_wrapper {
+    width: 100%;
+    clear: both;
+}
+.additional .btn{
+    height: 2.5em;
+    font-size: 1em;
+}
+
 
 /*管理端條列頁友善列印用*/
 @media print{

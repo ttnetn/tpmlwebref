@@ -66,7 +66,7 @@
 
 /*增加月曆style*/
 .year_month_block {
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     margin: 40px 0;
     font-weight: 500;
@@ -106,7 +106,7 @@
     color: #333;
     padding: 0.5em 1em;
     width: 14.28%;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 400;
 }
 .calendar_Tb table td {
