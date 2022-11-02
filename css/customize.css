@@ -97,6 +97,7 @@ div .radio_grp label input:checked ~ span:after {
     height: 2.5em;
     font-size: 1em;
 }
+hr{margin-top:20px;margin-bottom:30px;}
 
 
 /*管理端條列頁友善列印用*/
