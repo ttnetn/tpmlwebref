@@ -34,14 +34,14 @@
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
                     <li><a href="#">客製化管理</a></li>
-                    <li>預約管理</li>
+                    <li>會員管理</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>預約管理</h2>
+                        <h2>會員管理</h2>
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
@@ -58,55 +58,38 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>案件編號</label>
+                                                    <label>會員帳號(email)</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_name" id="search_name" type="text" value="">
-                                                    <label>預約編號</label>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>預約者email</label>
+                                                    <label>會員姓名</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_name" id="search_name" type="text" value="">
-                                                    <label>預約姓名</label>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <select name="search_deptid" id="search_deptid">
-                                                        <option value="" disabled selected></option>
-                                                        <option value="0">1F</option>
-                                                        <option value="001">101教室</option>
-                                                        <option value="002">102教室</option>
-                                                    </select>
-                                                    <label>預約場地</label>
+                                                    <label>單位</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp datepick">
                                                 <div class="startDate">
                                                     <div class="labelEffect">
                                                         <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                        <input name="" type="text" value="" onfocus="(this.type='datet')" onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>預約開始日期</label>
+                                                        <label>註冊日期(起)</label>
                                                     </div>
                                                     <!-- <div class="help">說明文字</div> -->
                                                 </div>
                                                 <div class="endDate">
                                                     <div class="labelEffect">
-                                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')" onblur="if(!this.value) this.type='text'">
+                                                        <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
                                                         <!--input name="" type="calendar" value="" class="calendar">
                                                         <button class="btn"><i class="i_calendar"></i></button-->
-                                                        <label>預約結束日期</label>
+                                                        <label>註冊日期(迄)</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -128,29 +111,28 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>預約資訊條列</h3>
+                                    <h3>會員條列</h3>
                                 </div>
                                 <div class="_head">
                                     <div class="tag">
-                                        預約狀態： 
+                                        審核狀態： 
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <!--li><a href="#">待確認</a></li-->
-                                            <li><a href="#">正常</a></li>
-                                            <li><a href="#">取消</a></li>
+                                            <li><a href="#">尚未審核</a></li>
+                                            <li><a href="#">審核通過</a></li>
+                                            <li><a href="#">審核不通過</a></li>
                                         </ul>
-                                        ｜到期狀態：
+                                        ｜驗證狀態：
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">尚未到期</a></li>
-                                            <li><a href="#">到期</a></li>
+                                            <li><a href="#">已驗證</a></li>
+                                            <li><a href="#">尚未驗證</a></li>
                                         </ul>
-                                        ｜報到狀態：
+                                        ｜帳號狀態：
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">未設定</a></li>
-                                            <li><a href="#">已報到</a></li>
-                                            <li><a href="#">未報到</a></li>
+                                            <li><a href="#">啟用</a></li>
+                                            <li><a href="#">停用</a></li>
                                         </ul>
                                     </div>
                                     <!-- 資料處理 -->
@@ -162,10 +144,10 @@
                                             <div class="dropdown-content">
                                                 <ul>
                                                     <li>
-                                                        <button class="btn"><i class="i_check"></i>批次設為報到</button>
+                                                        <button class="btn"><i class="i_check"></i>批次審核通過</button>
                                                     </li>
                                                     <li>
-                                                        <button class="btn"><i class="i_trash"></i>批次取消預約</button>
+                                                        <button class="btn"><i class="i_trash"></i>批次停用</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -182,9 +164,9 @@
                                                 </select> 筆 </div>
                                         </form>
                                     </div>
-                                    <div class="quick_btn">
+                                    <!--div class="quick_btn">
                                         <button class="btn btn-orange" onclick="window.print()"><i class="i_check"></i>列印本頁資料</button>
-                                    </div>
+                                    </div-->
                                 </div>
                                 <div class="_content">
                                     <!-- 表格樣式 -->
@@ -194,18 +176,16 @@
                                                 <tr>
                                                     <th><input type="checkbox"></th>
                                                     <th>編號</th>
-                                                    <th class="text-left">案件編號</th>
-                                                    <th class="text-left">
-                                                        <a href="#">預約編號 <i class="i_sort"></i>
+                                                    <th class="text-left"><a href="#"></a>會員帳號 <i class="i_sort"></i>
                                                         </a>
                                                     </th>
-                                                    <th>預約者email</th>
-                                                    <th>預約者姓名</th>
-                                                    <th>預約者單位</th>
-                                                    <th class="text-left">預約狀態</th>
-                                                    <th class="text-left">報到狀態</th>
+                                                    <th class="text-left">會員姓名</th>
+                                                    <th>單位</th>
+                                                    <th>相關案號</th>
+                                                    <th class="text-left">驗證狀態</th>
+                                                    <th class="text-left">審核狀態</th>
                                                     <th>
-                                                        <a href="#">預約日期 <i class="i_sort"></i></a>
+                                                        <a href="#">註冊日期 <i class="i_sort"></i></a>
                                                     </th>
                                                     <th>編輯</th>
                                                 </tr>
@@ -214,82 +194,45 @@
                                                 <tr>
                                                     <td><input type="checkbox"></td>
                                                     <td class="num">1</td>
-                                                    <td>ilosh111-Z102</td>
-                                                    <td><a href="ilosh_reservationEdit.htm">S11105080011</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td><a href="ilosh_memberEdit.htm"></a>liucc@hyweb.com.tw</a></td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="orange">正常</span></td>
                                                     <td></td>
-                                                    <td><time>2022/11/16 上午</time></td>
+                                                    <td><span class="gray">尚未驗證</span></td>
+                                                    <td></td>
+                                                    <td><time>2022/11/16 17:21</time></td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                            <a href="ilosh_memberEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
                                                     <td class="num">2</td>
-                                                    <td>ilosh111-Z102</td>
-                                                    <td><a href="ilosh_reservationEdit.htm">S11105080001</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td><a href="#"></a>liucc2@hyweb.com.tw</a></td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="orange">正常</span></td>
-                                                    <td></td>
-                                                    <td><time>2022/11/16 下午</time></td>
+                                                    <td>ilosh109-M108</td>
+                                                    <td><span class="green">已驗證</span></td>
+                                                    <td><span class="green">審核通過</span></td>
+                                                    <td><time>2022/11/16 17:21</time></td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
                                                     <td class="num">3</td>
-                                                    <td>ilosh111-Z101</td>
-                                                    <td><a href="#">S11105080001</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td><a href="#"></a>liucc3@hyweb.com.tw</a></td>
                                                     <td>劉佳淇</td>
                                                     <td>凌網科技股份有限公司</td>
-                                                    <td><span class="gray">取消</span></td>
                                                     <td></td>
-                                                    <td><time>2019/10/26 上午</time></td>
-                                                    <td>
-                                                        <div class="btn_grp">
-                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox"></td>
-                                                    <td class="num">4</td>
-                                                    <td>ilosh111-Z102</td>
-                                                    <td><a href="#">S11105080001</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
-                                                    <td>劉佳淇</td>
-                                                    <td>凌網科技股份有限公司</td>
-                                                    <td><span class="orange">正常</span></td>
-                                                    <td><span class="green">已報到</span></td>
-                                                    <td><time>2019/10/26 上午</time></td>
-                                                    <td>
-                                                        <div class="btn_grp">
-                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox"></td>
-                                                    <td class="num">5</td>
-                                                    <td>ilosh111-Z102</td>
-                                                    <td><a href="#">S11105080001</a></td>
-                                                    <td>liucc@hyweb.com.tw</td>
-                                                    <td>劉佳淇</td>
-                                                    <td>凌網科技股份有限公司</td>
-                                                    <td><span class="orange">正常</span></td>
-                                                    <td><span class="gray">未報到</span></td>
-                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td><span class="green">已驗證</span></td>
+                                                    <td><span class="gray">審核不通過</span></td>
+                                                    <td><time>2022/11/16 17:21</time></td>
                                                     <td>
                                                         <div class="btn_grp">
                                                             <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
