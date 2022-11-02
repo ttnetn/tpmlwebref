@@ -98,7 +98,7 @@ div .radio_grp label input:checked ~ span:after {
     font-size: 1em;
 }
 hr{margin-top:20px;margin-bottom:30px;}
-
+.login h2{text-align: center;}
 
 /*管理端條列頁友善列印用*/
 @media print{
