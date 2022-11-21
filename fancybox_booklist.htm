@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+</head>
+
+<body>
+    <div class="lightbox">
+                <!-- 中央區塊 -->
+                <div class="content_block">
+                    <div class="lightbox_title">選擇書目</div>
+                    <div class="_head" style="margin-top: 55px;">
+                        <div class="form_grp">
+                            <div class="labelEffect">
+                                <input name="" type="text" value="" class="used" placeholder="請輸入ISBN" style="width:25em;margin-right:10px;"><!--ISBN ISBN-->
+                                <input name="" type="text" value="unicorn" class="used" placeholder="請輸入書名關鍵字" style="width:25em;"><!--TI 題名-->
+                                <button class="btn btn-primary" style="min-width:5.5em;"><i class="i_search"></i>搜尋</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_head">
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <form action="" class="form_inline">
+                                <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">30</option>
+                                        <option value="">50</option>
+                                        <option value="">100</option>
+                                    </select> 筆 </div>
+                            </form>
+                        </div>
+                        <div class="quick_btn">
+                            <button class="btn btn-orange"><i class="i_add"></i>選入</button>
+                        </div>
+                    </div>
+                    <div class="_content">
+                        <!-- 表格樣式 -->
+                        <div class="table_wrapper">
+                            <table class="table_hover">
+                                <thead>
+                                    <tr>
+                                        <th><input type="radio"></th>
+                                        <th>編號</th>
+                                        <th>SID</th>
+                                        <th>ISBN(好像沒有)</th>
+                                        <th>書名</th>
+                                        <th>作者</th>
+                                        <th>連結(另開)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="radio"></td>
+                                        <td class="num">1</td>
+                                        <td>701679</td>
+                                        <td></td>
+                                        <td>Julie and the unicorn 2</td>
+                                        <td>by Cynthia Marie Rizzo.</td>
+                                        <td><a href="#">LINK</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio"></td>
+                                        <td class="num">2</td>
+                                        <td>762108</td>
+                                        <td></td>
+                                        <td>The lady and the unicorn</td>
+                                        <td>Tracy Chevalier.</td>
+                                        <td><a href="#">LINK</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio" checked></td>
+                                        <td class="num">3</td>
+                                        <td>653016</td>
+                                        <td>9781338158427</td>
+                                        <td>Thelma the unicorn / Aaron Blabey.</td>
+                                        <td>Blabey, Aaron</td>
+                                        <td><a href="https://book.tpml.edu.tw/bookDetail/653016">LINK</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio"></td>
+                                        <td class="num">4</td>
+                                        <td>701679</td>
+                                        <td></td>
+                                        <td>Julie and the unicorn 2</td>
+                                        <td>by Cynthia Marie Rizzo.</td>
+                                        <td><a href="#">LINK</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="radio"></td>
+                                        <td class="num">5</td>
+                                        <td>762108</td>
+                                        <td></td>
+                                        <td>The lady and the unicorn</td>
+                                        <td>Tracy Chevalier.</td>
+                                        <td><a href="#">LINK</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+</body>
+<!-- JS-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- template customize js -->
+<script src="js/customize.js"></script>
+<!-- highlight -->
+<script src="vendor/highlight/highlight.pack.js"></script>
+<!-- fancybox -->
+<script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
