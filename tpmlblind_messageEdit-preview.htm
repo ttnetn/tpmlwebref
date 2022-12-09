@@ -12,8 +12,6 @@
     <![endif]-->
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/supercms.css">
-    <!-- fancybox -->
-    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
     <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
@@ -29,7 +27,6 @@
         <aside></aside>
         <!-- 主要內容區 -->
         <div class="content">
-            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
             <!-- breadcrumb路徑 -->
             <div class="breadcrumb">
                 <ul>
@@ -63,12 +60,12 @@
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select name="" id="messagetype" class="dynamicCol used">
+                                                <select name="">
                                                     <option value="" disabled="disabled"></option>
                                                     <option value="借書留言" selected="">借書留言</option>
                                                     <option value="其他問題">其他問題</option>
                                                 </select>
-                                                <label for="messagetype">留言類型</label>
+                                                <label>留言類型</label>
                                             </div>
                                         </div>
                                         <div class="form_grp">
@@ -87,7 +84,7 @@
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <textarea id="message">錦衣夜行，第一部，卷五，直步青雲
+                                                <textarea>錦衣夜行，第一部，卷五，直步青雲
 孤星淚, 又名, 悲慘世界
 魔鬼的蹄印
 延禧攻略.上冊
@@ -111,7 +108,7 @@
 奇峰奔劍錄
 阿霞
 天堂門口最終的祝福</textarea>
-                                                <label for="message">留言內容<abbr>*</abbr></label>
+                                                <label for="userId">留言內容<abbr>*</abbr></label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
                                         </div>
@@ -120,30 +117,23 @@
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="title" id="replytitle" type="text" value="館方回覆(預設就先帶入值)">
-                                                <label for="replytitle">回覆標題<abbr>*</abbr></label>
-                                            </div>
-                                            <!-- <div class="help">說明文字</div> -->
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <textarea id="messagereply"></textarea>
-                                                <label for="messagereply">回覆內容<abbr>*</abbr></label>
+                                                <textarea></textarea>
+                                                <label>回覆內容<abbr>*</abbr></label>
                                             </div>
                                             <div class="help">請輸入回覆的內容(將顯示於前台留言板)</div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="replystatue" name="" class="dynamicCol used">
+                                                <select id="" name="" class="dynamicCol used">
                                                     <option value="" selected="" disabled="disabled">待回覆</option>
                                                     <option value="1">已回覆</option>
                                                 </select>
-                                                <label for="replystatue">回覆狀態<abbr>*</abbr></label>
+                                                <label>回覆狀態<abbr>*</abbr></label>
                                             </div>
                                         </div>
                                         <div class="btn_grp">
-											<button class="btn btn-orange" data-fancybox="" data-type="iframe" data-src="fancybox_messagePreview.htm" href="javascript:;" title="預覽發送">預覽發送</button>
-                                            <button class="btn" title="取消編修">取消編修</button>
+											<button class="btn btn-orange">預覽發送</button>
+											<button class="btn">取消編修</button>
                                         </div>
                                     </div>
                                 </div>
@@ -164,8 +154,6 @@
     <script src="vendor/highlight/highlight.pack.js"></script>
     <!-- tree view -->
     <script src="vendor/treeview/jquery.treeview.js"></script>
-    <!-- fancybox -->
-    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <script>
     // first example
     $(".treeview .treeview").treeview();

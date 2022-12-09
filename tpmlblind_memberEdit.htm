@@ -27,6 +27,7 @@
         <aside></aside>
         <!-- 主要內容區 -->
         <div class="content">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
             <!-- breadcrumb路徑 -->
             <div class="breadcrumb">
                 <ul>
@@ -76,17 +77,17 @@
                                             <div class="form_title">性別</div>
                                             <div class="form_content">
                                                 <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value="male" checked><span>男士</span></label>
-                                                    <label><input name="radioSample" type="radio" value="female"><span>女士</span></label>
+                                                    <label for="userSex"><input name="userSex" type="radio" value="male" id="userSex" checked><span>男士</span></label>
+                                                    <label for="userSex"><input name="userSex" type="radio" value="female" id="userSex"><span>女士</span></label>
                                                 </div>
                                                 <!-- <div class="help">說明文字</div> -->
                                             </div>
                                         </div>
                                         <div class="form_grp">
-                                            <div class="form_title">出生年月日</div>
+                                            <div class="form_title"><label for="birthDate">出生年月日</label></div>
                                             <div class="form_content">
                                                 <div class="labelEffect">
-                                                    <input name="" type="date" value="1989-04-26">
+                                                    <input name="birthDate" type="date" value="1989-04-26" id="birthDate">
                                                 </div>
                                             </div>
                                         </div>
@@ -112,21 +113,21 @@
                                             <div class="form_title">通訊地址<abbr>*</abbr></div>
                                             <div class="form_content form_inline">
                                                 <div class="labelEffect county">
-                                                    <select id="" name="">
-                                                        <option value="請選擇鄉鎮">請選擇鄉鎮</option>
-                                                        <option value="台北市">台北市</option>
+                                                    <select id="country" name="country" title="縣市">
+                                                        <option value="請選擇縣市">請選擇縣市</option>
+                                                        <option value="台北市" selected>台北市</option>
                                                         <option value="台北市">新北市</option>
                                                     </select>
                                                 </div>
                                                 <div class="labelEffect dist">
-                                                    <select id="" name="">
-                                                        <option value="請選擇區域">請選擇區域</option>
-                                                        <option value="中正區">中正區</option>
+                                                    <select id="country" name="country" title="鄉鎮區域">
+                                                        <option value="請選擇鄉鎮區域">請選擇鄉鎮區域</option>
+                                                        <option value="中正區" selected>中正區</option>
                                                         <option value="中正區">中山區</option>
                                                     </select>
                                                 </div>
                                                 <div class="labelEffect address">
-                                                    <input name="" type="text" value="重慶南路二段51號5樓" class="used">
+                                                    <input name="" type="text" value="重慶南路二段51號5樓" class="used" title="地址">
                                                 </div>
                                             </div>
                                         </div>
@@ -134,62 +135,62 @@
                                             <div class="form_title">戶籍地址<abbr>*</abbr></div>
                                             <div class="form_content form_inline">
                                                 <div class="labelEffect county">
-                                                    <select id="" name="">
-                                                        <option value="請選擇鄉鎮">請選擇鄉鎮</option>
+                                                    <select id="country" name="country" title="縣市">
+                                                        <option value="請選擇縣市">請選擇縣市</option>
                                                         <option value="台北市">台北市</option>
-                                                        <option value="台北市">新北市</option>
+                                                        <option value="台北市" selected>新北市</option>
                                                     </select>
                                                 </div>
                                                 <div class="labelEffect dist">
-                                                    <select id="" name="">
-                                                        <option value="請選擇區域">請選擇區域</option>
+                                                    <select id="country" name="country" title="鄉鎮區域">
+                                                        <option value="請選擇鄉鎮區域">請選擇鄉鎮區域</option>
                                                         <option value="中正區">中正區</option>
-                                                        <option value="中正區">中山區</option>
+                                                        <option value="中正區" selected>中山區</option>
                                                     </select>
                                                 </div>
                                                 <div class="labelEffect address">
-                                                    <input name="" type="text" value="重慶南路二段51號5樓" class="used">
+                                                    <input name="" type="text" value="重慶南路二段51號5樓" class="used" title="地址">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <input name="email" id="email" type="text" value="liucc@hyweb.com.tw">
-                                                <label>Email<abbr>*</abbr></label>
+                                                <label for="email">Email<abbr>*</abbr></label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
-                                            <div class="form_title">電話(辦公室)</div>
+                                            <div class="form_title"><label for="teloffice">電話(辦公室)</label></div>
                                             <div class="form_content form_inline">
                                                 <div class="labelEffect zip">
-                                                    <input name="" type="tel" value="02">
+                                                    <input name="" type="tel" value="02" title="區碼">
                                                 </div>
                                                 <div class="labelEffect">
-                                                    <input name="" type="tel" value="23956966">
+                                                    <input name="" type="tel" value="23956966" id="teloffice">
                                                 </div>
                                                 <div class="labelEffect ext">
                                                     <span>分機</span>
-                                                    <input name="" type="tel" value="123">
+                                                    <input name="" type="tel" value="123" title="分機">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form_grp">
-                                            <div class="form_title">電話(住家)</div>
+                                            <div class="form_title"><label for="telhome">電話(住家)</label></div>
                                             <div class="form_content form_inline">
                                                 <div class="labelEffect zip">
-                                                    <input name="" type="tel" value="02">
+                                                    <input name="" type="tel" value="02" title="區碼">
                                                 </div>
                                                 <div class="labelEffect">
-                                                    <input name="" type="tel" value="23956966">
+                                                    <input name="" type="tel" value="23956966" id="telhome">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form_grp">
-                                            <div class="form_title">行動電話</div>
+                                            <div class="form_title"><label for="telmobile">行動電話</label></div>
                                             <div class="form_content">
                                                 <div class="labelEffect">
-                                                    <input name="" type="tel" value="0911123456">
+                                                    <input name="" type="tel" value="0911123456" id="telmobile">
                                                 </div>
                                             </div>
                                         </div>
@@ -206,7 +207,7 @@
                                                     <div class="file_title">手冊正面檔案</div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="12345.jpg">
+                                                            <input name="" type="text" value="12345.jpg" title="上傳檔名" readonly>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -220,7 +221,7 @@
                                                     <div class="file_title">手冊反面檔案</div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="67890.jpg">
+                                                            <input name="" type="text" value="67890.jpg" title="上傳檔名" readonly>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -231,29 +232,29 @@
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="" name="" class="dynamicCol used" disabled="">
+                                                <select id="emailverfied" name="" class="dynamicCol used" disabled="">
                                                     <option value="" selected="" disabled="disabled"></option>
                                                     <option value="1" selected="">待驗證</option>
                                                     <option value="2">已驗證</option>
                                                 </select>
-                                                <label>email驗證狀態</label>
+                                                <label for="emailverfied">email驗證狀態</label>
                                             </div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <textarea></textarea>
-                                                <label>審核原因說明</label>
+                                                <textarea id="reviewreason"></textarea>
+                                                <label for="reviewreason">審核原因說明</label>
                                             </div>
                                             <div class="help">若需輸入審核原因請於此輸入</div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="" name="" class="dynamicCol used">
+                                                <select id="reviewstaus" name="" class="dynamicCol used">
                                                     <option value="" selected="" disabled="disabled">待審核</option>
                                                     <option value="1">審核通過</option>
                                                     <option value="2">審核不通過</option>
                                                 </select>
-                                                <label>審核狀態</label>
+                                                <label for="reviewstaus">審核狀態</label>
                                             </div>
                                             <div class="help">審核通過後，會員資訊將推送到自動化系統註冊閱讀證會員。後續編修會員資訊或密碼，請至自動化系統編修。</div>
                                         </div>
