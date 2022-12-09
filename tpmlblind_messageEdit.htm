@@ -12,6 +12,8 @@
     <![endif]-->
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/supercms.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
     <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
@@ -32,14 +34,14 @@
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
                     <li><a href="#">客製化功能</a></li>
-                    <li>會員管理</li>
+                    <li>留言管理</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>編輯會員</h2>
+                        <h2>編輯留言</h2>
                          <div class="function">
                             <ul>
                                 <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
@@ -54,212 +56,93 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>編輯使用者資料</h3>
+                                    <h3>編輯留言資料</h3>
                                 </div>
                                 <div class="_content">
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="userId" id="userId" type="text" value="K123456789" readonly>
-                                                <label for="userId">使用者帳號<abbr>*</abbr></label>
+                                                <select name="">
+                                                    <option value="" disabled="disabled"></option>
+                                                    <option value="借書留言" selected="">借書留言</option>
+                                                    <option value="其他問題">其他問題</option>
+                                                </select>
+                                                <label>留言類型</label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <input name="userName" id="userName" type="text" value="劉佳淇">
-                                                <label for="userName" >使用者姓名<abbr>*</abbr></label>
+                                                <label for="userName">留言者姓名<abbr>*</abbr></label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">性別</div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value="male" checked><span>男士</span></label>
-                                                    <label><input name="radioSample" type="radio" value="female"><span>女士</span></label>
-                                                </div>
-                                                <!-- <div class="help">說明文字</div> -->
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">出生年月日</div>
-                                            <div class="form_content">
-                                                <div class="labelEffect">
-                                                    <input name="" type="date" value="1989-04-26">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!--密碼由自動化端管理-->
-                                        <!--div class="form_grp">
-                                            <div class="labelEffect password_toggle">
-                                                <input name="password" id="password" type="password" value="">
-                                                <button class="btn btn-icon"><i class="i_hide"></i></button>
-                                                <label for="userName">使用者密碼<abbr>*</abbr></label>
-                                            </div>
-                                            <div class="help">請使用8位字元以上、英數字混合 (不修改請保持空白)</div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect password_toggle">
-                                                <input name="password2" id="password2" type="password" value="">
-                                                <button class="btn btn-icon"><i class="i_hide"></i></button>
-                                                <label for="password2">再次輸入確認密碼<abbr>*</abbr></label>
-                                            </div>
-                                            <div class="help">請使用8位字元以上、英數字混合 (不修改請保持空白)</div>
-                                        </div-->
-                                        <div class="form_grp">
-                                            <div class="form_title">通訊地址<abbr>*</abbr></div>
-                                            <div class="form_content form_inline">
-                                                <div class="labelEffect county">
-                                                    <select id="" name="">
-                                                        <option value="請選擇鄉鎮">請選擇鄉鎮</option>
-                                                        <option value="台北市">台北市</option>
-                                                        <option value="台北市">新北市</option>
-                                                    </select>
-                                                </div>
-                                                <div class="labelEffect dist">
-                                                    <select id="" name="">
-                                                        <option value="請選擇區域">請選擇區域</option>
-                                                        <option value="中正區">中正區</option>
-                                                        <option value="中正區">中山區</option>
-                                                    </select>
-                                                </div>
-                                                <div class="labelEffect address">
-                                                    <input name="" type="text" value="重慶南路二段51號5樓" class="used">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">戶籍地址<abbr>*</abbr></div>
-                                            <div class="form_content form_inline">
-                                                <div class="labelEffect county">
-                                                    <select id="" name="">
-                                                        <option value="請選擇鄉鎮">請選擇鄉鎮</option>
-                                                        <option value="台北市">台北市</option>
-                                                        <option value="台北市">新北市</option>
-                                                    </select>
-                                                </div>
-                                                <div class="labelEffect dist">
-                                                    <select id="" name="">
-                                                        <option value="請選擇區域">請選擇區域</option>
-                                                        <option value="中正區">中正區</option>
-                                                        <option value="中正區">中山區</option>
-                                                    </select>
-                                                </div>
-                                                <div class="labelEffect address">
-                                                    <input name="" type="text" value="重慶南路二段51號5樓" class="used">
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="email" id="email" type="text" value="liucc@hyweb.com.tw">
-                                                <label>Email<abbr>*</abbr></label>
+                                                <input name="title" id="title" type="text" value="我想借書(續借有聲書，家裡尚有九片，謝謝)">
+                                                <label for="title">留言標題<abbr>*</abbr></label>
                                             </div>
                                             <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
-                                            <div class="form_title">電話(辦公室)</div>
-                                            <div class="form_content form_inline">
-                                                <div class="labelEffect zip">
-                                                    <input name="" type="tel" value="02">
-                                                </div>
-                                                <div class="labelEffect">
-                                                    <input name="" type="tel" value="23956966">
-                                                </div>
-                                                <div class="labelEffect ext">
-                                                    <span>分機</span>
-                                                    <input name="" type="tel" value="123">
-                                                </div>
+                                            <div class="labelEffect">
+                                                <textarea>錦衣夜行，第一部，卷五，直步青雲
+孤星淚, 又名, 悲慘世界
+魔鬼的蹄印
+延禧攻略.上冊
+預知夢
+寒夜三部曲.第1冊 : 寒夜
+寒夜三部曲.第2冊 : 荒村
+寒夜三部曲.第3冊 : 孤燈
+天涯雙探.第一冊 : 青衣奇盜
+天涯雙探.第二冊 : 暴雪荒村
+雲空行.第一冊
+雲空行.第二冊
+雲空行.第三冊
+雲空行.第四冊
+此生你我皆短暫燦爛
+夏的故事
+仙人掌旅館
+為什麼要拋棄我? : 日本「嬰兒信箱」十年紀實
+童年 : 哥本哈根三部曲.1
+我家住在張日興隔壁
+解夢書
+奇峰奔劍錄
+阿霞
+天堂門口最終的祝福</textarea>
+                                                <label for="userId">留言內容<abbr>*</abbr></label>
                                             </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">電話(住家)</div>
-                                            <div class="form_content form_inline">
-                                                <div class="labelEffect zip">
-                                                    <input name="" type="tel" value="02">
-                                                </div>
-                                                <div class="labelEffect">
-                                                    <input name="" type="tel" value="23956966">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">行動電話</div>
-                                            <div class="form_content">
-                                                <div class="labelEffect">
-                                                    <input name="" type="tel" value="0911123456">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="setting_block">
-                                        <h4>身心障礙手冊</h4>
-                                        <div class="upload_block">
-                                            <!-- item = 1 file -->
-                                            <div class="item">
-                                                <div class="pic">
-                                                    <a href="images/pic01.jpg" target="_blank"><img src="images/pic01.jpg" alt=""></a>
-                                                </div>
-                                                <div class="flex-form">
-                                                    <div class="file_title">手冊正面檔案</div>
-                                                    <div class="form_grp">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="12345.jpg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- item = 1 file -->
-                                            <div class="item">
-                                                <div class="pic">
-                                                    <a href="images/pic01.jpg" target="_blank"><img src="images/pic01.jpg" alt=""></a>
-                                                </div>
-                                                <div class="flex-form">
-                                                    <div class="file_title">手冊反面檔案</div>
-                                                    <div class="form_grp">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="67890.jpg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
                                         </div>
                                     </div>
                                     <hr style="margin-bottom: 35px;">
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select id="" name="" class="dynamicCol used" disabled="">
-                                                    <option value="" selected="" disabled="disabled"></option>
-                                                    <option value="1" selected="">待驗證</option>
-                                                    <option value="2">已驗證</option>
-                                                </select>
-                                                <label>email驗證狀態</label>
+                                                <input name="title" id="title" type="text" value="館方回覆(預設帶值)">
+                                                <label for="title">回覆標題<abbr>*</abbr></label>
                                             </div>
+                                            <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <textarea></textarea>
-                                                <label>審核原因說明</label>
+                                                <label>回覆內容<abbr>*</abbr></label>
                                             </div>
-                                            <div class="help">若需輸入審核原因請於此輸入</div>
+                                            <div class="help">請輸入回覆的內容(將顯示於前台留言板)</div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <select id="" name="" class="dynamicCol used">
-                                                    <option value="" selected="" disabled="disabled">待審核</option>
-                                                    <option value="1">審核通過</option>
-                                                    <option value="2">審核不通過</option>
+                                                    <option value="" selected="" disabled="disabled">待回覆</option>
+                                                    <option value="1">已回覆</option>
                                                 </select>
-                                                <label>審核狀態</label>
+                                                <label>回覆狀態<abbr>*</abbr></label>
                                             </div>
-                                            <div class="help">審核通過後，會員資訊將推送到自動化系統註冊閱讀證會員。後續編修會員資訊或密碼，請至自動化系統編修。</div>
                                         </div>
                                         <div class="btn_grp">
-											<button class="btn btn-orange">編修儲存</button>
-											<button class="btn">取消編修</button>
+											<button class="btn btn-orange" data-fancybox="" data-type="iframe" data-src="fancybox_messagePreview.htm" href="javascript:;">預覽發送</button>
+                                            <button class="btn">取消編修</button>
                                         </div>
                                     </div>
                                 </div>
@@ -280,6 +163,8 @@
     <script src="vendor/highlight/highlight.pack.js"></script>
     <!-- tree view -->
     <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <script>
     // first example
     $(".treeview .treeview").treeview();
