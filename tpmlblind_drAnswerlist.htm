@@ -84,16 +84,15 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>問答條列</h3>
+                                    <h3>答題審核條列</h3>
                                 </div>
                                 <div class="_head">
                                     <div class="tag">
                                         狀態： 
                                         <ul>
                                             <li class="active"><a href="#">全部</a></li>
-                                            <li><a href="#">未發佈</a></li>
-                                            <li><a href="#">已發佈</a></li>
-                                            <li><a href="#">公布答案</a></li>
+                                            <li><a href="#">未審核</a></li>
+                                            <li><a href="#">已審核</a></li>
                                         </ul>
                                     </div>
                                     <!--div class="control_panel">
@@ -124,96 +123,43 @@
                                             <thead>
                                                 <tr>
                                                     <!--th><input type="checkbox"></th-->
-                                                    <th rowspan="2">編號</th>
-                                                    <th rowspan="2">標題(問答月份)</th>
-                                                    <th rowspan="2">問答開放起迄</th>
-                                                    <th class="text-left" colspan="3">第一題</th>
-                                                    <th class="text-left" colspan="3">第二題</th>
-                                                    <th rowspan="2" class="text-left">狀態</th>
-                                                    <th rowspan="2">編輯</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>答對</th>
-                                                    <th>答錯</th>
-                                                    <th>未審</th>
-                                                    <th>答對</th>
-                                                    <th>答錯</th>
-                                                    <th>未審</th>
+                                                    <th>編號</th>
+                                                    <th>姓名(回答者)</th>
+                                                    <th>身分證字號</th>
+                                                    <th>email</th>
+                                                    <th>回答日期</th>
+                                                    <th class="text-left">答案一</th>
+                                                    <th class="text-left">答案二</th>
+                                                    <th>編輯</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <!--td><input type="checkbox"></td-->
-                                                    <td class="num" data-title="序號">1</td>
-                                                    <td data-title="問答月份"><a href="tpmlblind_drEdit.htm" title="編輯問答資料">2023/01/01~2023/01/20</a></td>
-                                                    <td data-title="開放日期"><time>2023/01/01 09:00 - 2023/01/20 17:00</time></td>
-                                                    <td data-title="第一題答對">0</td>
-                                                    <td data-title="第一題答錯">0</td>
-                                                    <td data-title="第一題未審">0</td>
-                                                    <td data-title="第二題答對">0</td>
-                                                    <td data-title="第二題答錯">0</td>
-                                                    <td data-title="第二題未審">0</td>
-                                                    <td data-title="狀態">未發佈</td>
+                                                    <td class="num" data-title="編號">1</td>
+                                                    <td data-title="姓名(回答者)"><a href="tpmlblind_drAnsweredit.htm" title="審核">劉佳淇</a></td>
+                                                    <td data-title="身分證字號">A123456789</td>
+                                                    <td data-title="email">liucc@hyweb.com.tw</td>
+                                                    <td data-title="回答日期"><time>2023/01/01 09:00</time></td>
+                                                    <td data-title="第一題"></td>
+                                                    <td data-title="第二題"></td>
                                                     <td data-title="編輯">
                                                         <div class="btn_grp">
-                                                            <a href="tpmlblind_drAnswerlist.htm" class="btn" title="審核"><i class="i_edit"></i>審核答題</a>
-                                                            <a href="#" class="btn" title="審核"><i class="i_edit"></i>補單</a>
+                                                            <a href="tpmlblind_drAnsweredit.htm" class="btn" title="審核"><i class="i_edit"></i>審核答題</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <!--td><input type="checkbox"></td-->
-                                                    <td class="num" data-title="序號">2</td>
-                                                    <td data-title="問答月份"><a href="tpmlblind_drEdit.htm" title="編輯問答資料">2022/12/01~2022/12/20</a></td>
-                                                    <td data-title="開放日期"><time>2022/12/01 09:00 - 2022/12/20 17:00</time></td>
-                                                    <td data-title="第一題答對">0</td>
-                                                    <td data-title="第一題答錯">0</td>
-                                                    <td data-title="第一題未審">10</td>
-                                                    <td data-title="第二題答對">0</td>
-                                                    <td data-title="第二題答錯">0</td>
-                                                    <td data-title="第二題未審">6</td>
-                                                    <td data-title="狀態">發佈中</td>
+                                                    <td class="num" data-title="編號">2</td>
+                                                    <td data-title="姓名(回答者)"><a href="tpmlblind_drAnsweredit.htm" title="審核">劉佳淇</a></td>
+                                                    <td data-title="身分證字號">A123456789</td>
+                                                    <td data-title="email">liucc@hyweb.com.tw</td>
+                                                    <td data-title="回答日期"><time>2023/01/01 09:00</time></td>
+                                                    <td data-title="第一題">答對</td>
+                                                    <td data-title="第二題">答錯</td>
                                                     <td data-title="編輯">
                                                         <div class="btn_grp">
-                                                            <a href="tpmlblind_drAnswerlist.htm" class="btn" title="審核"><i class="i_edit"></i>審核答題</a>
-                                                            <a href="#" class="btn" title="審核"><i class="i_edit"></i>補單</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <!--td><input type="checkbox"></td-->
-                                                    <td class="num" data-title="序號">3</td>
-                                                    <td data-title="問答月份"><a href="tpmlblind_drEdit.htm" title="編輯問答資料">2022/11/01~2022/11/20</a></td>
-                                                    <td data-title="開放日期"><time>2022/11/01 09:00 - 2022/11/20 17:00</time></td>
-                                                    <td data-title="第一題答對">10</td>
-                                                    <td data-title="第一題答錯">0</td>
-                                                    <td data-title="第一題未審">1</td>
-                                                    <td data-title="第二題答對">11</td>
-                                                    <td data-title="第二題答錯">1</td>
-                                                    <td data-title="第二題未審">3</td>
-                                                    <td data-title="狀態">公布答案</td>
-                                                    <td data-title="編輯">
-                                                        <div class="btn_grp">
-                                                            <a href="tpmlblind_drAnswerlist.htm" class="btn" title="審核"><i class="i_edit"></i>審核答題</a>
-                                                            <a href="#" class="btn" title="審核"><i class="i_edit"></i>補單</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" data-title="序號">4</td>
-                                                    <td data-title="問答月份"><a href="tpmlblind_drEdit.htm" title="編輯問答資料">2022/10/01~2022/10/20</a></td>
-                                                    <td data-title="開放日期"><time>2022/10/01 09:00 - 2022/10/20 17:00</time></td>
-                                                    <td data-title="第一題答對">10</td>
-                                                    <td data-title="第一題答錯">1</td>
-                                                    <td data-title="第一題未審">1</td>
-                                                    <td data-title="第二題答對">11</td>
-                                                    <td data-title="第二題答錯">0</td>
-                                                    <td data-title="第二題未審">2</td>
-                                                    <td data-title="狀態">公布答案</td>
-                                                    <td data-title="編輯">
-                                                        <div class="btn_grp">
-                                                            <a href="tpmlblind_drAnswerlist.htm" class="btn" title="審核"><i class="i_edit"></i>審核答題</a>
-                                                            <a href="#" class="btn" title="審核"><i class="i_edit"></i>補單</a>
+                                                            <a href="tpmlblind_drAnsweredit.htm" class="btn" title="審核"><i class="i_edit"></i>審核答題</a>
                                                         </div>
                                                     </td>
                                                 </tr>
