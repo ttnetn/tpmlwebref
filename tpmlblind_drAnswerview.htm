@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon_tpml.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化功能</a></li>
+                    <li>博士通信箱管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>答題內容</h2>
+                         <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>答題內容</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <h4 style="margin:0 0 20px 0;">題目一</h4>
+                                        <div class="form_grp">
+                                            財經新聞經常報導，由於美國十年期公債殖利率上升，導致美國股市下跌，請問公債的殖利率是怎麼決定的呢？
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <textarea id="answer1" disabled>公債的殖利率又是怎麼決定的呢？ 是由公債的價格所決定，而且公債價格與公債殖利率呈現反向關係，當政府債券給購買者的報酬是固定的時候，隨著公債價格越高時，在此價格下領取固定的報酬所換算的報酬率（或殖利率）就會比較低；反之，當公債價格下跌時，所換算出的公債的殖利率就會上升。</textarea>
+                                                <label for="answer1">題目一答案<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="answer1link" id="answer1link" type="text" value="https://goldensun.get.com.tw/Columns/detail.aspx?no=421352" disabled>
+                                                <label for="answer1link">題目一資料來源<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="replystatue" name="" class="dynamicCol used" disabled>
+                                                    <option value="" disabled="disabled">請選擇</option>
+                                                    <option value="Y" selected="">答對</option>
+                                                    <option value="N">答錯</option>
+                                                </select>
+                                                <label for="replystatue">是否答對<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="flex-form">
+                                        <h4 style="margin:0 0 20px 0;">題目二</h4>
+                                        <div class="form_grp">
+                                            為什麼博學多聞者幾乎毫無例外都是愛講話的健談者？
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <textarea id="answer2" disabled>性格心理學早在 19 世紀末由佛洛伊德(Floyd)等人展開的精神分析學派開始，直到後來出現的現象學派、特質學派、行為學派及社會認知學派等，已成為一門穩定對人類性格探討的學問。另外，在社會心理學這門分支，研究對象從「個體」變成「群體中的個體」，探索人在社會中的認知過程、情感活動、意志品質等心理議題。</textarea>
+                                                <label for="answer2">題目二答案<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="answer2link" id="answer1link" type="text" value="心理學導論-溫世頌 p.123" disabled>
+                                                <label for="answer2link">題目二資料來源<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="replystatue" name="" class="dynamicCol used" disabled>
+                                                    <option value="" disabled="disabled">請選擇</option>
+                                                    <option value="Y" selected="">答對</option>
+                                                    <option value="N">答錯</option>
+                                                </select>
+                                                <label for="replystatue">是否答對<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr style="margin-bottom: 35px;">
+                                    <div class="flex-form">
+                                        <h4 style="margin:0 0 20px 0;">讀者資料</h4>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="userName" id="userName" type="text" value="劉佳淇" disabled>
+                                                <label for="userName">姓名<abbr>*</abbr></label>
+                                            </div>
+                                            <!-- <div class="help">說明文字</div> -->
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="personalID" id="personalID" type="text" value="A123456789" disabled>
+                                                <label for="personalID">身分證字號<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="telno" id="telno" type="text" value="" disabled>
+                                                <label for="telno">聯絡電話<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <input name="email" id="email" type="text" value="" disabled>
+                                                <label for="email">email<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="" id="messagetype" class="dynamicCol used" disabled>
+                                                    <option value="" disabled="disabled"></option>
+                                                    <option value="重度視障" selected="">重度視障</option>
+                                                    <option value="重度視障">中度視障</option>
+                                                    <option value="重度視障">輕度視障</option>
+                                                </select>
+                                                <label for="messagetype">視力狀況</label>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button class="btn" title="取消編修" href="javascript: history.back();">返回條列</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右側資料widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script>
+    // first example
+    $(".treeview .treeview").treeview();
+    $('header').load("header.htm");
+    $('aside').load("aside_tpml.htm");
+    </script>
+</body>
+
+</html>
