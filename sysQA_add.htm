@@ -72,7 +72,73 @@
                                                 <input name="" type="text" value='{session("deptName")}' class="dynamicCol used" disabled>
                                                 <label>分館：</label>
                                             </div>
-                                            <div class="help">依登入帳號自動帶入使用者與分館</div>
+                                            <div class="help">依登入帳號自動帶入使用者所屬單位</div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="search_branch" id="search_branch" class="dynamicCol used">
+                                                    <option value="" disabled="disabled"></option>
+                                                    <OPTION value=A/A11>松山區/松山分館</OPTION>
+                                                    <OPTION value=A/A12>松山區/民生分館</OPTION>
+                                                    <OPTION value=A/A13>松山區/三民分館</OPTION>
+                                                    <OPTION value=A/A14>松山區/中崙分館</OPTION>
+                                                    <OPTION value=B/B11>信義區/永春分館</OPTION>
+                                                    <OPTION value=B/B12>信義區/三興分館</OPTION>
+                                                    <OPTION value=B/B13>信義區/六合分館</OPTION>
+                                                    <OPTION value=B/B21>信義區/新興分館</OPTION>
+                                                    <OPTION value=C/C01>大安區/總館</OPTION>
+                                                    <OPTION value=C/C11>大安區/道藩分館</OPTION>
+                                                    <OPTION value=C/C12>大安區/大安分館</OPTION>
+                                                    <OPTION value=C/C21>大安區/延吉民眾閱覽室</OPTION>
+                                                    <OPTION value=C/C22>大安區/成功民眾閱覽室</OPTION>
+                                                    <OPTION value=C/C23>大安區/龍安民眾閱覽室</OPTION>
+                                                    <OPTION value=C/C41>大安區/大安書閣</OPTION>
+                                                    <OPTION value=D/D11>中山區/中山分館</OPTION>
+                                                    <OPTION value=D/D12>中山區/長安分館</OPTION>
+                                                    <OPTION value=D/D13>中山區/大直分館</OPTION>
+                                                    <OPTION value=D/D21>中山區/恆安民眾閱覽室</OPTION>
+                                                    <OPTION value=E/E11>中正區/王貫英先生紀念圖書館</OPTION>
+                                                    <OPTION value=E/E12>中正區/城中分館</OPTION>
+                                                    <OPTION value=F/F11>大同區/延平分館</OPTION>
+                                                    <OPTION value=F/F12>大同區/大同分館</OPTION>
+                                                    <OPTION value=F/F13>大同區/建成分館</OPTION>
+                                                    <OPTION value=F/F21>大同區/蘭州民眾閱覽室</OPTION>
+                                                    <OPTION value=G/G11>萬華區/龍山分館</OPTION>
+                                                    <OPTION value=G/G12>萬華區/東園分館</OPTION>
+                                                    <OPTION value=G/G13>萬華區/西園分館</OPTION>
+                                                    <OPTION value=G/G14>萬華區/萬華分館</OPTION>
+                                                    <OPTION value=G/G21>萬華區/柳鄉民眾閱覽室</OPTION>
+                                                    <OPTION value=H/H11>文山區/景美分館</OPTION>
+                                                    <OPTION value=H/H12>文山區/木柵分館</OPTION>
+                                                    <OPTION value=H/H13>文山區/永建分館</OPTION>
+                                                    <OPTION value=H/H14>文山區/萬興分館</OPTION>
+                                                    <OPTION value=H/H15>文山區/文山分館</OPTION>
+                                                    <OPTION value=H/H16>文山區/力行分館</OPTION>
+                                                    <OPTION value=H/H17>文山區/景新分館</OPTION>
+                                                    <OPTION value=H/H22>文山區/安康民眾閱覽室</OPTION>
+                                                    <OPTION value=H/H23>文山區/萬芳民眾閱覽室</OPTION>
+                                                    <OPTION value=I/I11>南港區/南港分館</OPTION>
+                                                    <OPTION value=I/I12>南港區/舊莊分館</OPTION>
+                                                    <OPTION value=I/I21>南港區/龍華民眾閱覽室</OPTION>
+                                                    <OPTION value=J/J11>內湖區/內湖分館</OPTION>
+                                                    <OPTION value=J/J12>內湖區/東湖分館</OPTION>
+                                                    <OPTION value=J/J13>內湖區/西湖分館</OPTION>
+                                                    <OPTION value=J/J14>內湖區/西中分館</OPTION>
+                                                    <OPTION value=K/K11>士林區/葫蘆堵分館</OPTION>
+                                                    <OPTION value=K/K12>士林區/天母分館</OPTION>
+                                                    <OPTION value=K/K13>士林區/士林分館</OPTION>
+                                                    <OPTION value=K/K14>士林區/李科永分館</OPTION>
+                                                    <OPTION value=L/L11>北投區/北投分館</OPTION>
+                                                    <OPTION value=L/L12>北投區/稻香分館</OPTION>
+                                                    <OPTION value=L/L13>北投區/石牌分館</OPTION>
+                                                    <OPTION value=L/L14>北投區/清江分館</OPTION>
+                                                    <OPTION value=L/L15>北投區/吉利分館</OPTION>
+                                                    <OPTION value=L/L21>北投區/永明民眾閱覽室</OPTION>
+                                                    <OPTION value=L/L23>北投區/秀山民眾閱覽室</OPTION>
+                                                </SELECT>
+                                                <label>分館<abbr>*</abbr></label>
+                                                <div class="help">預設會帶入您所屬分館，但若您不屬於任何分館或需要代建資料，請手動挑選</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <hr>
