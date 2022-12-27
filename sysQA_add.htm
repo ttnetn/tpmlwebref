@@ -39,9 +39,13 @@
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>題目新增</h2>
-                        <button class="btn btn-primary btn-adv">
-                            <i class="i_search"></i></button>
+                        <h2>新增小博士題目</h2>
+                        <!-- Liucc 內頁不會有搜尋，移除，改回上一頁-->
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- flex-12 -->
@@ -51,33 +55,85 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>題目編修</h3>
+                                    <h3>題目新增/編修</h3>
                                 </div>
                                 <div class="_content">
+                                    <!-- Liucc 需增加預設帶入行政區每月負責主題，所以把管理區塊分為三大塊：登入資訊/題目設定/題目內容-->
+                                    <h4>登入館別資訊</h4>
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <input name="" type="text" value='{session("userId")}' class="dynamicCol used" disabled>
                                                 <label>登入使用者：</label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <input name="" type="text" value='{session("deptName")}' class="dynamicCol used" disabled>
                                                 <label>分館：</label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
+                                            <div class="help">依登入帳號自動帶入使用者與分館</div>
                                         </div>
-										<div class="form_grp form_inline" style="margin-top:20px;">
+                                    </div>
+                                    <hr>
+                                    <h4>題目設定</h4>
+                                    <div class="flex-form">	
+                                        <!-- Liucc 日期起迄有專用的樣式 datepick-->
+                                        <div class="form_grp form_inline">
+                                            <div class="labelEffect">
+                                                <select name="search_year" id="search_year" class="dynamicCol used">
+                                                    <option value="" disabled="disabled"></option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2023" selected="">2023</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2025">2025</option>
+                                                </select>
+                                                <label>題目年度</label>
+                                            </div>
+                                            <div class="labelEffect">
+                                                <select name="search_month" id="search_month" class="dynamicCol used">
+                                                    <option value="" disabled="disabled"></option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4" selected="">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                <label>月份</label>
+                                            </div>												
+                                            <div class="help" style="color: red;">請先選擇年月，依據您的行政區/館別，系統會帶入問答預設起迄日期與主題。但您仍可依據需求自行調整。</div>
+                                        </div>
+                                        <div class="form_grp datepick" style="margin-top: 30px;">
+                                            <div class="startDate">
+                                                <div class="labelEffect">
+                                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果--><!--如果要到時間就要改datetime-local-->
+                                                    <input id="startdate" name="startdate" type="text" value="2023-04-07" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                                                    <label for="startdate">答題開始日期</label>
+                                                </div>
+                                                <!-- <div class="help">說明文字</div> -->
+                                            </div>
+                                            <div class="endDate">
+                                                <div class="labelEffect">
+                                                    <input id="enddate" name="enddate" type="text" value="2023-04-30" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                                                    <label for="enddate">答題結束日期</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Liucc 修改樣式-->
+                                        <!--div class="form_grp form_inline" style="margin-top:20px;">
 											<div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
 												<div class="startDate">
 													<div class="labelEffect">
-														<!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
 														<input name="date_start" id="date_start" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" >
 														<label>起始日期<abbr>*</abbr></label>
 													</div>
-													<!-- <div class="help">說明文字</div> -->
 												</div>
 												<div class="endDate">
 													<div class="labelEffect">
@@ -86,13 +142,13 @@
 													</div>
 												</div>
 											</div>
-										</div>                                        
+										</div-->                                        
 
-                                        <div class="form_grp" form_inline>
+                                        <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select name="subj_id" id="subj_id">
-                                                    <option value="" selected="" disabled="disabled"></option>
-                                                    <option value="A00">自然科學</option>
+                                                <select name="subj_id" id="subj_id" class="dynamicCol used">
+                                                    <option value="" disabled="disabled"></option>
+                                                    <option value="A00" selected="">自然科學</option>
                                                     <option value="B00">生活科技</option>
                                                     <option value="C00">宗教神話</option>
                                                     <option value="D00">醫療保健</option>
@@ -100,6 +156,12 @@
                                                 </select>
                                                 <label>主題<abbr>*</abbr></label>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h4>題目內容</h4>
+                                    <div class="flex-form">	
+                                        <div class="form_grp">
                                             <div class="labelEffect">
                                                 <select name="point" id="point">
                                                     <option value="" selected="" disabled="disabled"></option>
@@ -122,25 +184,22 @@
                                                 <textarea name="answer" id="answer"  ></textarea>
                                                 <label>答案<abbr>*</abbr></label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <textarea name="source" id="source"  ></textarea>
                                                 <label>出處</label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
                                         </div>										
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <input name="surl" id="surl" type="text">
                                                 <label>出處 URL</label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
                                         </div>
                                         
                                         <div class="btn_grp">
-											<button class="btn btn-orange">儲存</button>
+											<button class="btn btn-orange">編修儲存</button>
                                             <button class="btn">清除以上資料</button>
 											<button class="btn">取消</button>
                                         </div>
