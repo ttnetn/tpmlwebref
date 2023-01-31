@@ -110,6 +110,7 @@ hr{margin-top:20px;margin-bottom:30px;}
     th:nth-last-child(1), td:nth-last-child(1){display: none;}
     th:nth-child(1), td:nth-child(1){display: none;}
     th:nth-child(5), td:nth-child(5){display: none;}
+    thead {display: table-header-group;}
 }
 
 @page{
