@@ -12,12 +12,12 @@
     <![endif]-->
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/supercms.css">
-    <link rel="stylesheet" href="css/customize.css">
     <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <link rel="stylesheet" href="css/customize.css">
 
 </head>
 
@@ -205,8 +205,9 @@
                                                     <th class="text-left">預約狀態</th>
                                                     <th class="text-left">報到狀態</th>
                                                     <th>
-                                                        <a href="#">預約日期 <i class="i_sort"></i></a>
+                                                        <a href="#">預約日期/時段 <i class="i_sort"></i></a>
                                                     </th>
+                                                    <th class="text-left">座位</th>
                                                     <th>編輯</th>
                                                 </tr>
                                             </thead>
@@ -222,10 +223,19 @@
                                                     <td><span class="orange">正常</span></td>
                                                     <td></td>
                                                     <td><time>2022/11/16 上午</time></td>
+                                                    <td class="text-left">A4, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5</td>
                                                     <td>
-                                                        <div class="btn_grp">
-                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn"><i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li><button class="btn" onclick="javascript:location.href='ilosh_reservation_edit.jsp?bookingId=3D61247A-0DA1-ED11-8766-F4F814832EDD'"><i class="i_edit"></i>編輯 </button></li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
+                                                        <!--div class="btn_grp">
+                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div-->
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -238,7 +248,8 @@
                                                     <td>凌網科技股份有限公司</td>
                                                     <td><span class="orange">正常</span></td>
                                                     <td></td>
-                                                    <td><time>2022/11/16 下午</time></td>
+                                                    <td><time>2022/11/16 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
                                                     <td>
                                                         <div class="btn_grp">
                                                             <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
@@ -256,6 +267,7 @@
                                                     <td><span class="gray">取消</span></td>
                                                     <td></td>
                                                     <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
                                                     <td>
                                                         <div class="btn_grp">
                                                             <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
@@ -273,6 +285,7 @@
                                                     <td><span class="orange">正常</span></td>
                                                     <td><span class="green">已報到</span></td>
                                                     <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
                                                     <td>
                                                         <div class="btn_grp">
                                                             <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
@@ -290,6 +303,203 @@
                                                     <td><span class="orange">正常</span></td>
                                                     <td><span class="gray">未報到</span></td>
                                                     <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">1</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="ilosh_reservationEdit.htm">S11105080011</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td></td>
+                                                    <td><time>2022/11/16 上午</time></td>
+                                                    <td class="text-left">A4, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5</td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn"><i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li><button class="btn" onclick="javascript:location.href='ilosh_reservation_edit.jsp?bookingId=3D61247A-0DA1-ED11-8766-F4F814832EDD'"><i class="i_edit"></i>編輯 </button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!--div class="btn_grp">
+                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">2</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="ilosh_reservationEdit.htm">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td></td>
+                                                    <td><time>2022/11/16 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">3</td>
+                                                    <td>ilosh111-Z101</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="gray">取消</span></td>
+                                                    <td></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">4</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td><span class="green">已報到</span></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">5</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td><span class="gray">未報到</span></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">1</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="ilosh_reservationEdit.htm">S11105080011</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td></td>
+                                                    <td><time>2022/11/16 上午</time></td>
+                                                    <td class="text-left">A4, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A4, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A5, A1234567890987654321</td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn"><i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li><button class="btn" onclick="javascript:location.href='ilosh_reservation_edit.jsp?bookingId=3D61247A-0DA1-ED11-8766-F4F814832EDD'"><i class="i_edit"></i>編輯 </button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!--div class="btn_grp">
+                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">2</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="ilosh_reservationEdit.htm">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td></td>
+                                                    <td><time>2022/11/16 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="ilosh_reservationEdit.htm" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">3</td>
+                                                    <td>ilosh111-Z101</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="gray">取消</span></td>
+                                                    <td></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">4</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td><span class="green">已報到</span></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">5</td>
+                                                    <td>ilosh111-Z102</td>
+                                                    <td><a href="#">S11105080001</a></td>
+                                                    <td>liucc@hyweb.com.tw</td>
+                                                    <td>劉佳淇</td>
+                                                    <td>凌網科技股份有限公司</td>
+                                                    <td><span class="orange">正常</span></td>
+                                                    <td><span class="gray">未報到</span></td>
+                                                    <td><time>2019/10/26 上午</time></td>
+                                                    <td class="text-left">A4, A5</td>
                                                     <td>
                                                         <div class="btn_grp">
                                                             <a href="#" class="btn"><i class="i_edit"></i>編輯</a>
