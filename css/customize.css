@@ -107,7 +107,9 @@ hr{margin-top:20px;margin-bottom:30px;}
     .content_block ._head{display: none;}
     .pagination, .control_panel, .quick_btn, .tag{display: none;}
     .btn_grp a{display: none;}
-    .table_wrapper table tr th:nth-child(1), .table_wrapper table tr td:nth-child(1){display: none;}
+    th:nth-last-child(1), td:nth-last-child(1){display: none;}
+    th:nth-child(1), td:nth-child(1){display: none;}
+    th:nth-child(5), td:nth-child(5){display: none;}
 }
 
 @page{
@@ -115,4 +117,10 @@ hr{margin-top:20px;margin-bottom:30px;}
     margin: 0.5cm;
     orphans:4;
     widows:2;
+}
+
+
+body:focus * {
+   box-shadow:  0 0 0 2px #c00!important;
+   outline:solid 2px #c00!important;
 }
