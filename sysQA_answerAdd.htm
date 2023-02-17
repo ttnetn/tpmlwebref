@@ -17,6 +17,7 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <link rel="stylesheet" href="css/customize.css">
 </head>
 
 <body>
@@ -40,6 +41,11 @@
                 <div class="container">
                     <div class="title">
                         <h2>新增書面答題資料</h2>
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- flex-12 -->
@@ -110,7 +116,7 @@
                                         </div>                                        
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <select name="point" id="point">
+                                                <select name="point" id="point" class="dynamicCol used">
                                                     <option value="0">未審核</option>
                                                     <option value="1">答對</option>
                                                     <option value="2">答錯</option>
@@ -118,17 +124,18 @@
                                                 </select>
                                                 <label>答案審核<abbr*</abbr></label>
                                             </div>                   										
-                                        </div>	
+                                        <div class="help">請注意，每月七日為最後審核期限，點數一經發送則不可再進行編修</div>	
+                                        </div>
                                         <div class="btn_grp">
 											<button class="btn btn-orange">儲存</button>
-											<button class="btn">取消</button>
+											<button class="btn">重設</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 							
                             <!-- 右側資料widget -->
-                            <div class="publish_block">
+                            <div class="publish_block dradd">
                                 <!-- 每種不同功能，都用block區分 -->
                                 <div class="block">
                                     <div class="_head">
@@ -136,17 +143,24 @@
                                     </div>	
                                     <div class="flex-form">
                                         <div class="form_grp">
+											<div class="form_title">驗證<abbr>*</abbr></div>
+                                            <div class="form_content">
+												<input type="text" name="vertify_id" id="vertify_id" placeholder="請輸入身分證號或閱讀證號驗證"/>
+                                                <input type="button" value="驗證"  class="btn btn-submit used" onclick="myFunction()"/>
+                                            </div>									
+                                        </div>		                                        
+                                        <div class="form_grp" style="margin-top: 20px;">
+											<div class="form_title">借閱證號<abbr>*</abbr></div>
+                                            <div class="form_content">
+												<input type="text" name="usr_id" id="usr_id" placeholder="請使用驗證功能帶入" readonly/>
+                                            </div>									
+                                        </div>		                                        
+                                        <div class="form_grp" style="margin-top: 20px;">
 											<div class="form_title">姓名<abbr>*</abbr></div>
                                             <div class="form_content">
 												<input type="text" name="usr_name" id="usr_name"/>
                                             </div>									
                                         </div>									
-                                         <div class="form_grp" style="margin-top: 20px;">
-											<div class="form_title">借閱證號<abbr>*</abbr></div>
-                                            <div class="form_content">
-												<input type="text" name="usr_id" id="usr_id"/>
-                                            </div>									
-                                        </div>		                                        
 										<div class="form_grp" style="margin-top: 20px;">
 											<div class="form_title">Email</div>
                                             <div class="form_content">
@@ -168,12 +182,28 @@
 										<div class="form_grp" style="margin-top: 20px;">
 											<div class="form_title">班級</div>
                                             <div class="form_content inline">
-												<input type="text" name="usr_class" id="usr_class"/> 年 <input type="text" name="usr_class_name" id="usr_class_name"/> 班
+												<input type="text" name="usr_class" id="usr_class"/> 年
+                                                <input type="text" name="usr_class_name" id="usr_class_name"/> 班
                                             </div>									
                                         </div>	
-									
+                                        
 									</div>                                
 								</div>
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>編修資訊</h3>
+                                    </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                建立者：<span><i class="i_man"></i></span>劉佳淇(總館，admin)<br/><span><i class="i_clock"></i></span>2019/11/26 14:26:10 
+                                            </li>
+                                            <li>
+                                                最後編修者：<span><i class="i_man"></i></span>李曉明(總館，admin)<br/><span><i class="i_clock"></i></span>2019/11/26 14:26:10 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 					
                             </div>
                         </div>
@@ -197,6 +227,18 @@
     $('header').load("header.htm");
     $('aside').load("aside.htm");
     </script>
+    <script>
+        function myFunction() {
+            let text = "驗證成功，請確認讀者資訊\n證號：0318-tp-3280\n姓名：劉佳淇\n生日：2010/03/01(年齡符合資格)\n點選確定將讀者資料帶入，點選取消重新輸入驗證";
+            if (confirm(text) == true) {
+            text = "0318-tp-3280";
+            } else {
+            text = "";
+            }
+            document.getElementById("usr_id").innerHTML = text;
+        }
+    </script>
+
 </body>
 
 </html>
