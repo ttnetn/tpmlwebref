@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">功能管理</a></li>
+                    <li>小博士信箱</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>點數管理列表</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-8-4">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="search_user_id" id="search_user_id" type="text">
+                                                    <label>借閱證號碼</label>
+                                                </div>
+
+																		
+                                            </div>
+
+
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button class="btn reset">取消</button>
+                                            <button class="btn btn-primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+
+                                <div class="_head">
+
+                                <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <form action="" class="form_inline">
+                                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">30</option>
+                                                    <option value="">50</option>
+                                                    <option value="">100</option>
+                                                </select> 筆 </div>
+                                        </form>
+                                    </div>
+                                    <div class="quick_btn">
+                                    </div>
+                                </div>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>借閱證號碼</th>
+                                                    <th>讀者姓名</th>
+                                                    <th>累積點數</th>
+                                                    <th>已兌換點數</th>
+                                                    <th>剩餘點數</th>
+                                                    <th>30天內即將過期</th>
+                                                    <th>最後更新時間</th>
+                                                    <th>臨櫃兌換</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center">A13061830601</td>
+                                                    <td align="center">周岳祥 (Mr)</td>
+                                                    <td align="center"><a href="sysQA_pointLogList.htm?user_id=A13061830601">10</td>
+                                                    <td align="center"><a href="sysQA_pointUseList.htm?user_id=A13061830601">5</td>
+                                                    <td align="center">2 (過期3點)</td>
+                                                    <td align="center">1</td>
+                                                    <td align="center">2016/02/19 13:31:04</td>
+													<td align="center">
+                                                        <div class="btn_grp">
+                                                            <a href="sysQA_pointUse.htm?user_id=A13061830601" class="btn">兌換</a>
+                                                        </div>
+													</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">A13081924104</td>
+                                                    <td align="center">李秉睿 (Mr)</td>
+                                                    <td align="center"><a href="sysQA_pointLogList.htm?user_id=A13081924104">190</td>
+                                                    <td align="cente"r><a href="sysQA_pointUseList.htm?user_id=A13081924104">170</td>
+                                                    <td align="center">20 (過期0點)</td>
+                                                    <td align="center">6</td>
+                                                    <td align="center">2016/02/19 13:31:04</td>
+													<td align="center">
+                                                        <div class="btn_grp">
+                                                            <a href="sysQA_pointUse.htm?user_id=A13061830601" class="btn">兌換</a>
+                                                        </div>
+													</td>                                                
+												</tr>
+                                                <tr>
+                                                    <td align="center">A13097799900</td>
+                                                    <td align="center">黃以翔 (Mr)</td>
+                                                    <td align="center"><a href="sysQA_pointLogList.htm?user_id=A13097799900">16</td>
+                                                    <td align="center"><a href="sysQA_pointUseList.htm?user_id=A13097799900">10</td>
+                                                    <td align="center">6 (過期0點)</td>
+                                                    <td align="center">6</td>
+                                                    <td align="center">2016/02/19 13:31:04</td>
+													<td align="center">
+                                                        <div class="btn_grp">
+                                                            <a href="sysQA_pointUse.htm?user_id=A13061830601" class="btn">兌換</a>
+                                                        </div>
+													</td>                                                
+												</tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+    // first example
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    </script>
+</body>
+
+</html>
