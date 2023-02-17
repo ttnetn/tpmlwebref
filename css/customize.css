@@ -122,6 +122,10 @@ hr{margin-top:20px;margin-bottom:30px;}
 
 
 body:focus * {
-   box-shadow:  0 0 0 2px #c00!important;
-   outline:solid 2px #c00!important;
+   box-shadow:  0 0 0 2px #c00 !important;
+   outline:solid 2px #c00 !important;
+}
+
+.dradd {
+    flex: 0 1 25% !important;
 }
