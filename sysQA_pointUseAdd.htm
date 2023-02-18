@@ -42,7 +42,7 @@
                 <div class="container">
                     <div class="title">
                         <h2>兌換點數</h2>
-                         <div class="function">
+                        <div class="function">
                             <ul>
                                 <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
                             </ul>
@@ -60,105 +60,30 @@
                                 </div>
                                 <div class="_content">
                                     <div class="flex-form">
-                                        <h4 style="margin:0 0 20px 0;">題目一</h4>
-                                        <div class="form_grp">
-                                            財經新聞經常報導，由於美國十年期公債殖利率上升，導致美國股市下跌，請問公債的殖利率是怎麼決定的呢？
+                                        <div class="form_grp" id="question-date">
+											<span style="font-size:110%; font-weight: bold;">借閱證號碼：</span>
+                                            A13061830601
+                                        </div>
+                                        <div class="form_grp" id="question-date">
+											<span style="font-size:110%; font-weight: bold;">讀者姓名：</span>
+                                            周岳祥 (Mr)
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <textarea id="answer1"></textarea>
-                                                <label for="answer1">題目一答案<abbr>*</abbr></label>
+                                                <input name="content" id="content" type="text" value="">
+                                                <label for="content">內容(備註)<abbr>*</abbr></label>
                                             </div>
-                                            <!-- <div class="help">說明文字</div> -->
+                                            <div class="help">請輸入兌換內容等資訊</div>
                                         </div>
                                         <div class="form_grp">
                                             <div class="labelEffect">
-                                                <input name="answer1link" id="answer1link" type="text" value="">
-                                                <label for="answer1link">題目一資料來源<abbr>*</abbr></label>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <select id="replystatue" name="" class="dynamicCol used">
-                                                    <option value="" selected="" disabled="disabled">請選擇</option>
-                                                    <option value="Y">答對</option>
-                                                    <option value="N">答錯</option>
-                                                </select>
-                                                <label for="replystatue">是否答對<abbr>*</abbr></label>
+                                                <input name="point" id="point" type="text" value="">
+                                                <label for="point">兌換點數<abbr>*</abbr></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <hr/>
-                                    <div class="flex-form">
-                                        <h4 style="margin:0 0 20px 0;">題目二</h4>
-                                        <div class="form_grp">
-                                            為什麼博學多聞者幾乎毫無例外都是愛講話的健談者？
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <textarea id="answer2"></textarea>
-                                                <label for="answer2">題目二答案<abbr>*</abbr></label>
-                                            </div>
-                                            <!-- <div class="help">說明文字</div> -->
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <input name="answer2link" id="answer1link" type="text" value="">
-                                                <label for="answer2link">題目二資料來源<abbr>*</abbr></label>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <select id="replystatue" name="" class="dynamicCol used">
-                                                    <option value="" selected="" disabled="disabled">請選擇</option>
-                                                    <option value="Y">答對</option>
-                                                    <option value="N">答錯</option>
-                                                </select>
-                                                <label for="replystatue">是否答對<abbr>*</abbr></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr style="margin-bottom: 35px;">
-                                    <div class="flex-form">
-                                        <h4 style="margin:0 0 20px 0;">讀者資料</h4>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <input name="userName" id="userName" type="text" value="">
-                                                <label for="userName">姓名<abbr>*</abbr></label>
-                                            </div>
-                                            <!-- <div class="help">說明文字</div> -->
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <input name="personalID" id="personalID" type="text" value="">
-                                                <label for="personalID">身分證字號<abbr>*</abbr></label>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <input name="telno" id="telno" type="text" value="">
-                                                <label for="telno">聯絡電話</label>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <input name="email" id="email" type="text" value="">
-                                                <label for="email">email</label>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <select name="" id="messagetype" class="dynamicCol used">
-                                                    <option value="" disabled="disabled"></option>
-                                                    <option value="重度視障" selected="">重度視障</option>
-                                                    <option value="重度視障">中度視障</option>
-                                                    <option value="重度視障">輕度視障</option>
-                                                </select>
-                                                <label for="messagetype">視力狀況<abbr>*</abbr></label>
-                                            </div>
-                                        </div>
                                         <div class="btn_grp">
-											<button class="btn btn-orange" href="javascript:;" title="編修儲存">編修儲存</button>
+											<button class="btn btn-orange" href="javascript:;" title="編修儲存" onclick="alertEvent();linkFunction();";>確認兌換</button>
                                             <button class="btn" title="取消編修">取消編修</button>
                                         </div>
                                     </div>
@@ -187,6 +112,14 @@
     $(".treeview .treeview").treeview();
     $('header').load("header.htm");
     $('aside').load("aside_tpml.htm");
+    </script>
+    <script>
+        function alertEvent() {
+            alert("兌換點數成功");
+        }
+        function linkFunction() {
+        location.href = "sysQA_pointUseList.htm";
+        }
     </script>
 </body>
 
