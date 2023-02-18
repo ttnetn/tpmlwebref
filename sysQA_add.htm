@@ -70,7 +70,7 @@
                                         <div class="form_grp">
                                             <div class="labelEffect">
                                                 <input name="" type="text" value='{session("deptName")}' class="dynamicCol used" disabled>
-                                                <label>分館：</label>
+                                                <label>所屬單位：</label>
                                             </div>
                                             <div class="help">依登入帳號自動帶入使用者所屬單位</div>
                                         </div>
@@ -135,7 +135,7 @@
                                                     <OPTION value=L/L15>北投區/吉利分館</OPTION>
                                                     <OPTION value=L/L21>北投區/永明民眾閱覽室</OPTION>
                                                     <OPTION value=L/L23>北投區/秀山民眾閱覽室</OPTION>
-                                                </SELECT>
+                                                </select>
                                                 <label>分館<abbr>*</abbr></label>
                                                 <div class="help">預設會帶入您所屬分館，但若您不屬於任何分館或需要代建資料，請手動挑選</div>
                                             </div>
@@ -214,14 +214,22 @@
                                             <div class="labelEffect">
                                                 <select name="subj_id" id="subj_id" class="dynamicCol used">
                                                     <option value="" disabled="disabled"></option>
-                                                    <option value="A00" selected="">自然科學</option>
+                                                    <option value="A00">自然科學</option>
                                                     <option value="B00">生活科技</option>
                                                     <option value="C00">宗教神話</option>
                                                     <option value="D00">醫療保健</option>
-                                                    <option value="E00">名勝古蹟</option>
+                                                    <option value="E00">風俗民情</option>
+                                                    <option value="F00">語言文學</option>
+                                                    <option value="G00">藝術文化</option>
+                                                    <option value="H00">歷史地理</option>
+                                                    <option value="I00">名勝古蹟</option>
+                                                    <option value="J00">動物</option>
+                                                    <option value="K00" selected="">植物</option>
+                                                    <option value="L00">環境保護</option>
                                                 </select>
                                                 <label>主題<abbr>*</abbr></label>
                                             </div>
+                                            <div class="help"><span style="color: red;">松山區</span> x <span style="color: red;">2月</span>之主題預設為「<span style="color: red;">植物</span>」。本月植物主題已建有 <span style="color: red;">0</span> 題</div>
                                         </div>
                                     </div>
                                     <hr>
@@ -292,7 +300,7 @@
     // first example
     $(".treeview .treeview").treeview();
     $('header').load("header.htm");
-    $('aside').load("aside.htm");
+    $('aside').load("aside_tpml.htm");
     </script>
 </body>
 
