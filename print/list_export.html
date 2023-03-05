@@ -1,0 +1,315 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>小博士信箱 答對名單</title>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.winner {
+	border-collapse:collapse;
+	border:0;
+}
+img {
+	border:0;
+	vertical-align:top;
+	display:block;
+}
+table  {
+	border-collapse:collapse;
+	border:0;
+}
+table td {
+	vertical-align:top;
+	border-collapse:collapse;
+}
+.date {
+	font-weight:bold;
+	font-size:15px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	text-align:center;
+	margin:0 0 0 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+p {
+	font-size:16px;
+	padding:0 0 0 0;
+	line-height:24px;
+	letter-spacing:1px;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+.list {
+  margin: 10px 35px;
+}
+.list td {
+	letter-spacing:1px;
+	font-weight:bold;
+	font-size:16px;
+	line-height:21px;
+	padding:5px 5px;
+}
+.number {
+	font-weight:bold;
+	font-size:18px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	padding:1px 0 0 0 ;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.number2 {
+	font-weight:bold;
+	font-size:18px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	padding:1px 0 0 0 ;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.orange1, .orange2 {
+      background:#f47e06;
+  }
+
+@media print {            
+  body{
+	  -webkit-print-color-adjust:exact !important;
+	  print-color-adjust:exact !important;
+  }
+  .orange { 
+      background-color:#f0cb55;} 
+  .pink {
+      background: url(pink.gif) no-repeat left top;
+  }
+  table {
+      border-collapse: separate;
+      background:#fff;
+  }
+  .white {
+      background:#fff !important;
+  }
+  .orange {
+      background:#f0cb55 !important;
+  }
+  .pink {
+      background:#f52fa4 !important;
+  }
+}
+</style>
+
+<script>
+    const CONTEXT_PATH = "/sysadm";
+    const API_URL = "http://10.10.4.84:8082/TaipeiLibAdmin/";
+
+    function getAccessToken(){
+        return 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJhdWQiOiJ3ZWIiLCJpcCI6IjE3Mi4xNi4yLjE0MSIsImV4cCI6MTY3NzkxOTMyMiwiaWF0IjoxNjc3ODMyOTIyfQ.Xs4zYwZQbEYpwdCjWQJ1gXmkUuZfYn4bk29UE_xX7UwjJrEkG1F4cRCVj1-nhG1DC5-ebBy_vc4EKFFkm3Mx-Q'
+    }
+    function getUserId(){
+        return 'system';
+    }
+    function getUserName(){
+        return '系統管理者';
+    }
+    function getDeptId(){
+        return '0';
+    }
+    function getDeptName(){
+        return '北市圖 ';
+    }
+</script>
+<!-- JS-->
+<script src="/sysadm/js/jquery-3.5.0.min.js"></script>
+<script src="/sysadm/js/jquery-ui.min.js"></script>
+<script src="/sysadm/vendor/jquery.easing.min.js"></script>
+<!-- hgweb customize js -->
+<script src="/sysadm/js/customize.js"></script>
+<!-- highlight -->
+<script src="/sysadm/vendor/highlight/highlight.pack.js"></script>
+<!-- fancybox -->
+<script src="/sysadm/vendor/fancybox/jquery.fancybox.min.js"></script>
+<!-- tree view -->
+<script src="/sysadm/vendor/treeview/jquery.treeview.js"></script>
+
+<!-- apiRequest -->
+<script src="/sysadm/js/common/apiRequest.js"></script>
+<script src="/sysadm/js/common/common.js"></script>
+
+<!-- kenshi customize js -->
+<script src="/sysadm/js/common/customize.js"></script>
+<link href="/sysadm/images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+	<table width="595" border="0" align="center" cellpadding="0" cellspacing="0" class="winner">
+		<tbody><tr>
+			<td width="30"><table border="0" cellpadding="0" cellspacing="0" class="winner">
+					<tbody><tr>
+						<td><img src="images/winner001.gif"></td>
+						<td><img src="images/winner002.gif"></td>
+					</tr>
+				</tbody></table></td>
+		</tr>
+		<tr>
+			<td><table border="0" cellpadding="0" cellspacing="0" class="winner">
+					<tbody><tr>
+						<td><img src="images/winner003.gif"></td>
+						<td width="132" bgcolor="#be2000"><span class="date">111年度第1週</span></td>
+						<td><img src="images/winner004.gif"></td>
+					</tr>
+				</tbody></table></td>
+		</tr>
+		<tr>
+			<td><img src="images/winner005.gif"></td>
+		</tr>
+		<tr>
+			<td align="center">
+				<table border="0" cellpadding="0" cellspacing="0" class="winner">
+					<tbody><tr>
+						<td width="29" bgcolor="#f0cb55">&nbsp;</td>
+						<td width="540" align="center">
+							<table border="0" cellpadding="0" cellspacing="0" class="list" id="paperList"><tr><td>後OO<br>0318-OOOOO</td></tr></table>
+						</td>
+						<td width="26" bgcolor="#f0cb55">&nbsp;</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table border="0" cellpadding="0" cellspacing="0" class="winner">
+					<tbody><tr>
+						<td><img src="images/winner006.gif"></td>
+						<td width="59" bgcolor="#f52fa4" class="pink"><span class="number" id="paperCount">1</span></td>
+						<td><img src="images/winner007.gif"></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td><img src="images/winner008_01.gif"></td>
+		</tr>
+	</tbody></table>
+	<br/>
+	<table width="595" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td colspan="2"><img src="images/winner008_02.gif" width="595" height="61"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="0" cellpadding="0" cellspacing="0" class="winner">
+					<tbody><tr>
+						<td width="29" bgcolor="#f0cb55">&nbsp;</td>
+						<td width="540" align="center">
+							<table border="0" cellpadding="0" cellspacing="0" class="list" id="onlineList"><tr><td>侯OO<br>0135-OOOOO</td><td>賴OO<br>0170-OOOOO</td><td>楊OO<br>0177-OOOOO</td></tr><tr><td>楊OO<br>0177-OOOOO</td><td>林OO<br>0177-OOOOO</td><td>黃OO<br>0185-OOOOO</td></tr><tr><td>黃OO<br>0185-OOOOO</td><td>詹OO<br>0186-OOOOO</td><td>賴OO<br>0191-OOOOO</td></tr><tr><td>張OO<br>0194-OOOOO</td><td>楊OO<br>0207-OOOOO</td><td>徐OO<br>0208-OOOOO</td></tr><tr><td>詹OO<br>0215-OOOOO</td><td>張OO<br>0218-OOOOO</td><td>林OO<br>0224-OOOOO</td></tr><tr><td>蔡OO<br>0224-OOOOO</td><td>卓OO<br>0224-OOOOO</td><td>姚OO<br>0235-OOOOO</td></tr><tr><td>王OO<br>0236-OOOOO</td><td>林OO<br>0250-OOOOO</td><td>黃OO<br>0251-OOOOO</td></tr><tr><td>張OO<br>0252-OOOOO</td><td>林OO<br>0262-OOOOO</td><td>葛OO<br>0263-OOOOO</td></tr><tr><td>方OO<br>0288-OOOOO</td><td>吳OO<br>0306-OOOOO</td></tr></table>
+						</td>
+						<td width="26" bgcolor="#f0cb55">&nbsp;</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="images/winner009.gif"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="0" cellpadding="0" cellspacing="0" class="winner">
+					<tbody><tr>
+						<td><img src="images/winner010.gif"></td>
+						<td width="59" class="orange2"><span class="number2" id="onlineCount">26</span></td>
+						<td><img src="images/winner011.gif"></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="images/winner012.gif"></td>
+		</tr>
+		<tr>
+			<td width="30" bgcolor="#f0cb55">&nbsp;</td>
+			
+
+
+				<td bgcolor="#f0cb55"><p id="date-end">答對點數由電腦自行累積點數，請於112年1月31日起一年內至櫃檯兌換</p></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="images/winner013.gif"></td>
+		</tr>
+	</tbody></table>
+	<script>
+let qid = '39074';
+
+function findCorrectList(){
+	let url = "dr/littleDoctorQaAll/correctList/" + qid; 
+	return new Promise((resolve,reject)=>{
+		getRequest(url).then((data)=>{
+
+			let paperList = data.paperList;
+			let onlineList = data.onlineList;
+			let answerCount = data.answerCount||0;
+			let correctAnswerCount = paperList.length + onlineList.length;
+			let plHtml = makeTr(paperList);
+			let olHtml = makeTr(onlineList);
+			$("#paperList").html(plHtml);
+			$("#onlineList").html(olHtml);
+			$("#paperCount").text(paperList.length);
+			$("#onlineCount").text(onlineList.length);
+			resolve(olHtml);
+		});
+	}) 
+}
+function findOneQuestion(){
+	let url = "dr/littleDoctorQuestion/findOneById/" + qid; 
+	return new Promise((resolve,reject)=>{
+		getRequest(url).then((data)=>{
+			let dateText = (data.year-1911) + '年度第' + data.week + '週'; 
+			let titleText = dateText+ ' 小博士信箱 答對名單';
+			let dateEndText = '答對點數由電腦自行累積點數，請於';
+			dateEndText	+= toChiDate(new Date(data.date_end));
+			dateEndText	+= '起一年內至櫃檯兌換';
+			
+			$(".date").text(dateText);
+			$('#date-end').text(dateEndText);
+			$("title").text(titleText);
+			resolve(dateEndText);
+		});
+	}) 
+		
+}
+function makeTr(data){
+	let html = '';
+	let i = 0;
+	for(let d of data){
+		let name = d.split(' | ')[0];
+		let id = d.split(' | ')[1];
+		if(i%3 === 0){
+			html += '<tr>';			
+		}
+		html += '<td>'+ name + '<br/>' + id + '</td>';
+		if(i%3 === 2){
+			html += '</tr>';			
+		}
+		i++;
+	}
+	return html;
+}
+
+$(document).ready(()=>{
+	Promise.all([findOneQuestion(),findCorrectList()]).then(()=>{
+		window.print();
+	});
+})
+
+</script>
+
+</body>
+</html>
+

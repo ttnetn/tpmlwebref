@@ -1,0 +1,311 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>小博士信箱 本月問題</title>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.winner {
+	border-collapse:collapse;
+	border:0;
+}
+img {
+	border:0;
+	vertical-align:top;
+	display:block;
+}
+table  {
+	border-collapse:collapse;
+	border:0;
+}
+table td {
+	vertical-align:top;
+	border-collapse:collapse;
+	font-size:30px;
+}
+.date {
+	font-weight:bold;
+	font-size:15px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	text-align:center;
+	margin:0 0 0 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+p {
+	font-size:16px;
+	padding:0 0 0 0;
+	line-height:24px;
+	letter-spacing:1px;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+.list {
+  margin: 10px 35px;
+}
+.list td {
+	letter-spacing:1px;
+	font-weight:bold;
+	font-size:16px;
+	line-height:21px;
+	padding:5px 5px;
+}
+.number {
+	font-weight:bold;
+	font-size:18px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	padding:1px 0 0 0 ;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.number2 {
+	font-weight:bold;
+	font-size:18px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	padding:1px 0 0 0 ;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.orange1, .orange2 {
+      background:#f47e06;
+  }
+
+@media print {            
+  body{
+	  -webkit-print-color-adjust:exact !important;
+	  print-color-adjust:exact !important;
+  }
+  .orange { 
+      background-color:#f0cb55;} 
+  .pink {
+      background: url(pink.gif) no-repeat left top;
+  }
+  table {
+      border-collapse: separate;
+      background:#fff;
+  }
+  .white {
+      background:#fff !important;
+  }
+  .orange {
+      background:#f0cb55 !important;
+  }
+  .pink {
+      background:#f52fa4 !important;
+  }
+}
+
+
+</style>
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.winner {
+    border-collapse:collapse;
+	border:0;
+}
+img {
+    border:0;
+	vertical-align:top;
+	display:block;
+}
+table  {
+    border-collapse:collapse;
+	border:0;
+}
+table td {
+    vertical-align:top;
+	border-collapse:collapse;
+}
+.date {
+    font-weight:bold;
+	font-size:15px;
+	color:#fff;
+	line-height:25px;
+	letter-spacing:1px;
+	display:block;
+	text-align:center;
+	margin:0 0 0 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.library {
+    font-weight:bold;
+	letter-spacing:1px;
+}
+p {
+    font-size:13px;
+	padding:0 0 0 0;
+	line-height:24px;
+	letter-spacing:1px;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+.list {
+    margin: 10px 35px;
+}
+.list td {
+    letter-spacing:1px;
+	font-weight:bold;
+	font-size:15px;
+	line-height:21px;
+	padding:5px 5px;
+}
+.number {
+    font-weight:bold;
+	font-size:18px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	padding:1px 0 0 0 ;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.number2 {
+    font-weight:bold;
+	font-size:18px;
+	color:#fff;
+	letter-spacing:1px;
+	display:block;
+	text-align:center;
+	padding:3px 0 0 0 ;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.orange {
+    background:#f47e06;
+}
+@media print         {            
+           
+.orange { 
+     background-color:#f47e06; } 
+.pink {
+     background: url(pink.gif) no-repeat left top;
+}       
+}
+.orange1 {    background:#f47e06;
+}
+.orange1 {     background-color:#f47e06; }
+.question {    line-height:36px;font-size:19pt;letter-spacing:1px;
+}
+-->
+
+
+<script>
+    const CONTEXT_PATH = "/sysadm";
+    const API_URL = "http://10.10.4.84:8082/TaipeiLibAdmin/";
+
+    function getAccessToken(){
+        return 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzeXN0ZW0iLCJhdWQiOiJ3ZWIiLCJpcCI6IjE3Mi4xNi4yLjE0MSIsImV4cCI6MTY3NzkxOTMyMiwiaWF0IjoxNjc3ODMyOTIyfQ.Xs4zYwZQbEYpwdCjWQJ1gXmkUuZfYn4bk29UE_xX7UwjJrEkG1F4cRCVj1-nhG1DC5-ebBy_vc4EKFFkm3Mx-Q'
+    }
+    function getUserId(){
+        return 'system';
+    }
+    function getUserName(){
+        return '系統管理者';
+    }
+    function getDeptId(){
+        return '0';
+    }
+    function getDeptName(){
+        return '北市圖 ';
+    }
+</script>
+<!-- JS-->
+<script src="/sysadm/js/jquery-3.5.0.min.js"></script>
+<script src="/sysadm/js/jquery-ui.min.js"></script>
+<script src="/sysadm/vendor/jquery.easing.min.js"></script>
+<!-- hgweb customize js -->
+<script src="/sysadm/js/customize.js"></script>
+<!-- highlight -->
+<script src="/sysadm/vendor/highlight/highlight.pack.js"></script>
+<!-- fancybox -->
+<script src="/sysadm/vendor/fancybox/jquery.fancybox.min.js"></script>
+<!-- tree view -->
+<script src="/sysadm/vendor/treeview/jquery.treeview.js"></script>
+
+<!-- apiRequest -->
+<script src="/sysadm/js/common/apiRequest.js"></script>
+<script src="/sysadm/js/common/common.js"></script>
+
+<!-- kenshi customize js -->
+<script src="/sysadm/js/common/customize.js"></script>
+<link href="/sysadm/images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+	<table width="595" border="0" align="center" cellpadding="0" cellspacing="0" class="winner" height="100%">
+		<tbody><tr>
+		  <td width="30"><img src="images/question01.gif"></td>
+		</tr>
+		<tr>
+		  <td><table width="595" border="0" cellpadding="0" cellspacing="0" class="winner">
+			<tbody><tr>
+			  <td width="39"><img src="images/answer02.gif"></td>
+			  <td width="257" bgcolor="#be2000"><span class="date">111年第1週題目</span></td>
+			  <td width="126"><img src="images/answer03.gif"></td>
+			  <td bgcolor="#f0cb55"><span class="library">
+			  
+			  </span></td>
+			</tr>
+		  </tbody></table></td>
+		</tr>
+		<tr>
+		  <td><img src="images/answer04.gif"></td>
+		</tr>
+		<tr>
+		  <td><table border="0" cellpadding="0" cellspacing="0" class="winner">
+			<tbody><tr>
+			 <td width="30" bgcolor="#f0cb55"></td>
+			   <td width="538" height="600" class="question">【配合金鼎獎書展】請參考書展圖書《鄭和下西洋的祕密》：在歐洲大航海時代，對船員們來說，比狂風暴雨更可怕的是什麼？鄭和船隊因為有了什麼東西，所以避免了這個問題？<br><br>點數1點</td>
+			  <td width="27" bgcolor="#f0cb55"></td>
+			</tr>
+		  </tbody></table></td>
+		</tr>
+		
+		<tr>
+		  <td><img src="images/question.gif"></td>
+		</tr>
+	  </tbody></table>
+<script>
+
+	let qid = '39074';
+
+	function findOneQuestion(){
+		let url = "dr/littleDoctorQuestion/findOneById/" + qid; 
+		return new Promise((resolve,reject)=>{
+			getRequest(url).then((data)=>{
+				let questionHtml = data.question;
+				questionHtml += '<br><br>點數' + data.point + '點';
+				let dateText = (data.year -1911) + '年第' + data.week +'週' + '題目';
+				let titleText = dateText+ ' 小博士信箱 本週題目';
+
+				$(".question").html(questionHtml);
+				$(".date").text(dateText);
+				$("title").text(titleText);
+				resolve(data);
+			});
+		}) 
+			
+	}
+	$(document).ready(()=>{
+		findOneQuestion().then(()=>{
+			window.print();
+		});
+	})
+</script>
+</body>
+</html>
