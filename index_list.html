@@ -19,12 +19,13 @@
             font-size: 100%;
             line-height: 1em;
         }
+
         body {
             font-size: 1em;
             font-weight: normal;
             color: #222;
             line-height: 1.45em;
-            font-family: Lato,"PingFang TC","Helvetica Neue",Helvetica,微軟正黑體,Arial,sans-serif;
+            font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
             -webkit-text-size-adjust: none;
             counter-reset: num;
         }
@@ -37,6 +38,7 @@
             background: #FFF;
             border-radius: 0.5em;
         }
+
         .demo_wrap h1 {
             display: block;
             margin: 0px auto;
@@ -45,6 +47,7 @@
             margin-right: 1em;
             margin-bottom: 1em;
         }
+
         @media screen and (max-width:545px) {
             .demo_wrap h1 {
                 max-width: 100%;
@@ -52,10 +55,23 @@
                 text-align: center
             }
         }
-        .demo_wrap h1 img { width: 260px }
-        .num { width: 12% }
-        body { counter-reset: num }
-        table { margin-bottom: 1em }
+
+        .demo_wrap h1 img {
+            width: 260px
+        }
+
+        .num {
+            width: 12%
+        }
+
+        body {
+            counter-reset: num
+        }
+
+        table {
+            margin-bottom: 1em
+        }
+
         table caption {
             text-align: left;
             font-weight: bold;
@@ -63,29 +79,41 @@
             padding: .5em 0;
             color: #ff5050
         }
+
         tbody tr td:first-child:before {
             counter-increment: num;
             display: block;
             text-align: center;
             content: counters(num, ".") " "
         }
-        tbody tr td:nth-child(2) { width: 20% }
-        .btn_grp{ text-align: right; }
+
+        tbody tr td:nth-child(2) {
+            width: 20%
+        }
+
+        .btn_grp {
+            text-align: right;
+        }
 
         @media screen and (max-width:545px) {
-           .btn_grp{ text-align: center; }
+            .btn_grp {
+                text-align: center;
+            }
         }
     </style>
 </head>
+
 <body>
     <script>
         var date = document.lastModified;
-        document.write("Last Modified: "+date);
+        document.write("Last Modified: " + date);
     </script>
 
     <div class="demo_wrap">
-        <h1><img src="images/W_logo.png" alt="W CMS Lite" style="max-height:50px;width:auto;vertical-align:middle;margin-right:10px;">
-            <a href="index_list.html">W CMS管理端</a></h1>
+        <h1><img src="images/W_logo.png" alt="W CMS Lite"
+                style="max-height:50px;width:auto;vertical-align:middle;margin-right:10px;">
+            <a href="index_list.html">W CMS管理端</a>
+        </h1>
         <div class="btn_grp" style="float:right;">
             <span id="current_time"></span>
             <a href="https://github.com/LiuCC910/CMS_UI" class="btn">切版檔案更新請按此下載</a>
@@ -93,7 +121,7 @@
         <hr style="clear:both">
         <div class="table_wrapper">
             <table>
-              <caption>整合版本</caption>
+                <caption>整合版本</caption>
                 <thead>
                     <tr>
                         <th class="num">編號</th>
@@ -111,9 +139,11 @@
                                 <li>TICC：<a href="login_ticc.htm" target="_blank"></a></li>
                                 <li>ILOSH：<a href="login_ilosh.htm" target="_blank"></a></li>
                             </ul>
-                            
+
                             <font style="color:red;">替換登入頁和Aside logo圖</font>
-                            <p><li>勞安所用左欄功能選單：<a href="aside_ilosh.htm" target="_blank"></a></li></p>
+                            <p>
+                                <li>勞安所用左欄功能選單：<a href="aside_ilosh.htm" target="_blank"></a></li>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -124,7 +154,7 @@
                                 <li>忘記密碼申請重設：<a href="ilosh_fgPassword.htm" target="_blank"></a></li>
                                 <li>變更定期重設密碼：<a href="ilosh_resetPassword.htm" target="_blank"></a></li>
                             </ul>
-                            <font style="color:red;">增加 link rel="stylesheet" href="css/customize.css"</font>  
+                            <font style="color:red;">增加 link rel="stylesheet" href="css/customize.css"</font>
                         </td>
                     </tr>
                     <tr>
@@ -165,7 +195,8 @@
                         <td>
                             <ul>
                                 <li>使用者清單 <a href="userList.htm" target="_blank"></a><br>
-                                    <font style="color:red;">*4/28: 搜尋條件「權限群組」層級放錯</font></li>
+                                    <font style="color:red;">*4/28: 搜尋條件「權限群組」層級放錯</font>
+                                </li>
                                 <li>使用者編輯/新增 <a href="userEdit.htm" target="_blank"></a></li>
                             </ul>
                         </td>
@@ -218,17 +249,24 @@
                         <td>
                             <ul>
                                 <li>快速上稿 <a href="data_list_noTree.htm" target="_blank"></a><br>
-                                    <font style="color:red;">*4/28: 修正處理 Animated Labels for date/datetime-local 會卡在一起的效果</font></li>
+                                    <font style="color:red;">*4/28: 修正處理 Animated Labels for date/datetime-local
+                                        會卡在一起的效果</font>
+                                </li>
                                 <li>單元上稿 <a href="data_list.htm" target="_blank"></a></li>
                                 <li>新增/編修資料 <a href="data_new_update.htm" target="_blank"></a><br>
-                                    <font style="color:red;">*4/28: (1)修正處理 Animated Labels for date/datetime-local 會卡在一起的效果；(2)圖檔/檔案上傳區塊的註解文字，需同時更新 fileUpload.css</font></li>
+                                    <font style="color:red;">*4/28: (1)修正處理 Animated Labels for date/datetime-local
+                                        會卡在一起的效果；(2)圖檔/檔案上傳區塊的註解文字，需同時更新 fileUpload.css</font>
+                                </li>
                                 <li>檔案上傳中遮罩 <a href="data_new_uploading.htm" target="_blank"></a></li>
                             </ul>
                             <p>測試更新TinyMCE版本：<a href="https://www.tiny.cloud/docs-4x/quick-start/"></a></p>
                             <ul>
                                 <li>Html editor測試(1) <a href="data_new_htmleditor.htm" target="_blank"></a></li>
                                 <li>Html editor測試(2) <a href="data_new_htmleditorv4.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(Nathan版)</font>Html editor範例 <a href="data_new_htmleditorv4_test.htm" target="_blank"></a></li>
+                                <li>
+                                    <font style="color:red;">(Nathan版)</font>Html editor範例 <a
+                                        href="data_new_htmleditorv4_test.htm" target="_blank"></a>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -252,7 +290,7 @@
 
         <div class="table_wrapper">
             <table>
-              <caption>TICC 客製化功能</caption>
+                <caption>TICC 客製化功能</caption>
                 <thead>
                     <tr>
                         <th class="num">編號</th>
@@ -266,10 +304,23 @@
                         <td>AP功能：空間管理</td>
                         <td>
                             <ul>
-                                <li><font style="color:red;">(8/8更新)</font>1-1.場地清單 <a href="space_list.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(8/8更新)</font>1-2.新增/編修場地 <a href="data_spaceedit.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(8/9更新)</font>1-3.租用費用管理：依檔期管理 <a href="schedulerentEdit.htm" target="_blank"></a><!--｜[備用]依時段管理 <a href="spacerentEdit.htm" target="_blank"></a--></li>
-                                <li><font style="color:red;">(8/9更新)</font>1-4.設備管理 <a href="equipment_list.htm" target="_blank"></a> / <a href="equipmentEdit.htm" target="_blank"></a></li>
+                                <li>
+                                    <font style="color:red;">(8/8更新)</font>1-1.場地清單 <a href="space_list.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(8/8更新)</font>1-2.新增/編修場地 <a href="data_spaceedit.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(8/9更新)</font>1-3.租用費用管理：依檔期管理 <a
+                                        href="schedulerentEdit.htm"
+                                        target="_blank"></a><!--｜[備用]依時段管理 <a href="spacerentEdit.htm" target="_blank"></a-->
+                                </li>
+                                <li>
+                                    <font style="color:red;">(8/9更新)</font>1-4.設備管理 <a href="equipment_list.htm"
+                                        target="_blank"></a> / <a href="equipmentEdit.htm" target="_blank"></a>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -280,19 +331,37 @@
                             <ul>
                                 <li>版本一：
                                     <ol>
-                                        <li><font style="color:red;">(8/15更新)</font>2-1.預約清單 <a href="reservationList.htm" target="_blank"></a></li>
-                                        <li><font style="color:red;">(8/15更新)</font>2-2.預約聯繫與管理 <a href="reservationEdit.htm" target="_blank"></a></li>
+                                        <li>
+                                            <font style="color:red;">(8/15更新)</font>2-1.預約清單 <a
+                                                href="reservationList.htm" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <font style="color:red;">(8/15更新)</font>2-2.預約聯繫與管理 <a
+                                                href="reservationEdit.htm" target="_blank"></a>
+                                        </li>
                                     </ol>
                                 </li>
                                 <li>版本二：
                                     <ol>
-                                        <li><font style="color:red;">(8/19更新)</font>2-3.預約清單 <a href="reservationList_update.htm" target="_blank"></a></li>
-                                        <li><font style="color:red;">(8/19更新)</font>2-4.預約管理 <a href="reservationEdit_update.htm" target="_blank"></a></li>
-                                        <li><font style="color:red;">(8/23更新)</font>2-5.(預約)聯絡紀錄 <a href="reservationEdit_activity.htm" target="_blank"></a></li>
-                                        <li><font style="color:red;">(8/23更新)</font>2-4.(預約)活動資料 <a href="reservationEdit_contact.htm" target="_blank"></a></li>
+                                        <li>
+                                            <font style="color:red;">(8/19更新)</font>2-3.預約清單 <a
+                                                href="reservationList_update.htm" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <font style="color:red;">(8/19更新)</font>2-4.預約管理 <a
+                                                href="reservationEdit_update.htm" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <font style="color:red;">(8/23更新)</font>2-5.(預約)聯絡紀錄 <a
+                                                href="reservationEdit_activity.htm" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <font style="color:red;">(8/23更新)</font>2-4.(預約)活動資料 <a
+                                                href="reservationEdit_contact.htm" target="_blank"></a>
+                                        </li>
                                     </ol>
                                 </li>
-                                
+
                             </ul>
                         </td>
                     </tr>
@@ -301,8 +370,14 @@
                         <td>AP功能：聯絡我們管理</td>
                         <td>
                             <ul>
-                                <li><font style="color:red;">(8/16更新)</font>3-1.聯絡紀錄 <a href="contactList.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(8/16更新)</font>3-2.回覆與管理 <a href="contactEdit.htm" target="_blank"></a></li>
+                                <li>
+                                    <font style="color:red;">(8/16更新)</font>3-1.聯絡紀錄 <a href="contactList.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(8/16更新)</font>3-2.回覆與管理 <a href="contactEdit.htm"
+                                        target="_blank"></a>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -313,7 +388,7 @@
         <a name="ilosh" id="ilosh"></a>
         <div class="table_wrapper">
             <table>
-              <caption>勞安所 客製化功能</caption>
+                <caption>勞安所 客製化功能</caption>
                 <thead>
                     <tr>
                         <th class="num">編號</th>
@@ -326,7 +401,8 @@
                         <td></td>
                         <td>網站管理</td>
                         <td>
-                            <p style="color:red;">註：設計師有更新 Menu 行動展開部分，需更新JS及CSS <a href="supercms_updateMENU.zip" target="_blank"></a></p>
+                            <p style="color:red;">註：設計師有更新 Menu 行動展開部分，需更新JS及CSS <a href="supercms_updateMENU.zip"
+                                    target="_blank"></a></p>
                             <ul>
                                 <li>網站清單 <a href="ilosh_site_list.htm" target="_blank"></a></li>
                                 <li>網站設定 <a href="ilosh_siteEdit.htm" target="_blank"></a></li>
@@ -338,9 +414,15 @@
                         <td>AP功能：VDI - 1.場地空間管理:地點/電腦/分析區開放時間</td>
                         <td>
                             <ul>
-                                <li><font style="color:red;">(調整版面)</font> 1-1.場地/設備管理清單 <a href="ilosh_space_list.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(調整)</font> 1-2.新增編修場地/座位/開放時間設定 <a href="ilosh_spaceedit.htm" target="_blank"></a><br>
-                                    彈出視窗(Lightbox)：座位設定 <a href="fancybox_seatedit.htm" target="_blank"></a></li>
+                                <li>
+                                    <font style="color:red;">(調整版面)</font> 1-1.場地/設備管理清單 <a href="ilosh_space_list.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(調整)</font> 1-2.新增編修場地/座位/開放時間設定 <a
+                                        href="ilosh_spaceedit.htm" target="_blank"></a><br>
+                                    彈出視窗(Lightbox)：座位設定 <a href="fancybox_seatedit.htm" target="_blank"></a>
+                                </li>
                             </ul>
                         </td>
                     </tr>
@@ -349,25 +431,51 @@
                         <td>AP功能：VDI - 2.預約名單 / 會員帳號 / 虛擬主機 / 申請案件管理</td>
                         <td>
                             <ul>
-                                <li><font style="color:red;">(調整欄位、增加友善列印)</font> 2-1.預約清單 <a href="ilosh_reservationList.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(調整版面)</font> 2-2.預約管理 <a href="ilosh_reservationEdit.htm" target="_blank"></a></li>
+                                <li>
+                                    <font style="color:red;">(調整欄位、增加友善列印)</font> 2-1.預約清單 <a
+                                        href="ilosh_reservationList.htm" target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(調整版面)</font> 2-2.預約管理 <a href="ilosh_reservationEdit.htm"
+                                        target="_blank"></a>
+                                </li>
                             </ul>
                             <p>10/28 註：處理條列頁友善列印與版面共用，需更新 customize.css和fileUpload.css</p>
                             <ul>
-                                <li><font style="color:red;">(調整版面)</font> 2-3.案件清單 <a href="ilosh_planapplyList.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(調整版面)</font> 2-4.案件管理 <a href="ilosh_planapplyEdit.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(調整版面)</font> 2-5.虛擬主機清單 <a href="ilosh_vdiList.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(調整版面、增加欄位)</font> 2-6.虛擬主機管理 <a href="ilosh_vdiEdit.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(調整版面、篩選)</font> 2-7.會員清單 <a href="ilosh_memberList.htm" target="_blank"></a></li>
-                                <li><font style="color:red;">(調整版面、輸入樣式)</font> 2-8.會員管理 <a href="ilosh_memberEdit.htm" target="_blank"></a></li>
+                                <li>
+                                    <font style="color:red;">(調整版面)</font> 2-3.案件清單 <a href="ilosh_planapplyList.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(調整版面)</font> 2-4.案件管理 <a href="ilosh_planapplyEdit.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(調整版面)</font> 2-5.虛擬主機清單 <a href="ilosh_vdiList.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(調整版面、增加欄位)</font> 2-6.虛擬主機管理 <a href="ilosh_vdiEdit.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(調整版面、篩選)</font> 2-7.會員清單 <a href="ilosh_memberList.htm"
+                                        target="_blank"></a>
+                                </li>
+                                <li>
+                                    <font style="color:red;">(調整版面、輸入樣式)</font> 2-8.會員管理 <a href="ilosh_memberEdit.htm"
+                                        target="_blank"></a>
+                                </li>
                             </ul>
 
                         </td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font style="color:red;">(客製化新增)</font>
-                            AP功能：VDI - 3.VDI報表模組</td>
+                        <td>
+                            <font style="color:red;">(客製化新增)</font>
+                            AP功能：VDI - 3.VDI報表模組
+                        </td>
                         <td>
                             <ul>
                                 <li>3-1.VDI統計 <a href="ilosh_vdiStat.htm" target="_blank"></a></li>
@@ -376,21 +484,26 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font style="color:red;">(客製化新增)</font> 
-                            AP功能：採購網 - 4.標案管理(編輯案件、變更歷程紀錄)</td>
+                        <td>
+                            <font style="color:red;">(客製化新增)</font>
+                            AP功能：採購網 - 4.標案管理(編輯案件、變更歷程紀錄)
+                        </td>
                         <td>
                             <ul>
                                 <li>4-1.標案清單 <a href="ilosh_projectList.htm" target="_blank"></a></li>
                                 <li>4-2.標案新增 <a href="ilosh_projectNew.htm" target="_blank"></a></li>
                                 <li>4-3.標案新增/編修 <a href="ilosh_projectEdit.htm" target="_blank"></a><br>
-                                    彈出視窗(Lightbox)：歷程欄位記錄 <a href="fancybox_projecthistory.htm" target="_blank"></a></li>
+                                    彈出視窗(Lightbox)：歷程欄位記錄 <a href="fancybox_projecthistory.htm" target="_blank"></a>
+                                </li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font style="color:red;">(客製化新增)</font> 
-                            AP功能：採購網 - 5.報表模組</td>
+                        <td>
+                            <font style="color:red;">(客製化新增)</font>
+                            AP功能：採購網 - 5.報表模組
+                        </td>
                         <td>
                             <ul>
                                 <li>5-1.標案統計 <a href="ilosh_projectStat.htm" target="_blank"></a></li>
@@ -399,22 +512,28 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font style="color:red;">(客製化新增)</font> 
-                            AP功能：研究網 - 6.成果批次上稿(匯入/附件批次上傳)</td>
+                        <td>
+                            <font style="color:red;">(客製化新增)</font>
+                            AP功能：研究網 - 6.成果批次上稿(匯入/附件批次上傳)
+                        </td>
                         <td>
                             <ul>
                                 <li>6-1-1.成果清單(條列) <a href="ilosh_researchList.htm" target="_blank"></a></li>
                                 <li>6-1-2.成果單筆編輯 <a href="ilosh_researchNew.htm" target="_blank"></a><br>
-                                    彈出視窗(Lightbox)：歷程欄位記錄 <a href="fancybox_researchchapter.htm" target="_blank"></a></li>
+                                    彈出視窗(Lightbox)：歷程欄位記錄 <a href="fancybox_researchchapter.htm" target="_blank"></a>
+                                </li>
                                 <li>6-2.匯入紀錄 <a href="ilosh_researchImportrecord.htm" target="_blank"></a></li>
-                                <li>6-3.匯入 <a href="ilosh_researchImport.htm" target="_blank"></a>｜鎖定 <a href="ilosh_researchImport-uploading.htm" target="_blank"></a></li>
+                                <li>6-3.匯入 <a href="ilosh_researchImport.htm" target="_blank"></a>｜鎖定 <a
+                                        href="ilosh_researchImport-uploading.htm" target="_blank"></a></li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font style="color:red;">(客製化新增)</font>
-                            AP功能：研究網 - 7.報表模組</td>
+                        <td>
+                            <font style="color:red;">(客製化新增)</font>
+                            AP功能：研究網 - 7.報表模組
+                        </td>
                         <td>
                             <ul>
                                 <li>7-1.成果統計 <a href="ilosh_researchStat.htm" target="_blank"></a></li>
@@ -451,7 +570,7 @@
         <a name="tpml" id="tpml"></a>
         <div class="table_wrapper">
             <table>
-              <caption>北市圖 客製化功能</caption>
+                <caption>北市圖 客製化功能</caption>
                 <thead>
                     <tr>
                         <th class="num">編號</th>
@@ -489,13 +608,20 @@
                         <td>
                             <ul>
                                 <li>小博士問答條列清單 <a href="sysQA_list.htm" target="_blank"></a></li>
-                                <li>問答管理－新增 <a href="sysQA_add.htm" target="_blank"></a>｜編修 <a href="sysQA_edit.htm" target="_blank"></a></li>
-                                <li>答案審核－答題列表 <a href="sysQA_answerList.htm" target="_blank"></a>｜讀者答題審核 <a href="sysQA_userinfo.htm" target="_blank"></a></li>
-                                <li><span style="color:red;">** 調整版面：紙本答題紀錄</span> <a href="sysQA_answerAdd.htm" target="_blank"></a></li>
-                                <li><span style="color:red;">** 增加過期/即將過期點數</span> <a href="sysQA_pointList.htm" target="_blank"></a></li>
-                                <li><span style="color:red;">** 補</span> <a href="sysQA_pointLogList.htm" target="_blank"></a></li>
-                                <li><span style="color:red;">** 新增取消兌換效果</span> <a href="sysQA_pointUseList.htm" target="_blank"></a></li>
-                                <li><span style="color:red;">** 新增臨櫃兌換頁</span> <a href="sysQA_pointUseAdd.htm" target="_blank"></a></li>
+                                <li>問答管理－新增 <a href="sysQA_add.htm" target="_blank"></a>｜編修 <a href="sysQA_edit.htm"
+                                        target="_blank"></a></li>
+                                <li>答案審核－答題列表 <a href="sysQA_answerList.htm" target="_blank"></a>｜讀者答題審核 <a
+                                        href="sysQA_userinfo.htm" target="_blank"></a></li>
+                                <li><span style="color:red;">** 調整版面：紙本答題紀錄</span> <a href="sysQA_answerAdd.htm"
+                                        target="_blank"></a></li>
+                                <li><span style="color:red;">** 增加過期/即將過期點數</span> <a href="sysQA_pointList.htm"
+                                        target="_blank"></a></li>
+                                <li><span style="color:red;">** 補</span> <a href="sysQA_pointLogList.htm"
+                                        target="_blank"></a></li>
+                                <li><span style="color:red;">** 新增取消兌換效果</span> <a href="sysQA_pointUseList.htm"
+                                        target="_blank"></a></li>
+                                <li><span style="color:red;">** 新增臨櫃兌換頁</span> <a href="sysQA_pointUseAdd.htm"
+                                        target="_blank"></a></li>
                             </ul>
                         </td>
                     </tr>
@@ -509,7 +635,8 @@
                                 <li>會員清單 <a href="tpmlblind_memberlist.htm" target="_blank"></a></li>
                                 <li>會員編輯 <a href="tpmlblind_memberEdit.htm" target="_blank"></a></li>
                                 <li>留言清單 <a href="tpmlblind_messagelist.htm" target="_blank"></a></li>
-                                <li>留言編輯 <a href="tpmlblind_messageEdit.htm" target="_blank"></a>｜預覽留言 <a href="fancybox_messagePreview.htm" target="_blank"></a></li>
+                                <li>留言編輯 <a href="tpmlblind_messageEdit.htm" target="_blank"></a>｜預覽留言 <a
+                                        href="fancybox_messagePreview.htm" target="_blank"></a></li>
                             </ul>
                         </td>
                     </tr>
@@ -520,9 +647,12 @@
                             <ul>
                                 <li>問答清單 <a href="tpmlblind_drlist.htm" target="_blank"></a></li>
                                 <li>問答新增／編修 <a href="tpmlblind_drEdit.htm" target="_blank"></a></li>
-                                <li>審核答題清單 <a href="tpmlblind_drAnswerlist.htm" target="_blank"></a>｜審核答題 <a href="tpmlblind_drAnsweredit.htm" target="_blank"></a></li>
+                                <li>審核答題清單 <a href="tpmlblind_drAnswerlist.htm" target="_blank"></a>｜審核答題 <a
+                                        href="tpmlblind_drAnsweredit.htm" target="_blank"></a></li>
                                 <li>補單(紙本答題輸入) <a href="tpmlblind_drAnsweradd.htm" target="_blank"></a></li>
-                                <li>答題(使用者)清單 <a href="tpmlblind_drUserranklist.htm" target="_blank"></a>｜<a href="tpmlblind_drUserlist.htm" target="_blank"></a>｜<a href="tpmlblind_drAnswerview.htm" target="_blank"></a></li>
+                                <li>答題(使用者)清單 <a href="tpmlblind_drUserranklist.htm" target="_blank"></a>｜<a
+                                        href="tpmlblind_drUserlist.htm" target="_blank"></a>｜<a
+                                        href="tpmlblind_drAnswerview.htm" target="_blank"></a></li>
                             </ul>
                         </td>
                     </tr>
@@ -532,44 +662,74 @@
                         <td>
                             導盲磚範例頁面 <a href="tpmlblind_data_list.htm" target="_blank"></a>
                             <ol>
-                                <li>(共用區)header內 的 div class="container" 下方 加上 
+                                <li>(共用區)header內 的 div class="container" 下方 加上
                                     <a href="#aU" id="aU" accesskey="U" title="上方功能區塊" tabindex="2">:::</a>
                                 </li>
-                                <li>(共用區)aside內 的 h1 下方 加上 
+                                <li>(共用區)aside內 的 h1 下方 加上
                                     <a href="#aL" id="aL" title="左方導覽區塊" accesskey="L" tabindex="1">:::</a>
                                 </li>
-                                <li>div class="wrapper" 內 的 div class="content" 下方 加上 
+                                <li>div class="wrapper" 內 的 div class="content" 下方 加上
                                     <a href="#aC" id="aC" accesskey="C" title="中央內容區塊" tabindex="3">:::</a>
                                 </li>
-                                <li>主content 區若有切左右區塊，左邊的 div class="col" 下方 加 
+                                <li>主content 區若有切左右區塊，左邊的 div class="col" 下方 加
                                     <a href="#aM" id="aM" accesskey="M" title="目錄樹選單區塊">:::</a>
                                 </li>
-                                <li>右邊的 div class="content_block" 下方 加 
+                                <li>右邊的 div class="content_block" 下方 加
                                     <a href="#aR" id="aR" accesskey="R" title="資料內容區塊">:::</a>
                                 </li>
                             </ol>
                             <p>功能頁面：資料管理／資料上稿；客製化管理／視障會員、留言板、博士通問答、博士通答題</p>
                         </td>
                     </tr>
-
+                    <tr>
+                        <td></td>
+                        <td>(服務案)讀者問題回覆管理</td>
+                        <td>
+                            <ul>
+                                <li>讀者問題回覆管理 <a href="tpmlwebref_questionsearch.htm" target="_blank"></a></li>
+                                <li>轉介/審核維護管理 <a href="tpmlwebref_referralsedit.htm" target="_blank"></a></li>
+                            </ul>
+                            <p>功能頁面：客製化管理陳核、轉介信件、寄信給讀者</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>客服留言清單</td>
+                        <td>
+                            <ul>
+                                <li>客服留言清單 <a href="tpmlwebref_chat.htm" target="_blank"></a></li>
+                            </ul>
+                            <p>功能頁面：客製化留言清單</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>服務參考統計</td>
+                        <td>
+                            <ul>
+                                <li>服務參考統計 <a href="tpmlwebref_statistics.htm" target="_blank"></a></li>
+                            </ul>
+                            <p>功能頁面：數字統計頁面</p>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
 
     </div>
-    <a href="javascript:;" class="scrollToTop" >回頁首</a>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="vendor/jquery.easing.min.js"></script>
     <!--script src="js/hyui.js"></script>
     <script src="js/customize.js"></script-->
     <script>
-    $(function() {
-        $('tbody').find('a').each(function(index, el) {
-            var Link = $(this).attr('href');
-            $(this).text(Link);
-        });
-    })
+        $(function () {
+            $('tbody').find('a').each(function (index, el) {
+                var Link = $(this).attr('href');
+                $(this).text(Link);
+            });
+        })
     </script>
 </body>
 
