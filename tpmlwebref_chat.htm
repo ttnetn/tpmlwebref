@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon_tpml.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化功能</a></li>
+                    <li>客服管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>客服留言清單</h2>
+                        <button class="btn btn-primary btn-adv" title="點選展開或關閉搜尋區" aria-label="條件搜尋">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <select name="search_branch" id="search_branch" class="dynamicCol used">
+                                                <OPTION selected value=all>全部</OPTION>
+                                                <option value="2003">館藏查詢</option>
+                                                <option value="2003">開館與入館</option>
+                                                <option value="2004">借書與還書</option>
+                                                <option value="2004">學習與研究</option>
+                                                <option value="2004">其他類型</option>
+                                            </select>
+                                            <label>主分類</label>
+                                        </div>
+                                        <div class="labelEffect">
+                                            <select name="search_branch" id="search_branch" class="dynamicCol used">
+                                                <OPTION selected value=all>全部</OPTION>
+                                                <option value="1">館藏查詢系統及圖書預約問題</option>
+                                                <option value="2">開館日期及時間</option>
+                                                <option value="2">借還書規則</option>
+                                                <option value="2">圖書館講習</option>
+                                                <option value="2">輸入其他類型</option>
+                                            </select>
+                                            <label>次分類</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <input name="search_userid" id="search_userid" type="text" value="">
+                                            <label>請輸入常問問題關鍵字</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <select name="search_branch" id="search_branch" class="dynamicCol used">
+                                                <OPTION selected value=all>全部</OPTION>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                            </SELECT>
+                                            <label>留言年度</label>
+                                        </div>
+                                        <div class="labelEffect">
+                                            <select name="search_point" id="search_point" class="dynamicCol">
+                                                <option value="" disabled="disabled" selected></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="2">3</option>
+                                            </select>
+                                            <label>月份</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="btn_grp">
+                                        <button class="btn reset" title="重設輸入">取消</button>
+                                        <button class="btn btn-primary" title="確認查詢">確認</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>留言條列</h3>
+                                </div>
+                                <div class="_head">
+                                    <div class="tag">
+                                        回覆狀態：
+                                        <ul>
+                                            <li class="active"><a href=" #">全部</a></li>
+                                            <li><a href="#">已回覆</a></li>
+                                            <li><a href="#">提示回覆</a></li>
+                                        </ul>
+                                        ｜回覆方式：
+                                        <ul>
+                                            <li class="active"><a href="#">全部</a></li>
+                                            <li><a href="#">智能類別回覆</a></li>
+                                            <li><a href="#">請輸入更多資訊</a></li>
+                                            <li><a href="#">常見類別回覆</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--div class="control_panel">
+                                        <button class="btn btn-sm btn-red"><i class="i_check"></i>批次通過</button>
+                                        <button class="btn btn-sm btn-red"><i class="i_trash invert"></i>批次不通過</button>
+                                    </div-->
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <form action="" class="form_inline">
+                                            <div class="total">
+                                                共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                                                <select name="" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">30</option>
+                                                    <option value="">50</option>
+                                                    <option value="">100</option>
+                                                </select> 筆
+                                            </div>
+                                            <input type="button" value="條件切換" title="條件切換" class="btn btn-submit">
+                                        </form>
+                                    </div>
+                                    <div class="quick_btn">
+
+                                    </div>
+                                </div>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <!--th><input type="checkbox"></th-->
+                                                    <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                    <th><a href="#">留言日期<i class="i_sort"></i></a></th>
+                                                    <th>主分類</th>
+                                                    <th>次分類</th>
+                                                    <th>常問問題</th>
+                                                    <th>留言內容</th>
+                                                    <th>回覆狀態</th>
+                                                    <th>回覆方式</th>
+                                                    <th><a href="#">回覆天數<i class="i_sort"></i></a></th>
+                                                    <th><a href="#">回覆日期<i class="i_sort"></i></a></th>
+                                                    <th>檢視完整內容</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="num" data-title="序號">1</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td data-title="主分類">館藏查詢</td>
+                                                    <td data-title="次分類">館藏查詢系統及圖書預約問題</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="標題"><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">為何有收到「預約逾期未取取消通知」，卻沒有收到「預約書到館通知」？</a>
+                                                    </td>
+                                                    <td data-title="回覆狀態">已回覆</td>
+                                                    <td data-title="回覆方式">智能類別回覆</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 09:20</time></td>
+                                                    <td data-title="檢視">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_1.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num" data-title="序號">2</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td data-title="主分類">館藏查詢</td>
+                                                    <td data-title="次分類">讀者館藏查詢</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="標題"><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">我要查館藏</a>
+                                                    </td>
+                                                    <td data-title="回覆狀態">已回覆</td>
+                                                    <td data-title="回覆方式">智能類別回覆</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 09:20</time></td>
+                                                    <td data-title="檢視">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_1.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num" data-title="編號">3</td>
+                                                    <td data-title="留言日期"><time>2024/6/26 09:20</time></td>
+                                                    <td data-title="主分類">開館與入館</td>
+                                                    <td data-title="次分類">開館日期及時間</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="內容"><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">請問開館與入館時間？</a>
+                                                    </td>
+                                                    <td data-title="回覆狀態">已回覆</td>
+                                                    <td data-title="回覆方式">智能類別回覆</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/26 09:23</time></td>
+                                                    <td data-title="檢視">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_1.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num" data-title="編號">4</td>
+                                                    <td data-title="留言日期"><time>2024/6/26 09:20</time></td>
+                                                    <td data-title="主問題">借書與還書</td>
+                                                    <td data-title="次分類">借還書規則</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="內容"><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">如何借閱FastBook全自動借書站的圖書？在總館或分館借閱的圖書可以在FastBook全自動借書站歸還嗎？</a>
+                                                    </td>
+                                                    <td data-title="回覆狀態">已回覆</td>
+                                                    <td data-title="回覆方式">智能類別回覆</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/26 09:23</time></td>
+                                                    <td data-title="檢視">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_1.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num" data-title="編號">5</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td data-title="主分類">學習與研究</td>
+                                                    <td data-title="次分類">圖書館講習</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="標題"><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">
+                                                            請問臺北市立圖書館多元文化館藏發展及新移民圖書資訊服務之研究?</a></td>
+                                                    <td data-title="回覆狀態">已回覆</td>
+                                                    <td data-title="回覆方式">智能類別回覆</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 09:24</time></td>
+                                                    <td data-title="檢視">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_1.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <!--td><input type="checkbox"></td-->
+                                                    <td class="num" data-title="編號">6</td>
+                                                    <td data-title="留言日期"><time>2024/6/27 09:20</time></td>
+                                                    <td data-title="主分類">其他類型</td>
+                                                    <td data-title="次分類">輸入其他類型</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="內容"><a href="tpmlwebref_chatmessage_6.htm"
+                                                            title="留言資料">輸入123</a></td>
+                                                    <td data-title="回覆狀態">提示回覆</td>
+                                                    <td data-title="回覆方式">請輸入更多資訊</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/27 09:24</time></td>
+                                                    <td data-title="檢視完成內容">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_6.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <!--td><input type="checkbox"></td-->
+                                                    <td class="num" data-title="編號">7</td>
+                                                    <td data-title="留言日期"><time>2024/6/27 09:20</time></td>
+                                                    <td data-title="主分類">其他類型</td>
+                                                    <td data-title="次分類">輸入其他類型</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="內容"><a href="tpmlwebref_chatmessage_6.htm"
+                                                            title="留言資料">輸入政治問題</a></td>
+                                                    <td data-title="回覆狀態">提示回覆</td>
+                                                    <td data-title="回覆方式">請輸入更多資訊</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/27 09:24</time></td>
+                                                    <td data-title="檢視完成內容">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_6.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <!--td><input type="checkbox"></td-->
+                                                    <td class="num" data-title="編號">8</td>
+                                                    <td data-title="留言日期"><time>2024/6/27 09:20</time></td>
+                                                    <td data-title="主分類">其他類型</td>
+                                                    <td data-title="次分類">輸入其他類型</td>
+                                                    <td data-title="其他問題"></td>
+                                                    <td data-title="內容"><a href="tpmlwebref_chatmessage_6.htm"
+                                                            title="留言資料">輸入敏感問題</a></td>
+                                                    <td data-title="回覆狀態">提示回覆</td>
+                                                    <td data-title="回覆方式">請輸入更多資訊</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/27 09:24</time></td>
+                                                    <td data-title="檢視完成內容">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_6.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <!--td><input type="checkbox"></td-->
+                                                    <td class="num" data-title="編號">9</td>
+                                                    <td data-title="留言日期"><time>2024/6/27 09:20</time></td>
+                                                    <td data-title="主分類"></td>
+                                                    <td data-title="次分類"></td>
+                                                    <td data-title="其他問題">歷史</td>
+                                                    <td data-title="內容"><a href="tpmlwebref_chatmessage_9.htm"
+                                                            title="留言資料">圖書館的歷史</a></td>
+                                                    <td data-title="回覆狀態">已回覆</td>
+                                                    <td data-title="回覆方式">常見問題回覆</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/27 09:24</time></td>
+                                                    <td data-title="檢視完成內容">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_9.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                <tr>
+                                                    <!--td><input type="checkbox"></td-->
+                                                    <td class="num" data-title="編號">10</td>
+                                                    <td data-title="留言日期"><time>2024/6/27 09:20</time></td>
+                                                    <td data-title="主分類"></td>
+                                                    <td data-title="次分類"></td>
+                                                    <td data-title="其他問題">捐書</td>
+                                                    <td data-title="內容"><a href="tpmlwebref_chatmessage_9.htm"
+                                                            title="留言資料">我要捐書, 圖書館收那些主題 ?</a></td>
+                                                    <td data-title="回覆狀態">已回覆</td>
+                                                    <td data-title="回覆方式">常見問題回覆</td>
+                                                    <td data-title="回覆天數">1</td>
+                                                    <td data-title="回覆日期"><time>2024/6/27 09:24</time></td>
+                                                    <td data-title="檢視完成內容">
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_chatmessage_9.htm" class="btn"
+                                                                title="檢視"></i>檢視</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+        // first example
+        $('header').load("header.htm");
+        $('aside').load("aside_tpml.htm");
+    </script>
+</body>
+
+</html>
