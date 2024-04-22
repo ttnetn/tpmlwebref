@@ -1,0 +1,199 @@
+<div class="flex-12">
+    <div class="adv_search">
+        <div class="col">
+            <div class="content_block">
+                <div class="_head">
+                    <h3>一般查詢</h3>
+                    <input type="button" value="切換進階查詢" title="條件切換" class="btn btn-submit">
+                </div>
+                <div class="_content">
+                    <div class="flex-form flex-6-6">
+                        <div class="form_grp">
+                            <div class="labelEffect">
+                                <select id="" name="" class="dynamicCol used">
+                                    <option value="" disabled="disabled"></option>
+                                    <option value="1" selected>等於</option>
+                                    <option value="2">大於</option>
+                                    <option value="3">小於</option>
+                                </select>
+                                <label>回覆天數</label>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="labelEffect">
+                                <input name="search_name" id="search_name" type="text" value="">
+                                <label>天數</label>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="labelEffect">
+                                <select id="" name="">
+                                    <option value="" selected="" disabled="disabled"></option>
+                                    <optgroup label="熱門問題">
+                                        <option value="1">名稱1</option>
+                                        <option value="2">名稱2</option>
+                                    </optgroup>
+                                    <optgroup label="問題精萃">
+                                        <option value="3">名稱1</option>
+                                        <option value="4">名稱2</option>
+                                        <option value="4">名稱3</option>
+                                    </optgroup>
+                                </select>
+                                <label>問題主題類別</label>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="labelEffect">
+                                <input name="search_userid" id="search_userid" type="text" value="">
+                                <label>問題答案</label>
+                            </div>
+                        </div>
+                        <div class="form_grp datepick">
+                            <div class="startDate">
+                                <div class="labelEffect">
+                                    <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                    <input name="" type="text" value="" onfocus="(this.type='datetime-local')"
+                                        onblur="if(!this.value) this.type='text'">
+                                    <!--input name="" type="calendar" value="" class="calendar">
+                                    <button class="btn"><i class="i_calendar"></i></button-->
+                                    <label>回覆時間(起)</label>
+                                </div>
+                                <!-- <div class="help">說明文字</div> -->
+                            </div>
+                            <div class="endDate">
+                                <div class="labelEffect">
+                                    <input name="" type="text" value="" onfocus="(this.type='datetime-local')"
+                                        onblur="if(!this.value) this.type='text'">
+                                    <!--input name="" type="calendar" value="" class="calendar">
+                                    <button class="btn"><i class="i_calendar"></i></button-->
+                                    <label>回覆時間(迄)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_grp">
+                        <button class="btn reset">取消</button>
+                        <button class="btn btn-primary">確認</button>
+                    </div>
+                    <div class="_head">
+                        <h3>進階檢索</h3>
+                    </div>
+
+                    <div class="_content">
+                        <div class="flex-form flex-6-6">
+                            <div class="form_grp">
+                                <div class="labelEffect">
+                                    <select id="" name="">
+                                        <option value="" selected="" disabled="disabled"></option>
+                                        <option value="1" selected>提問時間</option>
+                                        <option value="2">回覆時間</option>
+                                        <option value="3">問題主題類別</option>
+                                        <option value="4">處理階段</option>
+                                        <option value="5">處理結果</option>
+                                        <option value="6">回覆方式</option>
+                                        <option value="7">回覆館別</option>
+                                        <option value="8">轉介單位</option>
+                                        <option value="9">讀者姓名</option>
+                                        <option value="10">電子郵件</option>
+                                        <option value="11">電話</option>
+                                        <option value="12">問題形式</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form_grp datepick">
+                                <div class="startDate">
+                                    <div class="labelEffect">
+                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')"
+                                            onblur="if(!this.value) this.type='text'">
+                                        <!--input name="" type="calendar" value="" class="calendar">
+                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                        <label>時間(起)</label>
+                                    </div>
+                                    <!-- <div class="help">說明文字</div> -->
+                                </div>
+                                <div class="endDate">
+                                    <div class="labelEffect">
+                                        <input name="" type="text" value="" onfocus="(this.type='datetime-local')"
+                                            onblur="if(!this.value) this.type='text'">
+                                        <!--input name="" type="calendar" value="" class="calendar">
+                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                        <label>時間(迄)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="form_grp form_inline">
+                                    <div class="labelEffect">
+                                        <select id="" name="">
+                                            <option value="" selected="" disabled="disabled">
+                                            </option>
+                                            <option value="1">not</option>
+                                            <option value="2">or</option>
+                                        </select>
+                                        <label>And</label>
+                                    </div>
+                                    <div class="labelEffect">
+                                        <select id="" name="">
+                                            <option value="" selected="" disabled="disabled">
+                                            </option>
+                                            <option value="2">問題主題類別</option>
+                                            <option value="3">處理階段</option>
+                                            <option value="4">處理結果</option>
+                                            <option value="5">回覆方式</option>
+                                            <option value="6">回覆館別</option>
+                                            <option value="7">轉介單位</option>
+                                            <option value="8">讀者姓名</option>
+                                            <option value="9">電子郵件</option>
+                                            <option value="10">電話</option>
+                                            <option value="11">問題形式</option>
+                                        </select>
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="labelEffect">
+                                        <input name="search_userid" id="search_userid" type="text" value="">
+                                        <label>請輸入關鍵字</label>
+                                    </div>
+                                </div>
+                                <div class="form_grp form_inline">
+                                    <div class="labelEffect">
+                                        <select id="" name="">
+                                            <option value="" selected="" disabled="disabled">
+                                            </option>
+                                            <option value="1">not</option>
+                                            <option value="2">or</option>
+                                        </select>
+                                        <label>And</label>
+                                    </div>
+                                    <div class="labelEffect">
+                                        <select id="" name="">
+                                            <option value="" selected="" disabled="disabled">
+                                            </option>
+                                            <option value="2">問題主題類別</option>
+                                            <option value="3">處理階段</option>
+                                            <option value="4">處理結果</option>
+                                            <option value="5">回覆方式</option>
+                                            <option value="6">回覆館別</option>
+                                            <option value="7">轉介單位</option>
+                                            <option value="8">讀者姓名</option>
+                                            <option value="9">電子郵件</option>
+                                            <option value="10">電話</option>
+                                            <option value="11">問題形式</option>
+                                        </select>
+                                        <label>問題描述</label>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="labelEffect">
+                                        <input name="search_userid" id="search_userid" type="text" value="">
+                                        <label>請輸入關鍵字</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>

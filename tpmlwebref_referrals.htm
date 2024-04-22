@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <link rel="stylesheet" href="css/customize.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>轉介維護</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>轉介/審核維護管理</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 搜尋區塊-->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="search_userid" id="search_userid" type="text" value="">
+                                                    <label>讀者問題描述 </label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <input name="search_name" id="search_name" type="text" value="">
+                                                    <label>轉介課室</label>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="" selected="" disabled="disabled">
+                                                        </option>
+                                                        <option value="1" selected>轉介時間</option>
+                                                        <option value="2">回覆時間</option>
+                                                        <option value="3">審核時間</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp datepick">
+                                                <div class="startDate">
+                                                    <div class="labelEffect">
+                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                        <input name="" type="text" value=""
+                                                            onfocus="(this.type='datet')"
+                                                            onblur="if(!this.value) this.type='text'">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>日期(起)</label>
+                                                    </div>
+                                                    <!-- <div class="help">說明文字</div> -->
+                                                </div>
+                                                <div class="endDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="text" value="" onfocus="(this.type='date')"
+                                                            onblur="if(!this.value) this.type='text'">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>日期(迄)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn_grp">
+                                            <button class="btn reset">取消</button>
+                                            <button class="btn btn-primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>條列維護</h3>
+                                </div>
+                                <div class="_head">
+                                    <div class="tag">
+                                        課室回覆狀態：
+                                        <ul>
+                                            <li class="active"><a href="#">全部</a></li>
+                                            <li><a href="#">已回覆</a></li>
+                                            <li><a href="#">尚未答覆</a></li>
+                                        </ul>
+                                        ｜審核狀態：
+                                        <ul>
+                                            <li class="active"><a href="#">審核通過</a></li>
+                                            <li><a href="#">審核不公過</a></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <form action="" class="form_inline">
+                                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select
+                                                    name="" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">30</option>
+                                                    <option value="">50</option>
+                                                    <option value="">100</option>
+                                                </select> 筆 </div>
+                                        </form>
+                                    </div>
+                                    <!--div class="quick_btn">
+                                        <button class="btn btn-orange" onclick="window.print()"><i class="i_check"></i>列印本頁資料</button>
+                                    </div-->
+                                </div>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>序號</th>
+                                                    <th>讀者問題描述</th>
+                                                    <th class="text-left">轉介時間</th>
+                                                    <th>轉介課室</th>
+                                                    <th class="text-left">課室回覆狀態</th>
+                                                    <th class="text-left">回覆時間</th>
+                                                    <th>審核人</th>
+                                                    <th class="text-left">審核狀態</th>
+                                                    <th>
+                                                        <a href="#">審核時間<i class="i_sort"></i></a>
+                                                    </th>
+                                                    <th>審核</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="num">999</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/15 <br>下午18:09</time></time></td>
+                                                    <td>秘書室</td>
+                                                    <td><span class="red">未答覆</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="red">待審核</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_referralsedit.htm" class="btn"><i
+                                                                    class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">998</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/15 <br>下午18:09</time></time></td>
+                                                    <td>兒童室</td>
+                                                    <td><span class="gray">已回覆</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="blue">審核通過</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_referralsedit.htm" class="btn"><i
+                                                                    class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">997</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/15 <br>下午18:09</time></time></td>
+                                                    <td>閱覽課</td>
+                                                    <td><span class="gray">已回覆</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="green">審核不通過</span></td>
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">996</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/15 <br>下午18:09</time></time></td>
+                                                    <td>閱覽課</td>
+                                                    <td><span class="gray">已回覆</span></td>
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="green">審核不通過</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">995</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/15 <br>下午18:09</time></time></td>
+                                                    <td>閱覽課</td>
+                                                    <td><span class="gray">已回覆</span></td>
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="green">審核不通過</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="#" class="btn"><i class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+        // first example
+        $('header').load("header.htm");
+        $('aside').load("aside_tpml.htm");
+    </script>
+</body>
+
+</html>

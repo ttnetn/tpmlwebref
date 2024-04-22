@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>讀者問題回覆管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>讀者問題回覆管理</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <div class="flex-12" style="display:none;">
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>請先選擇單元</h3>
+                                    <select id="" name="">
+                                        <option value="" selected="" disabled="disabled"></option>
+                                        <option value="1" selected>各年度研究報告</option>
+                                        <option value="2">簡訊</option>
+                                        <option value="3">研究季刊</option>
+                                        <option value="4">技術叢書</option>
+                                        <option value="5">重要績效輯(其他出版品)</option>
+                                        <option value="6">專利技術</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flex-12 搜尋 -->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>進階檢索</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                        </div>
+                                        <div class="_content">
+                                            <div class="flex-form flex-6-6">
+                                                <div class="form_grp">
+                                                    <div class="labelEffect">
+                                                        <select id="" name="">
+                                                            <option value="" selected="" disabled="disabled">
+                                                            </option>
+                                                            <option value="1" selected>提問時間</option>
+                                                            <option value="2">回覆時間</option>
+                                                            <option value="3">問題主題類別</option>
+                                                            <option value="4">處理階段</option>
+                                                            <option value="5">處理結果</option>
+                                                            <option value="6">回覆方式</option>
+                                                            <option value="7">回覆館別</option>
+                                                            <option value="8">轉介單位</option>
+                                                            <option value="9">讀者姓名</option>
+                                                            <option value="10">電子郵件</option>
+                                                            <option value="11">電話</option>
+                                                            <option value="12">問題形式</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form_grp datepick">
+                                                    <div class="startDate">
+                                                        <div class="labelEffect">
+                                                            <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                            <input name="" type="text" value=""
+                                                                onfocus="(this.type='datetime-local')"
+                                                                onblur="if(!this.value) this.type='text'">
+                                                            <!--input name="" type="calendar" value="" class="calendar">
+                                                            <button class="btn"><i class="i_calendar"></i></button-->
+                                                            <label>時間(起)</label>
+                                                        </div>
+                                                        <!-- <div class="help">說明文字</div> -->
+                                                    </div>
+                                                    <div class="endDate">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value=""
+                                                                onfocus="(this.type='datetime-local')"
+                                                                onblur="if(!this.value) this.type='text'">
+                                                            <!--input name="" type="calendar" value="" class="calendar">
+                                                            <button class="btn"><i class="i_calendar"></i></button-->
+                                                            <label>時間(迄)</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="1">not</option>
+                                                                <option value="2">or</option>
+                                                            </select>
+                                                            <label>And</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <select id="" name="">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="2">問題主題類別</option>
+                                                                <option value="3">處理階段</option>
+                                                                <option value="4">處理結果</option>
+                                                                <option value="6">回覆館別</option>
+                                                                <option value="7">轉介單位</option>
+                                                                <option value="8">讀者姓名</option>
+                                                                <option value="9">電子郵件</option>
+                                                                <option value="10">電話</option>
+                                                                <option value="11">問題形式</option>
+                                                            </select>
+                                                            <label></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <input name="search_userid" id="search_userid" type="text"
+                                                                value="">
+                                                            <label>請輸入關鍵字</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="1">not</option>
+                                                                <option value="2">or</option>
+                                                            </select>
+                                                            <label>And</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <select id="" name="">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="2">問題主題類別</option>
+                                                                <option value="3">處理階段</option>
+                                                                <option value="4">處理結果</option>
+                                                                <option value="5">回覆方式</option>
+                                                                <option value="6">回覆館別</option>
+                                                                <option value="7">轉介單位</option>
+                                                                <option value="8">讀者姓名</option>
+                                                                <option value="10">電話</option>
+                                                                <option value="11">問題形式</option>
+                                                            </select>
+                                                            <label>讀者問題描述</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <input name="search_userid" id="search_userid" type="text"
+                                                                value="">
+                                                            <label>請輸入關鍵字</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn btn-primary">檢索</button>
+                                        <button class="btn reset">取消</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flex-12 -->
+                <div class="flex-12">
+                    <div class="col ">
+                        <!-- 中央區塊 -->
+                        <div class="content_block">
+                            <div class="_head">
+                                <h3>處理方式</h3>
+                            </div>
+                            <div class="_head">
+                                <div class="tag">
+                                    處理階段：
+                                    <ul>
+                                        <li class="active"><a href="#">全部</a></li>
+                                        <li><a href="#">未處理</a></li>
+                                        <li><a href="#">處理中</a></li>
+                                        <li><a href="#">已結案</a></li>
+                                    </ul>
+                                    ｜處理結果：
+                                    <ul>
+                                        <li class="active"><a href="#">全部</a></li>
+                                        <li><a href="#">已回覆</a></li>
+                                        <li><a href="#">處理中</a></li>
+                                        <li><a href="#">不予處理</a></li>
+                                        <li><a href="#">尚未答覆</a></li>
+                                        <li><a href="#">完全解答</a></li>
+                                        <li><a href="#">部分解答</a></li>
+                                        <li><a href="#">無法解答</a></li>
+                                        <li><a href="#">指引使用方式</a></li>
+                                        <li><a href="#">轉介</a></li>
+                                    </ul>
+                                </div>
+                                <!-- flex-12 -->
+                                <div class="flex-12">
+                                    <div class="content_block">
+                                        <div class="_head">
+                                            <div class="control_panel">
+                                            </div>
+                                            <div class="btn_grp">
+                                                回覆天數：<a href="#" class="btn btn-xs">等於回覆天數<i class="i_sort"></i></a>
+                                                <button type="button" class="btn">請輸入天數<i class=""></i></button>
+                                                ｜問題主題類別：<a href="#" class="btn btn-xs">問題主題類別123<i
+                                                        class="i_sort"></i></a>
+                                                <button type="button" class="btn">請輸入答案<i class=""></i></button>
+
+                                                <button class="btn btn-primary">查詢</button>
+                                                <button class="btn btn-orange">取消</button>
+                                            </div>
+                                        </div>
+                                        <!-- 頁碼 -->
+                                        <div class="pagination">
+                                            <form action="" class="form_inline">
+                                                <div class="total">
+                                                    共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                                                    <select name="" id="">
+                                                        <option value="">10</option>
+                                                        <option value="">30</option>
+                                                        <option value="">50</option>
+                                                        <option value="">100</option>
+                                                    </select> 筆
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="_content">
+                                            <!-- 表格樣式 -->
+                                            <div class="table_wrapper">
+                                                <table class="table_hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-left">
+                                                                <a href="#">序號<i class="i_sort"></i></a>
+                                                            </th>
+                                                            <th><a href="#">提問時間<i class="i_sort"></i></a></th>
+                                                            <th class="text-center">讀者問題描述</th>
+                                                            <th class="text-center">問題主題類別</th>
+                                                            <th class="text-left">處理階段</a>
+                                                            </th>
+                                                            <th>處理結果</th>
+                                                            <th>審核結果</th>
+                                                            <th>
+                                                                <a href="#">回覆期限 <i class="i_sort"></i></a>
+                                                            </th>
+                                                            <th class="text-center">編輯</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="num">999</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">您好：最近要預約書時發現：無法選擇圖書館（原有設定沒了，要求我選擇圖書館，但是沒有任何選項可選。判斷是有bug或我半夜是不允許操作？），所以這個選項，不論在預約下或在個人設定下，都沒有選項（圖書館list）。
+                                                                    請協助處理。謝謝。</a></td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="green">未處理</span></td>
+                                                            <td><span class="green">尚未答覆</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/15
+                                                                    <br>下午18:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">998</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a
+                                                                    href="tpmlwebref_questionsearchnew.htm">電腦網頁版預約書籍無法選擇取書館（下拉選單空白，也沒有自動代入預設取書館）導致預約無法完成</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="blue">處理中</span></td>
+                                                            <td><span class="blue">處理中</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/15
+                                                                    <br>下午17:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">997</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">借閱及預約取書期限於4/3到期者延長至4/9
+                                                                    請問：4/6到期者是否亦可延長至4/9？
+                                                                    謝謝</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="blue">處理中</span></td>
+                                                            <td><span class="gray">完全解答</span></td>
+                                                            <td><span class="red">不通過</span></td>
+                                                            <td><time>2024/5/15
+                                                                    <br>下午16:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">996</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">補充說明
+                                                                    熱門館藏
+                                                                    9)
+                                                                    ★ 館藏查詢系統
+                                                                    > 首頁 > 熱門排行 >
+                                                                    熱門館藏：
+                                                                    9)「隱藏版」之熱門館藏 ex. 展覽中不外借 ( 同步書展 )，
+                                                                    雖可預約，但無法外借，即「實際可流通量 vs
+                                                                    可預約量」差距甚大， ex. 80% 為展覽中圖書，預約人數 ÷
+                                                                    該書目「可流通量」＞10
+                                                                    (以上)，卻無法列為熱門館藏
+                                                                    ( 無法加速資料流通 )， 無法增加館方之借閱量 ( 無法列為六都之借閱評比 ) ps.
+                                                                    設置「熱門館藏」之
+                                                                    初衷：加速資料流通
+                                                                    https://www.facebook.com/photo?fbid=644109052266009&set=a.603286406348274</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="gray">已經回覆(1天)</span></td>
+                                                            <td><span class="gray">已回覆</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/14
+                                                                    <br>下午16:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">995</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">★
+                                                                    館藏查詢系統
+                                                                    >
+                                                                    詳細資料頁 >
+                                                                    書目資料： 1)
+                                                                    若書目資料列數不多，未被隱藏，可否：無須出現「顯示更多」字樣？以避免展開後無隱藏內文之冏境
+                                                                    or
+                                                                    同「MARC格式」，未點選「顯示更多」前之末列文字呈現灰白色，以利分辨，再展開查看被隱藏之內文
+                                                                    2)
+                                                                    若「可預約數量=0」，可否同「查詢列表頁」：無須顯示「預約」功能紐？
+                                                                    以避免點選後，卻顯示「確定 & 取消 &
+                                                                    請勾選」之困擾， 若仍顯示預約紐，點選後是否應顯示「無法預約」？ 3)
+                                                                    當出版項之出版年，與同頁面MARC格式「008」之出版年，相異 ( 含不足4碼 ) or
+                                                                    其一未著錄出版年，
+                                                                    新系統能否稽核 & 提醒？館員如何避免失誤 & 疏漏？ 請查核原因 ( 避免 日後 重複
+                                                                    再次 出現 異常 ) 4)
+                                                                    相同ISBN之「增購」，是否無法沿用原先之書目資料？致兩筆之書目資料略有不同 ex.
+                                                                    主題、劃一題名 (
+                                                                    若合併於「舊」bookDetail編號之書目資料，增購「新」bookDetail編號
+                                                                    之書目資料無法代入？) 5)
+                                                                    套書編目之詳細資料頁，書目資料之相關欄位，可否顯示「已完結 or 完」？ ex.
+                                                                    HyRead ( Ebook
+                                                                    Taipei
+                                                                    )「查看系列」功能紐，可查看該系列書目，並顯示「已完結」https://tpml.ebook.hyread.com.tw/Template/RWD3.0/seriesbook.jsp?seriesID=2515
+                                                                    另，套書「詳細資料頁」之出版項，顯示出版年之「起訖年度」者，是否表示「已完結」？ex.
+                                                                    零的日常？
+                                                                    https://book.tpml.edu.tw/bookDetail/527488
+                                                                    但，如蝶翩翩
+                                                                    該套書已完結，卻未顯示「訖」年，
+                                                                    https://book.tpml.edu.tw/bookDetail/803948
+                                                                    或者，應該是問：套書「新冊別獨立編目」時，其出版項有出版年，為何合併於「舊」bookDetail編號之套書後，出版項無法顯示出版年之「訖」年？
+                                                                    謝謝 (17)
+                                                                </a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="gray">已回覆(2天)</span></td>
+                                                            <td><span class="gray">無法解答</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午16:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">994</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">「第85梯次好書大家讀」之得獎書單，上傳附檔前，請依類別調整「序號」，謝謝
+                                                                    ex.
+                                                                    1.文學讀物A組（單冊）：18冊 序號為
+                                                                    13、14、31、39、47...，第18筆之序號為148
+                                                                    https://www-ws.gov.taipei/001/Upload/430/relfile/41383/7541217/d9145fe6-9b88-4ecc-a768-e6c8a50a9d3f.pdf</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="gray">已回覆(2天)</span></td>
+                                                            <td><span class="gray">指引使用方式</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午16:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">993</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">新書通報列表，新書月份選擇2022/11，語文別選擇中文：
+                                                                    1.「福特汽車叢書」之館藏資訊，其一未著錄「冊數/卷期」，請查核 2.
+                                                                    有數筆出版年為19xx之清單，請問：新書通報之「新書」定義為何？ 謝謝</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="gray">已回覆(3天)</span></td>
+                                                            <td><span class="gray">不予處理</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午16:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">992</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">請問圖書館會添補已去向不明的館藏嗎？
+                                                                    "少女浮士德"這本書一二集都已去向不明，但要推薦圖書時，系統顯示已有館藏而無法推薦購買。
+                                                                    如果館藏皆已去向不明，那應該不算有該本館藏吧? 請問要怎樣圖書館才會再次添購此書呢?
+                                                                    謝謝!</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="gray">已回覆(3天)</span></td>
+                                                            <td><span class="gray">轉介</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/14
+                                                                    <br>下午16:09</time></td>
+
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">991</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a
+                                                                    href="tpmlwebref_questionsearchnew.htm">請問圖書館的網址https://tpml.gov.taipei/，其中的TPML是什麼的縮寫呢？T是taipei，P是public，L是library，請問M是什麼？</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="gray">已回覆(5天)</span></td>
+                                                            <td><span class="gray">轉介</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/14
+                                                                    <br>下午16:09</time></td>
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="num">990</td>
+                                                            <td><time>2024/5/13
+                                                                    <br>下午18:09</time></td>
+                                                            <td><a href="tpmlwebref_questionsearchnew.htm">借閱及預約取書期限於4/3到期者延長至4/9
+                                                                    請問：4/6到期者是否亦可延長至4/9？
+                                                                    謝謝</a>
+                                                            </td>
+                                                            <td>應用科學</td>
+                                                            <td><span class="gray">已回覆(5天)</span></td>
+                                                            <td><span class="gray">轉介</span></td>
+                                                            <td><span class="blue">通過</span></td>
+                                                            <td><time>2024/5/14
+                                                                    <br>下午16:09</time></td>
+                                                            <td>
+                                                                <div class="btn_grp">
+                                                                    <a href="tpmlwebref_questionsearchnew.htm"
+                                                                        class="btn"><i class="i_edit"></i>編輯</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- 頁碼 -->
+                                            <div class="pagination">
+                                                <ul class="page">
+                                                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">...</a></li>
+                                                    <li><a href="#">8</a></li>
+                                                    <li><a href="#">9</a></li>
+                                                    <li><a href="#">10</a></li>
+                                                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- JS-->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="vendor/jquery.easing.min.js"></script>
+            <!-- template customize js -->
+            <script src="js/customize.js"></script>
+            <!-- highlight -->
+            <script src="vendor/highlight/highlight.pack.js"></script>
+            <!-- tree view -->
+            <script src="vendor/treeview/jquery.treeview.js"></script>
+            <script>
+                // first example
+                $('header').load("header.htm");
+                $('aside').load("aside_tpml.htm");
+            </script>
+</body>
+
+</html>

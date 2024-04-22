@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>參考服務統計</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>參考服務統計</h2>
+                        <button class="btn btn-primary btn-adv">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 搜尋 -->
+                    <div class="flex-12">
+                        <div class="adv_search" id="open" style="display:block;">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>統計報表設定</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <h4>查詢條件設定</h4>
+                                        <div class="flex-form flex-6-6">
+                                            <div class="form_grp datepick">
+                                                <div class="startDate">
+                                                    <div class="labelEffect">
+                                                        <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
+                                                        <input name="" type="text" value=""
+                                                            onfocus="(this.type='datetime-local')"
+                                                            onblur="if(!this.value) this.type='text'">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>查詢日期(起)</label>
+                                                    </div>
+                                                    <!-- <div class="help">說明文字</div> -->
+                                                </div>
+                                                <div class="endDate">
+                                                    <div class="labelEffect">
+                                                        <input name="" type="text" value=""
+                                                            onfocus="(this.type='datetime-local')"
+                                                            onblur="if(!this.value) this.type='text'">
+                                                        <!--input name="" type="calendar" value="" class="calendar">
+                                                        <button class="btn"><i class="i_calendar"></i></button-->
+                                                        <label>查詢日期(迄)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp form_inline">
+                                                <div class="labelEffect">
+                                                    <select id="" name="">
+                                                        <option value="" selected="" disabled="disabled"></option>
+                                                        <option value="1">每年件數</option>
+                                                        <option value="2">每月件數</option>
+                                                        <option value="3">每天件數</option>
+                                                        <option value="4">回復天數</option>
+                                                        <option value="5">處理結果</option>
+                                                        <option value="6">回復館別</option>
+                                                        <option value="7">參考服務問題形式</option>
+                                                        <option value="8">問題主題類別</option>
+                                                        <option value="9">問題回復方式</option>
+                                                        <option value="10">讀者類型</option>
+                                                        <option value="11">回覆資料類型</option>
+                                                    </select>
+                                                    <label>功能選項</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp" style="margin-top:10px;">
+                                            <div class="labelEffect">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button class="btn reset">取消</button>
+                                        <button class="btn btn-primary">確認</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-12">
+                    <div class="col">
+                        <p class="notice">目前條件 - 每年件數；查詢日期：2022/1/1~2022/12/31</p>
+                    </div>
+
+                </div>
+                <!--div class="flex-3-3-3-3">
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>預約總數</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget">
+                                        <div class="widget_now_counter">
+                                            <div class="counter "data-count="1537"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>新增總數</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget">
+                                        <div class="widget_now_pageview">
+                                            <div class="counter "data-count="34"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>瀏覽總數</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget ">
+                                        <div class="widget_now_user">
+                                            <div class="counter "data-count="376"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>下載總數</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget">
+                                        <div class="widget_new_data">
+                                            <div class="counter "data-count="1220"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div-->
+                <div class="flex-12">
+                    <div class="col ">
+                        <div class="content_block">
+                            <div class="_head">
+                                <h3>參考統計</h3>
+                            </div>
+                            <div class="_head">
+                                <p>僅顯示符合查詢條件前10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
+                                <div class="quick_btn">
+                                    <button class="btn btn-orange" onclick="window.location.href='#';"><i
+                                            class="i_add"></i>匯出結果</button>
+                                </div>
+                            </div>
+                            <div class="_content">
+                                <!-- 表格樣式 -->
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>每年件數報表格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th><a href="#">每年件數<i class="i_sort"></i></a></th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>2020</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>2021</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>2022</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>2023</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>2024</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>每月件數報表格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th><a href="#">每月件數<i class="i_sort"></i></a></th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>2020/01</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>2020/02</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>2020/03</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>2020/04</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>2020/05</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>每天件數報表格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th><a href="#">每天件數<i class="i_sort"></i></a></th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>2020/01/01</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>2020/01/02</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>2020/01/03</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>2020/01/04</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>2020/01/05</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>回覆天數報表格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th><a href="#">回覆天數<i class="i_sort"></i></a></th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>0</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>1</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>2</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>3</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>5</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>回覆館別報表格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th class="text-left">回覆館別</th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>總館</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>松山分館</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>六合分館</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>內湖分館</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>中崙分館</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">6</td>
+                                                <td>中山分館</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>處理結果報表格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th class="text-left">處理結果</th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>不予處理</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>完全解答</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>其他</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>指引資料使用方式</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>部份解答</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">6</td>
+                                                <td>轉介</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>參考服務問題形式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th class="text-left">參考服務問題形式</th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>指引</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>事實</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>主題</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>研究</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>問題主題類別格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th class="text-left">問題主題類別</th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>全部</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>自然科學</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>其他</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>台北市立圖書館相關</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>應用科學</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">6</td>
+                                                <td>總類</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1112</td>
+                                                <td>1112</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>問題回復方式格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th class="text-left">問題回復方式</th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>線上</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>電話</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>書面</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>讀者類型格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th class="text-left">讀者類型</th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table_wrapper">
+                                    <table class="table_hover">
+                                        <caption>回覆資料類型格式</caption>
+                                        <thead>
+                                            <tr>
+                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                <th class="text-left">回覆資料類型</th>
+                                                <!--th>預約案號</th>
+                                                    <th>虛擬主機(編號)</th-->
+                                                <th class="text-left">次數</th>
+                                                <th class="text-left">瀏覽數</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="num">1</td>
+                                                <td>圖書</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>333</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">2</td>
+                                                <td>期刊</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>1234</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">3</td>
+                                                <td>網路資源</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">4</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="num">5</td>
+                                                <td>測試1234567890</td>
+                                                <!--td>1110101001</td>
+                                                    <td>1</td-->
+                                                <td>110</td>
+                                                <td>333</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- highchart plugin -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside_tpml.htm");
+        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+        // 長條
+        Highcharts.chart('axes_line_column1', {
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: '預約統計資訊'
+            },
+            // subtitle: {
+            //     text: 'Source: 勞安所科研採購網'
+            // },
+            colors: _Color,
+            xAxis: [{
+                categories: ['2022/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                title: {
+                    text: '次數',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: '',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 20,
+                verticalAlign: 'top',
+                y: 20,
+                floating: true,
+                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                    'rgba(255,255,255,0.25)'
+            },
+            series: [{
+                name: '101教室',
+                type: 'column',
+                yAxis: 1,
+                data: [49.0, 71.0, 106.0, 129.0, 144.0, 126.0, 35.0, 48.0, 16.0, 19.0, 95.0, 54.0],
+                tooltip: {
+                    valueSuffix: ''
+                }
+            }, {
+                name: '102教室',
+                type: 'column',
+                yAxis: 1,
+                data: [17.0, 26.0, 89.0, 94.0, 78.0, 91.0, 25.0, 26.0, 13.0, 18.0, 53.0, 19.0],
+                tooltip: {
+                    valueSuffix: ''
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>
