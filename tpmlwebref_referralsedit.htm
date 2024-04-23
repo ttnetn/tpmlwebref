@@ -16,9 +16,13 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css">
     <!--圖片批次上傳-->
     <link rel="stylesheet" href="css/fileUpload.css">
+    <!--增加select-->
     <link rel="stylesheet" href="css/customize.css">
+    <link rel="stylesheet" href="css/select2.min.css">
 
 </head>
 
@@ -35,168 +39,468 @@
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
                     <li><a href="#">客製化管理</a></li>
-                    <li>轉介/審核管理</li>
+                    <li>轉介問題編輯管理</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>轉介/審核編輯</h2>
+                        <h2>轉介問題編輯管理</h2>
+                        <!--button class="btn" onclick="window.location.href='data_list_noTree.htm';">放棄</button-->
                         <div class="function">
                             <ul>
                                 <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
                             </ul>
                         </div>
+
                     </div>
-                    <!-- flex-12 -->
-                    <!--這一層要放的數字是需不需要切欄，例如設定 -3-9 則 col 寬度會左3右9，和 col 下再分成 content_block, publish_block兩欄無關-->
                     <div class="flex-12">
-                        <div class="col ">
+                        <div class="col">
                             <!-- 中央區塊 -->
                             <div class="content_block edit_block">
                                 <div class="tabBtn_block">
                                     <div class="tab_items">
+                                        <button class="btn active" style="flex: 0 1 calc(50% - 1em);"><i
+                                                class="i_edit"></i>問題資訊</button>
+                                        <button class="btn" style="flex: 0 1 calc(50% - 1em);"><i
+                                                class="i_info"></i>讀者基本資料</button>
+                                        <!--button class="btn"><i class="i_setting"></i>資訊</button-->
                                     </div>
                                 </div>
                                 <!--頁籤區-->
                                 <div class="tab__content">
-                                    <!--tabcontent 1--><!--會員設定-->
+                                    <!--tabcontent 1 -->
                                     <div class="active">
                                         <div class="content__wrapper">
                                             <div class="_head">
-                                                <h3>轉介編輯資訊</h3>
+                                                <h3>問題資訊</h3>
                                             </div>
                                             <div class="_content">
                                                 <div class="flex-form">
-                                                    <div class="form_grp">
+                                                    <!--h4>基本資訊</h4-->
+                                                    <div class="form_grp form_inline">
+
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="999" disabled style="">
-                                                            <label>服務案序號</label>
+                                                            <input name="" type="text" value="請輸入案件編號"
+                                                                class="dynamicCol used">
+                                                            <label>案件編號</label>
+                                                        </div>
+
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="2024/5/13下午18:09"
+                                                                disabled>
+                                                            <label>提問時間</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="1" selected>未處理</option>
+                                                                <option value="2">處理中</option>
+                                                                <option value="3">已結案</option>
+                                                            </select>
+                                                            <label>問題處理階段</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="2天2小時33分3秒" disabled
+                                                                style="color: red;">
+                                                            <label>回覆期限</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp" style="margin-bottom:50px;">
                                                         <div class="labelEffect">
                                                             <textarea
                                                                 class="used">敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您</textarea>
-                                                            <label>讀者問題描述(不可編修)</label>
+                                                            <label>讀者問題描述</label>
                                                         </div>
                                                         <div class="help">字數200/500</div>
                                                     </div>
-                                                    <div class="form_grp">
+                                                    <div class="form_grp form_inline">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="2024/5/15下午18:09" disabled
-                                                                style="color: red;">
-                                                            <label>回覆時間</label>
+                                                            <input name="" type="text" value="臺北市立圖書館相關/研究需求/其他"
+                                                                disabled>
+                                                            <label>用途</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <input name="userId" id="userId" type="text"
-                                                                value="cod@email.tpml.edu.tw">
-                                                            <label for="userId">課室信箱 <abbr></abbr></label>
+                                                            <textarea>親愛的讀者您好
+會將您的問題一併轉知本館資訊室。如有其他相關問題，歡迎來電本館資訊室(02)2755-2823分機2755，由館員為您服務，謝謝。
+                                                                
+本館線上參考問題，將定期維護：關於個人借閱問題，僅保留1個月即自系統上刪除。 
+臺北市立圖書館 諮詢服務課 敬復 </textarea>
+                                                            <label for="userId">答案<abbr></abbr></label>
                                                         </div>
+                                                        <div class="help">輸入回覆的內容將顯示於前台留言板(字數200/500)</div>
                                                     </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <input name="userName" id="userName" type="text"
-                                                                value="秘書室">
-                                                            <label for="userName">轉介課室<abbr></abbr></label>
+                                                            <textarea>維基百科：https://en.wikipedia.org/wiki/Printer%27s_key (這裏請工程師做可以直接點擊網址（新開視窗）)</textarea>
+                                                            <label for="userId">資料來源<abbr></abbr></label>
                                                         </div>
-                                                        <!-- <div class="help">說明文字</div> -->
+                                                        <div class="help">輸入資料來源內容將顯示於前台留言板(字數200/500)</div>
                                                     </div>
-                                                    <hr>
-                                                    <div class="form_grp">
+                                                    <div class="form_grp form_inline">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="已回覆/未回覆/處理中" disabled
-                                                                style="">
-                                                            <label>客室回覆狀態</label>
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="1" selected>請選擇</option>
+                                                                <OPTION value=A/A11>松山區/松山分館</OPTION>
+                                                                <OPTION value=A/A12>松山區/民生分館</OPTION>
+                                                                <OPTION value=A/A13>松山區/三民分館</OPTION>
+                                                                <OPTION value=A/A14>松山區/中崙分館</OPTION>
+                                                                <OPTION value=B/B11>信義區/永春分館</OPTION>
+                                                                <OPTION value=B/B12>信義區/三興分館</OPTION>
+                                                                <OPTION value=B/B13>信義區/六合分館</OPTION>
+                                                                <OPTION value=B/B21>信義區/新興分館</OPTION>
+                                                                <OPTION value=C/C01>大安區/總館</OPTION>
+                                                                <OPTION value=C/C11>大安區/道藩分館</OPTION>
+                                                                <OPTION value=C/C12>大安區/大安分館</OPTION>
+                                                                <OPTION value=C/C21>大安區/延吉民眾閱覽室</OPTION>
+                                                                <OPTION value=C/C22>大安區/成功民眾閱覽室</OPTION>
+                                                                <OPTION value=C/C23>大安區/龍安民眾閱覽室</OPTION>
+                                                                <OPTION value=C/C41>大安區/大安書閣</OPTION>
+                                                                <OPTION value=D/D11>中山區/中山分館</OPTION>
+                                                                <OPTION value=D/D12>中山區/長安分館</OPTION>
+                                                                <OPTION value=D/D13>中山區/大直分館</OPTION>
+                                                                <OPTION value=D/D21>中山區/恆安民眾閱覽室</OPTION>
+                                                                <OPTION value=E/E11>中正區/王貫英先生紀念圖書館</OPTION>
+                                                                <OPTION value=E/E12>中正區/城中分館</OPTION>
+                                                                <OPTION value=F/F11>大同區/延平分館</OPTION>
+                                                                <OPTION value=F/F12>大同區/大同分館</OPTION>
+                                                                <OPTION value=F/F13>大同區/建成分館</OPTION>
+                                                                <OPTION value=F/F21>大同區/蘭州民眾閱覽室</OPTION>
+                                                                <OPTION value=G/G11>萬華區/龍山分館</OPTION>
+                                                                <OPTION value=G/G12>萬華區/東園分館</OPTION>
+                                                                <OPTION value=G/G13>萬華區/西園分館</OPTION>
+                                                                <OPTION value=G/G14>萬華區/萬華分館</OPTION>
+                                                                <OPTION value=G/G21>萬華區/柳鄉民眾閱覽室</OPTION>
+                                                                <OPTION value=H/H11>文山區/景美分館</OPTION>
+                                                                <OPTION value=H/H12>文山區/木柵分館</OPTION>
+                                                                <OPTION value=H/H13>文山區/永建分館</OPTION>
+                                                                <OPTION value=H/H14>文山區/萬興分館</OPTION>
+                                                                <OPTION value=H/H15>文山區/文山分館</OPTION>
+                                                                <OPTION value=H/H16>文山區/力行分館</OPTION>
+                                                                <OPTION value=H/H17>文山區/景新分館</OPTION>
+                                                                <OPTION value=H/H22>文山區/安康民眾閱覽室</OPTION>
+                                                                <OPTION value=H/H23>文山區/萬芳民眾閱覽室</OPTION>
+                                                                <OPTION value=I/I11>南港區/南港分館</OPTION>
+                                                                <OPTION value=I/I12>南港區/舊莊分館</OPTION>
+                                                                <OPTION value=I/I21>南港區/龍華民眾閱覽室</OPTION>
+                                                                <OPTION value=J/J11>內湖區/內湖分館</OPTION>
+                                                                <OPTION value=J/J12>內湖區/東湖分館</OPTION>
+                                                                <OPTION value=J/J13>內湖區/西湖分館</OPTION>
+                                                                <OPTION value=J/J14>內湖區/西中分館</OPTION>
+                                                                <OPTION value=K/K11>士林區/葫蘆堵分館</OPTION>
+                                                                <OPTION value=K/K12>士林區/天母分館</OPTION>
+                                                                <OPTION value=K/K13>士林區/士林分館</OPTION>
+                                                                <OPTION value=K/K14>士林區/李科永分館</OPTION>
+                                                                <OPTION value=L/L11>北投區/北投分館</OPTION>
+                                                                <OPTION value=L/L12>北投區/稻香分館</OPTION>
+                                                                <OPTION value=L/L13>北投區/石牌分館</OPTION>
+                                                                <OPTION value=L/L14>北投區/清江分館</OPTION>
+                                                                <OPTION value=L/L15>北投區/吉利分館</OPTION>
+                                                                <OPTION value=L/L21>北投區/永明民眾閱覽室</OPTION>
+                                                                <OPTION value=L/L23>北投區/秀山民眾閱覽室</OPTION>
+                                                            </select>
+                                                            <label>回覆館別</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="1" selected>電子信箱</option>
+                                                                <option value="2">書面</option>
+                                                                <option value="3">電話</option>
+                                                                <option value="3">全部</option>
+                                                            </select>
+                                                            <label>回覆方式(改成check box 複選)</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="0" selected>請選擇</option>
+                                                                <option value="1">處理中</option>
+                                                                <option value="2">不予處理</option>
+                                                                <option value="3">未答覆</option>
+                                                                <option value="4">完全解答</option>
+                                                                <option value="5">部分解答</option>
+                                                                <option value="6">無法解答</option>
+                                                                <option value="7">指引使用方式</option>
+                                                                <option value="8">轉介</option>
+                                                            </select>
+                                                            <label>處理結果</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="請輸入處理結果說明"
+                                                                class="dynamicCol used">
+                                                            <label>處理結果說明</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="1" selected>請選擇</option>
+                                                                <OPTION value=1>類別1</OPTION>
+                                                                <OPTION value=2>類別2</OPTION>
+                                                                <OPTION value=3>類別3</OPTION>
+                                                                <OPTION value=4>類別4</OPTION>
+                                                            </select>
+                                                            <label>問題主題類別</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="0" selected>請選擇</option>
+                                                                <OPTION value=1>指引</OPTION>
+                                                                <OPTION value=2>事實</OPTION>
+                                                                <OPTION value=3>主題</OPTION>
+                                                                <OPTION value=4>研究</OPTION>
+                                                            </select>
+                                                            <label>問題形式</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="1" selected>其他</option>
+                                                                <OPTION value=1>圖書</OPTION>
+                                                                <OPTION value=2>期刊</OPTION>
+                                                                <OPTION value=3>論文</OPTION>
+                                                                <OPTION value=4>資料庫</OPTION>
+                                                                <OPTION value=5>網路資源</OPTION>
+                                                                <OPTION value=5>其他</OPTION>
+                                                            </select>
+                                                            <label>回復資料類型</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="選擇其他請輸入文字"
+                                                                class="dynamicCol used">
+                                                            <label>其他</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="自動帶入館員姓名" disabled>
+                                                            <label>回覆人員</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="labelEffect">
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="setting_block">
+                                                    <h3>附件檔案上傳
+                                                        <!--button class="btn btn-xs"><i class="i_addfile"></i>新增檔案</button-->
+                                                    </h3>
+                                                    <div class="fileDragDrop">
+                                                        <input type="file" id="inputFile"
+                                                            onchange="changeHandler(event,'file')"
+                                                            ondragover="dragoverHandler(event,'file')"
+                                                            ondrop="dropHandler(event,'file')">
+                                                        <p><em>上傳附件檔案</em></p>
+                                                        <p>拖拉檔案或選擇「從本機上傳」</p>
+                                                    </div>
+                                                    <p class="tips">說明文案：檔案上傳限制，格式或檔案大小等</p>
+                                                    <div class="upload_block">
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_xls.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.xls </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱"
+                                                                            placeholder="附件檔案名稱" class="used">
+                                                                        <!--button class="btn btn-icon"><i class="i_copy"></i></button-->
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <a href="#" class="btn"><i
+                                                                                class="i_edit"></i>移除</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/F01/401/33/F014013341.jpg&v=5dc3804fk&w=348&h=348"" alt="">
+                                                                <!--img src=" images/noimage.png" alt=""
+                                                                    --><!--無圖時預設圖-->
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">圖片名稱.jpg </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text"
+                                                                            value="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/F01/401/33/F014013341.jpg&v=5dc3804fk&w=348&h=348"
+                                                                            placeholder="附件檔案名稱" class="used">
+                                                                        <!--button class="btn btn-icon"><i class="i_copy"></i></button-->
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <a href="#" class="btn"><i
+                                                                                class="i_edit"></i>移除</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- item = 1 file -->
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.pdf </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱"
+                                                                            placeholder="附件檔案名稱" class="used">
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <a href="#" class="btn"><i
+                                                                                class="i_edit"></i>移除</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="pic">
+                                                                <!--img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/F01/401/33/F014013341.jpg&v=5dc3804fk&w=348&h=348"" alt=""-->
+                                                                <img src="images/noimage.png" alt=""><!--無圖時預設圖-->
+                                                            </div>
+                                                            <div class="flex-form">
+                                                                <div class="file_title">附件檔案名稱.doc </div>
+                                                                <div class="form_grp">
+                                                                    <div class="labelEffect hasBtn">
+                                                                        <input name="" type="text" value="附件檔案名稱"
+                                                                            placeholder="附件檔案名稱" class="used">
+                                                                    </div>
+                                                                    <div class="additional">
+                                                                        <a href="#" class="btn"><i
+                                                                                class="i_edit"></i>移除</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!--tabcontent 2-->
+                                    <div>
+                                        <div class="content__wrapper">
+                                            <div class="_head">
+                                                <h3>讀者基本資料</h3>
+                                            </div>
+                                            <div class="_content">
+                                                <div class="flex-form">
+                                                    <!--h4>基本資訊</h4-->
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="林小姐" disabled>
+                                                            <label>姓名</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="ujkkk@gmail.com" disabled>
+                                                            <label>電子郵件</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="(02)2660-7600" disabled>
+                                                            <label>聯絡電話</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="選填，例如學校" disabled>
+                                                            <label>單位</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="無" disabled>
+                                                            <label>住家電話</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="無" disabled>
+                                                            <label>手機</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="46~55" disabled>
+                                                            <label>年齡</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="家管" disabled>
+                                                            <label>職業</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="大學" disabled>
+                                                            <label>教育</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <div class="flex-form">
-                                                    <div class="form_grp">
-                                                        <div class="labelEffect">
-                                                            <input name="userId" id="userId" type="text" value="陳長官">
-                                                            <label for="userId">審核 <abbr></abbr></label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <div class="labelEffect">
-                                                            <input name="dept" id="dept" type="text"
-                                                                value="2024/5/16 17:21">
-                                                            <label for="deptId">審核日期</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp" style="margin-bottom:50px;">
-                                                        <div class="labelEffect">
-                                                            <textarea
-                                                                class="used">敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您</textarea>
-                                                            <label>讀者問題描述(不可編修)</label>
-                                                        </div>
-                                                        <div class="help">字數200/500</div>
-                                                    </div>
-                                                    <div class="form_grp" style="margin-bottom:50px;">
-                                                        <div class="labelEffect">
-                                                            <textarea
-                                                                class="used">主管您好：請至後台線上參考服務案中審核維護管理進行審查999案件，該案件處理結果擬不予處理/擬完全解答/無法解答/處理中/指引使用方式/轉介，謝謝。</textarea>
-                                                            <label>主管審核通知信</label>
-                                                        </div>
-                                                        <div class="help">字數200/500</div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <div class="labelEffect">
-                                                            <textarea>請輸入意見</textarea>
-                                                            <label for="userId">審核意見<abbr></abbr></label>
-                                                        </div>
-                                                        <div class="help">輸入回覆的內容將顯示於前台留言板(字數200/500)</div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- 右側資料widget -->
                             <div class="publish_block">
-                                <!-- 每種不同功能，都用block區分 -->
                                 <div class="block">
                                     <div class="_head">
-                                        <h3>客室回覆狀態</h3>
+                                        <h3>狀態資訊</h3>
                                     </div>
                                     <div class="flex-form">
                                         <div class="form_grp">
-                                            <div class="form_title">狀態<abbr>*</abbr></div>未回覆
+                                            <div class="form_title">狀態<abbr>*已回覆</abbr></div>
+                                            <div>回覆時間 2024/5/14下午18:09</div>
                                             <div class="form_content">
-
                                             </div>
                                         </div>
                                     </div>
                                     <div class="btn_grp">
-                                        <button class="btn btn-green">暫存</button>
-                                        <button class="btn btn-blue">已回覆讀者</button>
+                                        <a href="tpmlwebref_questionsearchnewemail1.htm" class="btn btn-green">暫存</a>
+                                        <a href="tpmlwebref_questionsearchnewemail1.htm" class="btn btn-orange">陳核信件</a>
+                                    </div>
+                                    <div class="btn_grp">
+
+                                        <a href="tpmlwebref_questionsearchnewemail3.htm" class="btn btn-blue">回信讀者</a>
                                     </div>
                                 </div>
                                 <div class="block">
                                     <div class="_head">
-                                        <h3>審核狀態</h3>
+                                        <h3>發佈選項</h3>
                                     </div>
                                     <div class="flex-form">
                                         <div class="form_grp">
-                                            <div class="form_title">狀態<abbr>*</abbr></div>待審核
                                             <div class="form_content">
-
+                                                <div class="radio_grp form_inline">
+                                                    <label><input name="radioStatus" type="radio" value=""
+                                                            checked=""><span>不公開</span></label>
+                                                    <label><input name="radioStatus" type="radio"
+                                                            value=""><span>公開</span></label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="btn_grp">
-                                        <button class="btn btn-green">不通過</button>
-                                        <button class="btn btn-blue">審核通過</button>
+                                        <button class="btn btn-green">儲存</button>
+                                        <button class="btn">取消</button>
                                     </div>
                                 </div>
                                 <div class="block">
                                     <div class="_head">
-
                                         <div class="block">
                                             <div class="_head">
                                                 <h3>編輯紀錄</h3>
@@ -207,19 +511,17 @@
                                                         <span><i class="i_man"></i></span><a href="#">系統管理者(admin)</a>
                                                     </li>
                                                     <li>
-                                                        <span><i class="i_clock"></i></span>2019/11/26 14:26:10
+                                                        <span><i class="i_clock"></i></span>2024/11/26 14:26:10
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- JS-->
             <script src="js/jquery-3.3.1.min.js"></script>
@@ -228,27 +530,40 @@
             <script src="js/customize.js"></script>
             <!-- highlight -->
             <script src="vendor/highlight/highlight.pack.js"></script>
+            <!-- tree view -->
+            <script src="vendor/treeview/jquery.treeview.js"></script>
+            <!-- fancybox -->
+            <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+            <script src="js/select2.full.min.js"></script>
+
+            <script>
+                // first example
+                $(".treeview .treeview").treeview();
+            </script>
             <script>
                 hljs.initHighlightingOnLoad();
             </script>
-            <!-- sortable -->
-            <script src="vendor/sortable/Sortable.min.js"></script>
-            <script type="text/javascript">
-                var elements = $('.sortable');
-                for (var i = 0; i < elements.length; i++) {
-                    new Sortable(elements[i], {
-                        group: 'nested',
-                        animation: 150,
-                        invertSwap: true,
-                        fallbackOnBody: true,
-                        swapThreshold: 0.65
-                    });
-                }
-            </script>
             <script>
+                // first example
+                $(".treeview .treeview").treeview();
                 $('header').load("header.htm");
                 $('aside').load("aside_tpml.htm");
             </script>
+            <!--Select multiple checkbox-->
+            <script>
+                $(document).ready(function () {
+                    $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
+                });
+            </script>
+            <!--Select2-->
+            <script>
+                $(function () {
+                    $("#select1").select2();
+                    $("#select2").select2();
+                    $("#select3").select2();
+                });
+            </script>
+
 </body>
 
 </html>

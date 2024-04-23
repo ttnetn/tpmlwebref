@@ -80,15 +80,16 @@
                                                 <div class="flex-form">
                                                     <!--h4>基本資訊</h4-->
                                                     <div class="form_grp form_inline">
+
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="請輸入案件編號"
+                                                                class="dynamicCol used">
+                                                            <label>案件編號</label>
+                                                        </div>
                                                         <div class="labelEffect">
                                                             <input name="" type="text" value="2024/5/13下午18:09"
                                                                 disabled>
                                                             <label>提問時間</label>
-                                                        </div>
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="2天2小時33分3秒" disabled
-                                                                style="color: red;">
-                                                            <label>回覆期限</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp form_inline">
@@ -103,9 +104,9 @@
                                                             <label>問題處理階段</label>
                                                         </div>
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="2024/5/14下午18:09"
-                                                                disabled>
-                                                            <label>回覆日期</label>
+                                                            <input name="" type="text" value="2天2小時33分3秒" disabled
+                                                                style="color: red;">
+                                                            <label>回覆期限</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp" style="margin-bottom:50px;">
@@ -212,8 +213,9 @@
                                                                 <option value="1" selected>電子信箱</option>
                                                                 <option value="2">書面</option>
                                                                 <option value="3">電話</option>
+                                                                <option value="3">全部</option>
                                                             </select>
-                                                            <label>回覆方式</label>
+                                                            <label>回覆方式(改成check box 複選)</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp form_inline">
@@ -230,7 +232,6 @@
                                                                 <option value="6">無法解答</option>
                                                                 <option value="7">指引使用方式</option>
                                                                 <option value="8">轉介</option>
-                                                                <option value="8">已回覆</option>
                                                             </select>
                                                             <label>處理結果</label>
                                                         </div>
@@ -271,6 +272,7 @@
                                                                 <OPTION value=3>論文</OPTION>
                                                                 <OPTION value=4>資料庫</OPTION>
                                                                 <OPTION value=5>網路資源</OPTION>
+                                                                <OPTION value=5>其他</OPTION>
                                                             </select>
                                                             <label>回復資料類型</label>
                                                         </div>
@@ -280,6 +282,19 @@
                                                             <label>其他</label>
                                                         </div>
                                                     </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="1" selected>是</option>
+                                                                <OPTION value=1>否</OPTION>
+                                                            </select>
+                                                            <label>註記</label>
+                                                        </div>
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="自動帶入館員姓名" disabled>
+                                                            <label>回覆人員</label>
+                                                        </div>
+                                                    </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
                                                             <textarea>文字 </textarea>
@@ -287,15 +302,6 @@
                                                         </div>
                                                         <div class="help">由總館代鍵分館問題，經總館審核判定不上架時輸入不上架原因</div>
                                                     </div>
-                                                </div>
-                                                <div class="btn_grp">
-                                                    <button class="btn btn">暫存</button>
-                                                    <a href="tpmlwebref_questionsearchnewemail1.htm"
-                                                        class="btn btn-blue">陳核信件</a>
-                                                    <a href="tpmlwebref_questionsearchnewemail2.htm"
-                                                        class="btn btn-blue">轉介信件</a>
-                                                    <a href="tpmlwebref_questionsearchnewemail3.htm"
-                                                        class="btn btn-blue">寄信給讀者</a>
                                                 </div>
                                                 <hr>
                                                 <div class="setting_block">
@@ -453,10 +459,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="btn_grp">
-                                                    <a href="tpmlwebref_questionsearchnewemail3.htm"
-                                                        class="btn btn-blue">寄信給讀者</a>
-                                                </div>
                                                 <hr>
                                             </div>
                                         </div>
@@ -465,14 +467,33 @@
                             </div>
                             <!-- 右側資料widget -->
                             <div class="publish_block">
-                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <h3>狀態資訊</h3>
+                                    </div>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="form_title">狀態<abbr>*已回覆</abbr></div>
+                                            <div>回覆時間 2024/5/14下午18:09</div>
+                                            <div class="form_content">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <a href="tpmlwebref_questionsearchnewemail1.htm" class="btn btn-green">暫存</a>
+                                        <a href="tpmlwebref_questionsearchnewemail1.htm" class="btn btn-orange">陳核信件</a>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <a href="tpmlwebref_questionsearchnewemail2.htm" class="btn btn-primary">轉介</a>
+                                        <a href="tpmlwebref_questionsearchnewemail3.htm" class="btn btn-blue">回信讀者</a>
+                                    </div>
+                                </div>
                                 <div class="block">
                                     <div class="_head">
                                         <h3>發佈選項</h3>
                                     </div>
                                     <div class="flex-form">
                                         <div class="form_grp">
-                                            <div class="form_title">狀態<abbr>*</abbr></div>
                                             <div class="form_content">
                                                 <div class="radio_grp form_inline">
                                                     <label><input name="radioStatus" type="radio" value=""
@@ -482,56 +503,29 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
-                                        <div class="form_grp datepick">
-                                            <div class="form_title">發佈(上架)時間<abbr>*</abbr></div>
-                                            <div class="form_grp datepick">
-                                                <div class="labelEffect">
-                                                    <input name="" type="datetime-local" value="2021-10-03T19:30">
-                                                    <!--button class="btn"><i class="i_calendar"></i></button-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp datepick" style="margin-top:20px;">
-                                            <div class="form_title">下架時間</div>
-                                            <div class="form_grp datepick">
-                                                <div class="labelEffect">
-                                                    <input name="" type="datetime-local" value="">
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="btn_grp">
                                         <button class="btn btn-green">儲存</button>
                                         <button class="btn">取消</button>
-
-                                        <!--button class="btn">預覽</button-->
-                                        <!--button class="btn btn-orange">重新公告</button-->
-                                        <!--重新公告採複製模式，將原資料複製新的一筆，舊的資料紀錄為歷程，並自動產生公告次數。新增為第一次，複製後為第二次-->
                                     </div>
                                 </div>
                                 <div class="block">
                                     <div class="_head">
-                                        <h3>狀態資訊</h3>
-                                    </div>
-                                    <div class="log">
-                                        <!--ul>
-                                            <li>公告狀態：第二次公告(自動)</li>
-                                            <li>收件狀態：已截止(自動)</li>
-                                        </ul-->
-                                    </div>
-                                </div>
-                                <div class="block">
-                                    <div class="_head">
-                                        <h3>最後編修資訊</h3>
-                                    </div>
-                                    <div class="log">
-                                        <!--ul>
-                                            <li>編修者: <span><i class="i_man"></i></span>系統管理者(admin)</li>
-                                            <li>編修日期: <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
-                                            <li>建立者: <span><i class="i_man"></i></span>系統管理者(admin)</li>
-                                            <li>建立日期: <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
-                                        </ul-->
+                                        <div class="block">
+                                            <div class="_head">
+                                                <h3>編輯紀錄</h3>
+                                            </div>
+                                            <div class="log">
+                                                <ul>
+                                                    <li>
+                                                        <span><i class="i_man"></i></span><a href="#">系統管理者(admin)</a>
+                                                    </li>
+                                                    <li>
+                                                        <span><i class="i_clock"></i></span>2024/11/26 14:26:10
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -539,48 +533,46 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- JS-->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="vendor/jquery.easing.min.js"></script>
-    <!-- template customize js -->
-    <script src="js/customize.js"></script>
-    <!-- highlight -->
-    <script src="vendor/highlight/highlight.pack.js"></script>
-    <!-- tree view -->
-    <script src="vendor/treeview/jquery.treeview.js"></script>
-    <!-- fancybox -->
-    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-    <script src="js/select2.full.min.js"></script>
+            <!-- JS-->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="vendor/jquery.easing.min.js"></script>
+            <!-- template customize js -->
+            <script src="js/customize.js"></script>
+            <!-- highlight -->
+            <script src="vendor/highlight/highlight.pack.js"></script>
+            <!-- tree view -->
+            <script src="vendor/treeview/jquery.treeview.js"></script>
+            <!-- fancybox -->
+            <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+            <script src="js/select2.full.min.js"></script>
 
-    <script>
-        // first example
-        $(".treeview .treeview").treeview();
-    </script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <script>
-        // first example
-        $(".treeview .treeview").treeview();
-        $('header').load("header.htm");
-        $('aside').load("aside_tpml.htm");
-    </script>
-    <!--Select multiple checkbox-->
-    <script>
-        $(document).ready(function () {
-            $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
-        });
-    </script>
-    <!--Select2-->
-    <script>
-        $(function () {
-            $("#select1").select2();
-            $("#select2").select2();
-            $("#select3").select2();
-        });
-    </script>
+            <script>
+                // first example
+                $(".treeview .treeview").treeview();
+            </script>
+            <script>
+                hljs.initHighlightingOnLoad();
+            </script>
+            <script>
+                // first example
+                $(".treeview .treeview").treeview();
+                $('header').load("header.htm");
+                $('aside').load("aside_tpml.htm");
+            </script>
+            <!--Select multiple checkbox-->
+            <script>
+                $(document).ready(function () {
+                    $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
+                });
+            </script>
+            <!--Select2-->
+            <script>
+                $(function () {
+                    $("#select1").select2();
+                    $("#select2").select2();
+                    $("#select3").select2();
+                });
+            </script>
 
 </body>
 
