@@ -1,30 +1,186 @@
-<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+    <!--增加select-->
+    <link rel="stylesheet" href="css/fileUpload.css">
+    <link rel="stylesheet" href="css/customize.css">
+</head>
 
 <body>
-    <div class="form_grp form_inline">
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化管理</a></li>
+                    <li>陳核信件</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>陳核信件（編輯）</h2>
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <div class="labelEffect">
-            <br>
-            主管陳核通知:
-            <select id="" name="" class="dynamicCol used">
-                <option value="1" selected>請選擇</option>
-                <OPTION value=A/A11>長官1</OPTION>
-                <OPTION value=A/A12>長官2</OPTION>
-                <OPTION value=A/A13>長官3</OPTION>
-            </select>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>陳核信件（編輯）</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="flex-form">
+                                        <div class="form_grp form_inline">
+                                            <div class="labelEffect">
+                                                <select id="" name="" class="dynamicCol used">
+                                                    <option value="" selected="" disabled="disabled">
+                                                    </option>
+                                                    <option value="1" selected>主管1</option>
+                                                    <option value="2">主管2</option>
+                                                    <option value="3">主管3</option>
+                                                </select>
+                                                <label>陳核主管</label>
+                                            </div>
+                                        </div>
+                                        <span></span>
+                                        <hr>
+                                        <div class="labelEffect">
+                                            <input name="" id="" type="text" value="" class="dynamicCol used">
+                                            <label>標題<abbr>*</abbr></label>
+                                        </div>
+                                        <div class="form_grp" style="margin-top:20px;">
+                                            <div class="labelEffect">
+                                                <textarea class="used" disabled></textarea>
+                                                <div class="help">請輸入您的回覆內容，可換行但不接受 html 語法</div>
+                                                <label>信件內容<abbr>*</abbr></label>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <button class="btn btn-grey">主管陳核通知版型1：建議不予處理</button>
+                                            <button class="btn btn-grey">主管陳核通知版型2</button>
+                                            <button class="btn btn-grey">主管陳核通知版型3</button>
+                                        </div>
+                                        <hr>
+                                        <div class="setting_block" style="width:inherit;">
+                                            <div class="fileDragDrop">
+                                                <input type="file" id="inputImg" onchange="changeHandler(event,'img')"
+                                                    ondragover="dragoverHandler(event,'img')"
+                                                    ondrop="dropHandler(event,'img')">
+                                                <p><em>上傳圖片檔案</em></p>
+                                                <p>拖拉檔案或選擇「從本機上傳」</p>
+                                            </div>
+                                            <p class="tips">請注意:接受JPG,PNG,GIF,SVG圖片格式,檔案大小請勿超過10MB。若涉及侵權或危害善良風俗者,上傳單位應自負
+                                                咎責。</p>
+                                        </div>
+                                        <div class="setting_block" style="width:inherit;">
+                                            <div class="fileDragDrop">
+                                                <input type="file" id="inputImg" onchange="changeHandler(event,'img')"
+                                                    ondragover="dragoverHandler(event,'img')"
+                                                    ondrop="dropHandler(event,'img')">
+                                                <p><em>上傳附件檔案</em></p>
+                                                <p>拖拉檔案或選擇「從本機上傳」</p>
+                                            </div>
+                                            <p class="tips">
+                                                請注意:接受DOC,DOCX,TXT,PDF.HTML,HTM,ODT,ODS,MP4,AVI,FLV,WMV,MOV,MPEG-2,MPEG-4,ZIP,7Z,RAR檔案
+                                                格式,若涉及侵權或危害善良風俗者,上傳單位應自負咎責。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 右側資料widget -->
+                            <div class="publish_block">
+                                <!-- 每種不同功能，都用block區分 -->
+                                <div class="block">
+                                    <div class="_head">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <div class="_head">
+                                            <h3>陳核狀態</h3>
+                                        </div>
+                                        <div class="flex-form">
+                                            <div class="form_grp">
+                                                <div class="labelEffect">
+                                                    <div class="form_title">狀態 *未陳核</abbr></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <!--button class="btn btn-green">暫存</button-->
+                                            <button class="btn">儲存(不發送)</button>
+                                            <button class="btn btn-orange">發送陳核</button>
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <div class="_head">
+                                            <h3>最後編修資訊</h3>
+                                        </div>
+                                        <div class="log">
+                                            <ul>
+                                                <li>
+                                                    <span><i class="i_man"></i></span>系統管理者(admin)
+                                                </li>
+                                                <li>
+                                                    <span><i class="i_clock"></i></span>2024/11/26 14:26:10
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
-        <button class="btn btne">主管陳核通知版型1：建議不予處理</button>
-        <button class="btn btne">主管陳核通知版型2</button>
-        <button class="btn btne">主管陳核通知版型3</button>
-        <p></p>
-        信件內容:
-        <textarea name="mytext" rows="6"
-            cols="40">主管您好：請至後台線上參考服務案中審核維護管理進行審查999案件，該案件處理結果擬不予處理/擬完全解答/無法解答/處理中/指引使用方式/轉介，謝謝。</textarea>
-        <p></p>
-        <button class="btn btn">確定</button>
-        <button class="btn btne">取消</button>
-        </form>
+
+        <!-- JS-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="vendor/jquery.easing.min.js"></script>
+        <!-- template customize js -->
+        <script src="js/customize.js"></script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack.js"></script>
+        <!-- tree view -->
+        <script src="vendor/treeview/jquery.treeview.js"></script>
+        <script>
+            // first example
+            $(".treeview .treeview").treeview();
+            $('header').load("header.htm");
+            $('aside').load("aside_tpml.htm");
+        </script>
 </body>
 
 </html>
