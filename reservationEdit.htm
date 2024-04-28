@@ -28,26 +28,29 @@
     <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/4/tinymce.min.js'></script>
     <script>
         tinymce.init({
-        selector: 'textarea.tinymce',
-        height: 500,
-        menubar: false,
-        plugins: [
-            'advlist autolink lists link image charmap print preview anchor textcolor',
-            'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table contextmenu paste code help wordcount'
-        ],
-        mobile: { 
-            theme: 'mobile' 
-        },
-        toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
-        content_css: [
-            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-            '//www.tiny.cloud/css/codepen.min.css'
-        ],
+            selector: 'textarea.tinymce',
+            height: 500,
+            menubar: false,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor textcolor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table contextmenu paste code help wordcount'
+            ],
+            mobile: {
+                theme: 'mobile'
+            },
+            toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+            content_css: [
+                '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                '//www.tiny.cloud/css/codepen.min.css'
+            ],
         });
     </script>
     <style>
-        .mce-notification-inner, .mce-notification-warning {visibility: hidden;}
+        .mce-notification-inner,
+        .mce-notification-warning {
+            visibility: hidden;
+        }
     </style>
 </head>
 
@@ -102,11 +105,12 @@
                                             </div>
                                             <div class="_content">
                                                 <div class="flex-form">
-                                                <h4>訂單資訊</h4>
+                                                    <h4>訂單資訊</h4>
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_content form_inline">
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="2022050810022" class="dynamicCol used" disabled>
+                                                                <input name="" type="text" value="2022050810022"
+                                                                    class="dynamicCol used" disabled>
                                                                 <label>系統編號</label>
                                                             </div>
                                                             <div class="labelEffect">
@@ -114,28 +118,36 @@
                                                                 <label>預約編號</label>
                                                             </div>
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="A12345 / 劉佳淇" disabled>
+                                                                <input name="" type="text" value="A12345 / 劉佳淇"
+                                                                    disabled>
                                                                 <label>承辦人</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp form_inline" style="margin-top:20px;">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="活動名稱" class="dynamicCol used" disabled>
+                                                            <input name="" type="text" value="活動名稱"
+                                                                class="dynamicCol used" disabled>
                                                             <label>活動名稱</label>
                                                         </div>
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
                                                                 <div class="labelEffect">
                                                                     <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" disabled>
+                                                                    <input name="" type="text" value="2022-09-11"
+                                                                        onfocus="(this.type='date')"
+                                                                        onblur="if(!this.value) this.type='text'"
+                                                                        disabled>
                                                                     <label>活動開始日期</label>
                                                                 </div>
                                                                 <!-- <div class="help">說明文字</div> -->
                                                             </div>
                                                             <div class="endDate">
                                                                 <div class="labelEffect">
-                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" disabled>
+                                                                    <input name="" type="text" value="2022-09-11"
+                                                                        onfocus="(this.type='date')"
+                                                                        onblur="if(!this.value) this.type='text'"
+                                                                        disabled>
                                                                     <label>活動結束日期</label>
                                                                 </div>
                                                             </div>
@@ -143,11 +155,13 @@
                                                     </div>
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="凌網科技股份有限公司" class="dynamicCol used" disabled>
+                                                            <input name="" type="text" value="凌網科技股份有限公司"
+                                                                class="dynamicCol used" disabled>
                                                             <label>承租公司/承租人</label>
                                                         </div>
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="劉佳淇" class="dynamicCol used" disabled>
+                                                            <input name="" type="text" value="劉佳淇"
+                                                                class="dynamicCol used" disabled>
                                                             <label>聯絡人</label>
                                                             <div class="additional">
                                                                 <select name="" disabled>
@@ -162,27 +176,32 @@
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_content form_inline">
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="02-00000000#1234" class="dynamicCol used" disabled>
+                                                                <input name="" type="text" value="02-00000000#1234"
+                                                                    class="dynamicCol used" disabled>
                                                                 <label>連絡電話</label>
                                                             </div>
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="0900-000000" class="dynamicCol used" disabled>
+                                                                <input name="" type="text" value="0900-000000"
+                                                                    class="dynamicCol used" disabled>
                                                                 <label>手機</label>
                                                             </div>
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="02-00000001" class="dynamicCol used" disabled>
+                                                                <input name="" type="text" value="02-00000001"
+                                                                    class="dynamicCol used" disabled>
                                                                 <label>傳真</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="liucc@hyweb.com.tw" class="dynamicCol used" disabled>
+                                                            <input name="" type="text" value="liucc@hyweb.com.tw"
+                                                                class="dynamicCol used" disabled>
                                                             <label>聯絡email</label>
                                                         </div>
                                                         <div class="labelEffect">
                                                             <span style="margin-right:15px;">TWD </span>
-                                                            <input name="" type="text" value="789,567" class="dynamicCol used" disabled>
+                                                            <input name="" type="text" value="789,567"
+                                                                class="dynamicCol used" disabled>
                                                             <label>場地費用</label>
                                                         </div>
                                                     </div>
@@ -196,38 +215,42 @@
                                                 </div>
                                                 <hr>
                                                 <div class="flex-form">
-                                                <h4>合約管理</h4>
+                                                    <h4>合約管理</h4>
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
                                                                 <div class="labelEffect">
                                                                     <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                                                                    <input name="" type="text" value="2022-09-11"
+                                                                        onfocus="(this.type='date')"
+                                                                        onblur="if(!this.value) this.type='text'">
                                                                     <label>合約回傳期限</label>
                                                                 </div>
                                                                 <!-- <div class="help">說明文字</div> -->
                                                             </div>
-                                                         </div>
+                                                        </div>
                                                     </div>
                                                     <div class="setting_block" style="width:100%;">
                                                         <div class="upload_block">
                                                             <!-- item = 1 file -->
                                                             <div class="item">
                                                                 <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
                                                                 </div>
                                                                 <div class="flex-form">
                                                                     <div class="file_title">上傳已/未用印合約及附件</div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
+                                                                            <input name="" type="text"
+                                                                                value="附件檔案名稱附件檔案名稱.pdf"
+                                                                                placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs">
+                                                                                <i class="i_addfile"></i>更換
+                                                                            </button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                         <div class="tips">所上傳的檔案將顯示於前台會員訂單中。若兩方用印合約回傳完畢後，請移除未用印合約</div>
@@ -243,45 +266,51 @@
                                                     <div class="form_grp">
                                                         <h5 class="form_title">客戶端回傳檔案</h5>
                                                         <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12
+                                                                    15:33</em></li>
+                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13
+                                                                    16:14</em></li>
                                                         </ol>
-                                                    </div>      
+                                                    </div>
                                                 </div>
                                                 <hr>
                                                 <div class="flex-form">
-                                                <h4>場地及設備追加簽認單管理</h4>
+                                                    <h4>場地及設備追加簽認單管理</h4>
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
                                                                 <div class="labelEffect">
                                                                     <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="2022-09-11" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                                                                    <input name="" type="text" value="2022-09-11"
+                                                                        onfocus="(this.type='date')"
+                                                                        onblur="if(!this.value) this.type='text'">
                                                                     <label>合約回傳期限</label>
                                                                 </div>
                                                                 <!-- <div class="help">說明文字</div> -->
                                                             </div>
-                                                         </div>
+                                                        </div>
                                                     </div>
                                                     <div class="setting_block" style="width:100%;">
                                                         <div class="upload_block">
                                                             <!-- item = 1 file -->
                                                             <div class="item">
                                                                 <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
                                                                 </div>
                                                                 <div class="flex-form">
                                                                     <div class="file_title">上傳已/未用印合約及附件</div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
+                                                                            <input name="" type="text"
+                                                                                value="附件檔案名稱附件檔案名稱.pdf"
+                                                                                placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs">
+                                                                                <i class="i_addfile"></i>更換
+                                                                            </button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                         <div class="tips">所上傳的檔案將顯示於前台會員訂單中。若兩方用印合約回傳完畢後，請移除未用印合約</div>
@@ -289,22 +318,26 @@
                                                     <div class="form_grp">
                                                         <h5 class="form_title">客戶端回傳檔案</h5>
                                                         <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12
+                                                                    15:33</em></li>
+                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13
+                                                                    16:14</em></li>
                                                         </ol>
-                                                    </div>      
+                                                    </div>
                                                 </div>
                                                 <hr>
                                                 <h4>繳費資訊</h4>
                                                 <div class="flex-form">
-                                                <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">1.訂金</h5>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">1.訂金</h5>
                                                     <div class="form_grp">
                                                         <!--div class="form_title">繳費期限</div-->
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
                                                                 <div class="labelEffect">
                                                                     <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                                                                    <input name="" type="text" value=""
+                                                                        onfocus="(this.type='date')"
+                                                                        onblur="if(!this.value) this.type='text'">
                                                                     <label>繳費期限</label>
                                                                 </div>
                                                             </div>
@@ -314,9 +347,12 @@
                                                         <div class="form_title">繳款方式</div>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項一</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項二</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項三</span></label>
+                                                                <label><input name="radioSample1111" type="radio"
+                                                                        value=""><span>選項一</span></label>
+                                                                <label><input name="radioSample1111" type="radio"
+                                                                        value=""><span>選項二</span></label>
+                                                                <label><input name="radioSample1111" type="radio"
+                                                                        value=""><span>選項三</span></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -325,27 +361,30 @@
                                                             <!-- item = 1 file -->
                                                             <div class="item">
                                                                 <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
                                                                 </div>
                                                                 <div class="flex-form">
                                                                     <div class="file_title">上傳繳費單</div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
+                                                                            <input name="" type="text"
+                                                                                value="附件檔案名稱附件檔案名稱.pdf"
+                                                                                placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs">
+                                                                                <i class="i_addfile"></i>更換
+                                                                            </button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_content form_inline">
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="922 XX銀行" class="dynamicCol used" disabled>
+                                                                <input name="" type="text" value="922 XX銀行"
+                                                                    class="dynamicCol used" disabled>
                                                                 <label>匯款銀行</label>
                                                             </div>
                                                             <div class="labelEffect">
@@ -357,20 +396,25 @@
                                                     <div class="form_grp">
                                                         <h5 class="form_title">客戶端回傳檔案</h5>
                                                         <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12
+                                                                    15:33</em></li>
+                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13
+                                                                    16:14</em></li>
                                                         </ol>
-                                                    </div>      
+                                                    </div>
                                                 </div>
                                                 <div class="flex-form">
-                                                <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">2.待收網路費</h5>
+                                                    <h5 style="padding:0 0 1em 1em;margin:0;font-size:.95em;">2.待收網路費
+                                                    </h5>
                                                     <div class="form_grp">
                                                         <!--div class="form_title">繳費期限</div-->
                                                         <div class="datepick" style="flex: 0 1 50%;padding-left:.75em;">
                                                             <div class="startDate">
                                                                 <div class="labelEffect">
                                                                     <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
-                                                                    <input name="" type="text" value="" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                                                                    <input name="" type="text" value=""
+                                                                        onfocus="(this.type='date')"
+                                                                        onblur="if(!this.value) this.type='text'">
                                                                     <label>繳費期限</label>
                                                                 </div>
                                                             </div>
@@ -380,9 +424,12 @@
                                                         <div class="form_title">繳款方式</div>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項一</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項二</span></label>
-                                                                <label><input name="radioSample1111" type="radio" value=""><span>選項三</span></label>
+                                                                <label><input name="radioSample1111" type="radio"
+                                                                        value=""><span>選項一</span></label>
+                                                                <label><input name="radioSample1111" type="radio"
+                                                                        value=""><span>選項二</span></label>
+                                                                <label><input name="radioSample1111" type="radio"
+                                                                        value=""><span>選項三</span></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -391,36 +438,40 @@
                                                             <!-- item = 1 file -->
                                                             <div class="item">
                                                                 <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
                                                                 </div>
                                                                 <div class="flex-form">
                                                                     <div class="file_title">上傳繳費單</div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="附件檔案名稱附件檔案名稱.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
+                                                                            <input name="" type="text"
+                                                                                value="附件檔案名稱附件檔案名稱.pdf"
+                                                                                placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs">
+                                                                                <i class="i_addfile"></i>更換
+                                                                            </button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp">
                                                         <h5 class="form_title">客戶端回傳檔案</h5>
                                                         <ol style="margin-top:2em;">
-                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12 15:33</em></li>
-                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13 16:14</em></li>
+                                                            <li><a href="#">OOOOO公司用印合約.pdf</a>｜<em>2022-08-12
+                                                                    15:33</em></li>
+                                                            <li><a href="#">OOOOO公司用印更新合約.pdf</a>｜<em>2022-08-13
+                                                                    16:14</em></li>
                                                         </ol>
-                                                    </div>      
+                                                    </div>
                                                 </div>
                                                 <hr>
                                             </div>
-            
+
                                         </div>
-                                        
+
                                     </div>
                                     <!--tabcontent 2 -->
                                     <div>
@@ -435,8 +486,11 @@
                                                         <div class="form_title">同意活動登錄於官網</div>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample2222" type="radio" checked value="" disabled><span>同意</span></label>
-                                                                <label><input name="radioSample2222" type="radio" value="" disabled><span>不同意</span></label>
+                                                                <label><input name="radioSample2222" type="radio"
+                                                                        checked value=""
+                                                                        disabled><span>同意</span></label>
+                                                                <label><input name="radioSample2222" type="radio"
+                                                                        value="" disabled><span>不同意</span></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -444,8 +498,10 @@
                                                         <div class="form_title">活動行事曆顯示</div>
                                                         <div class="form_content">
                                                             <div class="radio_grp form_inline">
-                                                                <label><input name="radioSample3333" type="radio" checked value=""><span>開啟</span></label>
-                                                                <label><input name="radioSample3333" type="radio" value=""><span>關閉</span></label>
+                                                                <label><input name="radioSample3333" type="radio"
+                                                                        checked value=""><span>開啟</span></label>
+                                                                <label><input name="radioSample3333" type="radio"
+                                                                        value=""><span>關閉</span></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -456,7 +512,9 @@
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="form_content form_inline">
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="https://www.hyweb.com.tw" class="dynamicCol used" disabled>
+                                                                <input name="" type="text"
+                                                                    value="https://www.hyweb.com.tw"
+                                                                    class="dynamicCol used" disabled>
                                                                 <label>活動網站</label>
                                                             </div>
                                                             <div class="labelEffect">
@@ -464,7 +522,8 @@
                                                                 <label>主辦/承辦單位</label>
                                                             </div>
                                                             <div class="labelEffect">
-                                                                <input name="" type="text" value="liucc@hyweb.com.tw" disabled>
+                                                                <input name="" type="text" value="liucc@hyweb.com.tw"
+                                                                    disabled>
                                                                 <label>活動聯絡email</label>
                                                             </div>
                                                         </div>
@@ -490,7 +549,8 @@
                                                                     <div class="file_title">活動宣傳圖</div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                            <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
+                                                                            <input name="" type="text" value="alt圖片說明"
+                                                                                placeholder="請輸入圖片說明" class="used">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -528,17 +588,22 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>Q2</td>
-                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件2</a></td>
+                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務
+                                                                </td>
+                                                                <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a
+                                                                        href="#">附件1</a>, <a href="#">附件1</a>, <a
+                                                                        href="#">附件2</a></td>
                                                                 <td>2022-08-14 18:23</td>
                                                             </tr>
                                                             <tr style="background-color:#fdfccb;">
                                                                 <td>A1</td>
                                                                 <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。請填寫聯絡訊息，我們將盡快為您服務<br>
                                                                     若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務<br>
-                                                                    <a hrf="https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7">https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7</a>
+                                                                    <a
+                                                                        hrf="https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7">https://www.ticc.com.tw/main_ch/download.aspx?uid=160&pid=160&catep_id=7</a>
                                                                 </td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件2</a>, <a href="#">附件3</a></td>
+                                                                <td><a href="#">附件1</a>, <a href="#">附件2</a>, <a
+                                                                        href="#">附件3</a></td>
                                                                 <td>2022-08-16 10:11</td>
                                                             </tr>
                                                             <tr>
@@ -549,15 +614,18 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>Q4</td>
-                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務</td>
-                                                                <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件1</a>, <a href="#">附件2</a></td>
+                                                                <td>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務
+                                                                </td>
+                                                                <td><a href="#">附件1</a>, <a href="#">附件1</a>, <a
+                                                                        href="#">附件1</a>, <a href="#">附件1</a>, <a
+                                                                        href="#">附件2</a></td>
                                                                 <td>2022-08-18 14:34</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
                                                 <hr>
-                                                <h3>問題回復</h3>
+                                                <h3>問題回覆</h3>
                                                 <div class="flex-form">
                                                     <div class="form_grp" style="margin-top:20px;">
                                                         <div class="labelEffect">
@@ -570,11 +638,14 @@
                                                     <div class="setting_block" style="width:100%;">
                                                         <h4>附件上傳</h4>
                                                         <div class="fileDragDrop">
-                                                            <input type="file" id="inputImg" onchange="changeHandler(event,'img')" ondragover="dragoverHandler(event,'img')" ondrop="dropHandler(event,'img')">
+                                                            <input type="file" id="inputImg"
+                                                                onchange="changeHandler(event,'img')"
+                                                                ondragover="dragoverHandler(event,'img')"
+                                                                ondrop="dropHandler(event,'img')">
                                                             <p><em>上傳檔案</em></p>
                                                             <p>拖拉檔案或選擇「從本機上傳」</p>
                                                         </div>
-                        
+
                                                         <div class="upload_block">
                                                             <!-- item = 1 image -->
                                                             <div class="item">
@@ -585,9 +656,13 @@
                                                                     <div class="file_title">圖片名稱.jpg </div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                            <input name="" type="text" value="alt圖片說明" placeholder="請輸入圖片說明" class="used">
+                                                                            <input name="" type="text" value="alt圖片說明"
+                                                                                placeholder="請輸入圖片說明" class="used">
                                                                         </div>
-                                                                        <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                                        <div class="additional"><a
+                                                                                onclick="deleteAttach(-1)"
+                                                                                class="btn"><i class="i_edit"></i>移除</a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -600,11 +675,13 @@
                                                                     <div class="file_title">附件檔案名稱.pdf </div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                            <input name="" type="text" value="附件檔案名稱" placeholder="附件檔案名稱" class="used">
+                                                                            <input name="" type="text" value="附件檔案名稱"
+                                                                                placeholder="附件檔案名稱" class="used">
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="additional"><a onclick="deleteAttach(-1)" class="btn"><i class="i_edit"></i>移除</a></div>
+                                                                <div class="additional"><a onclick="deleteAttach(-1)"
+                                                                        class="btn"><i class="i_edit"></i>移除</a></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -701,20 +778,21 @@
                                                             <!-- item = 1 file -->
                                                             <div class="item">
                                                                 <div class="pic">
-                                                                <img src="images/icon/icon_pdf.svg" alt="">
+                                                                    <img src="images/icon/icon_pdf.svg" alt="">
                                                                 </div>
                                                                 <div class="flex-form">
                                                                     <div class="file_title">附件上傳</div>
                                                                     <div class="form_grp">
                                                                         <div class="labelEffect hasBtn">
-                                                                        <input name="" type="text" value="咖啡券.pdf" placeholder="附件檔案名稱" class="used">
-                                                                        <button class="btn btn-xs">
-                                                                            <i class="i_addfile"></i>更換
-                                                                        </button>
+                                                                            <input name="" type="text" value="咖啡券.pdf"
+                                                                                placeholder="附件檔案名稱" class="used">
+                                                                            <button class="btn btn-xs">
+                                                                                <i class="i_addfile"></i>更換
+                                                                            </button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
 
@@ -750,8 +828,10 @@
                                             <div class="form_title">狀態<abbr>*</abbr></div>
                                             <div class="form_content">
                                                 <div class="radio_grp form_inline">
-                                                    <label><input name="radioStatus" type="radio" value="" checked><span>公開(啟用)</span></label>
-                                                    <label><input name="radioStatus" type="radio" value=""><span>下架(停用)</span></label>
+                                                    <label><input name="radioStatus" type="radio" value=""
+                                                            checked><span>公開(啟用)</span></label>
+                                                    <label><input name="radioStatus" type="radio"
+                                                            value=""><span>下架(停用)</span></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -772,7 +852,8 @@
                                                 <span><i class="i_man"></i></span>系統管理者(admin)
                                             </li>
                                             <li>
-                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -797,22 +878,22 @@
     <script src="js/select2.full.min.js"></script>
 
     <script>
-    // first example
-    $(".treeview .treeview").treeview();
+        // first example
+        $(".treeview .treeview").treeview();
     </script>
     <script>
-    hljs.initHighlightingOnLoad();
+        hljs.initHighlightingOnLoad();
     </script>
     <script>
-    // first example
-    $(".treeview .treeview").treeview();
-    $('header').load("header.htm");
-    $('aside').load("aside_ticc.htm");
+        // first example
+        $(".treeview .treeview").treeview();
+        $('header').load("header.htm");
+        $('aside').load("aside_ticc.htm");
     </script>
     <!--Select multiple checkbox-->
     <script>
         $(document).ready(function () {
-            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
         });
     </script>
     <!--Select2-->
@@ -823,7 +904,7 @@
             $("#select3").select2();
         });
     </script>
-    
+
 </body>
 
 </html>

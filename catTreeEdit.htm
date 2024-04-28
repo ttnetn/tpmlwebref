@@ -41,7 +41,7 @@
                         <h2>架構管理</h2>
                         <div class="function">
                             <ul>
-                            	<li class="icon_back"><a href="catNodeEdit.htm">編修目錄樹</a></li>
+                                <li class="icon_back"><a href="catNodeEdit.htm">編修目錄樹</a></li>
                                 <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
                             </ul>
                         </div>
@@ -58,7 +58,7 @@
                                     <div class="flex-form">
                                         <div class="form_grp">
                                             <div class="labelEffect">
-												<input name="CtRootID" id="CtRootID" type="hidden" value="">
+                                                <input name="CtRootID" id="CtRootID" type="hidden" value="">
                                                 <input name="CtRootName" id="CtRootName" type="text">
                                                 <label>目錄樹名稱<abbr>*</abbr></label>
                                             </div>
@@ -81,25 +81,25 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>                                        
-                                        <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <select name="deptId" id="deptId">
-                                                        <option value="" disabled selected></option>
-                                                        <option value="0">總管理</option>
-                                                        <option value="001">單位1</option>
-                                                        <option value="00101">--第1-1科</option>
-                                                        <option value="00102">--第1-2科</option>
-                                                       <option value="002">單位2</option>
-                                                    </select>
-                                                    <label>單位</label>
-                                                </div>
                                         </div>
-                                     </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="deptId" id="deptId">
+                                                    <option value="" disabled selected></option>
+                                                    <option value="0">總管理</option>
+                                                    <option value="001">單位1</option>
+                                                    <option value="00101">--第1-1科</option>
+                                                    <option value="00102">--第1-2科</option>
+                                                    <option value="002">單位2</option>
+                                                </select>
+                                                <label>單位</label>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                     <div class="btn_grp">
-                                        <button class="btn">清除重設(回復前次設定)</button>
+                                        <button class="btn">清除重設(回覆前次設定)</button>
                                     </div>
 
                                 </div>
@@ -116,7 +116,8 @@
                                                 <span><i class="i_man"></i></span><a href="#">系統管理者(admin)</a>
                                             </li>
                                             <li>
-                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="btn_grp">
@@ -131,7 +132,8 @@
                                     <div class="log">
                                         <ul>
                                             <li>
-                                                <span><i class="i_global"></i></span>節點筆數: <em>99</em> 筆 </li>
+                                                <span><i class="i_global"></i></span>節點筆數: <em>99</em> 筆
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -142,36 +144,36 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
-            <!-- JS-->
-            <script src="js/jquery-3.3.1.min.js"></script>
-            <script src="vendor/jquery.easing.min.js"></script>
-            <!-- template customize js -->
-            <script src="js/customize.js"></script>
-            <!-- highlight -->
-            <script src="vendor/highlight/highlight.pack.js"></script>
-            <script>
-            hljs.initHighlightingOnLoad();
-            </script>
-            <!-- sortable -->
-            <script src="vendor/sortable/Sortable.min.js"></script>
-            <script type="text/javascript">
-            var elements = $('.sortable');
-            for (var i = 0; i < elements.length; i++) {
-                new Sortable(elements[i], {
-                    group: 'nested',
-                    animation: 150,
-                    invertSwap: true,
-                    fallbackOnBody: true,
-                    swapThreshold: 0.65
-                });
-            }
-            </script>
-            <script>
-            $('header').load("header.htm");
-            $('aside').load("aside.htm");
-            </script>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <!-- sortable -->
+    <script src="vendor/sortable/Sortable.min.js"></script>
+    <script type="text/javascript">
+        var elements = $('.sortable');
+        for (var i = 0; i < elements.length; i++) {
+            new Sortable(elements[i], {
+                group: 'nested',
+                animation: 150,
+                invertSwap: true,
+                fallbackOnBody: true,
+                swapThreshold: 0.65
+            });
+        }
+    </script>
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
 </body>
 
 </html>

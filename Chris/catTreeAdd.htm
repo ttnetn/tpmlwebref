@@ -73,68 +73,68 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>                                        
-                                            <div class="form_grp">
-                                                <div class="labelEffect">
-                                                    <select name="deptId" id="deptId">
-                                                        <option value="" disabled selected></option>
-                                                        <option value="0">總管理</option>
-                                                        <option value="001">單位1</option>
-                                                        <option value="00101">--第1-1科</option>
-                                                        <option value="00102">--第1-2科</option>
-                                                       <option value="002">單位2</option>
-                                                    </select>
-                                                    <label>單位</label>
-                                                </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select name="deptId" id="deptId">
+                                                    <option value="" disabled selected></option>
+                                                    <option value="0">總管理</option>
+                                                    <option value="001">單位1</option>
+                                                    <option value="00101">--第1-1科</option>
+                                                    <option value="00102">--第1-2科</option>
+                                                    <option value="002">單位2</option>
+                                                </select>
+                                                <label>單位</label>
                                             </div>
                                         </div>
+                                    </div>
 
 
-                                        <div class="btn_grp">
-                                            <button class="btn">清除重設(回復前次設定)</button>
-											<button class="btn">新增儲存</button>
+                                    <div class="btn_grp">
+                                        <button class="btn">清除重設(回覆前次設定)</button>
+                                        <button class="btn">新增儲存</button>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </div>
-        
     </div>
-            <!-- JS-->
-            <script src="../js/jquery-3.3.1.min.js"></script>
-            <script src="../vendor/jquery.easing.min.js"></script>
-            <!-- template customize js -->
-            <script src="../js/customize.js"></script>
-            <!-- highlight -->
-            <script src="../vendor/highlight/highlight.pack.js"></script>
-            <script>
-            hljs.initHighlightingOnLoad();
-            </script>
-            <!-- sortable -->
-            <script src="../vendor/sortable/Sortable.min.js"></script>
-            <script type="text/javascript">
-            var elements = $('.sortable');
-            for (var i = 0; i < elements.length; i++) {
-                new Sortable(elements[i], {
-                    group: 'nested',
-                    animation: 150,
-                    invertSwap: true,
-                    fallbackOnBody: true,
-                    swapThreshold: 0.65
-                });
-            }
-            </script>
-            <script>
-            $('header').load("header.htm");
-            $('aside').load("aside.htm");
-            </script>
+
+    </div>
+    <!-- JS-->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="../js/customize.js"></script>
+    <!-- highlight -->
+    <script src="../vendor/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <!-- sortable -->
+    <script src="../vendor/sortable/Sortable.min.js"></script>
+    <script type="text/javascript">
+        var elements = $('.sortable');
+        for (var i = 0; i < elements.length; i++) {
+            new Sortable(elements[i], {
+                group: 'nested',
+                animation: 150,
+                invertSwap: true,
+                fallbackOnBody: true,
+                swapThreshold: 0.65
+            });
+        }
+    </script>
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
 </body>
 
 </html>
