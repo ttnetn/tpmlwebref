@@ -35,14 +35,14 @@
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
                     <li><a href="#">客製化管理</a></li>
-                    <li>審核管理</li>
+                    <li>陳核信件管理</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>審核編輯</h2>
+                        <h2>陳核信件編輯</h2>
                         <div class="function">
                             <ul>
                                 <li class="icon_back"><a href="javascript: history.back();">回上一頁</a></li>
@@ -65,49 +65,35 @@
                                     <div class="active">
                                         <div class="content__wrapper">
                                             <div class="_head">
-                                                <h3>審核編輯資訊</h3>
+                                                <h3>陳核信件編輯</h3>
                                             </div>
                                             <div class="_content">
                                                 <div class="flex-form">
-                                                    <div class="form_grp">
+                                                    <div class="form_grp form_inline">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="自動帶入長官職稱姓名" disabled>
-                                                            <label for="userId">審核 <abbr></abbr></label>
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="1" selected>陳核信件模板1</option>
+                                                                <option value="2">陳核信件模板2</option>
+                                                                <option value="3">陳核信件模板3</option>
+                                                            </select>
+                                                            <label>陳核主管</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="2024/5/13下午18:09"
-                                                                disabled>
-                                                            <label>審核日期</label>
+                                                            <input name="" type="text" value="陳核範本標題名稱">
+                                                            <label>範本名稱<abbr>*</abbr></label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp" style="margin-bottom:50px;">
                                                         <div class="labelEffect">
                                                             <textarea
                                                                 class="used">敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您</textarea>
-                                                            <label>讀者問題描述(不可編修)</label>
+                                                            <label>範本訊息</label>
                                                         </div>
                                                         <div class="help">字數200/500</div>
-                                                    </div>
-                                                    <div class="form_grp" style="margin-bottom:50px;">
-                                                        <div class="labelEffect">
-                                                            <textarea class="used">親愛的讀者您好：
-關於您的問題，因涉及學術研究之資料索取，請參考本館相關規定（首頁>常見問答>使用規定>臺北市立圖書館協助研究及資料申請須知https://tpml.gov.taipei/News_toggle.aspx?n=B64082F5678B94B1&sms=D0034AF4F8239B65），如就使用規定需進一步說明，歡迎來電本館諮詢服務課(02)2755-2823分機2301，由館員為您服務，謝謝。
-                                                                
-本館線上參考問題，將定期維護：關於個人借閱問題，僅保留1個月即自系統上刪除。
-                                                                
-                                                                臺北市立圖書館 諮詢服務課 敬復</textarea>
-                                                            <label>承辦回覆答案(可編修)</label>
-                                                        </div>
-                                                        <div class="help">字數200/500</div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <div class="labelEffect">
-                                                            <textarea>請輸入意見</textarea>
-                                                            <label for="userId">審核意見<abbr></abbr></label>
-                                                        </div>
-                                                        <div class="help">輸入回覆的內容將顯示於前台留言板(字數200/500)</div>
                                                     </div>
                                                 </div>
                                                 <hr>
@@ -209,19 +195,17 @@
                                 <!-- 每種不同功能，都用block區分 -->
                                 <div class="block">
                                     <div class="_head">
-                                        <h3>審核狀態</h3>
+                                        <h3>信件資訊</h3>
                                     </div>
                                     <div class="flex-form">
                                         <div class="form_grp">
-                                            <div class="form_title">狀態<abbr>*</abbr></div>簽核
                                             <div class="form_content">
-
                                             </div>
                                         </div>
                                     </div>
                                     <div class="btn_grp">
-                                        <button class="btn btn-green">不通過</button>
-                                        <button class="btn btn-blue">審核通過</button>
+                                        <button class="btn">儲存</button>
+                                        <button class="btn btn-blue">送出</button>
                                     </div>
                                 </div>
                                 <div class="block">

@@ -34,14 +34,14 @@
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
                     <li><a href="#">客製化管理</a></li>
-                    <li>轉介信箱維護管理</li>
+                    <li>公版信件維護管理</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>轉介信箱維護管理</h2>
+                        <h2>公版信件維護管理</h2>
                         <button class="btn btn-primary btn-adv">
                             <i class="i_search"></i></button>
                     </div>
@@ -58,13 +58,13 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>單位名稱</label>
+                                                    <label>請輸入公版名稱關鍵字</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_name" id="search_name" type="text" value="">
-                                                    <label>信箱</label>
+                                                    <label>啟用狀態</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,28 +81,52 @@
                 <!-- flex-12 -->
                 <div class="flex-12">
                     <div class="col ">
-
                         <!-- 中央區塊 -->
                         <div class="content_block">
                             <div class="_head">
                                 <h3>條列維護</h3>
                             </div>
                             <div class="_head">
+                                <div class="_head">
+                                    <div class="quick_btn">
+                                        <button class="btn btn-orange"
+                                            onclick="window.location.href='tpmlwebref_emailtemplateedit.htm';"><i
+                                                class="i_add"></i>新增</button>
+                                    </div>
+                                </div>
                                 <!-- 頁碼 -->
+                                <!-- 批次資料處理 --><!-- 預設隱藏，有勾選check再顯示 -->
+                                <div class="control_panel">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-btn">
+                                            <i class="i_setting"></i>批次處理</button>
+                                        <div class="dropdown-content">
+                                            <ul>
+                                                <li>
+                                                    <button class="btn">
+                                                        <i class="i_add"></i>批次匯出</button>
+                                                </li>
+                                                <li>
+                                                    <button class="btn">
+                                                        <i class="i_add"></i>批次刪除下架</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="pagination">
                                     <form action="" class="form_inline">
-                                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select
-                                                name="" id="">
+                                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                                            <select name="" id="">
                                                 <option value="">10</option>
                                                 <option value="">30</option>
                                                 <option value="">50</option>
                                                 <option value="">100</option>
-                                            </select> 筆 </div>
+                                            </select> 筆
+                                        </div>
                                     </form>
                                 </div>
-                                <!--div class="quick_btn">
-                                        <button class="btn btn-orange" onclick="window.print()"><i class="i_check"></i>列印本頁資料</button>
-                                    </div-->
                             </div>
                             <div class="_content">
                                 <!-- 表格樣式 -->
@@ -110,123 +134,82 @@
                                     <table class="table_hover">
                                         <thead>
                                             <tr>
+                                                <th><input type="checkbox"></th>
                                                 <th class="text-left">
                                                     <a href="#">序號<i class="i_sort"></i></a>
                                                 </th>
-                                                <th class="text-left">單位名稱</th>
-                                                <th>信箱</th>
+                                                <th class="text-left">標題名稱</th>
+                                                <th>是否啟用</th>
+                                                <th class="text-left">
+                                                    <a href="#">編修日期<i class="i_sort"></i></a>
+                                                </th>
                                                 <th>編輯</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td class="num">1</td>
-                                                <td><time>諮詢服務課</time></td>
-                                                <td>cof@email.tpml.edu.tw,coi@email.tpml.edu.tw,coj@email.tpml.edu.tw,com@email.tpml.edu.tw,cok@email.tpml.edu.tw
+                                                <td><time>各課室公版1</time></td>
+                                                <td>啟用中
                                                 </td>
+                                                <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
                                                 <td>
                                                     <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
+                                                        <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
                                                                 class="i_edit"></i>編輯</a>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td class="num">2</td>
-                                                <td><time>資訊室</time></td>
-                                                <td>coi@email.tpml.edu.tw</td>
+                                                <td><time>各課室公版2</time></td>
+                                                <td>啟用中</td>
+                                                <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
                                                 <td>
                                                     <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
+                                                        <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
                                                                 class="i_edit"></i>編輯</a>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td class="num">3</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw</td>
+                                                <td><time>各課室公版3</time></td>
+                                                <td>啟用中
+                                                </td>
+                                                <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
                                                 <td>
                                                     <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
+                                                        <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
                                                                 class="i_edit"></i>編輯</a>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td class="num">4</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw</td>
+                                                <td><time>各課室公版4</time></td>
+                                                <td>啟用中</td>
+                                                <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
                                                 <td>
                                                     <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
+                                                        <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
                                                                 class="i_edit"></i>編輯</a>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td class="num">5</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw,cog@email.tpml.edu.tw</td>
+                                                <td><time>讀者公版5</time></td>
+                                                <td>啟用中</td>
+                                                <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
                                                 <td>
                                                     <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">6</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw,coi@email.tpml.edu.tw,coj@email.tpml.edu.tw,com@email.tpml.edu.tw
-                                                </td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">7</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw</td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">8</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw</td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">9</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw</td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="num">10</td>
-                                                <td><time>秘書室</time></td>
-                                                <td>cof@email.tpml.edu.tw,cog@email.tpml.edu.tw</td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_referralsedit.htm" class="btn"><i
+                                                        <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
                                                                 class="i_edit"></i>編輯</a>
                                                     </div>
                                                 </td>
