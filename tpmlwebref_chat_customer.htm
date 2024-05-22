@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W CMS Lite</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon_tpml.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.htm">首頁</a></li>
+                    <li><a href="#">客製化功能</a></li>
+                    <li>客服維護管理</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>客服維護管理</h2>
+                        <button class="btn btn-primary btn-adv" title="點選展開或關閉搜尋區" aria-label="條件搜尋">
+                            <i class="i_search"></i></button>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="adv_search">
+                            <div class="col">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>查詢</h3>
+                                    </div>
+                                    <div class="_content">
+                                        <div class="flex-form flex-6-6">
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <select name="search_branch" id="search_branch" class="dynamicCol used">
+                                                <OPTION selected value=all>全部</OPTION>
+                                                <option value="2003">館藏查詢</option>
+                                                <option value="2003">開館與入館</option>
+                                                <option value="2004">借書與還書</option>
+                                                <option value="2004">學習與研究</option>
+                                                <option value="2004">其他類型</option>
+                                            </select>
+                                            <label>主要分類</label>
+                                        </div>
+                                        <div class="labelEffect">
+                                            <select name="search_branch" id="search_branch" class="dynamicCol used">
+                                                <OPTION selected value=all>全部</OPTION>
+                                                <option value="1">館藏查詢系統及圖書預約問題</option>
+                                                <option value="2">開館日期及時間</option>
+                                                <option value="2">借還書規則</option>
+                                                <option value="2">圖書館講習</option>
+                                                <option value="2">輸入其他類型</option>
+                                            </select>
+                                            <label>次要分類</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form_grp form_inline">
+                                        <div class="labelEffect">
+                                            <select id="" name="" class="dynamicCol used">
+                                                <option value="" selected="" disabled="disabled">
+                                                </option>
+                                                <option value="0" selected>請選擇</option>
+                                                <option value="1">常問問題1</option>
+                                                <option value="2">常問問題2</option>
+                                                <option value="3">常問問題3</option>
+                                                <option value="4">常問問題4</option>
+                                                <option value="5">常問問題5</option>
+                                            </select>
+                                            <label>常問問題</label>
+                                        </div>
+                                        <div class="labelEffect">
+                                            <input name="" type="text" value="請輸入輸入的問題" class="dynamicCol used">
+                                            <label>輸入的問題</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form_grp">
+                                        <div class="labelEffect">
+                                            <select name="search_branch" id="search_branch" class="dynamicCol used">
+                                                <OPTION selected value=all>全部</OPTION>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                            </SELECT>
+                                            <label>留言年度</label>
+                                        </div>
+                                        <div class="labelEffect">
+                                            <select name="search_point" id="search_point" class="dynamicCol">
+                                                <option value="" disabled="disabled" selected></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="2">3</option>
+                                            </select>
+                                            <label>月份</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="btn_grp">
+                                        <button class="btn reset" title="重設輸入">取消</button>
+                                        <button class="btn btn-primary" title="確認查詢">確認</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- flex-12 -->
+                    <div class="flex-12">
+                        <div class="col ">
+                            <!-- 中央區塊 -->
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>客服條列</h3>
+                                </div>
+                                <div class="_head">
+                                    <div class="tag">
+                                        狀態：
+                                        <ul>
+                                            <li class="active"><a href=" #">全部</a></li>
+                                            <li><a href="#">公開</a></li>
+                                            <li><a href="#">草稿</a></li>
+                                            <li><a href="#">下架</a></li>
+                                            <li><a href="#">已回覆</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="control_panel">
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-btn">
+                                                <i class="i_setting"></i>批次處理</button>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <li>
+                                                        <button class="btn">
+                                                            <i class="i_add"></i>批次匯出</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn">
+                                                            <i class="i_add"></i>批次刪除下架</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pagination">
+                                        <form action="" class="form_inline">
+                                            <div class="total">
+                                                共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                                                <select name="" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">30</option>
+                                                    <option value="">50</option>
+                                                    <option value="">100</option>
+                                                </select> 筆
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="quick_btn">
+                                        <button class="btn btn-orange"
+                                            onclick="window.location.href='tpmlwebref_chat_customer_add.htm';"><i
+                                                class="i_add"></i>新增</button>
+                                    </div>
+                                </div>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <!--th><input type="checkbox"></th-->
+                                                    <th><input type="checkbox"></th>
+                                                    <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                    <th><a href="#">留言日期<i class="i_sort"></i></a></th>
+                                                    <th class="main_data">輸入的問題
+                                                        <a href="#"><i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th><a href="#">回覆日期<i class="i_sort"></i></a></th>
+                                                    <th class="main_data">建立的問題
+                                                        <a href="#"><i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th>
+                                                        <a href="#">上線日期 <i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th>
+                                                        <a href="#">下線日期 <i class="i_sort"></i>
+                                                        </a>
+                                                    </th>
+                                                    <th>狀態</th>
+                                                    <th>動作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num" data-title="序號">1</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料"></a>
+                                                    </td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td class="main_data">
+                                                        <a href="#">常見問題：例如為何有收到「預約逾期未取取消通知」，卻沒有收到「預約書到館通知」？</a>
+                                                    </td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><span class="green">公開</span></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>置頂</button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"
+                                                                                onclick="window.location.href='data_new_update.htm';"></i>編輯
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num" data-title="序號">2</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料"></a>
+                                                    </td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td class="main_data">
+                                                        <a href="#">敏感問題</a>
+                                                    </td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><span class="gray">草稿</span></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>置頂</button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"
+                                                                                onclick="window.location.href='data_new_update.htm';"></i>編輯
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num" data-title="序號">3</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料"></a>
+                                                    </td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td class="main_data">
+                                                        <a href="#">類別問題</a>
+                                                    </td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><span class="red">下架</span></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>置頂</button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"
+                                                                                onclick="window.location.href='data_new_update.htm';"></i>編輯
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num" data-title="序號">4</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">為何有收到「預約逾期未取取消通知」，卻沒有收到「預約書到館通知」？ </a>
+                                                    </td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td class="main_data">
+                                                        <a href="#"></a>
+                                                    </td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><span class="gray">已回覆</span></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>置頂</button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"
+                                                                                onclick="window.location.href='data_new_update.htm';"></i>編輯
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num" data-title="序號">5</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">為何有收到「預約逾期未取取消通知」，卻沒有收到「預約書到館通知」？ </a>
+                                                    </td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td class="main_data">
+                                                        <a href="#"></a>
+                                                    </td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><span class="gray">已回覆</span></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>置頂</button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"
+                                                                                onclick="window.location.href='data_new_update.htm';"></i>編輯
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num" data-title="序號">6</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">為何有收到「預約逾期未取取消通知」，卻沒有收到「預約書到館通知」？ </a>
+                                                    </td>
+                                                    <td data-title="回覆日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td class="main_data">
+                                                        <a href="#"></a>
+                                                    </td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><time>2024/6/24 <br>09:20</time></td>
+                                                    <td><span class="gray">已回覆</span></td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button class="btn dropdown-btn">
+                                                                <i class="i_setting"></i></button>
+                                                            <div class="dropdown-content">
+                                                                <ul>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_global"></i>預覽 </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_top"></i>置頂</button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn">
+                                                                            <i class="i_edit"
+                                                                                onclick="window.location.href='data_new_update.htm';"></i>編輯
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button class="btn btn-red">
+                                                                            <i class="i_trash"></i>刪除 </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <script>
+        // first example
+        $('header').load("header.htm");
+        $('aside').load("aside_tpml.htm");
+    </script>
+</body>
+
+</html>
