@@ -64,7 +64,7 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_name" id="search_name" type="text" value="">
-                                                    <label>長官姓名</label>
+                                                    <label>審核狀態</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
@@ -72,8 +72,10 @@
                                                     <select id="" name="">
                                                         <option value="" selected="" disabled="disabled">
                                                         </option>
-                                                        <option value="1" selected>陳核時間</option>
+                                                        <option value="1" selected>送陳時間</option>
                                                         <option value="2">審核時間</option>
+                                                        <option value="3" selected>修改時間</option>
+                                                        <option value="4">退文時間</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -101,7 +103,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="btn_grp">
                                             <button class="btn reset">取消</button>
                                             <button class="btn btn-primary">確認</button>
@@ -124,7 +125,8 @@
                                     <div class="tag">
                                         審核階段：
                                         <ul>
-                                            <li class="active"><a href="#">送陳</a></li>
+                                            <li class="active"><a href="#">全部</a></li>
+                                            <li><a href="#">送陳</a></li>
                                             <li><a href="#">簽核</a></li>
                                             <li><a href="#">修改</a></li>
                                             <li><a href="#">退文</a></li>
@@ -152,7 +154,9 @@
                                         <table class="table_hover">
                                             <thead>
                                                 <tr>
-                                                    <th>序號</th>
+                                                    <th class="text-left">
+                                                        <a href="#">序號<i class="i_sort"></i></a>
+                                                    </th>
                                                     <th>讀者問題描述</th>
                                                     <th>
                                                         <a href="#">陳核時間<i class="i_sort"></i></a>
@@ -166,7 +170,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="num">999</td>
+                                                    <td class="num">10</td>
                                                     <td>
                                                         敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
                                                     </td>
@@ -183,11 +187,10 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="num">998</td>
+                                                    <td class="num">9</td>
                                                     <td>
                                                         敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
                                                     </td>
-
                                                     <td><time>2024/11/16<br>下午18:09</time></time></td>
                                                     <td>陳長官</td>
                                                     <td><span class="blue">送陳</span></td>
@@ -200,11 +203,10 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="num">997</td>
+                                                    <td class="num">8</td>
                                                     <td>
                                                         敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
                                                     </td>
-
                                                     <td><time>2024/11/16<br>下午18:09</time></time></td>
                                                     <td>陳長官</td>
                                                     <td><span class="green">簽核</span></td>
@@ -217,11 +219,10 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="num">996</td>
+                                                    <td class="num">7</td>
                                                     <td>
                                                         敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
                                                     </td>
-
                                                     <td><time>2024/11/16 <br>下午18:09</time></time></td>
                                                     <td>陳長官</td>
                                                     <td><span class="blue">送陳</span></td>
@@ -234,14 +235,95 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="num">995</td>
+                                                    <td class="num">6</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="gray">修改</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_reviewedit.htm" class="btn"><i
+                                                                    class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">5</td>
                                                     <td>
                                                         敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
                                                     </td>
 
                                                     <td><time>2024/11/16 <br>下午18:09</time></time></td>
                                                     <td>陳長官</td>
-                                                    <td><span class="blue">送陳</span></td>
+                                                    <td><span class="gray">修改</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_reviewedit.htm" class="btn"><i
+                                                                    class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">4</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="gray">修改</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_reviewedit.htm" class="btn"><i
+                                                                    class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">3</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="gray">修改</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_reviewedit.htm" class="btn"><i
+                                                                    class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">2</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="gray">修改</span></td>
+                                                    <td><time>2024/11/16<br>下午18:09</time></time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_reviewedit.htm" class="btn"><i
+                                                                    class="i_edit"></i>審核</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num">1</td>
+                                                    <td>
+                                                        敬啟者您好我目前正在撰寫一篇研究性的論文，題目是「公共圖書館開闢財源之研究」，想調查國內各縣市公共圖書館因經費短缺，如何增加圖書館的收入來源，不知能否提供貴館有哪些收入來源的管道以便彙整撰寫。謝謝您
+                                                    </td>
+                                                    <td><time>2024/11/16 <br>下午18:09</time></time></td>
+                                                    <td>陳長官</td>
+                                                    <td><span class="gray">修改</span></td>
                                                     <td><time>2024/11/16<br>下午18:09</time></time></td>
                                                     <td>
                                                         <div class="btn_grp">

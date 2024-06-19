@@ -12,13 +12,11 @@
     <![endif]-->
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/supercms.css">
-    <link rel="stylesheet" href="css/customize.css">
     <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- favicon -->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <link href="images/favicon_tpml.png" rel="icon" type="image/x-icon">
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css">
-
 </head>
 
 <body>
@@ -29,20 +27,21 @@
         <aside></aside>
         <!-- 主要內容區 -->
         <div class="content">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
             <!-- breadcrumb路徑 -->
             <div class="breadcrumb">
                 <ul>
                     <li><a href="index.htm">首頁</a></li>
-                    <li><a href="#">客製化管理</a></li>
-                    <li>公版信件管理</li>
+                    <li><a href="#">客製化功能</a></li>
+                    <li>客服維護管理</li>
                 </ul>
             </div>
             <!-- gird section -->
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>公版信件管理</h2>
-                        <button class="btn btn-primary btn-adv">
+                        <h2>客服維護管理</h2>
+                        <button class="btn btn-primary btn-adv" title="點選展開或關閉搜尋區" aria-label="條件搜尋">
                             <i class="i_search"></i></button>
                     </div>
                     <!-- flex-12 搜尋區塊-->
@@ -58,7 +57,7 @@
                                             <div class="form_grp">
                                                 <div class="labelEffect">
                                                     <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>標題名稱</label>
+                                                    <label>留言內容</label>
                                                 </div>
                                             </div>
                                             <div class="form_grp datepick">
@@ -101,16 +100,10 @@
                             <!-- 中央區塊 -->
                             <div class="content_block">
                                 <div class="_head">
-                                    <h3>條列維護</h3>
+                                    <h3>客服留言清單</h3>
                                 </div>
                                 <div class="_head">
                                     <div class="tag">
-                                        狀態：
-                                        <ul>
-                                            <li class="active"><a href=" #">全部</a></li>
-                                            <li><a href="#">啟用</a></li>
-                                            <li><a href="#">未啟用</a></li>
-                                        </ul>
                                     </div>
                                     <div class="control_panel">
                                         <div class="dropdown">
@@ -124,7 +117,7 @@
                                                     </li>
                                                     <li>
                                                         <button class="btn">
-                                                            <i class="i_add"></i>批次刪除下架</button>
+                                                            <i class="i_add"></i>批次刪除</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -145,8 +138,8 @@
                                     </div>
                                     <div class="quick_btn">
                                         <button class="btn btn-orange"
-                                            onclick="window.location.href='tpmlwebref_emailtemplateedit.htm';"><i
-                                                class="i_add"></i>新增公版信</button>
+                                            onclick="window.location.href='tpmlwebref_chat_customer.htm';"><i
+                                                class="i_add"></i>回到情境問題</button>
                                     </div>
                                 </div>
                                 <div class="_content">
@@ -155,146 +148,166 @@
                                         <table class="table_hover">
                                             <thead>
                                                 <tr>
+                                                    <!--th><input type="checkbox"></th-->
                                                     <th><input type="checkbox"></th>
-                                                    <th class="text-left">
-                                                        <a href="#">序號<i class="i_sort"></i></a>
+                                                    <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                    <th><a href="#">留言日期<i class="i_sort"></i></a></th>
+                                                    <th class="main_data">留言內容
+                                                        <a href="#"><i class="i_sort"></i>
+                                                        </a>
                                                     </th>
-                                                    <th class="text-left">標題名稱</th>
-                                                    <th>啟用狀態</th>
-                                                    <th class="text-left">
-                                                        <a href="#">編修日期<i class="i_sort"></i></a>
-                                                    </th>
-                                                    <th>編輯</th>
+                                                    <th>IP</th>
+                                                    <th>回到情境</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">10</td>
-                                                    <td><time>各課室1</time></td>
-                                                    <td><span class="blue">啟用中</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">10</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">青鳥行動助攻拆樑行動</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">9</td>
-                                                    <td><time>各課室2</time></td>
-                                                    <td><span class="blue">啟用中</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">9</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">16所大學網激動：看到學校上榜好感動</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">8</td>
-                                                    <td><time>各課室3</time></td>
-                                                    <td><span class="blue">啟用中</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">8</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">圖書館館藏沒有我要的書怎麼辦</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">7</td>
-                                                    <td><time>各課室4</time></td>
-                                                    <td><span class="blue">啟用中</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">7</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">建築大師隈研吾超壯觀書牆 </a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">6</td>
-                                                    <td><time>各課室5</time></td>
-                                                    <td><span class="blue">啟用中</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">6</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">黃仁勳掀AI浪潮 </a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">5</td>
-                                                    <td><time>讀者1</time></td>
-                                                    <td><span class="green">未啟用</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">5</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">眾黨台中主：綠白可合</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">4</td>
-                                                    <td><time>讀者2</time></td>
-                                                    <td><span class="green">未啟用</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">4</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">館內是否有提供圖書影印服務？</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">3</td>
-                                                    <td><time>讀者3</time></td>
-                                                    <td><span class="green">未啟用</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">3</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">館內是否有免費無限上網及插座電源充電服務？</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">2</td>
-                                                    <td><time>讀者4</time></td>
-                                                    <td><span class="green">未啟用</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">2</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">外國人可否辦理借書證？</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><input type="checkbox"></td>
-                                                    <td class="num">10</td>
-                                                    <td><time>讀者5</time></td>
-                                                    <td><span class="green">未啟用</span></td>
-                                                    <td data-title="留言日期"><time>2024/6/24 09:20</time></td>
+                                                    <td class="num" data-title="序號">1</td>
+                                                    <td data-title="留言日期"><time>2024/6/24 <br>09:20</time></td>
+                                                    <td data-title=""><a href="tpmlwebref_chatmessage_1.htm"
+                                                            title="檢視留言資料">館內是否有觀光旅遊等相關資訊？</a>
+                                                    </td>
+                                                    <td>192.168.100.70</td>
                                                     <td>
                                                         <div class="btn_grp">
-                                                            <a href="tpmlwebref_emailtemplateedit.htm" class="btn"><i
-                                                                    class="i_edit"></i>編輯</a>
+                                                            <a href="tpmlwebref_chat_customer.htm"
+                                                                class="btn"></i>LINK</a>
                                                         </div>
                                                     </td>
                                                 </tr>
