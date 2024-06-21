@@ -48,7 +48,7 @@
                                 <div class="_content">
                                     <div class="mp_widget">
                                         <div class="widget_now_counter">
-                                            <div class="counter "data-count="37"></div>
+                                            <div class="counter " data-count="37"></div>
                                         </div>
                                         <div class="help">三日內新增資料數</div>
                                     </div>
@@ -63,7 +63,7 @@
                                 <div class="_content">
                                     <div class="mp_widget">
                                         <div class="widget_now_pageview">
-                                            <div class="counter "data-count="54"></div>
+                                            <div class="counter " data-count="54"></div>
                                         </div>
                                         <div class="help">待審核資料數</div>
                                     </div>
@@ -78,7 +78,7 @@
                                 <div class="_content">
                                     <div class="mp_widget ">
                                         <div class="widget_now_user">
-                                            <div class="counter "data-count="376"></div>
+                                            <div class="counter " data-count="376"></div>
                                         </div>
                                         <div class="help">目前線上影片總數</div>
                                     </div>
@@ -93,7 +93,7 @@
                                 <div class="_content">
                                     <div class="mp_widget">
                                         <div class="widget_new_data">
-                                            <div class="counter "data-count="20">11</div>
+                                            <div class="counter " data-count="20">11</div>
                                         </div>
                                         <div class="help">待推送Youtube / 推送失敗影片</div>
                                     </div>
@@ -120,12 +120,15 @@
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td class="text-left"><a href="announce.htm">撈取最新公告條列呈現：(公告標題)[系統公告]無法順利轉檔情況處理之說明</a></td>
+                                                    <td class="text-left"><a
+                                                            href="announce.htm">撈取最新公告條列呈現：(公告標題)[系統公告]無法順利轉檔情況處理之說明</a>
+                                                    </td>
                                                     <td class="data">2022-04-17</td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td class="text-left"><a href="#">大更沒於正時節直只們來壓算有先，求化化看雨的12345</a></td>
+                                                    <td class="text-left"><a href="#">大更沒於正時節直只們來壓算有先，求化化看雨的12345</a>
+                                                    </td>
                                                     <td class="data">2020-09-17</td>
                                                 </tr>
                                                 <tr>
@@ -218,7 +221,7 @@
     <!-- highlight -->
     <script src="vendor/highlight/highlight.pack.js"></script>
     <script>
-    hljs.initHighlightingOnLoad();
+        hljs.initHighlightingOnLoad();
     </script>
     <!-- highchart -->
     <!-- highchart plugin -->
@@ -230,138 +233,138 @@
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
     <script>
-    $('header').load("header.htm");
-    $('aside').load("aside.htm");
-    var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-    // 長條結合折線圖
-    Highcharts.chart('axes_line_column1', {
-        chart: {
-            zoomType: 'xy'
-        },
-        title: {
-            text: '圖表標題(可省略)'
-        },
-        subtitle: {
-            text: 'Source: WorldClimate.com'
-        },
-        colors: _Color,
-        xAxis: [{
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            crosshair: true
-        }],
-        yAxis: [{ // Primary yAxis
-            labels: {
-                format: '{value}°C',
-                style: {
-                    color: Highcharts.getOptions().colors[1]
-                }
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+        // 長條結合折線圖
+        Highcharts.chart('axes_line_column1', {
+            chart: {
+                zoomType: 'xy'
             },
             title: {
-                text: 'Temperature',
-                style: {
-                    color: Highcharts.getOptions().colors[1]
-                }
-            }
-        }, { // Secondary yAxis
-            title: {
-                text: 'Rainfall',
-                style: {
-                    color: Highcharts.getOptions().colors[0]
-                }
+                text: '圖表標題(可省略)'
             },
-            labels: {
-                format: '{value} mm',
-                style: {
-                    color: Highcharts.getOptions().colors[0]
-                }
+            subtitle: {
+                text: 'Source: WorldClimate.com'
             },
-            opposite: true
-        }],
-        tooltip: {
-            shared: true
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'left',
-            x: 120,
-            verticalAlign: 'top',
-            y: 100,
-            floating: true,
-            backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
-                'rgba(255,255,255,0.25)'
-        },
-        series: [{
-            name: 'Rainfall',
-            type: 'column',
-            yAxis: 1,
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-            tooltip: {
-                valueSuffix: ' mm'
-            }
-        }, {
-            name: 'Temperature',
-            type: 'spline',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
-            tooltip: {
-                valueSuffix: '°C'
-            }
-        }]
-    });
-    // pie
-    Highcharts.chart('pie1', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: '圖表標題(可省略)'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        // colors: _Color,
-        accessibility: {
-            point: {
-                valueSuffix: '%'
-            }
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false
+            colors: _Color,
+            xAxis: [{
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}°C',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
                 },
-                showInLegend: true
-            }
-        },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
-            data: [{
-                name: 'Chrome',
-                y: 61.41,
-                sliced: true,
-                selected: true
+                title: {
+                    text: 'Temperature',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'Rainfall',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} mm',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 120,
+                verticalAlign: 'top',
+                y: 100,
+                floating: true,
+                backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                    'rgba(255,255,255,0.25)'
+            },
+            series: [{
+                name: 'Rainfall',
+                type: 'column',
+                yAxis: 1,
+                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                tooltip: {
+                    valueSuffix: ' mm'
+                }
             }, {
-                name: 'Internet Explorer',
-                y: 11.84
-            }, {
-                name: 'Firefox',
-                y: 10.85
-            }, {
-                name: 'Edge',
-                y: 4.67
-            }, {
-                name: 'Safari',
-                y: 4.18
-            }, {
-                name: 'Other',
-                y: 7.05
+                name: 'Temperature',
+                type: 'spline',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                tooltip: {
+                    valueSuffix: '°C'
+                }
             }]
-        }]
-    });
+        });
+        // pie
+        Highcharts.chart('pie1', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: '圖表標題(可省略)'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            // colors: _Color,
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Chrome',
+                    y: 61.41,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Internet Explorer',
+                    y: 11.84
+                }, {
+                    name: 'Firefox',
+                    y: 10.85
+                }, {
+                    name: 'Edge',
+                    y: 4.67
+                }, {
+                    name: 'Safari',
+                    y: 4.18
+                }, {
+                    name: 'Other',
+                    y: 7.05
+                }]
+            }]
+        });
     </script>
 </body>
