@@ -229,11 +229,16 @@
                                                     </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <textarea>維基百科：https://en.wikipedia.org/wiki/Printer%27s_key (這裏請工程師做可以直接點擊網址（新開視窗）)</textarea>
+                                                            <textarea id="sourceText"
+                                                                style="color: rgb(128, 122, 139); cursor: pointer;">維基百科：https://en.wikipedia.org/wiki/Printer%27s_key</textarea>
                                                             <label for="userId">資料來源<abbr></abbr></label>
                                                         </div>
                                                         <div class="help">輸入資料來源內容將顯示於前台(字數200/500)</div>
                                                     </div>
+                                                    <!-- 隐藏的链接 -->
+                                                    <a id="hiddenLink"
+                                                        href="https://en.wikipedia.org/wiki/Printer%27s_key"
+                                                        target="_blank" style="display:none;">維基百科</a>
                                                     <hr>
                                                     <div class="form_grp form_inline">
                                                         <div class="labelEffect">
@@ -644,6 +649,14 @@
                     $("#select1").select2();
                     $("#select2").select2();
                     $("#select3").select2();
+                });
+            </script>
+            <script>
+                // 監聽 textarea 的點擊事件
+                document.getElementById('sourceText').addEventListener('click', function () {
+                    var hiddenLink = document.getElementById('hiddenLink');
+                    // 模擬點擊隱藏的鏈接
+                    hiddenLink.click();
                 });
             </script>
 
