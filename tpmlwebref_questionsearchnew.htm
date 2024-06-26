@@ -231,11 +231,16 @@
                                                     </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
-                                                            <textarea>維基百科：https://en.wikipedia.org/wiki/Printer%27s_key (這裏請工程師做可以直接點擊網址（新開視窗）)</textarea>
+                                                            <textarea id="sourceText"
+                                                                style="color: rgb(128, 122, 139); cursor: pointer;">維基百科：https://en.wikipedia.org/wiki/Printer%27s_key</textarea>
                                                             <label for="userId">資料來源<abbr></abbr></label>
                                                         </div>
                                                         <div class="help">輸入資料來源內容將顯示於前台(字數200/500)</div>
                                                     </div>
+                                                    <!-- 隐藏的链接 -->
+                                                    <a id="hiddenLink"
+                                                        href="https://en.wikipedia.org/wiki/Printer%27s_key"
+                                                        target="_blank" style="display:none;">維基百科</a>
                                                     <hr>
                                                     <div class="form_grp form_inline">
                                                         <div class="labelEffect">
@@ -310,7 +315,7 @@
                                                                 <option value="3">電話</option>
                                                                 <option value="3">全部</option>
                                                             </select>
-                                                            <label>回覆方式(改成check box)</label>
+                                                            <label>回覆方式</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp form_inline">
@@ -567,7 +572,7 @@
                                     </div>
                                 </div>
                             </div>
-                                                        <!-- 右側資料widget -->
+                            <!-- 右側資料widget -->
                             <div class="publish_block">
                                 <!-- 每種不同功能，都用block區分 -->
                                 <div class="block">
@@ -646,8 +651,8 @@
                                     <div class="log">
                                         <ul>
                                             <li id="editor" value="0"><span><i class="i_man"></i></span>管理員</li>
-                                            <li id="deditDate" value="0"><span><i
-                                                        class="i_clock"></i></span>2024/11/26 14:26:10
+                                            <li id="deditDate" value="0"><span><i class="i_clock"></i></span>2024/11/26
+                                                14:26:10
                                             </li>
                                         </ul>
                                     </div>
@@ -659,45 +664,52 @@
             </div>
         </div>
     </div>
-            <!-- JS-->
-            <script src="js/jquery-3.3.1.min.js"></script>
-            <script src="vendor/jquery.easing.min.js"></script>
-            <!-- template customize js -->
-            <script src="js/customize.js"></script>
-            <!-- highlight -->
-            <script src="vendor/highlight/highlight.pack.js"></script>
-            <!-- tree view -->
-            <script src="vendor/treeview/jquery.treeview.js"></script>
-            <!-- fancybox -->
-            <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-            <script src="js/select2.full.min.js"></script>
-
-            <script>
-                // first example
-                $(".treeview .treeview").treeview();
-            </script>
-            <script>
-                hljs.initHighlightingOnLoad();
-            </script>
-            <script>
-                // first example
-                $(".treeview .treeview").treeview();
-                $('header').load("header.htm");
-            </script>
-            <!--Select multiple checkbox-->
-            <script>
-                $(document).ready(function () {
-                    $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
-                });
-            </script>
-            <!--Select2-->
-            <script>
-                $(function () {
-                    $("#select1").select2();
-                    $("#select2").select2();
-                    $("#select3").select2();
-                });
-            </script>
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script>
+        // first example
+        $(".treeview .treeview").treeview();
+    </script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+        // first example
+        $(".treeview .treeview").treeview();
+        $('header').load("header.htm");
+    </script>
+    <!--Select multiple checkbox-->
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
+        });
+    </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
+    </script>
+    <script>
+        // 監聽 textarea 的點擊事件
+        document.getElementById('sourceText').addEventListener('click', function () {
+            var hiddenLink = document.getElementById('hiddenLink');
+            // 模擬點擊隱藏的鏈接
+            hiddenLink.click();
+        });
+    </script>
 
 </body>
 
