@@ -93,7 +93,7 @@
                         </a>
                         <ul>
                             <li><a href="tpmlwebref_questionsearch.htm"><span>(服務)讀者問題回覆管理</span></a></li>
-                            <li><a href="tpmlwebref_emailtemplate.htm"><span>(服務)公版信件管理</span></a></li>
+                            <li><a href="tpmlwebref_emailtemplate.htm"><span>(服務)公版回覆管理</span></a></li>
                             <li><a href="tpmlwebref_referrals.htm"><span>(服務)轉介信箱管理</span></a></li>
                             <li><a href="tpmlwebref_review.htm"><span>(服務)問題審核管理</span></a></li>
                             <li><a href="tpmlwebref_chat_customer.htm"><span>(服務)客服管理</span></a></li>
@@ -136,8 +136,12 @@
                                         <div class="flex-form flex-6-6">
                                             <div class="form_grp">
                                                 <div class="labelEffect">
-                                                    <input name="search_userid" id="search_userid" type="text" value="">
-                                                    <label>單位名稱</label>
+                                                    <select id="" name="">
+                                                        <option value="" selected="" disabled="disabled">
+                                                        </option>
+                                                        <option value="1" selected>第一層單位</option>
+                                                        <option value="2">第二層分館</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form_grp">
@@ -160,7 +164,6 @@
                 <!-- flex-12 -->
                 <div class="flex-12">
                     <div class="col ">
-
                         <!-- 中央區塊 -->
                         <div class="content_block">
                             <div class="_head">
@@ -194,7 +197,8 @@
                                                 <th class="text-left">
                                                     <a href="#">序號<i class="i_sort"></i></a>
                                                 </th>
-                                                <th class="text-left">單位名稱</th>
+                                                <th class="text-left">第一層單位</th>
+                                                <th class="text-left">第二層分館</th>
                                                 <th>信箱</th>
                                                 <th>編輯</th>
                                             </tr>
@@ -203,6 +207,7 @@
                                             <tr>
                                                 <td class="num">10</td>
                                                 <td><time>諮詢服務課</time></td>
+                                                <td><time>松山區/中崙分館</time></td>
                                                 <td>cof@email.tpml.edu.tw,coi@email.tpml.edu.tw,coj@email.tpml.edu.tw,com@email.tpml.edu.tw,cok@email.tpml.edu.tw
                                                 </td>
                                                 <td>
@@ -215,6 +220,7 @@
                                             <tr>
                                                 <td class="num">9</td>
                                                 <td><time>資訊室</time></td>
+                                                <td><time>中山區/大直分館</time></td>
                                                 <td>coi@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
@@ -226,6 +232,7 @@
                                             <tr>
                                                 <td class="num">8</td>
                                                 <td><time>秘書室</time></td>
+                                                <td><time>大安區/大安書閣</time></td>
                                                 <td>cof@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
@@ -236,7 +243,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="num">7</td>
-                                                <td><time>秘書室</time></td>
+                                                <td><time>閱覽課</time></td>
+                                                <td><time>大安區/龍安民眾閱覽室</time></td>
                                                 <td>cof@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
@@ -247,7 +255,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="num">6</td>
-                                                <td><time>秘書室</time></td>
+                                                <td><time>採編課</time></td>
+                                                <td><time>信義區/永春分館</time></td>
                                                 <td>cof@email.tpml.edu.tw,cog@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
@@ -258,7 +267,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="num">5</td>
-                                                <td><time>秘書室</time></td>
+                                                <td><time>兒童室</time></td>
+                                                <td><time>松山區/松山分館</time></td>
                                                 <td>cof@email.tpml.edu.tw,coi@email.tpml.edu.tw,coj@email.tpml.edu.tw,com@email.tpml.edu.tw
                                                 </td>
                                                 <td>
@@ -270,7 +280,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="num">4</td>
-                                                <td><time>秘書室</time></td>
+                                                <td><time>期刊室</time></td>
+                                                <td><time>信義區/六合分館</time></td>
                                                 <td>cof@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
@@ -281,7 +292,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="num">3</td>
-                                                <td><time>秘書室</time></td>
+                                                <td><time>推廣課</time></td>
+                                                <td><time>松山區/松山分館</time></td>
                                                 <td>cof@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
@@ -292,7 +304,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="num">2</td>
-                                                <td><time>秘書室</time></td>
+                                                <td><time>視聽室</time></td>
+                                                <td><time>大安區/道藩分館</time></td>
                                                 <td>cof@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
@@ -303,7 +316,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="num">1</td>
-                                                <td><time>秘書室</time></td>
+                                                <td><time>推廣課</time></td>
+                                                <td><time>信義區/新興分館</time></td>
                                                 <td>cof@email.tpml.edu.tw,cog@email.tpml.edu.tw</td>
                                                 <td>
                                                     <div class="btn_grp">
