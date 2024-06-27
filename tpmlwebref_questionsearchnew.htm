@@ -98,7 +98,7 @@
                         </a>
                         <ul>
                             <li><a href="tpmlwebref_questionsearch.htm"><span>(服務)讀者問題回覆管理</span></a></li>
-                            <li><a href="tpmlwebref_emailtemplate.htm"><span>(服務)公版信件管理</span></a></li>
+                            <li><a href="tpmlwebref_emailtemplate.htm"><span>(服務)公版回覆管理</span></a></li>
                             <li><a href="tpmlwebref_referrals.htm"><span>(服務)轉介信箱管理</span></a></li>
                             <li><a href="tpmlwebref_review.htm"><span>(服務)問題審核管理</span></a></li>
                             <li><a href="tpmlwebref_chat_customer.htm"><span>(服務)客服管理</span></a></li>
@@ -185,7 +185,6 @@
                                                             <label>提問時間</label>
                                                         </div>
                                                     </div>
-
                                                     <div class="form_grp form_inline">
                                                         <div class="labelEffect">
                                                             <select id="" name="" class="dynamicCol used">
@@ -218,6 +217,18 @@
                                                             <label>用途</label>
                                                         </div>
                                                     </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="1" selected>公版回覆1</option>
+                                                                <option value="2">公版回覆2</option>
+                                                                <option value="3">公版回覆3</option>
+                                                            </select>
+                                                            <label>公版回覆</label>
+                                                        </div>
+                                                    </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
                                                             <textarea>親愛的讀者您好
@@ -229,6 +240,7 @@
                                                         </div>
                                                         <div class="help">輸入回覆的內容將顯示於前台(字數200/500)</div>
                                                     </div>
+                                                    <hr>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
                                                             <textarea id="sourceText"
@@ -599,8 +611,22 @@
                                         </div>
                                     </div>
                                     <br>
+                                    <div class="flex-form">
+                                        <div class="form_grp">
+                                            <div class="labelEffect">
+                                                <select id="" name="" class="used">
+                                                    <option value="" selected="" disabled="disabled">請選擇</option>
+                                                    <option value="選項1">分館1</option>
+                                                    <option value="選項2">分館2</option>
+                                                    <option value="選項9">其他</option>
+                                                </select>
+                                                <label>分館</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <div class="labelEffect">
-                                        <input name="" type="text" value="選擇其他請輸入文字" class="dynamicCol used">
+                                        <input name="" type="text" value="選擇其他請輸入信箱" class="dynamicCol used">
                                         <label>其他</label>
                                     </div>
                                     <div class="btn_grp">
