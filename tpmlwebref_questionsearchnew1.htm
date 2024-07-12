@@ -153,11 +153,11 @@
                                     <div class="active">
                                         <div class="content__wrapper">
                                             <div class="_head">
-                                                <h3>代鍵問題資訊</h3>
+                                                <h3>問題資訊</h3>
                                             </div>
                                             <div class="_content">
                                                 <div class="form_grp">
-                                                    <div class="form_title">發佈選項<abbr>*</abbr></div>
+                                                    <div class="form_title">發布選項<abbr>*</abbr></div>
                                                     <div class="form_content">
                                                         <div class="radio_grp form_inline">
                                                             <label><input name="MenuUse" id="mobileMenuUse" type="radio"
@@ -179,8 +179,7 @@
                                                             <label>序號</label>
                                                         </div>
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="2024/5/13下午18:09"
-                                                                disabled>
+                                                            <input name="" type="text" value="2024/5/13下午18:09">
                                                             <label>提問時間</label>
                                                         </div>
                                                     </div>
@@ -211,22 +210,35 @@
                                                     </div>
                                                     <div class="form_grp form_inline">
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="臺北市立圖書館相關/研究需求/其他"
-                                                                disabled>
+                                                            <input name="" type="text" value="臺北市立圖書館相關/研究需求/其他">
                                                             <label>用途</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp form_inline">
+                                                        <div class="labelEffect">
+                                                            <select id="" name="" class="dynamicCol used">
+                                                                <option value="" selected="" disabled="disabled">
+                                                                </option>
+                                                                <option value="1" selected>無</option>
+                                                                <option value="2">公版回覆1</option>
+                                                                <option value="3">公版回覆2</option>
+                                                                <option value="4">公版回覆3</option>
+                                                            </select>
+                                                            <label>公版回覆</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
                                                             <textarea>親愛的讀者您好
 會將您的問題一併轉知本館資訊室。如有其他相關問題，歡迎來電本館資訊室(02)2755-2823分機2755，由館員為您服務，謝謝。
-                                                                
+                                                            
 本館線上參考問題，將定期維護：關於個人借閱問題，僅保留1個月即自系統上刪除。 
 臺北市立圖書館 諮詢服務課 敬復 </textarea>
                                                             <label for="userId">回覆答案<abbr></abbr></label>
                                                         </div>
                                                         <div class="help">輸入回覆的內容將顯示於前台(字數200/500)</div>
                                                     </div>
+                                                    <hr>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
                                                             <textarea id="sourceText"
@@ -313,7 +325,7 @@
                                                                 <option value="3">電話</option>
                                                                 <option value="3">全部</option>
                                                             </select>
-                                                            <label>回覆方式(改成check box)</label>
+                                                            <label>回覆方式</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp form_inline">
@@ -334,9 +346,8 @@
                                                             <label>處理結果</label>
                                                         </div>
                                                         <div class="labelEffect">
-                                                            <input name="" type="text" value="請輸入處理結果說明"
-                                                                class="dynamicCol used">
-                                                            <label>處理結果說明</label>
+                                                            <input name="" type="text" value="館員姓名">
+                                                            <label>回覆人員</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp form_inline">
@@ -380,35 +391,21 @@
                                                             <label>其他</label>
                                                         </div>
                                                     </div>
-                                                    <div class="form_grp form_inline">
-                                                        <div class="labelEffect">
-                                                            <select id="" name="" class="dynamicCol used">
-                                                                <option value="1" selected>是</option>
-                                                                <OPTION value=1>否</OPTION>
-                                                            </select>
-                                                            <label>註記</label>
-                                                        </div>
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="自動帶入館員姓名" disabled>
-                                                            <label>回覆人員</label>
-                                                        </div>
-                                                    </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
                                                             <textarea>請輸入意見</textarea>
-                                                            <label for="userId">陳核之審核意見<abbr></abbr></label>
+                                                            <label for="userId">審核意見<abbr></abbr></label>
                                                         </div>
-                                                        <div class="help">輸入回覆的內容將顯示於前台留言板(字數200/500)</div>
+                                                        <div class="help">審核意見(字數200/500)</div>
                                                     </div>
                                                     <div class="form_grp">
                                                         <div class="labelEffect">
                                                             <textarea>文字 </textarea>
                                                             <label for="userId">審核說明<abbr></abbr></label>
                                                         </div>
-                                                        <div class="help">由總館代鍵分館問題，經總館審核判定不上架時輸入不上架原因</div>
+                                                        <div class="help">審核說明文字(字數200/500)</div>
                                                     </div>
                                                 </div>
-                                                <hr>
                                                 <div class="setting_block">
                                                     <h3>附件檔案上傳
                                                         <!--button class="btn btn-xs"><i class="i_addfile"></i>新增檔案</button-->
