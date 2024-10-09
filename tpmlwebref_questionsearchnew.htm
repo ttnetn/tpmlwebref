@@ -586,7 +586,7 @@
                                     </div>
                                 </div>
                             </div>
-                                                       <!-- 右側資料widget -->
+                                                        <!-- 右側資料widget -->
                             <div class="publish_block">
                                 <!-- 每種不同功能，都用block區分 -->
                                 <div class="block">
@@ -601,6 +601,7 @@
                                                     <option value="選項1">區域1</option>
                                                     <option value="選項2">區域2</option>
                                                     <option value="選項3">區域3</option>
+                                                    <option value="選項4">其他</option>
                                                 </select>
                                                 <label>轉介區域</label>
                                             </div>
@@ -614,6 +615,7 @@
                                                     <option value="" selected="" disabled="disabled">請選擇</option>
                                                     <option value="選項1">分館1</option>
                                                     <option value="選項2">分館2</option>
+                                                    <option value="選項9">其他</option>
                                                 </select>
                                                 <label>分館</label>
                                             </div>
@@ -673,25 +675,10 @@
                                                 disabled><span>放置愛書亞</span></label>
                                         <label><input name="radioStatus" type="radio" value=""
                                                 disabled><span>不放愛書亞</span></label>
-                                    </div>
-                                    <div class="btn_grp">
-                                        <button class="btn btn-primary">確認轉介</button>
-                                        <div class="form_content">
-                                            <div class="checkbox_grp form_inline">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="block">
-                                    <div class="_head">
-                                        <h3>選項</h3>
-                                    </div>
-                                    <div class="flex-form">
-                                        <div class="form_grp">
-                                            <div class="form_title">選項</div>
-                                            <div class="form_content">
-                                            </div>
-                                        </div>
+                                        <label><input name="radioStatus" type="radio" value="" checked
+                                                disabled><span>放置搜尋</span></label>
+                                        <label><input name="radioStatus" type="radio" value=""
+                                                disabled><span>不放搜尋</span></label>
                                     </div>
                                     <div class="btn_grp">
                                         <button class="btn btn-green">取消</button>
@@ -720,13 +707,15 @@
                                 </div>
                                 <div class="block">
                                     <div class="_head">
-                                        <h3>最後編修資訊</h3>
+                                        <h3>編輯紀錄</h3>
                                     </div>
                                     <div class="log">
                                         <ul>
-                                            <li id="editor" value="0"><span><i class="i_man"></i></span>管理員</li>
-                                            <li id="deditDate" value="0"><span><i class="i_clock"></i></span>2024/11/26
-                                                14:26:10
+                                            <li>
+                                                <span><i class="i_man"></i></span><a href="#">系統管理者(admin)</a>
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10
                                             </li>
                                         </ul>
                                     </div>
