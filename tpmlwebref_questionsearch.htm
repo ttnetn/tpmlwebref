@@ -183,7 +183,7 @@
                                                                 onfocus="(this.type='datetime-local')"
                                                                 onblur="if(!this.value) this.type='text'">
                                                             <!--input name="" type="calendar" value="" class="calendar">
-                                                            <button class="btn"><i class="i_calendar"></i></button-->
+                                                                            <button class="btn"><i class="i_calendar"></i></button-->
                                                             <label>時間(起)</label>
                                                         </div>
                                                         <!-- <div class="help">說明文字</div> -->
@@ -194,7 +194,7 @@
                                                                 onfocus="(this.type='datetime-local')"
                                                                 onblur="if(!this.value) this.type='text'">
                                                             <!--input name="" type="calendar" value="" class="calendar">
-                                                            <button class="btn"><i class="i_calendar"></i></button-->
+                                                                            <button class="btn"><i class="i_calendar"></i></button-->
                                                             <label>時間(迄)</label>
                                                         </div>
                                                     </div>
@@ -281,42 +281,37 @@
                         </div>
                     </div>
                 </div>
-                 <!-- flex-12 -->
+                <!-- flex-12 -->
                 <div class="flex-12">
                     <div class="col ">
                         <!-- 中央區塊 -->
                         <div class="content_block">
                             <div class="_head">
-                                <h3>處理方式</h3>
+                                <h3>處理狀態</h3>
                             </div>
                             <div class="_head">
                                 <div class="tag">
+                                    處理方式/結果：
+                                    <ul>
+                                        <li class="active"><a href="#">全部</a></li>
+                                        <li><a href="#">不予處理</a></li>
+                                        <li><a href="#">完全解答</a></li>
+                                        <li><a href="#">部份解答</a></li>
+                                        <li><a href="#">無法解答</a></li>
+                                        <li><a href="#">轉介</a></li>
+                                    </ul>
+                                    <br>
                                     處理階段：
                                     <ul>
                                         <li class="active"><a href="#">全部</a></li>
-                                        <li><a href="#">未處理</a></li>
+                                        <li><a href="#">未回覆</a></li>
+                                        <li><a href="#">已回覆(結案)</a></li>
                                         <li><a href="#">處理中</a></li>
-                                        <li><a href="#">已轉介</a></li>
                                         <li><a href="#">送陳</a></li>
-                                        <li><a href="#">簽核</a></li>
                                         <li><a href="#">退文</a></li>
-                                        <li><a href="#">無需處理</a></li>
-                                        <li><a href="#">結案</a></li>
-                                    </ul>
-                                    <br>
-                                    處理結果：
-                                    <ul>
-                                        <li class="active"><a href="#">全部</a></li>
-                                        <li><a href="#">處理中</a></li>
-                                        <li><a href="#">已結案</a></li>
-                                        <li><a href="#">送陳</a></li>
-                                        <li><a href="#">已回覆</a></li>
-                                        <li><a href="#">已回覆90天</a></li>
-                                        <li><a href="#">不予處理</a></li>
-                                        <li><a href="#">已結案</a></li>
                                     </ul>
                                 </div>
-                                 <!-- 頁碼 -->
+                                <!-- 頁碼 -->
                                 <div class="control_panel">
                                     <div class="dropdown">
                                         <button class="btn dropdown-btn">
@@ -366,9 +361,9 @@
                                                 <th><a href="#">提問時間<i class="i_sort"></i></a></th>
                                                 <th class="text-center">讀者問題描述</th>
                                                 <th class="text-center">問題主題類別</th>
-                                                <th class="text-left">處理階段</a>
+                                                <th class="text-left">處理方式/結果</a>
                                                 </th>
-                                                <th>處理結果</th>
+                                                <th>處理階段</th>
                                                 <th>
                                                     <a href="#">回覆期限 <i class="i_sort"></i></a>
                                                 </th>
@@ -385,10 +380,9 @@
                                                 <td><a href="tpmlwebref_questionsearchnew.htm">您好：最近要預約書時發現：無法選擇圖書館（原有設定沒了，要求我選擇圖書館，但是沒有任何選項可選。判斷是有bug或我半夜是不允許操作？），所以這個選項，不論在預約下或在個人設定下，都沒有選項（圖書館list）。
                                                         請協助處理。謝謝。</a></td>
                                                 <td>應用科學</td>
-                                                <td><span class="green">未處理</span></td>
-                                                <td><span class="green">處理中
-
-                                                    </span></td>
+                                                <td><span class="green">轉介</span></td>
+                                                <td><span class="blue">送陳</span></td>
+                                                </span></td>
                                                 <td><time>2024/5/15
                                                         <br>下午18:09</time></td>
                                                 <td>
@@ -408,8 +402,8 @@
                                                         href="tpmlwebref_questionsearchnew.htm">電腦網頁版預約書籍無法選擇取書館（下拉選單空白，也沒有自動代入預設取書館）導致預約無法完成</a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="green">處理中</span></td>
-                                                <td><span class="green">處理中</span></td>
+                                                <td><span class="gray">不予處理</span></td>
+                                                <td><span class="blue">送陳</span></td>
 
                                                 <td><time>2024/5/15
                                                         <br>下午17:09</time></td>
@@ -431,8 +425,8 @@
                                                         謝謝</a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="gray">已轉介</span></td>
-                                                <td><span class="gray">已結案</span></td>
+                                                <td><span class="gray">不予處理</span></td>
+                                                <td><span class="red">未回覆</span></td>
                                                 <td><time>2024/5/15
                                                         <br>下午16:09</time></td>
                                                 <td>
@@ -465,7 +459,7 @@
                                                         https://www.facebook.com/photo?fbid=644109052266009&set=a.603286406348274</a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="blue">送陳</span></td>
+                                                <td><span class="blue">完全解答</span></td>
                                                 <td><span class="blue">送陳</span></td>
                                                 <td><time>2024/5/14
                                                         <br>下午16:09</time></td>
@@ -488,8 +482,8 @@
                                                     </a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="orange">簽核</span></td>
-                                                <td><span class="gray">已回覆</span></td>
+                                                <td><span class="orange">部分解答</span></td>
+                                                <td><span class="blue">送陳</span></td>
                                                 <td><time>2024/5/13
                                                         <br>下午16:09</time></td>
                                                 <td>
@@ -512,8 +506,8 @@
                                                         https://www-ws.gov.taipei/001/Upload/430/relfile/41383/7541217/d9145fe6-9b88-4ecc-a768-e6c8a50a9d3f.pdf</a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="orange">簽核</span></td>
-                                                <td><span class="gray">已回覆</span></td>
+                                                <td><span class="orange">無法解答</span></td>
+                                                <td><span class="blue">送陳</span></td>
                                                 <td><time>2024/5/13
                                                         <br>下午16:09</time></td>
                                                 <td>
@@ -534,8 +528,8 @@
                                                         有數筆出版年為19xx之清單，請問：新書通報之「新書」定義為何？ 謝謝</a>
                                                 </td>
                                                 <td>應用科學</td>
+                                                <td><span class="gray">不予處理</span></td>
                                                 <td><span class="red">退文</span></td>
-                                                <td><span class="gray">處理中</span></td>
                                                 <td><time>2024/5/13
                                                         <br>下午16:09</time></td>
                                                 <td>
@@ -557,8 +551,8 @@
                                                         謝謝!</a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="gray">無需處理</span></td>
                                                 <td><span class="gray">不予處理</span></td>
+                                                <td><span class="red">退文</span></td>
                                                 <td><time>2024/5/14
                                                         <br>下午16:09</time></td>
                                                 <td>
@@ -578,8 +572,8 @@
                                                         href="tpmlwebref_questionsearchnew.htm">請問圖書館的網址https://tpml.gov.taipei/，其中的TPML是什麼的縮寫呢？T是taipei，P是public，L是library，請問M是什麼？</a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="gray">結案</span></td>
-                                                <td><span class="gray">已結案</span></td>
+                                                <td><span class="gray">不予處理</span></td>
+                                                <td><span class="green">處理中</span></td>
                                                 <td><time>2024/5/14
                                                         <br>下午16:09</time></td>
                                                 <td>
@@ -600,8 +594,8 @@
                                                         謝謝</a>
                                                 </td>
                                                 <td>應用科學</td>
-                                                <td><span class="gray">結案</span></td>
-                                                <td><span class="gray">已結案</span></td>
+                                                <td><span class="gray">不予處理</span></td>
+                                                <td><span class="gray">已回覆(結案)</span></td>
                                                 <td><time>2024/5/14
                                                         <br>下午16:09</time></td>
                                                 <td>
