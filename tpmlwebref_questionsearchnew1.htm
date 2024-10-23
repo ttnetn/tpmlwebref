@@ -520,69 +520,55 @@
                                             </div>
                                         </div>
                                     </div>
-                                   <!--tabcontent 2-->
+                                    <!--tabcontent 2-->
                                     <div>
                                         <div class="content__wrapper">
                                             <div class="_head">
-                                                <h3>讀者基本資料</h3>
+                                                <h3>基本資料</h3>
                                             </div>
-                                            <div class="_content">
-                                                <div class="flex-form">
-                                                    <!--h4>基本資訊</h4-->
-                                                    <div class="form_grp form_inline">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="林小姐">
-                                                            <label>姓名</label>
-                                                        </div>
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="ujkkk@gmail.com">
-                                                            <label>電子郵件</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp form_inline">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="(02)2660-7600">
-                                                            <label>聯絡電話</label>
-                                                        </div>
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="選填，例如學校">
-                                                            <label>單位</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp form_inline">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="無">
-                                                            <label>住家電話</label>
-                                                        </div>
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="無">
-                                                            <label>手機</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp form_inline">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="46~55">
-                                                            <label>年齡</label>
-                                                        </div>
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="家管">
-                                                            <label>職業</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp form_inline">
-                                                        <div class="labelEffect">
-                                                            <input name="" type="text" value="大學">
-                                                            <label>教育</label>
-                                                        </div>
+                                            <div class="flex-form">
+                                                <div class="form_grp">
+                                                    <div class="form_title">驗證<abbr>*</abbr></div>
+                                                    <div class="form_content">
+                                                        <input type="text" name="vertify_id" id="vertify_id"
+                                                            placeholder="請輸入身分證號或閱讀證號驗證"
+                                                            style="display:inline;width:65%;" />
+                                                        <input type="button" value="驗證" class="btn btn-submit used"
+                                                            onclick="myFunction()" />
                                                     </div>
                                                 </div>
-                                                <hr>
+                                                <div class="form_grp" style="margin-top: 20px;">
+                                                    <div class="form_title">讀者證號<abbr>*</abbr></div>
+                                                    <div class="form_content">
+                                                        <input type="text" name="usr_id" id="usr_id"
+                                                            placeholder="請使用驗證功能帶入" readonly />
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" style="margin-top: 20px;">
+                                                    <div class="form_title">讀者姓名<abbr>*</abbr></div>
+                                                    <div class="form_content">
+                                                        <input type="text" name="usr_name" id="usr_name" />
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" style="margin-top: 20px;">
+                                                    <div class="form_title">Email</div>
+                                                    <div class="form_content">
+                                                        <input type="text" name="usr_email" id="usr_email" />
+                                                    </div>
+                                                    <div class="form_grp" style="margin-top: 20px;">
+                                                        <div class="form_title">電話</div>
+                                                        <div class="form_content">
+                                                            <input type="text" name="usr_email" id="usr_email" />
+                                                        </div>
+                                                        <hr>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                          <!-- 右側資料widget -->
+                            <!-- 右側資料widget -->
                             <div class="publish_block">
                                 <!-- 每種不同功能，都用block區分 -->
                                 <div class="block">
@@ -658,52 +644,52 @@
         </div>
     </div>
     <!-- JS-->
-            <script src="js/jquery-3.3.1.min.js"></script>
-            <script src="vendor/jquery.easing.min.js"></script>
-            <!-- template customize js -->
-            <script src="js/customize.js"></script>
-            <!-- highlight -->
-            <script src="vendor/highlight/highlight.pack.js"></script>
-            <!-- tree view -->
-            <script src="vendor/treeview/jquery.treeview.js"></script>
-            <!-- fancybox -->
-            <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-            <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- tree view -->
+    <script src="vendor/treeview/jquery.treeview.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
 
-            <script>
-                // first example
-                $(".treeview .treeview").treeview();
-            </script>
-            <script>
-                hljs.initHighlightingOnLoad();
-            </script>
-            <script>
-                // first example
-                $(".treeview .treeview").treeview();
-                $('header').load("header.htm");
-            </script>
-            <!--Select multiple checkbox-->
-            <script>
-                $(document).ready(function () {
-                    $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
-                });
-            </script>
-            <!--Select2-->
-            <script>
-                $(function () {
-                    $("#select1").select2();
-                    $("#select2").select2();
-                    $("#select3").select2();
-                });
-            </script>
-            <script>
-                // 監聽 textarea 的點擊事件
-                document.getElementById('sourceText').addEventListener('click', function () {
-                    var hiddenLink = document.getElementById('hiddenLink');
-                    // 模擬點擊隱藏的鏈接
-                    hiddenLink.click();
-                });
-            </script>
+    <script>
+        // first example
+        $(".treeview .treeview").treeview();
+    </script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script>
+        // first example
+        $(".treeview .treeview").treeview();
+        $('header').load("header.htm");
+    </script>
+    <!--Select multiple checkbox-->
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText: 'Select Below', height: '250px' });
+        });
+    </script>
+    <!--Select2-->
+    <script>
+        $(function () {
+            $("#select1").select2();
+            $("#select2").select2();
+            $("#select3").select2();
+        });
+    </script>
+    <script>
+        // 監聽 textarea 的點擊事件
+        document.getElementById('sourceText').addEventListener('click', function () {
+            var hiddenLink = document.getElementById('hiddenLink');
+            // 模擬點擊隱藏的鏈接
+            hiddenLink.click();
+        });
+    </script>
 
 </body>
 
