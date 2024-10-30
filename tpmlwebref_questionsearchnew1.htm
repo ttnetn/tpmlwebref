@@ -188,9 +188,11 @@
                                                             <select id="" name="" class="dynamicCol used">
                                                                 <option value="" selected="" disabled="disabled">
                                                                 </option>
-                                                                <option value="1" selected>未處理</option>
-                                                                <option value="2">處理中</option>
-                                                                <option value="3">已結案</option>
+                                                                <option value="1" selected>不予未處理</option>
+                                                                <option value="2">完全解答</option>
+                                                                <option value="3">部分解答</option>
+                                                                <option value="4">無法解答</option>
+                                                                <option value="5">轉介</option>
                                                             </select>
                                                             <label>問題處理階段</label>
                                                         </div>
@@ -349,16 +351,13 @@
                                                                 <option value="" selected="" disabled="disabled">
                                                                 </option>
                                                                 <option value="0" selected>請選擇</option>
-                                                                <option value="1">處理中</option>
-                                                                <option value="2">不予處理</option>
-                                                                <option value="3">未答覆</option>
-                                                                <option value="4">完全解答</option>
-                                                                <option value="5">部分解答</option>
-                                                                <option value="6">無法解答</option>
-                                                                <option value="7">指引使用方式</option>
-                                                                <option value="8">轉介</option>
+                                                                <option value="1">不予處理</option>
+                                                                <option value="2">完全解答</option>
+                                                                <option value="3">部分解答</option>
+                                                                <option value="4">無法解答</option>
+                                                                <option value="5">轉介</option>
                                                             </select>
-                                                            <label>處理結果</label>
+                                                            <label>處理方式/結果</label>
                                                         </div>
                                                         <div class="labelEffect">
                                                             <input name="" type="text" value="館員姓名">
@@ -404,6 +403,12 @@
                                                             <input name="" type="text" value="選擇其他請輸入文字"
                                                                 class="dynamicCol used">
                                                             <label>其他</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="labelEffect">
+                                                            <input name="" type="text" value="自動帶入長官姓名" disabled>
+                                                            <label>審核者</label>
                                                         </div>
                                                     </div>
                                                     <div class="form_grp">
@@ -617,7 +622,7 @@
                                                 disabled><span>不放搜尋</span></label>
                                     </div>
                                     <div class="btn_grp">
-                                        <button class="btn btn-green">取消</button>
+                                        <button class="btn btn-green">暫存</button>
                                         <button class="btn btn-orange">代鍵</button>
                                     </div>
                                 </div>
