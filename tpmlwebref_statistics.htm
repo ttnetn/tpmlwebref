@@ -22,9 +22,7 @@
 
     <body>
         <div class="wrapper">
-            <!-- header load header.htm -->
             <header></header>
-            <!-- aside load aside.htm -->
             <aside>
                 <h1>
                     <a href="index.htm">
@@ -137,31 +135,26 @@
                                                 <div class="form_grp datepick">
                                                     <div class="startDate">
                                                         <div class="labelEffect">
-                                                            <!--處理 Animated Labels for date/datetime-local 會卡在一起的效果-->
                                                             <input name="" type="text" value=""
                                                                 onfocus="(this.type='datetime-local')"
                                                                 onblur="if(!this.value) this.type='text'">
-                                                            <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button-->
                                                             <label>查詢日期(起)</label>
                                                         </div>
-                                                        <!-- <div class="help">說明文字</div> -->
                                                     </div>
                                                     <div class="endDate">
                                                         <div class="labelEffect">
                                                             <input name="" type="text" value=""
                                                                 onfocus="(this.type='datetime-local')"
                                                                 onblur="if(!this.value) this.type='text'">
-                                                            <!--input name="" type="calendar" value="" class="calendar">
-                                                        <button class="btn"><i class="i_calendar"></i></button-->
                                                             <label>查詢日期(迄)</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form_grp form_inline">
                                                     <div class="labelEffect">
-                                                        <select id="" name="">
-                                                            <option value="" selected="" disabled="disabled"></option>
+                                                        <select id="selectOption" name="">
+                                                            <option value="" selected="" disabled="disabled">請選擇功能
+                                                            </option>
                                                             <option value="1">每年件數</option>
                                                             <option value="2">每月件數</option>
                                                             <option value="3">回覆天數</option>
@@ -169,215 +162,104 @@
                                                             <option value="5">回覆館別</option>
                                                             <option value="6">參考服務問題形式</option>
                                                             <option value="7">問題主題類別</option>
-                                                            <option value="8">問題回覆方式
-                                                            </option>
+                                                            <option value="8">問題回覆方式</option>
                                                             <option value="9">讀者類型</option>
                                                             <option value="10">回覆資料類型</option>
                                                         </select>
-                                                        <label>功能選項</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" style="margin-top:10px;">
+                                                    <div class="labelEffect">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form_grp" style="margin-top:10px;">
-                                                <div class="labelEffect">
-                                                </div>
+                                            <div class="btn_grp">
+                                                <button class="btn reset">取消</button>
+                                                <button class="btn btn-primary">確認</button>
                                             </div>
                                         </div>
-                                        <div class="btn_grp">
-                                            <button class="btn reset">取消</button>
-                                            <button class="btn btn-primary">確認</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex-12">
-                        <div class="col">
-                            <p class="notice">目前條件 - 每年件數；查詢日期：2022/1/1~2022/12/31</p>
+                        <div class="flex-12">
+                            <div class="col">
+                                <p class="notice">目前條件 - 每年件數；查詢日期：2022/1/1~2022/12/31</p>
+                            </div>
                         </div>
+                        <div class="flex-12">
+                            <div class="col ">
+                                <div class="content_block">
+                                    <div class="_head">
+                                        <h3>參考統計</h3>
+                                    </div>
+                                    <div class="_head">
+                                        <p>僅顯示符合查詢條件前10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
+                                        <div class="quick_btn">
+                                            <button class="btn btn-orange" onclick="window.location.href='#';"><i
+                                                    class="i_add"></i>匯出結果</button>
+                                        </div>
+                                    </div>
+                                    <div class="_content">
+                                        <!-- 每年件數表格 -->
+                                        <div class="table_wrapper" id="yearTable" style="display:none;">
+                                            <table class="table_hover">
+                                                <caption>每年件數報表格式</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">序號<i class="i_sort"></i></th>
+                                                        <th class="text-center">每年件數<i class="i_sort"></i></th>
+                                                        <th class="text-center">次數</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="num" style="text-align: center;">1</td>
+                                                        <td style="text-align: center;">2020</td>
+                                                        <td style="text-align: center;">333</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="num" style="text-align: center;">2</td>
+                                                        <td style="text-align: center;">2021</td>
+                                                        <td style="text-align: center;">1234</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
 
-                    </div>
-                    <!--div class="flex-3-3-3-3">
-                        <div class="col">
-                            <div class="content_block">
-                                <div class="_head">
-                                    <h3>預約總數</h3>
-                                </div>
-                                <div class="_content">
-                                    <div class="mp_widget">
-                                        <div class="widget_now_counter">
-                                            <div class="counter "data-count="1537"></div>
+                                        <!-- 每月件數表格 -->
+                                        <div class="table_wrapper" id="monthTable" style="display:none;">
+                                            <table class="table_hover">
+                                                <caption>每月件數報表格式</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">序號<i class="i_sort"></i></th>
+                                                        <th class="text-center">每月件數<i class="i_sort"></i></th>
+                                                        <th class="text-center">次數</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="num" style="text-align: center;">1</td>
+                                                        <td style="text-align: center;">2020/01</td>
+                                                        <td style="text-align: center;">333</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="num" style="text-align: center;">2</td>
+                                                        <td style="text-align: center;">2020/02</td>
+                                                        <td style="text-align: center;">1234</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="content_block">
-                                <div class="_head">
-                                    <h3>新增總數</h3>
-                                </div>
-                                <div class="_content">
-                                    <div class="mp_widget">
-                                        <div class="widget_now_pageview">
-                                            <div class="counter "data-count="34"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="content_block">
-                                <div class="_head">
-                                    <h3>瀏覽總數</h3>
-                                </div>
-                                <div class="_content">
-                                    <div class="mp_widget ">
-                                        <div class="widget_now_user">
-                                            <div class="counter "data-count="376"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="content_block">
-                                <div class="_head">
-                                    <h3>下載總數</h3>
-                                </div>
-                                <div class="_content">
-                                    <div class="mp_widget">
-                                        <div class="widget_new_data">
-                                            <div class="counter "data-count="1220"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div-->
-                    <div class="flex-12">
-                        <div class="col ">
-                            <div class="content_block">
-                                <div class="_head">
-                                    <h3>參考統計</h3>
-                                </div>
-                                <div class="_head">
-                                    <p>僅顯示符合查詢條件前10筆資訊供預覽，請使用匯出來檢視完整資料。</p>
-                                    <div class="quick_btn">
-                                        <button class="btn btn-orange" onclick="window.location.href='#';"><i
-                                                class="i_add"></i>匯出結果</button>
-                                    </div>
-                                </div>
-                                <div class="_content">
-                                    <!-- 表格樣式 -->
-                                    <div class="table_wrapper">
-                                        <table class="table_hover">
-                                            <caption>每年件數報表格式</caption>
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-center">序號<i class="i_sort"></i></a></th>
-                                                    <th class="text-center">每年件數<i class="i_sort"></i></a></th>
-                                                    <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
-                                                    <th class="text-center">次數</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">1</td>
-                                                    <td style="text-align: center;">2020</td>
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">2</td>
-                                                    <td style="text-align: center;">2021</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1234</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">3</td>
-                                                    <td style="text-align: center;">2022</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">2023</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">5</td>
-                                                    <td style="text-align: center;">2024</td>
-                                                    <td style="text-align: center;">1112</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="table_wrapper">
-                                        <table class="table_hover">
-                                            <caption>每月件數報表格式</caption>
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-center">序號<i class="i_sort"></i></a></th>
-                                                    <th class="text-center">每月件數<i class="i_sort"></i></a></th>
-                                                    <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
-                                                    <th class="text-center">次數</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">1</td>
-                                                    <td style="text-align: center;">2020/01</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">2</td>
-                                                    <td style="text-align: center;">2020/02</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1234</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">3</td>
-                                                    <td style="text-align: center;">2020/03</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">2020/04</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">5</td>
-                                                    <td style="text-align: center;">2020/05</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1112</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="table_wrapper">
+                                    <div class="table_wrapper" id="dayTable" style="display:none;">
                                         <table class="table_hover">
                                             <caption>回覆天數報表格式</caption>
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">序號<i class="i_sort"></i></a></th>
                                                     <th class="text-center">回覆天數<i class="i_sort"></i></a></th>
-                                                    <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
                                                     <th class="text-center">次數</th>
                                                 </tr>
                                             </thead>
@@ -385,108 +267,23 @@
                                                 <tr>
                                                     <td class="num" style="text-align: center;">1</td>
                                                     <td style="text-align: center;">0</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">333</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num" style="text-align: center;">2</td>
                                                     <td style="text-align: center;">1</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">1234</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">3</td>
-                                                    <td style="text-align: center;">2</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">3</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">5</td>
-                                                    <td style="text-align: center;">5</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1112</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="table_wrapper">
-                                        <table class="table_hover">
-                                            <caption>回覆館別報表格式</caption>
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-center">序號<i class="i_sort"></i></a></th>
-                                                    <th class="text-center">回覆館別</th>
-                                                    <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
-                                                    <th class="text-center">次數</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">1</td>
-                                                    <td style="text-align: center;">總館</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">2</td>
-                                                    <td style="text-align: center;">松山分館</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1234</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">3</td>
-                                                    <td style="text-align: center;">六合分館</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">內湖分館</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">5</td>
-                                                    <td style="text-align: center;">中崙分館</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1112</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">6</td>
-                                                    <td style="text-align: center;">中山分館</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1112</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="table_wrapper">
+                                    <div class="table_wrapper" id="resultTable" style="display:none;">
                                         <table class="table_hover">
                                             <caption>處理結果報表格式</caption>
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">序號<i class="i_sort"></i></a></th>
                                                     <th class="text-center">處理結果</th>
-                                                    <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
                                                     <th class="text-center">次數</th>
                                                 </tr>
                                             </thead>
@@ -507,27 +304,20 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="num" style="text-align: center;">3</td>
-                                                    <td style="text-align: center;">其他</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">指引資料使用方式</td>
+                                                    <td style="text-align: center;">部份解答</td>
                                                     <!--td>1110101001</td>
                                                     <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">110</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="num" style="text-align: center;">5</td>
-                                                    <td style="text-align: center;">部份解答</td>
+                                                    <td class="num" style="text-align: center;">4</td>
+                                                    <td style="text-align: center;">無法解答</td>
                                                     <!--td>1110101001</td>
                                                     <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">1112</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="num" style="text-align: center;">6</td>
+                                                    <td class="num" style="text-align: center;">5</td>
                                                     <td style="text-align: center;">轉介</td>
                                                     <!--td>1110101001</td>
                                                     <td style="text-align: center;">1</td-->
@@ -536,7 +326,31 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="table_wrapper">
+                                    <div class="table_wrapper" id="typeTable" style="display:none;">
+                                        <table class="table_hover">
+                                            <caption>回覆館別報表格式</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">序號<i class="i_sort"></i></a></th>
+                                                    <th class="text-center">回覆館別</th>
+                                                    <th class="text-center">次數</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="num" style="text-align: center;">1</td>
+                                                    <td style="text-align: center;">總館</td>
+                                                    <td style="text-align: center;">333</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="num" style="text-align: center;">2</td>
+                                                    <td style="text-align: center;">松山分館</td>
+                                                    <td style="text-align: center;">1234</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table_wrapper" id="questionTable" style="display:none;">
                                         <table class="table_hover">
                                             <caption>參考服務問題形式</caption>
                                             <thead>
@@ -552,35 +366,22 @@
                                                 <tr>
                                                     <td class="num" style="text-align: center;">1</td>
                                                     <td style="text-align: center;">指引</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">333</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num" style="text-align: center;">2</td>
                                                     <td style="text-align: center;">事實</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">1234</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num" style="text-align: center;">3</td>
                                                     <td style="text-align: center;">主題</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">研究</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1112</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="table_wrapper">
+                                    <div class="table_wrapper" id="themeTable" style="display:none;">
                                         <table class="table_hover">
                                             <caption>問題主題類別格式</caption>
                                             <thead>
@@ -631,7 +432,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="table_wrapper">
+                                    <div class="table_wrapper" id="replyTable" style="display:none;">
                                         <table class="table_hover">
                                             <caption>問題回覆方式格式</caption>
                                             <thead>
@@ -647,50 +448,28 @@
                                                 <tr>
                                                     <td class="num" style="text-align: center;">1</td>
                                                     <td style="text-align: center;">線上</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">333</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num" style="text-align: center;">2</td>
                                                     <td style="text-align: center;">電話</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">1234</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="num" style="text-align: center;">3</td>
                                                     <td style="text-align: center;">書面</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">測試1234567890</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">5</td>
-                                                    <td style="text-align: center;">測試1234567890</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">110</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="table_wrapper">
+                                    <div class="table_wrapper" id="readertypeTable" style="display:none;">
                                         <table class="table_hover">
                                             <caption>讀者類型格式</caption>
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">序號<i class="i_sort"></i></a></th>
                                                     <th class="text-center">讀者類型無此欄位</th>
-                                                    <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
                                                     <th class="text-center">次數</th>
                                                 </tr>
                                             </thead>
@@ -698,50 +477,18 @@
                                                 <tr>
                                                     <td class="num" style="text-align: center;">1</td>
                                                     <td style="text-align: center;">無此欄位</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
                                                     <td style="text-align: center;">333</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">2</td>
-                                                    <td style="text-align: center;">無此欄位</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">1234</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">3</td>
-                                                    <td style="text-align: center;">無此欄位</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">4</td>
-                                                    <td style="text-align: center;">無此欄位</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="num" style="text-align: center;">5</td>
-                                                    <td style="text-align: center;">無此欄位</td>
-                                                    <!--td>1110101001</td>
-                                                    <td style="text-align: center;">1</td-->
-                                                    <td style="text-align: center;">110</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="table_wrapper">
+                                    <div class="table_wrapper" id="dataTable" style="display:none;">
                                         <table class="table_hover">
                                             <caption>回覆資料類型格式</caption>
                                             <thead>
                                                 <tr>
                                                     <th class="text-center">序號<i class="i_sort"></i></a></th>
                                                     <th class="text-center">回覆資料類型</th>
-                                                    <!--th>預約案號</th>
-                                                    <th>虛擬主機(編號)</th-->
                                                     <th class="text-center">次數</th>
                                                 </tr>
                                             </thead>
@@ -794,98 +541,41 @@
         </div>
         <!-- JS-->
         <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="vendor/jquery.easing.min.js"></script>
         <!-- template customize js -->
         <script src="js/customize.js"></script>
-        <!-- highlight -->
-        <script src="vendor/highlight/highlight.pack.js"></script>
-        <!-- tree view -->
-        <script src="vendor/treeview/jquery.treeview.js"></script>
-        <!-- highchart plugin -->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/highcharts-more.js"></script>
-        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-        <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+        <!-- JavaScript 部分 -->
         <script>
-            $('header').load("header.htm");
-            var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
-            // 長條
-            Highcharts.chart('axes_line_column1', {
-                chart: {
-                    zoomType: 'xy'
-                },
-                title: {
-                    text: '預約統計資訊'
-                },
-                // subtitle: {
-                //     text: 'Source: 勞安所科研採購網'
-                // },
-                colors: _Color,
-                xAxis: [{
-                    categories: ['2022/1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-                    crosshair: true
-                }],
-                yAxis: [{ // Primary yAxis
-                    labels: {
-                        format: '{value}',
-                        style: {
-                            color: Highcharts.getOptions().colors[1]
-                        }
-                    },
-                    title: {
-                        text: '次數',
-                        style: {
-                            color: Highcharts.getOptions().colors[1]
-                        }
-                    }
-                }, { // Secondary yAxis
-                    title: {
-                        text: '',
-                        style: {
-                            color: Highcharts.getOptions().colors[0]
-                        }
-                    },
-                    labels: {
-                        format: '{value}',
-                        style: {
-                            color: Highcharts.getOptions().colors[0]
-                        }
-                    },
-                    opposite: true
-                }],
-                tooltip: {
-                    shared: true
-                },
-                legend: {
-                    layout: 'vertical',
-                    align: 'left',
-                    x: 20,
-                    verticalAlign: 'top',
-                    y: 20,
-                    floating: true,
-                    backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
-                        'rgba(255,255,255,0.25)'
-                },
-                series: [{
-                    name: '101教室',
-                    type: 'column',
-                    yAxis: 1,
-                    data: [49.0, 71.0, 106.0, 129.0, 144.0, 126.0, 35.0, 48.0, 16.0, 19.0, 95.0, 54.0],
-                    tooltip: {
-                        valueSuffix: ''
-                    }
-                }, {
-                    name: '102教室',
-                    type: 'column',
-                    yAxis: 1,
-                    data: [17.0, 26.0, 89.0, 94.0, 78.0, 91.0, 25.0, 26.0, 13.0, 18.0, 53.0, 19.0],
-                    tooltip: {
-                        valueSuffix: ''
-                    }
-                }]
+            document.getElementById('selectOption').addEventListener('change', function () {
+                // 隱藏所有表格
+                var tables = document.querySelectorAll('.table_wrapper');
+                tables.forEach(function (table) {
+                    table.style.display = 'none';
+                });
+
+                // 顯示選擇的表格
+                var selectedValue = this.value;
+                if (selectedValue == "1") {
+                    document.getElementById('yearTable').style.display = 'block'; // 顯示每年件數表格
+                } else if (selectedValue == "2") {
+                    document.getElementById('monthTable').style.display = 'block'; // 顯示每月件數表格
+                } else if (selectedValue == "3") {
+                    document.getElementById('dayTable').style.display = 'block'; // 顯示回覆天數件數表格
+                } else if (selectedValue == "4") {
+                    document.getElementById('resultTable').style.display = 'block'; // 顯示處理結果件數表格
+                } else if (selectedValue == "5") {
+                    document.getElementById('typeTable').style.display = 'block'; // 顯示回覆館別件數表格
+                } else if (selectedValue == "6") {
+                    document.getElementById('questionTable').style.display = 'block'; // 顯示參考服務問題形式件數表格
+                } else if (selectedValue == "7") {
+                    document.getElementById('themeTable').style.display = 'block'; // 顯示主題類別件數表格
+                } else if (selectedValue == "8") {
+                    document.getElementById('replyTable').style.display = 'block'; // 顯示回覆方式件數表格
+                } else if (selectedValue == "9") {
+                    document.getElementById('readertypeTable').style.display = 'block'; // 顯示讀者類型件數表格
+                } else if (selectedValue == "10") {
+                    document.getElementById('dataTable').style.display = 'block'; // 顯示資料類型件數表格
+                }
+                // 可以依照需要添加更多選項的顯示邏輯
             });
         </script>
     </body>
