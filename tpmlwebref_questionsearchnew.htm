@@ -513,49 +513,67 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--tabcontent 2-->
+                                    <!-- tabcontent 2 -->
                                     <div>
                                         <div class="content__wrapper">
                                             <div class="_head">
                                                 <h3>基本資料</h3>
                                             </div>
                                             <div class="flex-form">
+                                                <!-- 驗證 -->
                                                 <div class="form_grp">
                                                     <div class="form_title">驗證<abbr>*</abbr></div>
                                                     <div class="form_content">
                                                         <input type="text" name="vertify_id" id="vertify_id"
                                                             placeholder="請輸入身分證號或閱讀證號驗證"
-                                                            style="display:inline;width:65%;" />
+                                                            style="display:inline; width:65%;" required />
                                                         <input type="button" value="驗證" class="btn btn-submit used"
                                                             onclick="myFunction()" />
                                                     </div>
                                                 </div>
+                                                <!-- 讀者證號 -->
                                                 <div class="form_grp" style="margin-top: 20px;">
                                                     <div class="form_title">讀者證號<abbr>*</abbr></div>
                                                     <div class="form_content">
-                                                        <input type="text" name="usr_id" id="usr_id"
-                                                            placeholder="請使用驗證功能帶入" readonly />
+                                                        <input type="text" name="usr_id" id="usr_id" placeholder=""
+                                                            readonly />
                                                     </div>
                                                 </div>
+
+                                                <!-- 讀者姓名 -->
                                                 <div class="form_grp" style="margin-top: 20px;">
                                                     <div class="form_title">讀者姓名<abbr>*</abbr></div>
                                                     <div class="form_content">
-                                                        <input type="text" name="usr_name" id="usr_name" />
+                                                        <input type="text" name="usr_fullname" id="usr_fullname"
+                                                            placeholder="" required />
                                                     </div>
                                                 </div>
+                                                <!-- 讀者類型 -->
+                                                <div class="form_grp" style="margin-top: 20px;">
+                                                    <div class="form_title">讀者類型</div>
+                                                    <div class="form_content">
+                                                        <input type="text" name="usr_type" id="usr_type" placeholder=""
+                                                            required />
+                                                    </div>
+                                                </div>
+                                                <!-- Email -->
                                                 <div class="form_grp" style="margin-top: 20px;">
                                                     <div class="form_title">Email</div>
                                                     <div class="form_content">
-                                                        <input type="text" name="usr_email" id="usr_email" />
-                                                    </div>
-                                                    <div class="form_grp" style="margin-top: 20px;">
-                                                        <div class="form_title">電話</div>
-                                                        <div class="form_content">
-                                                            <input type="text" name="usr_email" id="usr_email" />
-                                                        </div>
-                                                        <hr>
+                                                        <input type="email" name="usr_email" id="usr_email"
+                                                            placeholder="" required />
                                                     </div>
                                                 </div>
+                                                <!-- 電話 -->
+                                                <div class="form_grp" style="margin-top: 20px;">
+                                                    <div class="form_title">電話</div>
+                                                    <div class="form_content">
+                                                        <input type="tel" name="usr_phone" id="usr_phone" placeholder=""
+                                                            required />
+                                                    </div>
+                                                </div>
+                                                <!-- 分隔線 -->
+                                                <hr style="margin-top: 20px;">
                                             </div>
                                         </div>
                                     </div>
