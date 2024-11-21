@@ -150,12 +150,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <div class="form_grp form_inline">
                                                     <div class="labelEffect">
-                                                        <select id="" name="">
-                                                            <option value="" selected="" disabled="disabled">
-                                                            </option>
+                                                        <select id="functionSelect">
+                                                            <option value="" selected disabled>請選擇</option>
                                                             <option value="1">每年件數</option>
                                                             <option value="2">每月件數</option>
                                                             <option value="3">回覆天數</option>
@@ -167,11 +165,9 @@
                                                             <option value="9">讀者類型</option>
                                                             <option value="10">回覆資料類型</option>
                                                         </select>
-                                                        <label>請選擇功能</label>
+
                                                     </div>
                                                 </div>
-
-
                                                 <div class="form_grp" style="margin-top:10px;">
                                                     <div class="labelEffect">
                                                     </div>
@@ -179,7 +175,7 @@
                                             </div>
                                             <div class="btn_grp">
                                                 <button class="btn reset">取消</button>
-                                                <button class="btn btn-primary">確認</button>
+                                                <button class="btn btn-primary" id="confirmBtn">確認</button>
                                             </div>
                                         </div>
                                     </div>
@@ -585,53 +581,67 @@
         <script src="js/customize.js"></script>
         <!-- JavaScript 部分 -->
         <script>
-            // 為下拉選單添加事件監聽
-            document.querySelector('select').addEventListener('change', function () {
-                var label = this.parentElement.querySelector('label');
-
-                // 確保選中後隱藏 label，避免重疊
-                if (this.value) {
-                    label.style.visibility = 'hidden'; // 隱藏 label
-                } else {
-                    label.style.visibility = 'visible'; // 沒有選值時顯示 label
-                }
+            document.addEventListener('DOMContentLoaded', function () {
+                var tables = document.querySelectorAll('.table_wrapper');
+                var selectElement = document.getElementById('functionSelect');
+                var labelElement = selectElement.closest('.labelEffect').querySelector('label');
 
                 // 隱藏所有表格
-                var tables = document.querySelectorAll('.table_wrapper');
                 tables.forEach(function (table) {
-                    table.style.display = 'none';
+                    table.style.display = 'none'; // 隱藏所有表格
                 });
 
-                // 顯示選擇的表格
-                var selectedValue = this.value;
-                if (selectedValue == "1") {
-                    document.getElementById('yearTable').style.display = 'block'; // 顯示每年件數表格
-                } else if (selectedValue == "2") {
-                    document.getElementById('monthTable').style.display = 'block'; // 顯示每月件數表格
-                } else if (selectedValue == "3") {
-                    document.getElementById('dayTable').style.display = 'block'; // 顯示回覆天數表格
-                } else if (selectedValue == "4") {
-                    document.getElementById('resultTable').style.display = 'block'; // 顯示處理結果表格
-                } else if (selectedValue == "5") {
-                    document.getElementById('typeTable').style.display = 'block'; // 顯示回覆館別表格
-                } else if (selectedValue == "6") {
-                    document.getElementById('questionTable').style.display = 'block'; // 顯示參考服務問題形式表格
-                } else if (selectedValue == "7") {
-                    document.getElementById('themeTable').style.display = 'block'; // 顯示主題類別表格
-                } else if (selectedValue == "8") {
-                    document.getElementById('replyTable').style.display = 'block'; // 顯示回覆方式表格
-                }
-            });
+                // 當選擇框的選項改變時
+                selectElement.addEventListener('change', function () {
+                    // 如果選擇框不為空，隱藏 label
+                    if (this.value) {
+                        labelElement.style.visibility = 'hidden';
+                    } else {
+                        // 如果選擇框為空，顯示 label
+                        labelElement.style.visibility = 'visible';
+                    }
+                });
 
-            // 當頁面加載時確保 label 是可見的
-            document.addEventListener('DOMContentLoaded', function () {
-                var select = document.querySelector('select');
-                var label = select.parentElement.querySelector('label');
-                if (!select.value) {
-                    label.style.visibility = 'visible';
-                }
+                // 當按下確認按鈕時，顯示選擇的表格
+                document.getElementById('confirmBtn').addEventListener('click', function () {
+                    var selectedValue = selectElement.value; // 獲取選擇的值
+
+                    // 如果未選擇任何功能，則不顯示任何表格
+                    if (!selectedValue) {
+                        return; // 如果沒有選擇功能，則不顯示任何表格
+                    }
+
+                    // 隱藏所有表格
+                    tables.forEach(function (table) {
+                        table.style.display = 'none';
+                    });
+
+                    // 根據選擇的值顯示相應的表格
+                    if (selectedValue == "1") {
+                        document.getElementById('yearTable').style.display = 'block'; // 顯示每年件數表格
+                    } else if (selectedValue == "2") {
+                        document.getElementById('monthTable').style.display = 'block'; // 顯示每月件數表格
+                    } else if (selectedValue == "3") {
+                        document.getElementById('dayTable').style.display = 'block'; // 顯示回覆天數表格
+                    } else if (selectedValue == "4") {
+                        document.getElementById('resultTable').style.display = 'block'; // 顯示處理結果表格
+                    } else if (selectedValue == "5") {
+                        document.getElementById('typeTable').style.display = 'block'; // 顯示回覆館別表格
+                    } else if (selectedValue == "6") {
+                        document.getElementById('questionTable').style.display = 'block'; // 顯示參考服務問題形式表格
+                    } else if (selectedValue == "7") {
+                        document.getElementById('themeTable').style.display = 'block'; // 顯示問題主題類別表格
+                    } else if (selectedValue == "8") {
+                        document.getElementById('replyTable').style.display = 'block'; // 顯示回覆方式表格
+                    } else if (selectedValue == "9") {
+                        document.getElementById('readertypeTable').style.display = 'block'; // 顯示讀者類型表格
+                    } else if (selectedValue == "10") {
+                        document.getElementById('dataTable').style.display = 'block'; // 顯示回覆資料類型表格
+                    }
+                });
             });
         </script>
+
 
     </body>
 
