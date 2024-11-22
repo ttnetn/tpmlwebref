@@ -282,8 +282,8 @@
                                         <li><a href="#">轉介</a></li>
                                     </ul>
                                 </div>
-                                <!-- 頁碼 -->
-                                <div class="control_panel">
+                                <!-- 批次處理與頁碼部分，靠左顯示 -->
+                                <div class="control_panel" style="display: flex; justify-content: flex-start;">
                                     <div class="dropdown">
                                         <button class="btn dropdown-btn">
                                             <i class="i_setting"></i>批次處理</button>
@@ -297,7 +297,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pagination">
+                                <div class="pagination" style="text-align: left;">
                                     <form action="" class="form_inline">
                                         <div class="total">
                                             共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
@@ -310,283 +310,298 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="quick_btn">
-                                    <button class="btn btn-orange"
-                                        onclick="window.location.href='tpmlwebref_questionsearchnew1.htm';"><i
-                                            class="i_add"></i>新增代鍵</button>
+                                <!-- 超過90天與新增代鍵，靠右顯示 -->
+                                <div class="form_grp"
+                                    style="display: flex; justify-content: flex-end; align-items: center;">
+                                    <div class="form_title" style="margin-right: 10px;">超過90天</div>
+                                    <div class="form_content" style="margin-right: 20px;">
+                                        <div class="checkSwitch">
+                                            <label>
+                                                <input name="checkboxSample1" type="checkbox" value="">
+                                                <div class="checkSwitch_switch"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="quick_btn">
+                                        <button class="btn btn-orange"
+                                            onclick="window.location.href='tpmlwebref_questionsearchnew1.htm';">
+                                            <i class="i_add"></i>新增代鍵</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="_content">
-                                <!-- 表格樣式 -->
-                                <div class="table_wrapper">
-                                    <table class="table_hover">
-                                        <thead>
-                                            <tr>
-                                                <th><input type="checkbox"></th>
-                                                <th><a href="#">序號<i class="i_sort"></i></a></th>
-                                                </th>
-                                                <th><a href="#">文件編號<i class="i_sort"></i></a></th>
-                                                </th>
-                                                <th><a href="#">提問時間<i class="i_sort"></i></a></th>
-                                                <th class="text-center">問題描述</th>
-                                                <th class="text-center">主題類別</th>
-                                                <th class="text-center">處理階段</a>
-                                                </th>
-                                                <th class="text-center">處理方式</a>
-                                                <th>
-                                                    <a href="#">回覆日期/期限 <i class="i_sort"></i></a>
-                                                </th>
-                                                <th class="text-center">編輯</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">10</td>
-                                                <td>11312349</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">您好：最近要預約書時發現：無法選擇圖書館（原有設定沒了，要求我選擇圖書館，但是沒有任何選項可選。判斷是有bug或我半夜是不允許操作？），所以這個選項，不論在預約下或在個人設定下，都沒有選項（圖書館list）。
-                                                        請協助處理。謝謝。</a></td>
-                                                <td>應用科學</td>
-                                                <td><span class="blue">送陳</span></td>
-                                                <td><span class="green">轉介</span></td>
-                                                </span></td>
-                                                <td><time>2024-11-07
-                                                        <br>18:09</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">9</td>
-                                                <td>11312348</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a
-                                                        href="tpmlwebref_questionsearchnew.htm">電腦網頁版預約書籍無法選擇取書館（下拉選單空白，也沒有自動代入預設取書館）導致預約無法完成</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="blue">送陳</span></td>
-                                                <td><span class="gray">不予處理</span></td>
-                                                <td><time>1天2小時30分</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">8</td>
-                                                <td>11312347</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">借閱及預約取書期限於4/3到期者延長至4/9
-                                                        請問：4/6到期者是否亦可延長至4/9？
-                                                        謝謝</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="red">未回覆</span></td>
-                                                <td><span class="gray">不予處理</span></td>
-                                                <td><time>1天2小時30分</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">7</td>
-                                                <td>11312346</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">補充說明
-                                                        熱門館藏
-                                                        9)
-                                                        ★ 館藏查詢系統
-                                                        > 首頁 > 熱門排行 >
-                                                        熱門館藏：
-                                                        9)「隱藏版」之熱門館藏 ex. 展覽中不外借 ( 同步書展 )，
-                                                        雖可預約，但無法外借，即「實際可流通量 vs
-                                                        可預約量」差距甚大， ex. 80% 為展覽中圖書，預約人數 ÷
-                                                        該書目「可流通量」＞10
-                                                        (以上)，卻無法列為熱門館藏
-                                                        ( 無法加速資料流通 )， 無法增加館方之借閱量 ( 無法列為六都之借閱評比 ) ps.
-                                                        設置「熱門館藏」之
-                                                        初衷：加速資料流通
-                                                        https://www.facebook.com/photo?fbid=644109052266009&set=a.603286406348274</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="blue">送陳</span></td>
-                                                <td><span class="blue">完全解答</span></td>
-                                                <td><time><span style="color: red;">已過<br>2天2小時33分</span></time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">6</td>
-                                                <td>11312345</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">新書通報列表，新書月份選擇2022/11，語文別選擇中文：
-                                                        1.「福特汽車叢書」之館藏資訊，其一未著錄「冊數/卷期」，請查核 2.
-                                                        有數筆出版年為19xx之清單，請問：新書通報之「新書」定義為何？ 謝謝
-                                                    </a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="blue">送陳</span></td>
-                                                <td><span class="orange">部分解答</span></td>
-                                                <td><time><span style="color: red;">已過<br>2天2小時33分</span></time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">5</td>
-                                                <td>11312344</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">「第85梯次好書大家讀」之得獎書單，上傳附檔前，請依類別調整「序號」，謝謝
-                                                        ex.
-                                                        1.文學讀物A組（單冊）：18冊 序號為
-                                                        13、14、31、39、47...，第18筆之序號為148
-                                                        https://www-ws.gov.taipei/001/Upload/430/relfile/41383/7541217/d9145fe6-9b88-4ecc-a768-e6c8a50a9d3f.pdf</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="blue">送陳</span></td>
-                                                <td><span class="orange">無法解答</span></td>
-                                                <td><time>2024-05-13
-                                                        <br> 16:09</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">4</td>
-                                                <td>11312343</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">新書通報列表，新書月份選擇2022/11，語文別選擇中文：
-                                                        1.「福特汽車叢書」之館藏資訊，其一未著錄「冊數/卷期」，請查核 2.
-                                                        有數筆出版年為19xx之清單，請問：新書通報之「新書」定義為何？ 謝謝</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="orange">退文</span></td>
-                                                <td><span class="gray">不予處理</span></td>
-                                                <td><time>2024-05-13
-                                                        <br> 16:09</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">3</td>
-                                                <td>11312342</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">請問圖書館會添補已去向不明的館藏嗎？
-                                                        "少女浮士德"這本書一二集都已去向不明，但要推薦圖書時，系統顯示已有館藏而無法推薦購買。
-                                                        如果館藏皆已去向不明，那應該不算有該本館藏吧? 請問要怎樣圖書館才會再次添購此書呢?
-                                                        謝謝!</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="orange">退文</span></td>
-                                                <td><span class="red">尚未回覆</span></td>
-                                                <td><time>2024/5/14
-                                                        <br> 16:09</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">2</td>
-                                                <td>11312341</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a
-                                                        href="tpmlwebref_questionsearchnew.htm">請問圖書館的網址https://tpml.gov.taipei/，其中的TPML是什麼的縮寫呢？T是taipei，P是public，L是library，請問M是什麼？</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="green">處理中</span></td>
-                                                <td><span class="gray">不予處理</span></td>
-                                                <td><time>2024/5/14
-                                                        <br> 16:09</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td class="num">1</td>
-                                                <td>11312340</td>
-                                                <td><time>2024-05-13
-                                                        <br>18:09</time></td>
-                                                <td><a href="tpmlwebref_questionsearchnew.htm">借閱及預約取書期限於4/3到期者延長至4/9
-                                                        請問：4/6到期者是否亦可延長至4/9？
-                                                        謝謝</a>
-                                                </td>
-                                                <td>應用科學</td>
-                                                <td><span class="gray">已回覆(結案)</span></td>
-                                                <td><span class="gray">不予處理</span></td>
-                                                <td><time>2024/5/14
-                                                        <br> 16:09</time></td>
-                                                <td>
-                                                    <div class="btn_grp">
-                                                        <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
-                                                                class="i_edit"></i>編輯</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- 頁碼 -->
-                                <div class="pagination">
-                                    <ul class="page">
-                                        <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                                        <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">...</a></li>
-                                        <li><a href="#">8</a></li>
-                                        <li><a href="#">9</a></li>
-                                        <li><a href="#">10</a></li>
-                                        <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                                        <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
-                                    </ul>
+                                <div class="_content">
+                                    <!-- 表格樣式 -->
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th><a href="#">序號<i class="i_sort"></i></a></th>
+                                                    </th>
+                                                    <th><a href="#">文件編號<i class="i_sort"></i></a></th>
+                                                    </th>
+                                                    <th><a href="#">提問時間<i class="i_sort"></i></a></th>
+                                                    <th class="text-center">問題描述</th>
+                                                    <th class="text-center">主題類別</th>
+                                                    <th class="text-center">處理階段</a>
+                                                    </th>
+                                                    <th class="text-center">處理方式</a>
+                                                    <th>
+                                                        <a href="#">回覆日期/期限 <i class="i_sort"></i></a>
+                                                    </th>
+                                                    <th class="text-center">編輯</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">10</td>
+                                                    <td>11312349</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">您好：最近要預約書時發現：無法選擇圖書館（原有設定沒了，要求我選擇圖書館，但是沒有任何選項可選。判斷是有bug或我半夜是不允許操作？），所以這個選項，不論在預約下或在個人設定下，都沒有選項（圖書館list）。
+                                                            請協助處理。謝謝。</a></td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="blue">送陳</span></td>
+                                                    <td><span class="green">轉介</span></td>
+                                                    </span></td>
+                                                    <td><time>2024-11-07
+                                                            <br>18:09</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">9</td>
+                                                    <td>11312348</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a
+                                                            href="tpmlwebref_questionsearchnew.htm">電腦網頁版預約書籍無法選擇取書館（下拉選單空白，也沒有自動代入預設取書館）導致預約無法完成</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="blue">送陳</span></td>
+                                                    <td><span class="gray">不予處理</span></td>
+                                                    <td><time>1天2小時30分</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">8</td>
+                                                    <td>11312347</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">借閱及預約取書期限於4/3到期者延長至4/9
+                                                            請問：4/6到期者是否亦可延長至4/9？
+                                                            謝謝</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="red">未回覆</span></td>
+                                                    <td><span class="gray">不予處理</span></td>
+                                                    <td><time>1天2小時30分</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">7</td>
+                                                    <td>11312346</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">補充說明
+                                                            熱門館藏
+                                                            9)
+                                                            ★ 館藏查詢系統
+                                                            > 首頁 > 熱門排行 >
+                                                            熱門館藏：
+                                                            9)「隱藏版」之熱門館藏 ex. 展覽中不外借 ( 同步書展 )，
+                                                            雖可預約，但無法外借，即「實際可流通量 vs
+                                                            可預約量」差距甚大， ex. 80% 為展覽中圖書，預約人數 ÷
+                                                            該書目「可流通量」＞10
+                                                            (以上)，卻無法列為熱門館藏
+                                                            ( 無法加速資料流通 )， 無法增加館方之借閱量 ( 無法列為六都之借閱評比 ) ps.
+                                                            設置「熱門館藏」之
+                                                            初衷：加速資料流通
+                                                            https://www.facebook.com/photo?fbid=644109052266009&set=a.603286406348274</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="blue">送陳</span></td>
+                                                    <td><span class="blue">完全解答</span></td>
+                                                    <td><time><span style="color: red;">已過<br>2天2小時33分</span></time>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">6</td>
+                                                    <td>11312345</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">新書通報列表，新書月份選擇2022/11，語文別選擇中文：
+                                                            1.「福特汽車叢書」之館藏資訊，其一未著錄「冊數/卷期」，請查核 2.
+                                                            有數筆出版年為19xx之清單，請問：新書通報之「新書」定義為何？ 謝謝
+                                                        </a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="blue">送陳</span></td>
+                                                    <td><span class="orange">部分解答</span></td>
+                                                    <td><time><span style="color: red;">已過<br>2天2小時33分</span></time>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">5</td>
+                                                    <td>11312344</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">「第85梯次好書大家讀」之得獎書單，上傳附檔前，請依類別調整「序號」，謝謝
+                                                            ex.
+                                                            1.文學讀物A組（單冊）：18冊 序號為
+                                                            13、14、31、39、47...，第18筆之序號為148
+                                                            https://www-ws.gov.taipei/001/Upload/430/relfile/41383/7541217/d9145fe6-9b88-4ecc-a768-e6c8a50a9d3f.pdf</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="blue">送陳</span></td>
+                                                    <td><span class="orange">無法解答</span></td>
+                                                    <td><time>2024-05-13
+                                                            <br> 16:09</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">4</td>
+                                                    <td>11312343</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">新書通報列表，新書月份選擇2022/11，語文別選擇中文：
+                                                            1.「福特汽車叢書」之館藏資訊，其一未著錄「冊數/卷期」，請查核 2.
+                                                            有數筆出版年為19xx之清單，請問：新書通報之「新書」定義為何？ 謝謝</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="orange">退文</span></td>
+                                                    <td><span class="gray">不予處理</span></td>
+                                                    <td><time>2024-05-13
+                                                            <br> 16:09</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">3</td>
+                                                    <td>11312342</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">請問圖書館會添補已去向不明的館藏嗎？
+                                                            "少女浮士德"這本書一二集都已去向不明，但要推薦圖書時，系統顯示已有館藏而無法推薦購買。
+                                                            如果館藏皆已去向不明，那應該不算有該本館藏吧? 請問要怎樣圖書館才會再次添購此書呢?
+                                                            謝謝!</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="orange">退文</span></td>
+                                                    <td><span class="red">尚未回覆</span></td>
+                                                    <td><time>2024/5/14
+                                                            <br> 16:09</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">2</td>
+                                                    <td>11312341</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a
+                                                            href="tpmlwebref_questionsearchnew.htm">請問圖書館的網址https://tpml.gov.taipei/，其中的TPML是什麼的縮寫呢？T是taipei，P是public，L是library，請問M是什麼？</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="green">處理中</span></td>
+                                                    <td><span class="gray">不予處理</span></td>
+                                                    <td><time>2024/5/14
+                                                            <br> 16:09</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td class="num">1</td>
+                                                    <td>11312340</td>
+                                                    <td><time>2024-05-13
+                                                            <br>18:09</time></td>
+                                                    <td><a href="tpmlwebref_questionsearchnew.htm">借閱及預約取書期限於4/3到期者延長至4/9
+                                                            請問：4/6到期者是否亦可延長至4/9？
+                                                            謝謝</a>
+                                                    </td>
+                                                    <td>應用科學</td>
+                                                    <td><span class="gray">已回覆(結案)</span></td>
+                                                    <td><span class="gray">不予處理</span></td>
+                                                    <td><time>2024/5/14
+                                                            <br> 16:09</time></td>
+                                                    <td>
+                                                        <div class="btn_grp">
+                                                            <a href="tpmlwebref_questionsearchnew.htm" class="btn"><i
+                                                                    class="i_edit"></i>編輯</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -594,7 +609,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- JS-->
     <script src="js/jquery-3.3.1.min.js"></script>
